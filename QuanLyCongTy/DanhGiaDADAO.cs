@@ -9,7 +9,7 @@ namespace QuanLyCongTy
 {
     public class DanhGiaDADAO
     {
-        DBConnetion dbConn = new DBConnetion();
+        DBConnection dbConn = new DBConnection();
 
         public DataTable LayDanhSachDanhGiaDA()
         {

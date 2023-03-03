@@ -12,9 +12,15 @@ namespace QuanLyCongTy
 {
     public partial class DanhGia : Form
     {
+        DanhGiaDAO DGdao = new DanhGiaDAO();
         public DanhGia()
         {
             InitializeComponent();
+        }
+
+        private void DanhGia_Load(object sender, EventArgs e)
+        {
+            gv_PhanCong.DataSource= DGdao.LayDanhSachDanhGia();
         }
     }
 }

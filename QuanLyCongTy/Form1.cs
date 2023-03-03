@@ -38,5 +38,10 @@ namespace QuanLyCongTy
             OpenChildForm(new DanhGia());
             lbl_Title.Text = btn_DanhGia.Text;
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            OpenChildForm(new FDangNhap());
+        }
     }
 }

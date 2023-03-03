@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace QuanLyCongTy
 {
-    public class DBConnetion
+    public class DBConnection
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr);
 

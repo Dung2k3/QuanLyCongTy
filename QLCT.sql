@@ -5,7 +5,7 @@ USE QLCT
 GO
 
 CREATE TABLE dbo.MucLuong(
-	MaLuong nchar(10) PRIMARY KEY,
+	MaLuong varchar(10) PRIMARY KEY,
 	MucLuong int NOT NULL 
 )
 GO
@@ -18,16 +18,16 @@ INSERT INTO MucLuong VALUES('ML_QL01',40000000)--QuanLy
 GO
 
 CREATE TABLE dbo.NhanVien(
-	MaNV nchar(10) PRIMARY KEY,
-	HoTenNV nchar(50),
-	DiaChi nchar(50) NULL,
-	Sdt nchar(12) UNIQUE,	
+	MaNV varchar(10) PRIMARY KEY,
+	HoTenNV nvarchar(50),
+	DiaChi nvarchar(50) NULL,
+	Sdt varchar(12) UNIQUE,	
 	NgaySinh date,
-	Phai nchar(10),
-	Cccd nchar(20) UNIQUE,
-	Email nchar(25) UNIQUE,
-	MaPB nchar(10) NULL,
-	MaLuong nchar(10) REFERENCES MucLuong(MaLuong)
+	Phai nvarchar(10),
+	Cccd varchar(20) UNIQUE,
+	Email varchar(25) UNIQUE,
+	MaPB varchar(10) NULL,
+	MaLuong varchar(10) REFERENCES MucLuong(MaLuong)
 )
 GO
 
@@ -40,7 +40,7 @@ VALUES('NV003', N'Lê Minh Hùng', 'HCM', '0986810782', '1988-03-03', 'Nam', '09
 INSERT INTO NhanVien 
 VALUES('NV004', N'Phạm Hoài Sơn', 'HCM', '0923232323', '1989-04-04', 'Nam', '098968366861', 'PHS@gmail.com', 'PB_SX', 'ML_QL01')
 INSERT INTO NhanVien 
-VALUES('NV005', N'Trần Phương Đài', 'HCM', '0986810782', '1988-05-05', N'Nữ', '098353536799', 'TPD@gmail.com', 'PB_SX', 'ML_QL01')
+VALUES('NV005', N'Trần Phương Đài', 'HCM', '0986865482', '1988-05-05', N'Nữ', '098353536799', 'TPD@gmail.com', 'PB_SX', 'ML_QL01')
 INSERT INTO NhanVien 
 VALUES('NV006', N'Đỗ Đăng Khoa', 'HCM', '0929192796', '1989-06-06', 'Nam', '090107287746', 'DDK@gmail.com', 'PB_SX', 'ML_QL01')
 INSERT INTO NhanVien 
@@ -68,10 +68,10 @@ VALUES('NV017', N'Hồ Ngọc Hà', 'HCM', '0913632527', '1982-11-21', 'Nam', '0
 GO
 
 CREATE TABLE dbo.PhongBan(
-	MaPB nchar(10) PRIMARY KEY,
-	TenPB nchar(30),
-	MaTrPhong nchar(10) REFERENCES NhanVien(MaNV),
-	ViTri nchar(40) NULL,
+	MaPB varchar(10) PRIMARY KEY,
+	TenPB nvarchar(30),
+	MaTrPhong varchar(10) REFERENCES NhanVien(MaNV),
+	ViTri nvarchar(40) NULL,
 )
 GO
 
@@ -85,9 +85,9 @@ GO
 ALTER TABLE NhanVien WITH CHECK ADD FOREIGN KEY(MaPB) REFERENCES PhongBan(MaPB)
 
 CREATE TABLE dbo.TaiKhoan(
-	MaNV nchar(10) REFERENCES NhanVien(MaNV),
-	TK nchar(30),
-	MK nchar(30),
+	MaNV varchar(10) REFERENCES NhanVien(MaNV),
+	TK varchar(30),
+	MK varchar(30),
 	PRIMARY KEY(MaNV)
 )
 GO
@@ -112,7 +112,7 @@ INSERT INTO TaiKhoan VALUES('NV017','hnh','hnh123')
 GO
 
 CREATE TABLE dbo.Checkin(
-	MaNV nchar(10) REFERENCES NhanVien(MaNV),
+	MaNV varchar(10) REFERENCES NhanVien(MaNV),
 	TGCheckin datetime,
 	PRIMARY KEY(MaNV,TGCheckin)
 )
@@ -172,7 +172,7 @@ INSERT INTO Checkin VALUES('NV017','2023-03-03T07:50:00')
 GO
 
 CREATE TABLE dbo.Checkout(
-	MaNV nchar(10) REFERENCES NhanVien(MaNV),
+	MaNV varchar(10) REFERENCES NhanVien(MaNV),
 	TGCheckin datetime,
 	PRIMARY KEY(MaNV,TGCheckin)
 )
@@ -231,7 +231,7 @@ INSERT INTO Checkout VALUES('NV017','2023-03-03T17:10:00')
 GO
 
 CREATE TABLE dbo.XinNghi(
-	MaNV nchar(10) REFERENCES NhanVien(MaNV),
+	MaNV varchar(10) REFERENCES NhanVien(MaNV),
 	NgayNghi date,
 	NgayDiLam date,
 	PRIMARY KEY(MaNV,NgayNghi)
@@ -239,13 +239,13 @@ CREATE TABLE dbo.XinNghi(
 GO
 
 CREATE TABLE dbo.DuAn(
-	MaDA nchar(10) PRIMARY KEY,
-	TenDuAn nchar(50),
-	MoTa nchar(200) NULL,
-	MaPB nchar(10) REFERENCES PhongBan(MaPB),
-	DiaDiem nchar(40) NULL,
+	MaDA varchar(10) PRIMARY KEY,
+	TenDuAn nvarchar(50),
+	MoTa nvarchar(200) NULL,
+	MaPB varchar(10) REFERENCES PhongBan(MaPB),
+	DiaDiem nvarchar(40) NULL,
 	DeadLine date,
-	DanhGia nchar(200) NULL,
+	DanhGia nvarchar(200) NULL,
 	Thuong bigint NULL
 )
 GO
@@ -266,11 +266,11 @@ GO
 
 
 CREATE TABLE dbo.PhanCong(
-	MaNV nchar(10) REFERENCES NhanVien(MaNV),
-	MaDA nchar(10) REFERENCES DuAn(MaDA),
-	CongViec nchar(100),
+	MaNV varchar(10) REFERENCES NhanVien(MaNV),
+	MaDA varchar(10) REFERENCES DuAn(MaDA),
+	CongViec nvarchar(200),
 	DeadLine date,
-	NhanXet nchar(50) NULL,
+	NhanXet nvarchar(50) NULL,
 	ChamCong int NULL,
 	PRIMARY KEY(MaNV,MaDA)
 )
@@ -303,10 +303,3 @@ VALUES('NV010','DA006',N'Liên hệ các nhà báo','2000-04-20', N'Đang Thực
 INSERT INTO PhanCong
 VALUES('NV011','DA006',N'Đăng bài về logo','2000-04-20', N'Đang Thực Hiện', 0)
 GO
-
-SELECT * FROM MucLuong
-SELECT * FROM NhanVien
-SELECT * FROM PhongBan
-SELECT * FROM P
-SELECT * FROM PhanCong
-SELECT * FROM PhanCong

@@ -9,7 +9,7 @@ namespace QuanLyCongTy
 {
     public class PhanCongDAO
     {
-        DBConnetion dbConn = new DBConnetion();
+        DBConnection dbConn = new DBConnection();
 
         public DataTable LayDanhSachPhanCong()
         {
