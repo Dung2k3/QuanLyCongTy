@@ -1,0 +1,15 @@
+D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\bin\Debug\QuanLyCongTy.exe.config
+D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\bin\Debug\QuanLyCongTy.exe
+D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\bin\Debug\QuanLyCongTy.pdb
+D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.csproj.AssemblyReference.cache
+D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.csproj.SuggestedBindingRedirects.cache
+D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.Properties.Resources.resources
+D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.csproj.GenerateResource.cache
+D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.csproj.CoreCompileInputs.cache
+D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.exe
+D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.pdb
+D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.DanhGia.resources
+D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.DanhGiaDA.resources
+D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.DuAn.resources
+D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.Form1.resources
+D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.PhanCong.resources
