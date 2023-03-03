@@ -1,6 +1,6 @@
 ﻿namespace QuanLyCongTy
 {
-    partial class DuAn
+    partial class FDuAn
     {
         /// <summary>
         /// Required designer variable.
@@ -43,7 +43,7 @@
             this.btn_Xoa = new System.Windows.Forms.Button();
             this.btn_Them = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_deadline = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.gv_DuAn)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,6 +56,7 @@
             this.gv_DuAn.RowTemplate.Height = 28;
             this.gv_DuAn.Size = new System.Drawing.Size(516, 404);
             this.gv_DuAn.TabIndex = 0;
+            this.gv_DuAn.DoubleClick += new System.EventHandler(this.gv_DuAn_DoubleClick);
             // 
             // label1
             // 
@@ -146,6 +147,7 @@
             this.btn_Sua.TabIndex = 24;
             this.btn_Sua.Text = "Sửa";
             this.btn_Sua.UseVisualStyleBackColor = true;
+            this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
             // 
             // btn_Xoa
             // 
@@ -155,6 +157,7 @@
             this.btn_Xoa.TabIndex = 23;
             this.btn_Xoa.Text = "Xóa";
             this.btn_Xoa.UseVisualStyleBackColor = true;
+            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
             // 
             // btn_Them
             // 
@@ -164,6 +167,7 @@
             this.btn_Them.TabIndex = 22;
             this.btn_Them.Text = "Thêm";
             this.btn_Them.UseVisualStyleBackColor = true;
+            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
             // label6
             // 
@@ -174,19 +178,19 @@
             this.label6.TabIndex = 25;
             this.label6.Text = "Thời hạn:";
             // 
-            // dateTimePicker1
+            // dtp_deadline
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(158, 237);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(297, 26);
-            this.dateTimePicker1.TabIndex = 26;
+            this.dtp_deadline.Location = new System.Drawing.Point(158, 237);
+            this.dtp_deadline.Name = "dtp_deadline";
+            this.dtp_deadline.Size = new System.Drawing.Size(297, 26);
+            this.dtp_deadline.TabIndex = 26;
             // 
-            // DuAn
+            // FDuAn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1049, 488);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtp_deadline);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btn_Sua);
             this.Controls.Add(this.btn_Xoa);
@@ -202,8 +206,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.gv_DuAn);
-            this.Name = "DuAn";
+            this.Name = "FDuAn";
             this.Text = "DuAn";
+            this.Load += new System.EventHandler(this.DuAn_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gv_DuAn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -227,6 +232,6 @@
         private System.Windows.Forms.Button btn_Xoa;
         private System.Windows.Forms.Button btn_Them;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtp_deadline;
     }
 }

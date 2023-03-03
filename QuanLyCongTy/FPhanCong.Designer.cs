@@ -1,6 +1,6 @@
 ﻿namespace QuanLyCongTy
 {
-    partial class PhanCong
+    partial class FPhanCong
     {
         /// <summary>
         /// Required designer variable.
@@ -43,8 +43,10 @@
             this.btn_Sua = new System.Windows.Forms.Button();
             this.btn_Xoa = new System.Windows.Forms.Button();
             this.btn_Them = new System.Windows.Forms.Button();
+            this.gv_CongViec = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.gv_NhanVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_DuAn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gv_CongViec)).BeginInit();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -62,6 +64,7 @@
             this.gv_NhanVien.RowTemplate.Height = 28;
             this.gv_NhanVien.Size = new System.Drawing.Size(336, 253);
             this.gv_NhanVien.TabIndex = 17;
+            this.gv_NhanVien.DoubleClick += new System.EventHandler(this.gv_NhanVien_DoubleClick);
             // 
             // txt_CongViec
             // 
@@ -134,8 +137,9 @@
             this.gv_DuAn.Name = "gv_DuAn";
             this.gv_DuAn.RowHeadersWidth = 62;
             this.gv_DuAn.RowTemplate.Height = 28;
-            this.gv_DuAn.Size = new System.Drawing.Size(336, 253);
+            this.gv_DuAn.Size = new System.Drawing.Size(336, 108);
             this.gv_DuAn.TabIndex = 18;
+            this.gv_DuAn.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gv_DuAn_CellContentClick);
             // 
             // btn_Sua
             // 
@@ -145,6 +149,7 @@
             this.btn_Sua.TabIndex = 21;
             this.btn_Sua.Text = "Sửa";
             this.btn_Sua.UseVisualStyleBackColor = true;
+            this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
             // 
             // btn_Xoa
             // 
@@ -154,6 +159,7 @@
             this.btn_Xoa.TabIndex = 20;
             this.btn_Xoa.Text = "Xóa";
             this.btn_Xoa.UseVisualStyleBackColor = true;
+            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
             // 
             // btn_Them
             // 
@@ -163,12 +169,25 @@
             this.btn_Them.TabIndex = 19;
             this.btn_Them.Text = "Thêm";
             this.btn_Them.UseVisualStyleBackColor = true;
+            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
-            // PhanCong
+            // gv_CongViec
+            // 
+            this.gv_CongViec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gv_CongViec.Location = new System.Drawing.Point(453, 354);
+            this.gv_CongViec.Name = "gv_CongViec";
+            this.gv_CongViec.RowHeadersWidth = 62;
+            this.gv_CongViec.RowTemplate.Height = 28;
+            this.gv_CongViec.Size = new System.Drawing.Size(336, 108);
+            this.gv_CongViec.TabIndex = 22;
+            this.gv_CongViec.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gv_CongViec_CellContentClick);
+            // 
+            // FPhanCong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(851, 502);
+            this.Controls.Add(this.gv_CongViec);
             this.Controls.Add(this.btn_Sua);
             this.Controls.Add(this.btn_Xoa);
             this.Controls.Add(this.btn_Them);
@@ -182,10 +201,12 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "PhanCong";
+            this.Name = "FPhanCong";
             this.Text = "PhanCong";
+            this.Load += new System.EventHandler(this.PhanCong_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gv_NhanVien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_DuAn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gv_CongViec)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -206,5 +227,6 @@
         private System.Windows.Forms.Button btn_Sua;
         private System.Windows.Forms.Button btn_Xoa;
         private System.Windows.Forms.Button btn_Them;
+        private System.Windows.Forms.DataGridView gv_CongViec;
     }
 }

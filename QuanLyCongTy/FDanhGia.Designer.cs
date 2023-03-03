@@ -1,6 +1,6 @@
 ﻿namespace QuanLyCongTy
 {
-    partial class DanhGia
+    partial class FDanhGia
     {
         /// <summary>
         /// Required designer variable.
@@ -86,6 +86,7 @@
             this.gv_PhanCong.RowTemplate.Height = 28;
             this.gv_PhanCong.Size = new System.Drawing.Size(870, 347);
             this.gv_PhanCong.TabIndex = 7;
+            this.gv_PhanCong.DoubleClick += new System.EventHandler(this.gv_PhanCong_DoubleClick);
             // 
             // btn_Them
             // 
@@ -95,6 +96,7 @@
             this.btn_Them.TabIndex = 8;
             this.btn_Them.Text = "Thêm";
             this.btn_Them.UseVisualStyleBackColor = true;
+            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
             // btn_Xoa
             // 
@@ -104,6 +106,7 @@
             this.btn_Xoa.TabIndex = 9;
             this.btn_Xoa.Text = "Xóa";
             this.btn_Xoa.UseVisualStyleBackColor = true;
+            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
             // 
             // btn_Sua
             // 
@@ -113,6 +116,7 @@
             this.btn_Sua.TabIndex = 10;
             this.btn_Sua.Text = "Sửa";
             this.btn_Sua.UseVisualStyleBackColor = true;
+            this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
             // 
             // txt_ChamCong
             // 
@@ -147,7 +151,7 @@
             this.label4.Text = "Mã dự án:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // DanhGia
+            // FDanhGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -164,8 +168,9 @@
             this.Controls.Add(this.txt_MaNV);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Name = "DanhGia";
+            this.Name = "FDanhGia";
             this.Text = "DanhGia";
+            this.Load += new System.EventHandler(this.DanhGia_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gv_PhanCong)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
