@@ -79,9 +79,9 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(185, 212);
+            this.textBox2.Location = new System.Drawing.Point(144, 212);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(212, 26);
+            this.textBox2.Size = new System.Drawing.Size(253, 26);
             this.textBox2.TabIndex = 4;
             // 
             // textBox3
@@ -104,9 +104,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(57, 215);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(122, 20);
+            this.label4.Size = new System.Drawing.Size(67, 20);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Thưởng dự kiến:";
+            this.label4.Text = "Thưởng:";
             // 
             // dataGridView1
             // 
@@ -115,7 +115,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(694, 168);
+            this.dataGridView1.Size = new System.Drawing.Size(694, 156);
             this.dataGridView1.TabIndex = 8;
             // 
             // btn_Sua
@@ -149,7 +149,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(801, 469);
+            this.ClientSize = new System.Drawing.Size(978, 444);
             this.Controls.Add(this.btn_Sua);
             this.Controls.Add(this.btn_Xoa);
             this.Controls.Add(this.btn_Them);

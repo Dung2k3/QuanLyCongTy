@@ -66,30 +66,30 @@
             // 
             this.txt_MaNV.Location = new System.Drawing.Point(163, 34);
             this.txt_MaNV.Name = "txt_MaNV";
-            this.txt_MaNV.Size = new System.Drawing.Size(246, 26);
+            this.txt_MaNV.Size = new System.Drawing.Size(303, 26);
             this.txt_MaNV.TabIndex = 3;
             // 
             // rtxt_NhanXet
             // 
             this.rtxt_NhanXet.Location = new System.Drawing.Point(54, 110);
             this.rtxt_NhanXet.Name = "rtxt_NhanXet";
-            this.rtxt_NhanXet.Size = new System.Drawing.Size(786, 80);
+            this.rtxt_NhanXet.Size = new System.Drawing.Size(870, 75);
             this.rtxt_NhanXet.TabIndex = 6;
             this.rtxt_NhanXet.Text = "";
             // 
             // gv_PhanCong
             // 
             this.gv_PhanCong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gv_PhanCong.Location = new System.Drawing.Point(54, 261);
+            this.gv_PhanCong.Location = new System.Drawing.Point(54, 268);
             this.gv_PhanCong.Name = "gv_PhanCong";
             this.gv_PhanCong.RowHeadersWidth = 62;
             this.gv_PhanCong.RowTemplate.Height = 28;
-            this.gv_PhanCong.Size = new System.Drawing.Size(786, 260);
+            this.gv_PhanCong.Size = new System.Drawing.Size(870, 347);
             this.gv_PhanCong.TabIndex = 7;
             // 
             // btn_Them
             // 
-            this.btn_Them.Location = new System.Drawing.Point(520, 204);
+            this.btn_Them.Location = new System.Drawing.Point(603, 210);
             this.btn_Them.Name = "btn_Them";
             this.btn_Them.Size = new System.Drawing.Size(83, 30);
             this.btn_Them.TabIndex = 8;
@@ -98,7 +98,7 @@
             // 
             // btn_Xoa
             // 
-            this.btn_Xoa.Location = new System.Drawing.Point(626, 204);
+            this.btn_Xoa.Location = new System.Drawing.Point(709, 210);
             this.btn_Xoa.Name = "btn_Xoa";
             this.btn_Xoa.Size = new System.Drawing.Size(83, 30);
             this.btn_Xoa.TabIndex = 9;
@@ -107,24 +107,24 @@
             // 
             // btn_Sua
             // 
-            this.btn_Sua.Location = new System.Drawing.Point(732, 204);
+            this.btn_Sua.Location = new System.Drawing.Point(815, 210);
             this.btn_Sua.Name = "btn_Sua";
-            this.btn_Sua.Size = new System.Drawing.Size(83, 27);
+            this.btn_Sua.Size = new System.Drawing.Size(83, 30);
             this.btn_Sua.TabIndex = 10;
             this.btn_Sua.Text = "Sửa";
             this.btn_Sua.UseVisualStyleBackColor = true;
             // 
             // txt_ChamCong
             // 
-            this.txt_ChamCong.Location = new System.Drawing.Point(163, 205);
+            this.txt_ChamCong.Location = new System.Drawing.Point(163, 211);
             this.txt_ChamCong.Name = "txt_ChamCong";
-            this.txt_ChamCong.Size = new System.Drawing.Size(246, 26);
+            this.txt_ChamCong.Size = new System.Drawing.Size(303, 26);
             this.txt_ChamCong.TabIndex = 12;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(48, 208);
+            this.label2.Location = new System.Drawing.Point(48, 214);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 20);
             this.label2.TabIndex = 11;
@@ -132,15 +132,15 @@
             // 
             // txt_MaDA
             // 
-            this.txt_MaDA.Location = new System.Drawing.Point(569, 34);
+            this.txt_MaDA.Location = new System.Drawing.Point(604, 34);
             this.txt_MaDA.Name = "txt_MaDA";
-            this.txt_MaDA.Size = new System.Drawing.Size(246, 26);
+            this.txt_MaDA.Size = new System.Drawing.Size(320, 26);
             this.txt_MaDA.TabIndex = 14;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(456, 37);
+            this.label4.Location = new System.Drawing.Point(510, 37);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 20);
             this.label4.TabIndex = 13;
@@ -151,7 +151,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(897, 564);
+            this.ClientSize = new System.Drawing.Size(978, 644);
             this.Controls.Add(this.txt_MaDA);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txt_ChamCong);
