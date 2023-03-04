@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.gv_NhanVien = new System.Windows.Forms.DataGridView();
             this.txt_CongViec = new System.Windows.Forms.TextBox();
             this.txt_MaDA = new System.Windows.Forms.TextBox();
@@ -48,12 +46,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gv_DuAn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_CongViec)).BeginInit();
             this.SuspendLayout();
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // gv_NhanVien
             // 
@@ -186,7 +178,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(851, 502);
+            this.ClientSize = new System.Drawing.Size(944, 502);
             this.Controls.Add(this.gv_CongViec);
             this.Controls.Add(this.btn_Sua);
             this.Controls.Add(this.btn_Xoa);
@@ -213,7 +205,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.DataGridView gv_NhanVien;
         private System.Windows.Forms.TextBox txt_CongViec;
         private System.Windows.Forms.TextBox txt_MaDA;

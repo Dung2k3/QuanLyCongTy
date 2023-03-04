@@ -13,17 +13,17 @@ namespace QuanLyCongTy
 
         public DataTable LayDanhSachDuAn()
         {
-            string sqlStr = string.Format("SELECT * FROM DuAn (MaDA) VALUES ('{0}')");
+            string sqlStr = string.Format("SELECT * FROM DuAn ");
             return dbConn.LayDanhSach(sqlStr);
         }
         public DataTable LayDanhSachNhanVien()
         {
-            string sqlStr = string.Format("SELECT * FROM NhanVien (MaNV) VALUES ('{0}')");
+            string sqlStr = string.Format("SELECT * FROM NhanVien");
             return dbConn.LayDanhSach(sqlStr);
         }
         public DataTable LayDanhSachPhanCong()
         {
-            string sqlStr = string.Format("SELECT * FROM PhanCong (CongViec) VALUES ('{0}')");
+            string sqlStr = string.Format("SELECT * FROM PhanCong");
             return dbConn.LayDanhSach(sqlStr);
         }
 
