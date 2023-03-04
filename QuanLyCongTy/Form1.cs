@@ -33,10 +33,11 @@ namespace QuanLyCongTy
             childForm.Show();
 
         }
-        private void btn_DanhGia_Click(object sender, EventArgs e)
+        private void lbl_DanhGia_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FDanhGia());
-            label1.Text = btn_DanhGia.Text;
+            label1.Text = lbl_DanhGia.Text;
         }
+  
     }
 }
