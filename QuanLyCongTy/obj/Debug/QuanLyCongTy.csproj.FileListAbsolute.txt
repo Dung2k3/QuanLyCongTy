@@ -33,3 +33,7 @@ D:\hc\CTDH\WinForm\Project\QuanLyCongTy\QuanLyCongTy\obj\Debug\QuanLyCongTy.FNha
 D:\hc\CTDH\WinForm\Project\QuanLyCongTy\QuanLyCongTy\obj\Debug\QuanLyCongTy.FCheckinout.resources
 D:\hc\CTDH\WinForm\Project\QuanLyCongTy\QuanLyCongTy\obj\Debug\QuanLyCongTy.FQuanLy.resources
 D:\hc\CTDH\WinForm\Project\QuanLyCongTy\QuanLyCongTy\obj\Debug\QuanLyCongTy.FTruongPhong.resources
+D:\hc\CTDH\WinForm\Project\PJ_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.csproj.AssemblyReference.cache
+D:\hc\CTDH\WinForm\Project\PJ_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.csproj.SuggestedBindingRedirects.cache
+D:\hc\CTDH\WinForm\Project\PJ_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.exe
+D:\hc\CTDH\WinForm\Project\PJ_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.pdb
