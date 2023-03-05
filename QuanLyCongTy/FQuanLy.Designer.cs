@@ -95,6 +95,7 @@
             this.btnDanhGiaDA.Text = "         Đánh giá Dự án ";
             this.btnDanhGiaDA.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDanhGiaDA.UseVisualStyleBackColor = true;
+            this.btnDanhGiaDA.Click += new System.EventHandler(this.btnDanhGiaDA_Click);
             // 
             // btnTaoDA
             // 

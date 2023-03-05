@@ -11,7 +11,6 @@ namespace QuanLyCongTy
         string maNV;
         string maDA;
         string congViec;
-        string nhanXet;
         DateTime deadline;
 
         public string MaNV { get { return maNV; } }

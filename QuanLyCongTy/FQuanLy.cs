@@ -27,6 +27,7 @@ namespace QuanLyCongTy
                 currentFormChild.Close();
             }
             currentFormChild = childForm;
+            childForm.FormBorderStyle= FormBorderStyle.None;
             childForm.TopLevel = false;
             childForm.Dock = DockStyle.Fill;
             pnlNoiDung.Controls.Add(childForm);
@@ -52,7 +53,12 @@ namespace QuanLyCongTy
 
         private void btnTaoDA_Click(object sender, EventArgs e)
         {
-            
+            OpenChildForm(new FDuAn());
+        }
+
+        private void btnDanhGiaDA_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FDanhGiaDA());
         }
     }
 }
