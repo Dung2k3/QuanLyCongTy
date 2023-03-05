@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="CheckinDao.cs" />
     <Compile Include="CheckoutDao.cs" />
+    <Compile Include="ClassDangNhap.cs" />
     <Compile Include="FCheckinout.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -55,7 +56,6 @@
       <DependentUpon>FCheckinout.cs</DependentUpon>
     </Compile>
     <Compile Include="ClassDanhGiaDA.cs" />
-    <Compile Include="DangNhap.cs" />
     <Compile Include="DangNhapDao.cs" />
     <Compile Include="DanhGiaDA.cs">
       <SubType>Form</SubType>

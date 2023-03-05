@@ -52,7 +52,7 @@ namespace QuanLyCongTy
 
         private void btnTaoDA_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FDu(maQL));
+            
         }
     }
 }
