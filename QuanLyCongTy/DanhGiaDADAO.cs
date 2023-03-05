@@ -24,10 +24,9 @@ namespace QuanLyCongTy
         }
         public void Xoa(ClassDanhGiaDA dgda)
         {
-            string sqlStr1 = string.Format("DELETE FROM DuAn WHERE MaDA = '{0}'", dgda.MaDA);
+            string sqlStr1 = string.Format("DELETE FROM PhanCong WHERE MaDA = '{0}'"+ "DELETE FROM DuAn WHERE MaDA = '{0}'", dgda.MaDA);
             dbConn.ThucThi(sqlStr1);
         }
-
         public void Sua(ClassDanhGiaDA dgda)
         {
             string sqlStr = string.Format("UPDATE DuAn SET MaDA = '{0}', TenDuAn = '{1}', NhanXet = '{2}', Thuong = '{3}' WHERE MaDA = '{4}'", dgda.MaDA, dgda.TenDA, dgda.NhanXet, dgda.Thuong, dgda.MaDA);

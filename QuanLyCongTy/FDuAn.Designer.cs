@@ -67,7 +67,7 @@
             this.DeadLine,
             this.DanhGia,
             this.Thuong});
-            this.gv_DuAn.Location = new System.Drawing.Point(352, 55);
+            this.gv_DuAn.Location = new System.Drawing.Point(361, 55);
             this.gv_DuAn.Name = "gv_DuAn";
             this.gv_DuAn.RowHeadersVisible = false;
             this.gv_DuAn.RowHeadersWidth = 62;
@@ -88,7 +88,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 107);
+            this.label2.Location = new System.Drawing.Point(18, 102);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 20);
             this.label2.TabIndex = 2;
