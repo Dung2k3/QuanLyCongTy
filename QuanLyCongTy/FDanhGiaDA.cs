@@ -47,13 +47,13 @@ namespace QuanLyCongTy
             HienThiDanhSach();
         }
 
-        private void gv_DanhGiaDA_DoubleClick(object sender, EventArgs e)
+        private void gv_DanhGiaDA_MouseClick(object sender, MouseEventArgs e)
         {
             int i = gv_DanhGiaDA.CurrentRow.Index;
             txt_MaDA.Text = gv_DanhGiaDA.Rows[i].Cells[0].Value.ToString();
             txt_TenDA.Text = gv_DanhGiaDA.Rows[i].Cells[1].Value.ToString();
-            rtxt_NhanXet.Text= gv_DanhGiaDA.Rows[i].Cells[6].Value.ToString();
-            txt_Thuong.Text= gv_DanhGiaDA.Rows[i].Cells[7].Value.ToString();
+            rtxt_NhanXet.Text = gv_DanhGiaDA.Rows[i].Cells[6].Value.ToString();
+            txt_Thuong.Text = gv_DanhGiaDA.Rows[i].Cells[7].Value.ToString();
         }
     }
 }

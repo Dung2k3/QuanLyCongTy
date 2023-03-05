@@ -11,15 +11,29 @@ namespace QuanLyCongTy
     {
         DBConnection dbConn = new DBConnection();
 
-        public DataTable LayDanhSachDuAn()
+        public List<string> LayDanhSachMaDuAn()
         {
-            string sqlStr = string.Format("SELECT * FROM DuAn ");
-            return dbConn.LayDanhSach(sqlStr);
+            string sqlStr = string.Format("SELECT MaDA FROM DuAn");
+            DataTable dt = dbConn.LayDanhSach(sqlStr);
+            List<string> list = new List<string>();
+            foreach (DataRow dr in dt.Rows)
+            {
+                list.Add(dr[0].ToString());
+            }
+            list.Sort();
+            return list;
         }
-        public DataTable LayDanhSachNhanVien()
+        public List<string>  LayDanhSachMaNhanVien()
         {
-            string sqlStr = string.Format("SELECT * FROM NhanVien");
-            return dbConn.LayDanhSach(sqlStr);
+            string sqlStr = string.Format("SELECT MaNV FROM NhanVien");
+            DataTable dt = dbConn.LayDanhSach(sqlStr);
+            List<string> list = new List<string>();
+            foreach(DataRow dr in dt.Rows)
+            {
+                list.Add(dr[0].ToString());
+            }
+            list.Sort();
+            return list;
         }
         public DataTable LayDanhSachPhanCong()
         {

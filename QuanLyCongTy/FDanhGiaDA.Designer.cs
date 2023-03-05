@@ -40,13 +40,21 @@
             this.btn_Sua = new System.Windows.Forms.Button();
             this.btn_Xoa = new System.Windows.Forms.Button();
             this.btn_Them = new System.Windows.Forms.Button();
+            this.MaDA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenDuAn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MoTa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaPB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiaDiem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DeadLine = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Thuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gv_DanhGiaDA)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(46, 45);
+            this.label1.Location = new System.Drawing.Point(45, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 20);
             this.label1.TabIndex = 0;
@@ -54,8 +62,9 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(418, 45);
+            this.label2.Location = new System.Drawing.Point(45, 113);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 20);
             this.label2.TabIndex = 1;
@@ -63,8 +72,9 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(46, 83);
+            this.label3.Location = new System.Drawing.Point(41, 194);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 20);
             this.label3.TabIndex = 2;
@@ -72,37 +82,42 @@
             // 
             // txt_MaDA
             // 
-            this.txt_MaDA.Location = new System.Drawing.Point(144, 42);
+            this.txt_MaDA.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_MaDA.Location = new System.Drawing.Point(47, 66);
             this.txt_MaDA.Name = "txt_MaDA";
-            this.txt_MaDA.Size = new System.Drawing.Size(253, 26);
+            this.txt_MaDA.Size = new System.Drawing.Size(149, 26);
             this.txt_MaDA.TabIndex = 3;
             // 
             // txt_Thuong
             // 
-            this.txt_Thuong.Location = new System.Drawing.Point(144, 212);
+            this.txt_Thuong.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_Thuong.Location = new System.Drawing.Point(42, 398);
             this.txt_Thuong.Name = "txt_Thuong";
-            this.txt_Thuong.Size = new System.Drawing.Size(253, 26);
+            this.txt_Thuong.Size = new System.Drawing.Size(124, 26);
             this.txt_Thuong.TabIndex = 4;
             // 
             // txt_TenDA
             // 
-            this.txt_TenDA.Location = new System.Drawing.Point(508, 42);
+            this.txt_TenDA.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_TenDA.Location = new System.Drawing.Point(47, 147);
             this.txt_TenDA.Name = "txt_TenDA";
-            this.txt_TenDA.Size = new System.Drawing.Size(236, 26);
+            this.txt_TenDA.Size = new System.Drawing.Size(149, 26);
             this.txt_TenDA.TabIndex = 5;
             // 
             // rtxt_NhanXet
             // 
-            this.rtxt_NhanXet.Location = new System.Drawing.Point(50, 116);
+            this.rtxt_NhanXet.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.rtxt_NhanXet.Location = new System.Drawing.Point(42, 227);
             this.rtxt_NhanXet.Name = "rtxt_NhanXet";
-            this.rtxt_NhanXet.Size = new System.Drawing.Size(694, 82);
+            this.rtxt_NhanXet.Size = new System.Drawing.Size(261, 97);
             this.rtxt_NhanXet.TabIndex = 6;
             this.rtxt_NhanXet.Text = "";
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(57, 215);
+            this.label4.Location = new System.Drawing.Point(41, 356);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 20);
             this.label4.TabIndex = 7;
@@ -110,20 +125,30 @@
             // 
             // gv_DanhGiaDA
             // 
+            this.gv_DanhGiaDA.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gv_DanhGiaDA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gv_DanhGiaDA.Location = new System.Drawing.Point(50, 260);
+            this.gv_DanhGiaDA.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaDA,
+            this.TenDuAn,
+            this.MoTa,
+            this.MaPB,
+            this.DiaDiem,
+            this.DeadLine,
+            this.Thuong});
+            this.gv_DanhGiaDA.Location = new System.Drawing.Point(374, 51);
             this.gv_DanhGiaDA.Name = "gv_DanhGiaDA";
             this.gv_DanhGiaDA.RowHeadersWidth = 62;
             this.gv_DanhGiaDA.RowTemplate.Height = 28;
-            this.gv_DanhGiaDA.Size = new System.Drawing.Size(694, 156);
+            this.gv_DanhGiaDA.Size = new System.Drawing.Size(561, 515);
             this.gv_DanhGiaDA.TabIndex = 8;
-            this.gv_DanhGiaDA.DoubleClick += new System.EventHandler(this.gv_DanhGiaDA_DoubleClick);
+            this.gv_DanhGiaDA.MouseClick += new System.Windows.Forms.MouseEventHandler(this.gv_DanhGiaDA_MouseClick);
             // 
             // btn_Sua
             // 
-            this.btn_Sua.Location = new System.Drawing.Point(643, 209);
+            this.btn_Sua.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Sua.Location = new System.Drawing.Point(220, 483);
             this.btn_Sua.Name = "btn_Sua";
-            this.btn_Sua.Size = new System.Drawing.Size(83, 27);
+            this.btn_Sua.Size = new System.Drawing.Size(83, 31);
             this.btn_Sua.TabIndex = 13;
             this.btn_Sua.Text = "Sửa";
             this.btn_Sua.UseVisualStyleBackColor = true;
@@ -131,9 +156,10 @@
             // 
             // btn_Xoa
             // 
-            this.btn_Xoa.Location = new System.Drawing.Point(554, 208);
+            this.btn_Xoa.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Xoa.Location = new System.Drawing.Point(131, 482);
             this.btn_Xoa.Name = "btn_Xoa";
-            this.btn_Xoa.Size = new System.Drawing.Size(83, 30);
+            this.btn_Xoa.Size = new System.Drawing.Size(83, 34);
             this.btn_Xoa.TabIndex = 12;
             this.btn_Xoa.Text = "Xóa";
             this.btn_Xoa.UseVisualStyleBackColor = true;
@@ -141,19 +167,83 @@
             // 
             // btn_Them
             // 
-            this.btn_Them.Location = new System.Drawing.Point(465, 209);
+            this.btn_Them.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Them.Location = new System.Drawing.Point(42, 483);
             this.btn_Them.Name = "btn_Them";
-            this.btn_Them.Size = new System.Drawing.Size(83, 30);
+            this.btn_Them.Size = new System.Drawing.Size(83, 34);
             this.btn_Them.TabIndex = 11;
             this.btn_Them.Text = "Thêm";
             this.btn_Them.UseVisualStyleBackColor = true;
             this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
+            // MaDA
+            // 
+            this.MaDA.DataPropertyName = "MaDA";
+            this.MaDA.HeaderText = "Mã dự án";
+            this.MaDA.MinimumWidth = 8;
+            this.MaDA.Name = "MaDA";
+            this.MaDA.ReadOnly = true;
+            this.MaDA.Width = 150;
+            // 
+            // TenDuAn
+            // 
+            this.TenDuAn.DataPropertyName = "TenDuAn";
+            this.TenDuAn.HeaderText = "Tên dự án";
+            this.TenDuAn.MinimumWidth = 8;
+            this.TenDuAn.Name = "TenDuAn";
+            this.TenDuAn.ReadOnly = true;
+            this.TenDuAn.Width = 150;
+            // 
+            // MoTa
+            // 
+            this.MoTa.DataPropertyName = "MoTa";
+            this.MoTa.HeaderText = "Mô tả";
+            this.MoTa.MinimumWidth = 8;
+            this.MoTa.Name = "MoTa";
+            this.MoTa.ReadOnly = true;
+            this.MoTa.Width = 150;
+            // 
+            // MaPB
+            // 
+            this.MaPB.DataPropertyName = "maPB";
+            this.MaPB.HeaderText = "Mã phòng ban";
+            this.MaPB.MinimumWidth = 8;
+            this.MaPB.Name = "MaPB";
+            this.MaPB.ReadOnly = true;
+            this.MaPB.Width = 150;
+            // 
+            // DiaDiem
+            // 
+            this.DiaDiem.DataPropertyName = "DiaDiem";
+            this.DiaDiem.HeaderText = "Địa điểm";
+            this.DiaDiem.MinimumWidth = 8;
+            this.DiaDiem.Name = "DiaDiem";
+            this.DiaDiem.ReadOnly = true;
+            this.DiaDiem.Width = 150;
+            // 
+            // DeadLine
+            // 
+            this.DeadLine.DataPropertyName = "DeadLine";
+            this.DeadLine.HeaderText = "Thời hạn";
+            this.DeadLine.MinimumWidth = 8;
+            this.DeadLine.Name = "DeadLine";
+            this.DeadLine.ReadOnly = true;
+            this.DeadLine.Width = 150;
+            // 
+            // Thuong
+            // 
+            this.Thuong.DataPropertyName = "Thuong";
+            this.Thuong.HeaderText = "Thưởng";
+            this.Thuong.MinimumWidth = 8;
+            this.Thuong.Name = "Thuong";
+            this.Thuong.ReadOnly = true;
+            this.Thuong.Width = 150;
+            // 
             // FDanhGiaDA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(795, 444);
+            this.ClientSize = new System.Drawing.Size(978, 644);
             this.Controls.Add(this.btn_Sua);
             this.Controls.Add(this.btn_Xoa);
             this.Controls.Add(this.btn_Them);
@@ -189,5 +279,12 @@
         private System.Windows.Forms.Button btn_Sua;
         private System.Windows.Forms.Button btn_Xoa;
         private System.Windows.Forms.Button btn_Them;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaDA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenDuAn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MoTa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaPB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DiaDiem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DeadLine;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Thuong;
     }
 }

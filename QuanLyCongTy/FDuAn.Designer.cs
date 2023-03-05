@@ -44,24 +44,42 @@
             this.btn_Them = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.dtp_deadline = new System.Windows.Forms.DateTimePicker();
+            this.MaDA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenDuAn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MoTa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaPB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiaDiem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DeadLine = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DanhGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Thuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gv_DuAn)).BeginInit();
             this.SuspendLayout();
             // 
             // gv_DuAn
             // 
             this.gv_DuAn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gv_DuAn.Location = new System.Drawing.Point(498, 50);
+            this.gv_DuAn.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaDA,
+            this.TenDuAn,
+            this.MoTa,
+            this.MaPB,
+            this.DiaDiem,
+            this.DeadLine,
+            this.DanhGia,
+            this.Thuong});
+            this.gv_DuAn.Location = new System.Drawing.Point(352, 55);
             this.gv_DuAn.Name = "gv_DuAn";
+            this.gv_DuAn.RowHeadersVisible = false;
             this.gv_DuAn.RowHeadersWidth = 62;
             this.gv_DuAn.RowTemplate.Height = 28;
-            this.gv_DuAn.Size = new System.Drawing.Size(516, 404);
+            this.gv_DuAn.Size = new System.Drawing.Size(595, 512);
             this.gv_DuAn.TabIndex = 0;
             this.gv_DuAn.DoubleClick += new System.EventHandler(this.gv_DuAn_DoubleClick);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 50);
+            this.label1.Location = new System.Drawing.Point(18, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 20);
             this.label1.TabIndex = 1;
@@ -70,7 +88,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 98);
+            this.label2.Location = new System.Drawing.Point(18, 107);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 20);
             this.label2.TabIndex = 2;
@@ -79,7 +97,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 147);
+            this.label3.Location = new System.Drawing.Point(18, 188);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(115, 20);
             this.label3.TabIndex = 3;
@@ -88,7 +106,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(26, 198);
+            this.label4.Location = new System.Drawing.Point(22, 272);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 20);
             this.label4.TabIndex = 4;
@@ -97,7 +115,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(26, 298);
+            this.label5.Location = new System.Drawing.Point(22, 453);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 20);
             this.label5.TabIndex = 5;
@@ -105,43 +123,43 @@
             // 
             // txt_MaDA
             // 
-            this.txt_MaDA.Location = new System.Drawing.Point(158, 50);
+            this.txt_MaDA.Location = new System.Drawing.Point(22, 55);
             this.txt_MaDA.Name = "txt_MaDA";
             this.txt_MaDA.Size = new System.Drawing.Size(297, 26);
             this.txt_MaDA.TabIndex = 6;
             // 
             // txt_TenDA
             // 
-            this.txt_TenDA.Location = new System.Drawing.Point(158, 98);
+            this.txt_TenDA.Location = new System.Drawing.Point(22, 141);
             this.txt_TenDA.Name = "txt_TenDA";
             this.txt_TenDA.Size = new System.Drawing.Size(297, 26);
             this.txt_TenDA.TabIndex = 7;
             // 
             // txt_MaPB
             // 
-            this.txt_MaPB.Location = new System.Drawing.Point(158, 144);
+            this.txt_MaPB.Location = new System.Drawing.Point(22, 224);
             this.txt_MaPB.Name = "txt_MaPB";
             this.txt_MaPB.Size = new System.Drawing.Size(297, 26);
             this.txt_MaPB.TabIndex = 8;
             // 
             // txt_DD
             // 
-            this.txt_DD.Location = new System.Drawing.Point(158, 192);
+            this.txt_DD.Location = new System.Drawing.Point(22, 312);
             this.txt_DD.Name = "txt_DD";
             this.txt_DD.Size = new System.Drawing.Size(297, 26);
             this.txt_DD.TabIndex = 9;
             // 
             // rtxt_MoTa
             // 
-            this.rtxt_MoTa.Location = new System.Drawing.Point(158, 287);
+            this.rtxt_MoTa.Location = new System.Drawing.Point(22, 485);
             this.rtxt_MoTa.Name = "rtxt_MoTa";
-            this.rtxt_MoTa.Size = new System.Drawing.Size(297, 108);
+            this.rtxt_MoTa.Size = new System.Drawing.Size(297, 82);
             this.rtxt_MoTa.TabIndex = 10;
             this.rtxt_MoTa.Text = "";
             // 
             // btn_Sua
             // 
-            this.btn_Sua.Location = new System.Drawing.Point(372, 424);
+            this.btn_Sua.Location = new System.Drawing.Point(236, 589);
             this.btn_Sua.Name = "btn_Sua";
             this.btn_Sua.Size = new System.Drawing.Size(83, 30);
             this.btn_Sua.TabIndex = 24;
@@ -151,7 +169,7 @@
             // 
             // btn_Xoa
             // 
-            this.btn_Xoa.Location = new System.Drawing.Point(265, 424);
+            this.btn_Xoa.Location = new System.Drawing.Point(129, 589);
             this.btn_Xoa.Name = "btn_Xoa";
             this.btn_Xoa.Size = new System.Drawing.Size(83, 30);
             this.btn_Xoa.TabIndex = 23;
@@ -161,7 +179,7 @@
             // 
             // btn_Them
             // 
-            this.btn_Them.Location = new System.Drawing.Point(158, 424);
+            this.btn_Them.Location = new System.Drawing.Point(22, 589);
             this.btn_Them.Name = "btn_Them";
             this.btn_Them.Size = new System.Drawing.Size(83, 30);
             this.btn_Them.TabIndex = 22;
@@ -172,7 +190,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(26, 244);
+            this.label6.Location = new System.Drawing.Point(22, 359);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 20);
             this.label6.TabIndex = 25;
@@ -180,16 +198,88 @@
             // 
             // dtp_deadline
             // 
-            this.dtp_deadline.Location = new System.Drawing.Point(158, 237);
+            this.dtp_deadline.Location = new System.Drawing.Point(22, 397);
             this.dtp_deadline.Name = "dtp_deadline";
             this.dtp_deadline.Size = new System.Drawing.Size(297, 26);
             this.dtp_deadline.TabIndex = 26;
+            // 
+            // MaDA
+            // 
+            this.MaDA.DataPropertyName = "MaDA";
+            this.MaDA.HeaderText = "Mã dự án";
+            this.MaDA.MinimumWidth = 8;
+            this.MaDA.Name = "MaDA";
+            this.MaDA.ReadOnly = true;
+            this.MaDA.Width = 150;
+            // 
+            // TenDuAn
+            // 
+            this.TenDuAn.DataPropertyName = "TenDuAn";
+            this.TenDuAn.HeaderText = "Tên dự án";
+            this.TenDuAn.MinimumWidth = 8;
+            this.TenDuAn.Name = "TenDuAn";
+            this.TenDuAn.ReadOnly = true;
+            this.TenDuAn.Width = 150;
+            // 
+            // MoTa
+            // 
+            this.MoTa.DataPropertyName = "MoTa";
+            this.MoTa.HeaderText = "Mô tả";
+            this.MoTa.MinimumWidth = 8;
+            this.MoTa.Name = "MoTa";
+            this.MoTa.ReadOnly = true;
+            this.MoTa.Width = 150;
+            // 
+            // MaPB
+            // 
+            this.MaPB.DataPropertyName = "MaPB";
+            this.MaPB.HeaderText = "Mã phòng ban";
+            this.MaPB.MinimumWidth = 8;
+            this.MaPB.Name = "MaPB";
+            this.MaPB.ReadOnly = true;
+            this.MaPB.Width = 150;
+            // 
+            // DiaDiem
+            // 
+            this.DiaDiem.DataPropertyName = "DiaDiem";
+            this.DiaDiem.HeaderText = "Địa điểm";
+            this.DiaDiem.MinimumWidth = 8;
+            this.DiaDiem.Name = "DiaDiem";
+            this.DiaDiem.ReadOnly = true;
+            this.DiaDiem.Width = 150;
+            // 
+            // DeadLine
+            // 
+            this.DeadLine.DataPropertyName = "DeadLine";
+            this.DeadLine.HeaderText = "Thời hạn";
+            this.DeadLine.MinimumWidth = 8;
+            this.DeadLine.Name = "DeadLine";
+            this.DeadLine.ReadOnly = true;
+            this.DeadLine.Width = 150;
+            // 
+            // DanhGia
+            // 
+            this.DanhGia.DataPropertyName = "DanhGia";
+            this.DanhGia.HeaderText = "Đánh giá";
+            this.DanhGia.MinimumWidth = 8;
+            this.DanhGia.Name = "DanhGia";
+            this.DanhGia.ReadOnly = true;
+            this.DanhGia.Width = 150;
+            // 
+            // Thuong
+            // 
+            this.Thuong.DataPropertyName = "Thuong";
+            this.Thuong.HeaderText = "Thưởng";
+            this.Thuong.MinimumWidth = 8;
+            this.Thuong.Name = "Thuong";
+            this.Thuong.ReadOnly = true;
+            this.Thuong.Width = 150;
             // 
             // FDuAn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1049, 488);
+            this.ClientSize = new System.Drawing.Size(978, 644);
             this.Controls.Add(this.dtp_deadline);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btn_Sua);
@@ -233,5 +323,13 @@
         private System.Windows.Forms.Button btn_Them;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dtp_deadline;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaDA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenDuAn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MoTa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaPB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DiaDiem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DeadLine;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DanhGia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Thuong;
     }
 }
