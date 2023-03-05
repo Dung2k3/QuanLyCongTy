@@ -1,6 +1,6 @@
 ﻿namespace QuanLyCongTy
 {
-    partial class DuAn
+    partial class FDuAn
     {
         /// <summary>
         /// Required designer variable.

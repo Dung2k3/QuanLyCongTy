@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace QuanLyCongTy
 {
-    public partial class DanhGia : Form
+    public partial class FDanhGia : Form
     {
         DanhGiaDAO DGdao = new DanhGiaDAO();
-        public DanhGia()
+        public FDanhGia()
         {
             InitializeComponent();
         }

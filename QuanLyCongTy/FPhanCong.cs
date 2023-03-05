@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace QuanLyCongTy
 {
-    public partial class DuAn : Form
+    public partial class FPhanCong : Form
     {
-        public DuAn()
+        public FPhanCong()
         {
             InitializeComponent();
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

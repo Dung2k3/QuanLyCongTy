@@ -1,6 +1,6 @@
 ﻿namespace QuanLyCongTy
 {
-    partial class DanhGia
+    partial class FDanhGia
     {
         /// <summary>
         /// Required designer variable.
