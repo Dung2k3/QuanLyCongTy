@@ -15,7 +15,7 @@ namespace QuanLyCongTy
         public string Matkhau { get { return matkhau; } }
         public ClassDangNhap(string taikhoan, string matkhau)
         {
-      
+
             this.taikhoan = taikhoan;
             this.matkhau = matkhau;
         }
