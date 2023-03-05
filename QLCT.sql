@@ -173,8 +173,8 @@ GO
 
 CREATE TABLE dbo.Checkout(
 	MaNV varchar(10) REFERENCES NhanVien(MaNV),
-	TGCheckin datetime,
-	PRIMARY KEY(MaNV,TGCheckin)
+	TGCheckout datetime,
+	PRIMARY KEY(MaNV,TGCheckout)
 )
 GO
 INSERT INTO Checkout VALUES('NV001','2023-03-01T17:10:00')

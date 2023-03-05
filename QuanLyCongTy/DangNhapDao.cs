@@ -18,10 +18,25 @@ namespace QuanLyCongTy
             DataTable dt = dbConn.LayDanhSach(sqlStr);
             foreach (DataRow row in dt.Rows)
             {
-                if (row.ItemArray[1].ToString().Equals(dn.Taikhoan) && row.ItemArray[2].ToString().Equals(dn.Matkhau))
-                    return row.ItemArray[0].ToString();
+                if (row[1].ToString().Equals(dn.Taikhoan) && row[2].ToString().Equals(dn.Matkhau))
+                    return row[0].ToString();
             }
             return null;
+        }
+        public bool KTQuanLy(string MaNV)
+        {
+            string sqlStr = string.Format("SELECT MaPB FROM NhanVien Where MaNV = '{0}'", MaNV);
+            DataTable dt = dbConn.LayDanhSach(sqlStr);
+            return dt.Rows[0][0].ToString() == "PB_QL";
+        }
+        public bool KTTruongPhong(string MaNV)
+        {
+            string sqlStr = string.Format("SELECT MaTrPhong " +
+                            "FROM NhanVien INNER JOIN PhongBan " +
+                            "ON NhanVien.MaPB = PhongBan.MaPB " +
+                            "Where MaNV = '{0}'", MaNV);
+            DataTable dt = dbConn.LayDanhSach(sqlStr);
+            return dt.Rows[0][0].ToString() == MaNV;
         }
     }
 }

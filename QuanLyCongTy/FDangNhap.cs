@@ -17,11 +17,6 @@ namespace QuanLyCongTy
         {
             InitializeComponent();
         }
-
-        private void FDangNhap_Load(object sender, EventArgs e)
-        { 
-        }
-
         private void btnCloseForm_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -32,9 +27,22 @@ namespace QuanLyCongTy
             DangNhap dn = new DangNhap(txtTaiKhoan.Text,txtMatKhau.Text);
             string MaNV = dnDao.KTTaiKhoan(dn);
             if (MaNV != null)
-                MessageBox.Show(MaNV);
+            {
+                this.Hide();
+                txtTaiKhoan.Text = "";
+                txtMatKhau.Text = "";
+                Form newForm;
+                if (dnDao.KTQuanLy(MaNV))
+                    newForm = new FQuanLy(MaNV);
+                else if (dnDao.KTTruongPhong(MaNV))
+                    newForm = new FTruongPhong(MaNV);
+                else
+                    newForm = new FNhanVien(MaNV);
+                newForm.ShowDialog();
+                this.Show();
+            }
             else
-                MessageBox.Show("That bai");
+                MessageBox.Show("Tài khoản hoặc mật khẩu chưa đúng");
         }
     }
 }

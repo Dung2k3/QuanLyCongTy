@@ -40,9 +40,8 @@ namespace QuanLyCongTy
                 conn.Open();
 
                 SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                cmd.ExecuteNonQuery();
 
-                if (cmd.ExecuteNonQuery() > 0)
-                    MessageBox.Show("Thành Công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {

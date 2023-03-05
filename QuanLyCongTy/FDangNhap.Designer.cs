@@ -31,18 +31,18 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FDangNhap));
             this.txtTaiKhoan = new System.Windows.Forms.TextBox();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblTitle2 = new System.Windows.Forms.Label();
             this.lblTitle1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCloseForm = new System.Windows.Forms.Button();
             this.lblTaiKhoan = new System.Windows.Forms.Label();
             this.lblMatKhau = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnDangNhap = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtTaiKhoan
@@ -55,12 +55,6 @@
             resources.ApplyResources(this.txtMatKhau, "txtMatKhau");
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.UseSystemPasswordChar = true;
-            // 
-            // pictureBox1
-            // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
             // 
             // lblTitle
             // 
@@ -77,6 +71,12 @@
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Name = "label1";
+            // 
             // lblTitle2
             // 
             resources.ApplyResources(this.lblTitle2, "lblTitle2");
@@ -88,6 +88,13 @@
             resources.ApplyResources(this.lblTitle1, "lblTitle1");
             this.lblTitle1.ForeColor = System.Drawing.Color.White;
             this.lblTitle1.Name = "lblTitle1";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::QuanLyCongTy.Properties.Resources.DangNhap;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
             // 
             // btnCloseForm
             // 
@@ -107,12 +114,6 @@
             // 
             resources.ApplyResources(this.lblMatKhau, "lblMatKhau");
             this.lblMatKhau.Name = "lblMatKhau";
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Name = "label1";
             // 
             // btnDangNhap
             // 
@@ -138,10 +139,9 @@
             this.Controls.Add(this.txtTaiKhoan);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FDangNhap";
-            this.Load += new System.EventHandler(this.FDangNhap_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

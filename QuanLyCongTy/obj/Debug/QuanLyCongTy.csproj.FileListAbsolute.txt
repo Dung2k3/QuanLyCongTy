@@ -29,3 +29,7 @@ D:\hc\CTDH\WinForm\Project\QuanLyCongTy\QuanLyCongTy\obj\Debug\QuanLyCongTy.cspr
 D:\hc\CTDH\WinForm\Project\QuanLyCongTy\QuanLyCongTy\obj\Debug\QuanLyCongTy.exe
 D:\hc\CTDH\WinForm\Project\QuanLyCongTy\QuanLyCongTy\obj\Debug\QuanLyCongTy.pdb
 D:\hc\CTDH\WinForm\Project\QuanLyCongTy\QuanLyCongTy\obj\Debug\QuanLyCongTy.FDangNhap.resources
+D:\hc\CTDH\WinForm\Project\QuanLyCongTy\QuanLyCongTy\obj\Debug\QuanLyCongTy.FNhanVien.resources
+D:\hc\CTDH\WinForm\Project\QuanLyCongTy\QuanLyCongTy\obj\Debug\QuanLyCongTy.FCheckinout.resources
+D:\hc\CTDH\WinForm\Project\QuanLyCongTy\QuanLyCongTy\obj\Debug\QuanLyCongTy.FQuanLy.resources
+D:\hc\CTDH\WinForm\Project\QuanLyCongTy\QuanLyCongTy\obj\Debug\QuanLyCongTy.FTruongPhong.resources

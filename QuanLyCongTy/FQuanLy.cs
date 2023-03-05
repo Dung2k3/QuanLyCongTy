@@ -10,43 +10,44 @@ using System.Windows.Forms;
 
 namespace QuanLyCongTy
 {
-    public partial class Form1 : Form
+    public partial class FQuanLy : Form
     {
-        public Form1()
+        string maQL;
+        QuanLyDao qlDao = new QuanLyDao();
+        public FQuanLy(string maQL)
         {
             InitializeComponent();
+            this.maQL = maQL;
         }
         private Form currentFormChild;
         private void OpenChildForm(Form childForm)
         {
-            if(currentFormChild != null)
+            if (currentFormChild != null)
             {
                 currentFormChild.Close();
             }
             currentFormChild = childForm;
             childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            panel_ShowForm.Controls.Add(childForm);
-            panel_ShowForm.Tag = childForm;
+            pnlNoiDung.Controls.Add(childForm);
+            pnlNoiDung.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-
         }
-        private void btn_DanhGia_Click(object sender, EventArgs e)
+        private void btnCheckinout_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new DanhGia());
-            lbl_Title.Text = btn_DanhGia.Text;
+            OpenChildForm(new FCheckinout(maQL));
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+
+        private void btnCloseForm_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FDangNhap());
+            Close();
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void FQuanLy_Load(object sender, EventArgs e)
         {
-
+            lblName.Text = qlDao.GetTenQL(this.maQL);
         }
     }
 }
