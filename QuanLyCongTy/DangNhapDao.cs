@@ -12,7 +12,7 @@ namespace QuanLyCongTy
     internal class DangNhapDao
     {
         DBConnection dbConn = new DBConnection();
-        public string KTTaiKhoan(DangNhap dn)
+        public string KTTaiKhoan(ClassDangNhap dn)
         {
             string sqlStr = string.Format("SELECT * FROM TaiKhoan");
             DataTable dt = dbConn.LayDanhSach(sqlStr);

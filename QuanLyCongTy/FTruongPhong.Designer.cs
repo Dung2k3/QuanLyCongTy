@@ -111,6 +111,7 @@
             this.btnTaoPC.TabIndex = 3;
             this.btnTaoPC.Text = "Tạo Phân Công";
             this.btnTaoPC.UseVisualStyleBackColor = true;
+            this.btnTaoPC.Click += new System.EventHandler(this.btnTaoPC_Click);
             // 
             // btnCheckinout
             // 

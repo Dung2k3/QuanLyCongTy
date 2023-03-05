@@ -49,5 +49,10 @@ namespace QuanLyCongTy
         {
             lblName.Text = tpDao.GetTenTP(this.maTP);
         }
+
+        private void btnTaoPC_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

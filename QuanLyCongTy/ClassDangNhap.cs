@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace QuanLyCongTy
 {
-    internal class DangNhap
+    internal class ClassDangNhap
     {
         string taikhoan;
         string matkhau;
         public string Taikhoan { get { return taikhoan; } }
         public string Matkhau { get { return matkhau; } }
-        public DangNhap(string taikhoan, string matkhau)
+        public ClassDangNhap(string taikhoan, string matkhau)
         {
       
             this.taikhoan = taikhoan;
