@@ -18,7 +18,7 @@ namespace QuanLyCongTy
         }
         public void Them(ClassDanhGiaDA dgda)
         {
-            string sqlStr1 = string.Format("INSERT INTO DuAn (MaDA, TenDuAn, NhanXet, Thuong) VALUES ('{0}','{1}','{2}','{3}')", 
+            string sqlStr1 = string.Format("UPDATE  DuAn SET  (MaDA, TenDuAn, DanhGia, Thuong) VALUES ('{0}','{1}','{2}','{3}')", 
                                             dgda.MaDA, dgda.TenDA, dgda.NhanXet, dgda.Thuong);
             dbConn.ThucThi(sqlStr1);
         }
@@ -30,7 +30,7 @@ namespace QuanLyCongTy
 
         public void Sua(ClassDanhGiaDA dgda)
         {
-            string sqlStr = string.Format("UPDATE DuAn SET MaDA = '{0}', TenDuAn = '{1}', NhanXet = '{2}', Thuong = '{3}' WHERE MaDA = '{4}'", dgda.MaDA, dgda.TenDA, dgda.NhanXet, dgda.Thuong, dgda.MaDA);
+            string sqlStr = string.Format("UPDATE DuAn SET  DanhGia = '{0}', Thuong = '{1}' WHERE MaDA = '{2}'", dgda.NhanXet, dgda.Thuong, dgda.MaDA);
             dbConn.ThucThi(sqlStr);
         }
     }
