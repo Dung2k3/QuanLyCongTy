@@ -56,12 +56,12 @@ namespace QuanLyCongTy
 
         private void btnCheckout_Click(object sender, EventArgs e)
         {
-            DateTime curent = DateTime.Now;
-            if (coDao.KTDiemDanh(curent))
+            DateTime current = DateTime.Now;
+            if (coDao.KTDiemDanh(current))
             {
-                coDao.Them(curent);
+                coDao.Them(current);
                 CapNhatGVCheckout();
-                if (coDao.KTSom(curent.TimeOfDay))
+                if (coDao.KTSom(current.TimeOfDay))
                 {
                     MessageBox.Show("Bạn về trước giờ nghỉ");
                 }

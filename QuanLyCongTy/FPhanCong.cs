@@ -12,10 +12,12 @@ namespace QuanLyCongTy
 {
     public partial class FPhanCong : Form
     {
+        string MaPB;
         PhanCongDAO PCdao = new PhanCongDAO();
-        public FPhanCong()
+        public FPhanCong(string maPB)
         {
             InitializeComponent();
+            MaPB = maPB;
         }
 
         private void PhanCong_Load(object sender, EventArgs e)
