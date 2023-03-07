@@ -19,6 +19,17 @@ namespace QuanLyCongTy
             InitializeComponent();
             this.maNV = maNV;
         }
+        private void btnClickChangeColor(Button btn, string color)
+        {
+            btnCheckinout.BackColor = ColorTranslator.FromHtml("#33334C");
+            btnPhanCong.BackColor = ColorTranslator.FromHtml("#33334C");
+            btnThuong.BackColor = ColorTranslator.FromHtml("#33334C");
+            btnXinNghi.BackColor = ColorTranslator.FromHtml("#33334C");
+            btn.BackColor = ColorTranslator.FromHtml(color);
+            pnlTitle.BackColor = ColorTranslator.FromHtml(color);
+            lblTitle.Text = btn.Text;
+        }
+
         private Form currentFormChild;
         private void OpenChildForm(Form childForm)
         {
@@ -51,6 +62,22 @@ namespace QuanLyCongTy
         private void btnCheckinout_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FCheckinout(maNV));
+            btnClickChangeColor(btnCheckinout, "#8BC240");
+        }
+
+        private void btnPhanCong_Click(object sender, EventArgs e)
+        {
+            btnClickChangeColor(btnPhanCong, "#126881");
+        }
+
+        private void btnThuong_Click(object sender, EventArgs e)
+        {
+            btnClickChangeColor(btnThuong, "#A12059");
+        }
+
+        private void btnXinNghi_Click(object sender, EventArgs e)
+        {
+            btnClickChangeColor(btnXinNghi, "#364D5B");
         }
     }
 }

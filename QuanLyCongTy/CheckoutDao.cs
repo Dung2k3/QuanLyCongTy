@@ -48,7 +48,7 @@ namespace QuanLyCongTy
         public void Them(DateTime current)
         {
             string sqlStr = string.Format("INSERT INTO Checkout VALUES('{0}' , '{1}T{2}')",
-                ma, current.ToString("yyyy-MM-dd"), current.ToString("hh:mm:ss"));
+                ma, current.ToString("yyyy-MM-dd"), current.ToString("HH:mm:ss"));
             dbConn.ThucThi(sqlStr);
         }
     }

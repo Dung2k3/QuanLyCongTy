@@ -16,7 +16,10 @@ namespace QuanLyCongTy
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FQuanLy("NV001"));
+            //Application.Run(new FTruongPhong("NV004"));
+            Application.Run(new FDangNhap());
+            //Application.Run(new FQuanLy("NV001"));
+
         }
     }
 }
