@@ -45,8 +45,6 @@
             this.DeadLine = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Thuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_Sua = new System.Windows.Forms.Button();
-            this.btn_Xoa = new System.Windows.Forms.Button();
-            this.btn_Them = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gv_DanhGiaDA)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +52,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(80, 38);
+            this.label1.Location = new System.Drawing.Point(49, 94);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 20);
             this.label1.TabIndex = 0;
@@ -64,7 +62,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(80, 182);
+            this.label2.Location = new System.Drawing.Point(49, 184);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 20);
             this.label2.TabIndex = 1;
@@ -74,7 +72,7 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(71, 327);
+            this.label3.Location = new System.Drawing.Point(57, 281);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 20);
             this.label3.TabIndex = 2;
@@ -83,7 +81,7 @@
             // txt_MaDA
             // 
             this.txt_MaDA.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_MaDA.Location = new System.Drawing.Point(84, 98);
+            this.txt_MaDA.Location = new System.Drawing.Point(53, 132);
             this.txt_MaDA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_MaDA.Name = "txt_MaDA";
             this.txt_MaDA.Size = new System.Drawing.Size(149, 26);
@@ -92,16 +90,16 @@
             // txt_Thuong
             // 
             this.txt_Thuong.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_Thuong.Location = new System.Drawing.Point(72, 716);
+            this.txt_Thuong.Location = new System.Drawing.Point(53, 547);
             this.txt_Thuong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_Thuong.Name = "txt_Thuong";
-            this.txt_Thuong.Size = new System.Drawing.Size(124, 26);
+            this.txt_Thuong.Size = new System.Drawing.Size(190, 26);
             this.txt_Thuong.TabIndex = 4;
             // 
             // txt_TenDA
             // 
             this.txt_TenDA.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_TenDA.Location = new System.Drawing.Point(84, 243);
+            this.txt_TenDA.Location = new System.Drawing.Point(53, 229);
             this.txt_TenDA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_TenDA.Name = "txt_TenDA";
             this.txt_TenDA.Size = new System.Drawing.Size(149, 26);
@@ -110,7 +108,7 @@
             // rtxt_NhanXet
             // 
             this.rtxt_NhanXet.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.rtxt_NhanXet.Location = new System.Drawing.Point(72, 387);
+            this.rtxt_NhanXet.Location = new System.Drawing.Point(53, 343);
             this.rtxt_NhanXet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rtxt_NhanXet.Name = "rtxt_NhanXet";
             this.rtxt_NhanXet.Size = new System.Drawing.Size(260, 125);
@@ -121,7 +119,7 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(68, 653);
+            this.label4.Location = new System.Drawing.Point(57, 506);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 20);
             this.label4.TabIndex = 7;
@@ -141,13 +139,13 @@
             this.DiaDiem,
             this.DeadLine,
             this.Thuong});
-            this.gv_DanhGiaDA.Location = new System.Drawing.Point(618, 29);
+            this.gv_DanhGiaDA.Location = new System.Drawing.Point(336, 94);
             this.gv_DanhGiaDA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gv_DanhGiaDA.Name = "gv_DanhGiaDA";
             this.gv_DanhGiaDA.RowHeadersVisible = false;
             this.gv_DanhGiaDA.RowHeadersWidth = 62;
             this.gv_DanhGiaDA.RowTemplate.Height = 28;
-            this.gv_DanhGiaDA.Size = new System.Drawing.Size(732, 722);
+            this.gv_DanhGiaDA.Size = new System.Drawing.Size(710, 640);
             this.gv_DanhGiaDA.TabIndex = 8;
             this.gv_DanhGiaDA.MouseClick += new System.Windows.Forms.MouseEventHandler(this.gv_DanhGiaDA_MouseClick);
             // 
@@ -217,38 +215,14 @@
             // btn_Sua
             // 
             this.btn_Sua.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Sua.Location = new System.Drawing.Point(393, 930);
+            this.btn_Sua.Location = new System.Drawing.Point(53, 620);
             this.btn_Sua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Sua.Name = "btn_Sua";
-            this.btn_Sua.Size = new System.Drawing.Size(83, 31);
+            this.btn_Sua.Size = new System.Drawing.Size(190, 31);
             this.btn_Sua.TabIndex = 13;
-            this.btn_Sua.Text = "Sửa";
+            this.btn_Sua.Text = "Thêm đánh giá";
             this.btn_Sua.UseVisualStyleBackColor = true;
             this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
-            // 
-            // btn_Xoa
-            // 
-            this.btn_Xoa.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Xoa.Location = new System.Drawing.Point(231, 930);
-            this.btn_Xoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_Xoa.Name = "btn_Xoa";
-            this.btn_Xoa.Size = new System.Drawing.Size(83, 34);
-            this.btn_Xoa.TabIndex = 12;
-            this.btn_Xoa.Text = "Xóa";
-            this.btn_Xoa.UseVisualStyleBackColor = true;
-            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
-            // 
-            // btn_Them
-            // 
-            this.btn_Them.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Them.Location = new System.Drawing.Point(71, 930);
-            this.btn_Them.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_Them.Name = "btn_Them";
-            this.btn_Them.Size = new System.Drawing.Size(83, 34);
-            this.btn_Them.TabIndex = 11;
-            this.btn_Them.Text = "Thêm";
-            this.btn_Them.UseVisualStyleBackColor = true;
-            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
             // FDanhGiaDA
             // 
@@ -257,8 +231,6 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1125, 875);
             this.Controls.Add(this.btn_Sua);
-            this.Controls.Add(this.btn_Xoa);
-            this.Controls.Add(this.btn_Them);
             this.Controls.Add(this.gv_DanhGiaDA);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.rtxt_NhanXet);
@@ -291,8 +263,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView gv_DanhGiaDA;
         private System.Windows.Forms.Button btn_Sua;
-        private System.Windows.Forms.Button btn_Xoa;
-        private System.Windows.Forms.Button btn_Them;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaDA;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenDuAn;
         private System.Windows.Forms.DataGridViewTextBoxColumn MoTa;

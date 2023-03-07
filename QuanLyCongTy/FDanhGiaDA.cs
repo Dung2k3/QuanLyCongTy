@@ -26,19 +26,6 @@ namespace QuanLyCongTy
         {
             this.gv_DanhGiaDA.DataSource = DGDAdao.LayDanhSachDanhGiaDA();
         }
-        private void btn_Them_Click(object sender, EventArgs e)
-        {
-            ClassDanhGiaDA dgda = new ClassDanhGiaDA(txt_MaDA.Text, txt_TenDA.Text, rtxt_NhanXet.Text, long.Parse(txt_Thuong.Text));
-            DGDAdao.Them(dgda);
-            HienThiDanhSach();
-        }
-
-        private void btn_Xoa_Click(object sender, EventArgs e)
-        {
-            ClassDanhGiaDA dgda = new ClassDanhGiaDA(txt_MaDA.Text, txt_TenDA.Text, rtxt_NhanXet.Text, long.Parse(txt_Thuong.Text));
-            DGDAdao.Xoa(dgda);
-            HienThiDanhSach();
-        }
 
         private void btn_Sua_Click(object sender, EventArgs e)
         {

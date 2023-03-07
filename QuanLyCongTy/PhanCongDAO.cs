@@ -43,7 +43,7 @@ namespace QuanLyCongTy
 
         public void Them(ClassPhanCong pc)
         {
-            string sqlStr1 = string.Format("INSERT INTO PhanCong (MaNV, MaDA, CongViec, DeadLine) VALUES ('{0}', '{1}', '{2}', '{3}'",
+            string sqlStr1 = string.Format("INSERT INTO PhanCong (MaNV, MaDA, CongViec, DeadLine) VALUES ('{0}', '{1}', N'{2}', '{3}')",
                                             pc.MaNV, pc.MaDA, pc.CongViec, pc.Deadline);
             dbConn.ThucThi(sqlStr1);
         }

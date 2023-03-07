@@ -64,11 +64,13 @@ namespace QuanLyCongTy
 
         private void btnTaoPC_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new FPhanCong());
             btnClickChangeColor(btnTaoPC, "#126881");
         }
 
         private void btnDanhGiaPC_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new FDanhGia());
             btnClickChangeColor(btnDanhGiaPC, "#A12059");
         }
 
