@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace QuanLyCongTy
 {
@@ -13,12 +14,13 @@ namespace QuanLyCongTy
 
         public DataTable LayDanhSachDuAn()
         {
-            string sqlStr = string.Format("SELECT * FROM DuAn");
+            string sqlStr = string.Format("SELECT MaDA, TenDuAn, MoTa, MaPB, DiaDiem, DeadLine FROM DuAn");
             return dbConn.LayDanhSach(sqlStr);
         }
         public void Them(ClassDuAn da)
-        { 
-            string sqlStr1 = string.Format("INSERT INTO DuAn (MaDA, TenDuAn, MaPB, DiaDiem, DeadLine, MoTa) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}')", 
+        {
+            MessageBox.Show(string.Format("{0}", da.ThoiHan.ToShortDateString()));
+            string sqlStr1 = string.Format("INSERT INTO DuAn (MaDA, TenDuAn, MaPB, DiaDiem, DeadLine, MoTa) VALUES ('{0}',N'{1}','{2}',N'{3}','{4}',N'{5}')", 
                                             da.MaDA, da.TenDA, da.MaPhongBan, da.DiaDiem,da.ThoiHan, da.MoTa);
             dbConn.ThucThi(sqlStr1);
         }

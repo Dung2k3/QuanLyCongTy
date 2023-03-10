@@ -34,14 +34,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gvCheckoutList = new System.Windows.Forms.DataGridView();
-            this.btnCheckout = new System.Windows.Forms.Button();
-            this.gvCheckinList = new System.Windows.Forms.DataGridView();
-            this.btnCheckin = new System.Windows.Forms.Button();
-            this.pnlTable = new System.Windows.Forms.Panel();
             this.TGCheckout = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nhanxet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnCheckout = new System.Windows.Forms.Button();
+            this.gvCheckinList = new System.Windows.Forms.DataGridView();
             this.TGCheckin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nhanxet2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnCheckin = new System.Windows.Forms.Button();
+            this.pnlTable = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.gvCheckoutList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvCheckinList)).BeginInit();
             this.pnlTable.SuspendLayout();
@@ -80,6 +80,22 @@
             this.gvCheckoutList.RowTemplate.Height = 24;
             this.gvCheckoutList.Size = new System.Drawing.Size(345, 690);
             this.gvCheckoutList.TabIndex = 2;
+            // 
+            // TGCheckout
+            // 
+            this.TGCheckout.DataPropertyName = "TGCheckout";
+            this.TGCheckout.HeaderText = "Thời điểm Checkout";
+            this.TGCheckout.MinimumWidth = 6;
+            this.TGCheckout.Name = "TGCheckout";
+            this.TGCheckout.Width = 155;
+            // 
+            // Nhanxet
+            // 
+            this.Nhanxet.DataPropertyName = "Nhanxet";
+            this.Nhanxet.HeaderText = "Nhận xét";
+            this.Nhanxet.MinimumWidth = 6;
+            this.Nhanxet.Name = "Nhanxet";
+            this.Nhanxet.Width = 90;
             // 
             // btnCheckout
             // 
@@ -137,6 +153,22 @@
             this.gvCheckinList.Size = new System.Drawing.Size(340, 690);
             this.gvCheckinList.TabIndex = 0;
             // 
+            // TGCheckin
+            // 
+            this.TGCheckin.DataPropertyName = "TGCheckin";
+            this.TGCheckin.HeaderText = "Thời điểm Checkin";
+            this.TGCheckin.MinimumWidth = 6;
+            this.TGCheckin.Name = "TGCheckin";
+            this.TGCheckin.Width = 155;
+            // 
+            // Nhanxet2
+            // 
+            this.Nhanxet2.DataPropertyName = "Nhanxet";
+            this.Nhanxet2.HeaderText = "Nhận xét";
+            this.Nhanxet2.MinimumWidth = 6;
+            this.Nhanxet2.Name = "Nhanxet2";
+            this.Nhanxet2.Width = 90;
+            // 
             // btnCheckin
             // 
             this.btnCheckin.BackColor = System.Drawing.Color.Teal;
@@ -162,38 +194,6 @@
             this.pnlTable.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.pnlTable.Size = new System.Drawing.Size(700, 700);
             this.pnlTable.TabIndex = 3;
-            // 
-            // TGCheckout
-            // 
-            this.TGCheckout.DataPropertyName = "TGCheckout";
-            this.TGCheckout.HeaderText = "Thời điểm Checkout";
-            this.TGCheckout.MinimumWidth = 6;
-            this.TGCheckout.Name = "TGCheckout";
-            this.TGCheckout.Width = 155;
-            // 
-            // Nhanxet
-            // 
-            this.Nhanxet.DataPropertyName = "Nhanxet";
-            this.Nhanxet.HeaderText = "Nhận xét";
-            this.Nhanxet.MinimumWidth = 6;
-            this.Nhanxet.Name = "Nhanxet";
-            this.Nhanxet.Width = 90;
-            // 
-            // TGCheckin
-            // 
-            this.TGCheckin.DataPropertyName = "TGCheckin";
-            this.TGCheckin.HeaderText = "Thời điểm Checkin";
-            this.TGCheckin.MinimumWidth = 6;
-            this.TGCheckin.Name = "TGCheckin";
-            this.TGCheckin.Width = 155;
-            // 
-            // Nhanxet2
-            // 
-            this.Nhanxet2.DataPropertyName = "Nhanxet";
-            this.Nhanxet2.HeaderText = "Nhận xét";
-            this.Nhanxet2.MinimumWidth = 6;
-            this.Nhanxet2.Name = "Nhanxet2";
-            this.Nhanxet2.Width = 90;
             // 
             // FCheckinout
             // 

@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.gv_DuAn = new System.Windows.Forms.DataGridView();
+            this.MaDA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenDuAn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MoTa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaPB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiaDiem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DeadLine = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,14 +50,6 @@
             this.btn_Them = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.dtp_deadline = new System.Windows.Forms.DateTimePicker();
-            this.MaDA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenDuAn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MoTa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaPB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiaDiem = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DeadLine = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DanhGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Thuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gv_DuAn)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,9 +64,7 @@
             this.MoTa,
             this.MaPB,
             this.DiaDiem,
-            this.DeadLine,
-            this.DanhGia,
-            this.Thuong});
+            this.DeadLine});
             this.gv_DuAn.Location = new System.Drawing.Point(311, 44);
             this.gv_DuAn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gv_DuAn.Name = "gv_DuAn";
@@ -77,8 +73,61 @@
             this.gv_DuAn.RowTemplate.Height = 40;
             this.gv_DuAn.Size = new System.Drawing.Size(677, 558);
             this.gv_DuAn.TabIndex = 0;
-            this.gv_DuAn.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gv_DuAn_CellContentClick);
             this.gv_DuAn.DoubleClick += new System.EventHandler(this.gv_DuAn_DoubleClick);
+            // 
+            // MaDA
+            // 
+            this.MaDA.DataPropertyName = "MaDA";
+            this.MaDA.HeaderText = "Mã dự án";
+            this.MaDA.MinimumWidth = 8;
+            this.MaDA.Name = "MaDA";
+            this.MaDA.ReadOnly = true;
+            this.MaDA.Width = 50;
+            // 
+            // TenDuAn
+            // 
+            this.TenDuAn.DataPropertyName = "TenDuAn";
+            this.TenDuAn.HeaderText = "Tên dự án";
+            this.TenDuAn.MinimumWidth = 8;
+            this.TenDuAn.Name = "TenDuAn";
+            this.TenDuAn.ReadOnly = true;
+            this.TenDuAn.Width = 150;
+            // 
+            // MoTa
+            // 
+            this.MoTa.DataPropertyName = "MoTa";
+            this.MoTa.HeaderText = "Mô tả";
+            this.MoTa.MinimumWidth = 8;
+            this.MoTa.Name = "MoTa";
+            this.MoTa.ReadOnly = true;
+            this.MoTa.Width = 150;
+            // 
+            // MaPB
+            // 
+            this.MaPB.DataPropertyName = "MaPB";
+            this.MaPB.HeaderText = "Mã phòng ban";
+            this.MaPB.MinimumWidth = 8;
+            this.MaPB.Name = "MaPB";
+            this.MaPB.ReadOnly = true;
+            this.MaPB.Width = 50;
+            // 
+            // DiaDiem
+            // 
+            this.DiaDiem.DataPropertyName = "DiaDiem";
+            this.DiaDiem.HeaderText = "Địa điểm";
+            this.DiaDiem.MinimumWidth = 8;
+            this.DiaDiem.Name = "DiaDiem";
+            this.DiaDiem.ReadOnly = true;
+            this.DiaDiem.Width = 80;
+            // 
+            // DeadLine
+            // 
+            this.DeadLine.DataPropertyName = "DeadLine";
+            this.DeadLine.HeaderText = "Thời hạn";
+            this.DeadLine.MinimumWidth = 8;
+            this.DeadLine.Name = "DeadLine";
+            this.DeadLine.ReadOnly = true;
+            this.DeadLine.Width = 60;
             // 
             // label1
             // 
@@ -216,77 +265,6 @@
             this.dtp_deadline.Size = new System.Drawing.Size(264, 22);
             this.dtp_deadline.TabIndex = 26;
             // 
-            // MaDA
-            // 
-            this.MaDA.DataPropertyName = "MaDA";
-            this.MaDA.HeaderText = "Mã dự án";
-            this.MaDA.MinimumWidth = 8;
-            this.MaDA.Name = "MaDA";
-            this.MaDA.ReadOnly = true;
-            this.MaDA.Width = 50;
-            // 
-            // TenDuAn
-            // 
-            this.TenDuAn.DataPropertyName = "TenDuAn";
-            this.TenDuAn.HeaderText = "Tên dự án";
-            this.TenDuAn.MinimumWidth = 8;
-            this.TenDuAn.Name = "TenDuAn";
-            this.TenDuAn.ReadOnly = true;
-            this.TenDuAn.Width = 150;
-            // 
-            // MoTa
-            // 
-            this.MoTa.DataPropertyName = "MoTa";
-            this.MoTa.HeaderText = "Mô tả";
-            this.MoTa.MinimumWidth = 8;
-            this.MoTa.Name = "MoTa";
-            this.MoTa.ReadOnly = true;
-            this.MoTa.Width = 150;
-            // 
-            // MaPB
-            // 
-            this.MaPB.DataPropertyName = "MaPB";
-            this.MaPB.HeaderText = "Mã phòng ban";
-            this.MaPB.MinimumWidth = 8;
-            this.MaPB.Name = "MaPB";
-            this.MaPB.ReadOnly = true;
-            this.MaPB.Width = 50;
-            // 
-            // DiaDiem
-            // 
-            this.DiaDiem.DataPropertyName = "DiaDiem";
-            this.DiaDiem.HeaderText = "Địa điểm";
-            this.DiaDiem.MinimumWidth = 8;
-            this.DiaDiem.Name = "DiaDiem";
-            this.DiaDiem.ReadOnly = true;
-            this.DiaDiem.Width = 80;
-            // 
-            // DeadLine
-            // 
-            this.DeadLine.DataPropertyName = "DeadLine";
-            this.DeadLine.HeaderText = "Thời hạn";
-            this.DeadLine.MinimumWidth = 8;
-            this.DeadLine.Name = "DeadLine";
-            this.DeadLine.ReadOnly = true;
-            this.DeadLine.Width = 60;
-            // 
-            // DanhGia
-            // 
-            this.DanhGia.DataPropertyName = "DanhGia";
-            this.DanhGia.HeaderText = "Đánh giá";
-            this.DanhGia.MinimumWidth = 8;
-            this.DanhGia.Name = "DanhGia";
-            this.DanhGia.ReadOnly = true;
-            // 
-            // Thuong
-            // 
-            this.Thuong.DataPropertyName = "Thuong";
-            this.Thuong.HeaderText = "Thưởng";
-            this.Thuong.MinimumWidth = 8;
-            this.Thuong.Name = "Thuong";
-            this.Thuong.ReadOnly = true;
-            this.Thuong.Width = 80;
-            // 
             // FDuAn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -312,7 +290,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FDuAn";
-            this.Text = "DuAn";
             this.Load += new System.EventHandler(this.DuAn_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gv_DuAn)).EndInit();
             this.ResumeLayout(false);
@@ -344,7 +321,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MaPB;
         private System.Windows.Forms.DataGridViewTextBoxColumn DiaDiem;
         private System.Windows.Forms.DataGridViewTextBoxColumn DeadLine;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DanhGia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Thuong;
     }
 }

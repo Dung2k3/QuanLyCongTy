@@ -55,5 +55,15 @@ namespace QuanLyCongTy
             rtxt_NhanXet.Text = gv_DanhGiaDA.Rows[i].Cells[6].Value.ToString();
             txt_Thuong.Text = gv_DanhGiaDA.Rows[i].Cells[7].Value.ToString();
         }
+
+        private void txt_Thuong_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gv_DanhGiaDA_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

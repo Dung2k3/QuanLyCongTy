@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -94,6 +95,12 @@
     <Compile Include="FDangNhap.Designer.cs">
       <DependentUpon>FDangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="FQuanLy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +125,18 @@
     </Compile>
     <Compile Include="QuanLyDao.cs" />
     <Compile Include="TruongPhongDao.cs" />
+    <Compile Include="UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC.Designer.cs">
+      <DependentUpon>UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucMenuBtn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucMenuBtn.Designer.cs">
+      <DependentUpon>ucMenuBtn.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FCheckinout.resx">
       <DependentUpon>FCheckinout.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,6 +157,9 @@
     <EmbeddedResource Include="FNhanVien.resx">
       <DependentUpon>FNhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FQuanLy.resx">
       <DependentUpon>FQuanLy.cs</DependentUpon>
     </EmbeddedResource>
@@ -156,6 +178,12 @@
     </Compile>
     <EmbeddedResource Include="FPhanCong.resx">
       <DependentUpon>FPhanCong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC.resx">
+      <DependentUpon>UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucMenuBtn.resx">
+      <DependentUpon>ucMenuBtn.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

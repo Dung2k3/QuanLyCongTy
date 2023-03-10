@@ -30,20 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FNhanVien));
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.panelName = new System.Windows.Forms.Panel();
+            this.lblName = new System.Windows.Forms.Label();
+            this.pnlTitle = new System.Windows.Forms.Panel();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.btnCloseForm = new System.Windows.Forms.Button();
+            this.pnlNoiDung = new System.Windows.Forms.Panel();
             this.btnXinNghi = new System.Windows.Forms.Button();
             this.btnThuong = new System.Windows.Forms.Button();
             this.btnPhanCong = new System.Windows.Forms.Button();
             this.btnCheckinout = new System.Windows.Forms.Button();
-            this.panelName = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblName = new System.Windows.Forms.Label();
-            this.pnlTitle = new System.Windows.Forms.Panel();
-            this.btnCloseForm = new System.Windows.Forms.Button();
-            this.pnlNoiDung = new System.Windows.Forms.Panel();
             this.pnlMenu.SuspendLayout();
             this.panelName.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlTitle.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -61,75 +62,6 @@
             this.pnlMenu.Size = new System.Drawing.Size(250, 800);
             this.pnlMenu.TabIndex = 7;
             // 
-            // btnXinNghi
-            // 
-            this.btnXinNghi.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnXinNghi.FlatAppearance.BorderSize = 0;
-            this.btnXinNghi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXinNghi.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXinNghi.ForeColor = System.Drawing.Color.White;
-            this.btnXinNghi.Image = ((System.Drawing.Image)(resources.GetObject("btnXinNghi.Image")));
-            this.btnXinNghi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXinNghi.Location = new System.Drawing.Point(0, 310);
-            this.btnXinNghi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnXinNghi.Name = "btnXinNghi";
-            this.btnXinNghi.Size = new System.Drawing.Size(250, 70);
-            this.btnXinNghi.TabIndex = 5;
-            this.btnXinNghi.Text = "Xin Nghỉ";
-            this.btnXinNghi.UseVisualStyleBackColor = true;
-            // 
-            // btnThuong
-            // 
-            this.btnThuong.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnThuong.FlatAppearance.BorderSize = 0;
-            this.btnThuong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThuong.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThuong.ForeColor = System.Drawing.Color.White;
-            this.btnThuong.Image = global::QuanLyCongTy.Properties.Resources.document_32;
-            this.btnThuong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThuong.Location = new System.Drawing.Point(0, 240);
-            this.btnThuong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnThuong.Name = "btnThuong";
-            this.btnThuong.Size = new System.Drawing.Size(250, 70);
-            this.btnThuong.TabIndex = 4;
-            this.btnThuong.Text = "    Lương Thưởng";
-            this.btnThuong.UseVisualStyleBackColor = true;
-            // 
-            // btnPhanCong
-            // 
-            this.btnPhanCong.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPhanCong.FlatAppearance.BorderSize = 0;
-            this.btnPhanCong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPhanCong.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPhanCong.ForeColor = System.Drawing.Color.White;
-            this.btnPhanCong.Image = ((System.Drawing.Image)(resources.GetObject("btnPhanCong.Image")));
-            this.btnPhanCong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPhanCong.Location = new System.Drawing.Point(0, 170);
-            this.btnPhanCong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnPhanCong.Name = "btnPhanCong";
-            this.btnPhanCong.Size = new System.Drawing.Size(250, 70);
-            this.btnPhanCong.TabIndex = 3;
-            this.btnPhanCong.Text = "Phân Công";
-            this.btnPhanCong.UseVisualStyleBackColor = true;
-            // 
-            // btnCheckinout
-            // 
-            this.btnCheckinout.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCheckinout.FlatAppearance.BorderSize = 0;
-            this.btnCheckinout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCheckinout.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCheckinout.ForeColor = System.Drawing.Color.White;
-            this.btnCheckinout.Image = global::QuanLyCongTy.Properties.Resources.arrow_19_32_2_;
-            this.btnCheckinout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCheckinout.Location = new System.Drawing.Point(0, 100);
-            this.btnCheckinout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCheckinout.Name = "btnCheckinout";
-            this.btnCheckinout.Size = new System.Drawing.Size(250, 70);
-            this.btnCheckinout.TabIndex = 1;
-            this.btnCheckinout.Text = "Check in/out";
-            this.btnCheckinout.UseVisualStyleBackColor = true;
-            this.btnCheckinout.Click += new System.EventHandler(this.btnCheckinout_Click);
-            // 
             // panelName
             // 
             this.panelName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
@@ -141,17 +73,6 @@
             this.panelName.Name = "panelName";
             this.panelName.Size = new System.Drawing.Size(250, 100);
             this.panelName.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::QuanLyCongTy.Properties.Resources.NhanVienName;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 11);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(69, 64);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // lblName
             // 
@@ -166,6 +87,7 @@
             // 
             // pnlTitle
             // 
+            this.pnlTitle.Controls.Add(this.lblTitle);
             this.pnlTitle.Controls.Add(this.btnCloseForm);
             this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitle.Location = new System.Drawing.Point(250, 0);
@@ -173,6 +95,17 @@
             this.pnlTitle.Name = "pnlTitle";
             this.pnlTitle.Size = new System.Drawing.Size(1000, 100);
             this.pnlTitle.TabIndex = 8;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(488, 32);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(24, 37);
+            this.lblTitle.TabIndex = 8;
+            this.lblTitle.Text = " ";
             // 
             // btnCloseForm
             // 
@@ -199,6 +132,89 @@
             this.pnlNoiDung.Size = new System.Drawing.Size(1000, 700);
             this.pnlNoiDung.TabIndex = 9;
             // 
+            // btnXinNghi
+            // 
+            this.btnXinNghi.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnXinNghi.FlatAppearance.BorderSize = 0;
+            this.btnXinNghi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXinNghi.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXinNghi.ForeColor = System.Drawing.Color.White;
+            this.btnXinNghi.Image = ((System.Drawing.Image)(resources.GetObject("btnXinNghi.Image")));
+            this.btnXinNghi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXinNghi.Location = new System.Drawing.Point(0, 310);
+            this.btnXinNghi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnXinNghi.Name = "btnXinNghi";
+            this.btnXinNghi.Size = new System.Drawing.Size(250, 70);
+            this.btnXinNghi.TabIndex = 5;
+            this.btnXinNghi.Text = "Xin Nghỉ";
+            this.btnXinNghi.UseVisualStyleBackColor = true;
+            this.btnXinNghi.Click += new System.EventHandler(this.btnXinNghi_Click);
+            // 
+            // btnThuong
+            // 
+            this.btnThuong.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnThuong.FlatAppearance.BorderSize = 0;
+            this.btnThuong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThuong.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThuong.ForeColor = System.Drawing.Color.White;
+            this.btnThuong.Image = global::QuanLyCongTy.Properties.Resources.document_32;
+            this.btnThuong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThuong.Location = new System.Drawing.Point(0, 240);
+            this.btnThuong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnThuong.Name = "btnThuong";
+            this.btnThuong.Size = new System.Drawing.Size(250, 70);
+            this.btnThuong.TabIndex = 4;
+            this.btnThuong.Text = "    Lương Thưởng";
+            this.btnThuong.UseVisualStyleBackColor = true;
+            this.btnThuong.Click += new System.EventHandler(this.btnThuong_Click);
+            // 
+            // btnPhanCong
+            // 
+            this.btnPhanCong.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPhanCong.FlatAppearance.BorderSize = 0;
+            this.btnPhanCong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPhanCong.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPhanCong.ForeColor = System.Drawing.Color.White;
+            this.btnPhanCong.Image = ((System.Drawing.Image)(resources.GetObject("btnPhanCong.Image")));
+            this.btnPhanCong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPhanCong.Location = new System.Drawing.Point(0, 170);
+            this.btnPhanCong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPhanCong.Name = "btnPhanCong";
+            this.btnPhanCong.Size = new System.Drawing.Size(250, 70);
+            this.btnPhanCong.TabIndex = 3;
+            this.btnPhanCong.Text = "Phân Công";
+            this.btnPhanCong.UseVisualStyleBackColor = true;
+            this.btnPhanCong.Click += new System.EventHandler(this.btnPhanCong_Click);
+            // 
+            // btnCheckinout
+            // 
+            this.btnCheckinout.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCheckinout.FlatAppearance.BorderSize = 0;
+            this.btnCheckinout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCheckinout.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckinout.ForeColor = System.Drawing.Color.White;
+            this.btnCheckinout.Image = global::QuanLyCongTy.Properties.Resources.arrow_19_32_2_;
+            this.btnCheckinout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCheckinout.Location = new System.Drawing.Point(0, 100);
+            this.btnCheckinout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCheckinout.Name = "btnCheckinout";
+            this.btnCheckinout.Size = new System.Drawing.Size(250, 70);
+            this.btnCheckinout.TabIndex = 1;
+            this.btnCheckinout.Text = "Check in/out";
+            this.btnCheckinout.UseVisualStyleBackColor = true;
+            this.btnCheckinout.Click += new System.EventHandler(this.btnCheckinout_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::QuanLyCongTy.Properties.Resources.NhanVienName;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 11);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(69, 64);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // FNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -216,8 +232,9 @@
             this.pnlMenu.ResumeLayout(false);
             this.panelName.ResumeLayout(false);
             this.panelName.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlTitle.ResumeLayout(false);
+            this.pnlTitle.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -234,5 +251,6 @@
         private System.Windows.Forms.Button btnCloseForm;
         private System.Windows.Forms.Button btnXinNghi;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblTitle;
     }
 }

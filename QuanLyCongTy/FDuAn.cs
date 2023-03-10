@@ -54,15 +54,10 @@ namespace QuanLyCongTy
             int i = gv_DuAn.CurrentRow.Index;
             txt_MaDA.Text = gv_DuAn.Rows[i].Cells[0].Value.ToString();
             txt_TenDA.Text = gv_DuAn.Rows[i].Cells[1].Value.ToString();
+            rtxt_MoTa.Text = gv_DuAn.Rows[i].Cells[2].Value.ToString();
             txt_MaPB.Text = gv_DuAn.Rows[i].Cells[3].Value.ToString();
             txt_DD.Text= gv_DuAn.Rows[i].Cells[4].Value.ToString();
             dtp_deadline.Text = gv_DuAn.Rows[i].Cells[5].Value.ToString();
-            rtxt_MoTa.Text= gv_DuAn.Rows[i].Cells[2].Value.ToString();
-        }
-
-        private void gv_DuAn_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

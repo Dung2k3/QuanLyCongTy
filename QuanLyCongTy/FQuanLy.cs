@@ -19,6 +19,18 @@ namespace QuanLyCongTy
             InitializeComponent();
             this.maQL = maQL;
         }
+
+        private void btnClickChangeColor(Button btn, string color)
+        {
+            btnCheckinout.BackColor = ColorTranslator.FromHtml("#33334C");
+            btnTaoDA.BackColor = ColorTranslator.FromHtml("#33334C");
+            btnDanhGiaDA.BackColor = ColorTranslator.FromHtml("#33334C");
+            btnXinNghi.BackColor = ColorTranslator.FromHtml("#33334C");
+            btn.BackColor = ColorTranslator.FromHtml(color);
+            pnlTitle.BackColor = ColorTranslator.FromHtml(color);
+            lblTitle.Text = btn.Text;
+        }
+
         private Form currentFormChild;
         private void OpenChildForm(Form childForm)
         {
@@ -38,6 +50,8 @@ namespace QuanLyCongTy
         private void btnCheckinout_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FCheckinout(maQL));
+            btnClickChangeColor(btnCheckinout, "#8BC240");
+            lblTitle.Text = btnCheckinout.Text;
         }
 
 
@@ -54,11 +68,18 @@ namespace QuanLyCongTy
         private void btnTaoDA_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FDuAn());
+            btnClickChangeColor(btnTaoDA, "#126881");
         }
 
         private void btnDanhGiaDA_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FDanhGiaDA());
+            btnClickChangeColor(btnDanhGiaDA, "#A12059");
+        }
+
+        private void btnXinNghi_Click(object sender, EventArgs e)
+        {
+            btnClickChangeColor(btnXinNghi, "#364D5B");
         }
     }
 }

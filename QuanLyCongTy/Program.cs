@@ -16,7 +16,13 @@ namespace QuanLyCongTy
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FDangNhap());
+
+            //Application.Run(new FDangNhap());
+
+            //Application.Run(new FTruongPhong("NV004"));
+            //Application.Run(new FDangNhap());
+            Application.Run(new Form1("NV017"));
+
         }
     }
 }

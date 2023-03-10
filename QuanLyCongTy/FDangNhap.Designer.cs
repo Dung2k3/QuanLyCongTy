@@ -118,6 +118,7 @@
             // btnDangNhap
             // 
             this.btnDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(72)))), ((int)(((byte)(90)))));
+            this.btnDangNhap.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.btnDangNhap, "btnDangNhap");
             this.btnDangNhap.ForeColor = System.Drawing.Color.White;
             this.btnDangNhap.Name = "btnDangNhap";

@@ -8,7 +8,6 @@ D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.csproj.Generate
 D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.csproj.CoreCompileInputs.cache
 D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.exe
 D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.pdb
-D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.Form1.resources
 D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.FDanhGia.resources
 D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.FDanhGiaDA.resources
 D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.FDuAn.resources
@@ -32,3 +31,11 @@ D:\hc\CTDH\WinForm\Project\PJ_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.csproj.As
 D:\hc\CTDH\WinForm\Project\PJ_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.csproj.SuggestedBindingRedirects.cache
 D:\hc\CTDH\WinForm\Project\PJ_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.exe
 D:\hc\CTDH\WinForm\Project\PJ_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.pdb
+D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.FCheckinout.resources
+D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.FDangNhap.resources
+D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.FNhanVien.resources
+D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.FQuanLy.resources
+D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.FTruongPhong.resources
+D:\hc\CTDH\WinForm\Project\PJ_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.UC.resources
+D:\hc\CTDH\WinForm\Project\PJ_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.Form1.resources
+D:\hc\CTDH\WinForm\Project\PJ_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.ucMenuBtn.resources

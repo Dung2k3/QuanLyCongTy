@@ -25,6 +25,7 @@ namespace QuanLyCongTy
         private void CapNhatGVCheckin()
         {
             gvCheckinList.DataSource = ciDao.LayDanhSachCheckin();
+            
         }
         private void CapNhatGVCheckout()
         {
