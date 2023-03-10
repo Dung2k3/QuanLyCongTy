@@ -51,7 +51,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(107, 372);
+            this.label4.Location = new System.Drawing.Point(35, 412);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 20);
             this.label4.TabIndex = 13;
@@ -59,15 +59,15 @@
             // 
             // dtp_Deadline
             // 
-            this.dtp_Deadline.Location = new System.Drawing.Point(111, 419);
+            this.dtp_Deadline.Location = new System.Drawing.Point(35, 454);
             this.dtp_Deadline.Name = "dtp_Deadline";
-            this.dtp_Deadline.Size = new System.Drawing.Size(288, 26);
+            this.dtp_Deadline.Size = new System.Drawing.Size(309, 26);
             this.dtp_Deadline.TabIndex = 12;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(103, 199);
+            this.label3.Location = new System.Drawing.Point(31, 236);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 20);
             this.label3.TabIndex = 11;
@@ -76,7 +76,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(271, 87);
+            this.label2.Location = new System.Drawing.Point(31, 148);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 20);
             this.label2.TabIndex = 10;
@@ -85,7 +85,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(103, 87);
+            this.label1.Location = new System.Drawing.Point(31, 66);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(107, 20);
             this.label1.TabIndex = 9;
@@ -93,7 +93,7 @@
             // 
             // btn_Sua
             // 
-            this.btn_Sua.Location = new System.Drawing.Point(298, 519);
+            this.btn_Sua.Location = new System.Drawing.Point(261, 556);
             this.btn_Sua.Name = "btn_Sua";
             this.btn_Sua.Size = new System.Drawing.Size(83, 33);
             this.btn_Sua.TabIndex = 21;
@@ -103,7 +103,7 @@
             // 
             // btn_Xoa
             // 
-            this.btn_Xoa.Location = new System.Drawing.Point(209, 519);
+            this.btn_Xoa.Location = new System.Drawing.Point(149, 556);
             this.btn_Xoa.Name = "btn_Xoa";
             this.btn_Xoa.Size = new System.Drawing.Size(83, 33);
             this.btn_Xoa.TabIndex = 20;
@@ -113,7 +113,7 @@
             // 
             // btn_Them
             // 
-            this.btn_Them.Location = new System.Drawing.Point(118, 519);
+            this.btn_Them.Location = new System.Drawing.Point(35, 556);
             this.btn_Them.Name = "btn_Them";
             this.btn_Them.Size = new System.Drawing.Size(83, 33);
             this.btn_Them.TabIndex = 19;
@@ -130,12 +130,12 @@
             this.CongViec,
             this.DeadLine,
             this.ChamCong});
-            this.gv_CongViec.Location = new System.Drawing.Point(442, 62);
+            this.gv_CongViec.Location = new System.Drawing.Point(362, 49);
             this.gv_CongViec.Name = "gv_CongViec";
             this.gv_CongViec.RowHeadersVisible = false;
             this.gv_CongViec.RowHeadersWidth = 62;
             this.gv_CongViec.RowTemplate.Height = 28;
-            this.gv_CongViec.Size = new System.Drawing.Size(575, 537);
+            this.gv_CongViec.Size = new System.Drawing.Size(733, 666);
             this.gv_CongViec.TabIndex = 22;
             this.gv_CongViec.MouseClick += new System.Windows.Forms.MouseEventHandler(this.gv_CongViec_MouseClick);
             // 
@@ -187,24 +187,24 @@
             // cbo_MaNV
             // 
             this.cbo_MaNV.FormattingEnabled = true;
-            this.cbo_MaNV.Location = new System.Drawing.Point(107, 121);
+            this.cbo_MaNV.Location = new System.Drawing.Point(35, 103);
             this.cbo_MaNV.Name = "cbo_MaNV";
-            this.cbo_MaNV.Size = new System.Drawing.Size(128, 28);
+            this.cbo_MaNV.Size = new System.Drawing.Size(185, 28);
             this.cbo_MaNV.TabIndex = 23;
             // 
             // cbo_MaDA
             // 
             this.cbo_MaDA.FormattingEnabled = true;
-            this.cbo_MaDA.Location = new System.Drawing.Point(275, 121);
+            this.cbo_MaDA.Location = new System.Drawing.Point(35, 182);
             this.cbo_MaDA.Name = "cbo_MaDA";
-            this.cbo_MaDA.Size = new System.Drawing.Size(124, 28);
+            this.cbo_MaDA.Size = new System.Drawing.Size(185, 28);
             this.cbo_MaDA.TabIndex = 24;
             // 
             // rtxt_CongViec
             // 
-            this.rtxt_CongViec.Location = new System.Drawing.Point(111, 233);
+            this.rtxt_CongViec.Location = new System.Drawing.Point(35, 272);
             this.rtxt_CongViec.Name = "rtxt_CongViec";
-            this.rtxt_CongViec.Size = new System.Drawing.Size(288, 107);
+            this.rtxt_CongViec.Size = new System.Drawing.Size(309, 107);
             this.rtxt_CongViec.TabIndex = 25;
             this.rtxt_CongViec.Text = "";
             // 

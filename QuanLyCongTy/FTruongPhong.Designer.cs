@@ -139,6 +139,7 @@
             this.panelName.Name = "panelName";
             this.panelName.Size = new System.Drawing.Size(281, 125);
             this.panelName.TabIndex = 0;
+            this.panelName.Click += new System.EventHandler(this.panelName_Click);
             // 
             // pictureBox1
             // 
@@ -201,10 +202,10 @@
             // 
             // pnlNoiDung
             // 
-            this.pnlNoiDung.Location = new System.Drawing.Point(281, 129);
+            this.pnlNoiDung.Location = new System.Drawing.Point(281, 125);
             this.pnlNoiDung.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlNoiDung.Name = "pnlNoiDung";
-            this.pnlNoiDung.Size = new System.Drawing.Size(1125, 871);
+            this.pnlNoiDung.Size = new System.Drawing.Size(1125, 875);
             this.pnlNoiDung.TabIndex = 10;
             // 
             // FTruongPhong

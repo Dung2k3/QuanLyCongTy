@@ -19,7 +19,7 @@ namespace QuanLyCongTy
             InitializeComponent();
             this.maNV = maNV;
         }
-        private void btnClickChangeColor(Button btn, string color)
+        private void btnClickChangeColor(Control btn, string color)
         {
             btnCheckinout.BackColor = ColorTranslator.FromHtml("#33334C");
             btnPhanCong.BackColor = ColorTranslator.FromHtml("#33334C");
@@ -44,20 +44,15 @@ namespace QuanLyCongTy
             pnlNoiDung.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-
         }
 
         private void FNhanVien_Load(object sender, EventArgs e)
         {
             lblName.Text = nvDao.GetTenNV(this.maNV);
+            OpenChildForm(new FThongTin(maNV));
+            btnClickChangeColor(pnlTitle, "#33334C");
+            lblTitle.Text = "Thông tin nhân viên";
         }
-
-
-        private void btnCloseForm_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
 
         private void btnCheckinout_Click(object sender, EventArgs e)
         {
@@ -78,6 +73,19 @@ namespace QuanLyCongTy
         private void btnXinNghi_Click(object sender, EventArgs e)
         {
             btnClickChangeColor(btnXinNghi, "#364D5B");
+        }
+
+        private void btnCloseForm_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void panelName_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FThongTin(maNV));
+            btnClickChangeColor(panelName, "#33334C");
+            btnClickChangeColor(pnlTitle, "#33334C");
+            lblTitle.Text = "Thông tin nhân viên";
         }
     }
 }

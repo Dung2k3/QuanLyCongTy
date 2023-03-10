@@ -25,6 +25,8 @@ namespace QuanLyCongTy
         private void CapNhatGVCheckin()
         {
             gvCheckinList.DataSource = ciDao.LayDanhSachCheckin();
+            //DataTable dt = ciDao.LayDanhSachCheckin();
+            //Chart_Checkinout.DataSource = dt.AsEnumerable().Select(r => r.Field<string>("Nhanxet").ToString()).ToList();
         }
         private void CapNhatGVCheckout()
         {

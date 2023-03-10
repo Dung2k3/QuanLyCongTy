@@ -38,9 +38,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblName = new System.Windows.Forms.Label();
             this.pnlTitle = new System.Windows.Forms.Panel();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.btnCloseForm = new System.Windows.Forms.Button();
             this.pnlNoiDung = new System.Windows.Forms.Panel();
-            this.lblTitle = new System.Windows.Forms.Label();
             this.pnlMenu.SuspendLayout();
             this.panelName.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -145,6 +145,7 @@
             this.panelName.Name = "panelName";
             this.panelName.Size = new System.Drawing.Size(281, 125);
             this.panelName.TabIndex = 0;
+            this.panelName.Click += new System.EventHandler(this.panelName_Click);
             // 
             // pictureBox1
             // 
@@ -179,6 +180,17 @@
             this.pnlTitle.Size = new System.Drawing.Size(1125, 125);
             this.pnlTitle.TabIndex = 8;
             // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(549, 40);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(27, 44);
+            this.lblTitle.TabIndex = 8;
+            this.lblTitle.Text = " ";
+            // 
             // btnCloseForm
             // 
             this.btnCloseForm.FlatAppearance.BorderSize = 0;
@@ -203,17 +215,6 @@
             this.pnlNoiDung.Name = "pnlNoiDung";
             this.pnlNoiDung.Size = new System.Drawing.Size(1125, 875);
             this.pnlNoiDung.TabIndex = 9;
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(549, 40);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(27, 44);
-            this.lblTitle.TabIndex = 8;
-            this.lblTitle.Text = " ";
             // 
             // FNhanVien
             // 

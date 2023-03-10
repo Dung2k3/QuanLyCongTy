@@ -303,3 +303,7 @@ VALUES('NV010','DA006',N'Liên hệ các nhà báo','2000-04-20', N'Đang Thực
 INSERT INTO PhanCong
 VALUES('NV011','DA006',N'Đăng bài về logo','2000-04-20', N'Đang Thực Hiện', 0)
 GO
+
+SELECT MaNV, HoTenNV, DiaChi, Sdt, NgaySinh, Phai, Cccd, Email, NhanVien.MaPB, TenPB 
+FROM NhanVien inner join PhongBan ON NhanVien.MaPB = PhongBan.MaPB
+WHERE NhanVien.MaNV = 'NV001'

@@ -36,3 +36,4 @@ D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.FDangNhap.resou
 D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.FNhanVien.resources
 D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.FQuanLy.resources
 D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.FTruongPhong.resources
+D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.FThongTin.resources
