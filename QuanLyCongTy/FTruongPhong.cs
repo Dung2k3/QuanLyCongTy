@@ -20,7 +20,7 @@ namespace QuanLyCongTy
             this.maTP = maTP;
         }
 
-        private void btnClickChangeColor(Button btn, string color)
+        private void btnClickChangeColor(Control btn, string color)
         {
             btnCheckinout.BackColor = ColorTranslator.FromHtml("#33334C");
             btnTaoPC.BackColor = ColorTranslator.FromHtml("#33334C");
@@ -60,21 +60,33 @@ namespace QuanLyCongTy
         private void FTruongPhong_Load(object sender, EventArgs e)
         {
             lblName.Text = tpDao.GetTenTP(this.maTP);
+            OpenChildForm(new FThongTin(maTP));
+            btnClickChangeColor(pnlTitle, "#33334C");
+            lblTitle.Text = "Thông tin nhân viên";
         }
 
         private void btnTaoPC_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new FPhanCong(maTP));
             btnClickChangeColor(btnTaoPC, "#126881");
         }
 
         private void btnDanhGiaPC_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new FDanhGia());
             btnClickChangeColor(btnDanhGiaPC, "#A12059");
         }
 
         private void btnXinNghi_Click(object sender, EventArgs e)
         {
             btnClickChangeColor(btnXinNghi, "#364D5B");
+        }
+        private void panelName_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FThongTin(maTP));
+            btnClickChangeColor(panelName, "#33334C");
+            btnClickChangeColor(pnlTitle, "#33334C");
+            lblTitle.Text = "Thông tin nhân viên";
         }
     }
 }

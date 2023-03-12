@@ -1,4 +1,4 @@
-﻿namespace QuanLyCongTy
+namespace QuanLyCongTy
 {
     partial class FDanhGiaDA
     {
@@ -45,8 +45,6 @@
             this.DeadLine = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Thuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_Sua = new System.Windows.Forms.Button();
-            this.btn_Xoa = new System.Windows.Forms.Button();
-            this.btn_Them = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gv_DanhGiaDA)).BeginInit();
             this.SuspendLayout();
             // 
@@ -199,26 +197,7 @@
             this.btn_Sua.Text = "Sửa";
             this.btn_Sua.UseVisualStyleBackColor = true;
             this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
-            // 
-            // btn_Xoa
-            // 
-            this.btn_Xoa.Location = new System.Drawing.Point(262, 454);
-            this.btn_Xoa.Name = "btn_Xoa";
-            this.btn_Xoa.Size = new System.Drawing.Size(75, 23);
-            this.btn_Xoa.TabIndex = 1;
-            this.btn_Xoa.Text = "Xóa";
-            this.btn_Xoa.UseVisualStyleBackColor = true;
-            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
-            // 
-            // btn_Them
-            // 
-            this.btn_Them.Location = new System.Drawing.Point(25, 454);
-            this.btn_Them.Name = "btn_Them";
-            this.btn_Them.Size = new System.Drawing.Size(75, 23);
-            this.btn_Them.TabIndex = 2;
-            this.btn_Them.Text = "Thêm";
-            this.btn_Them.UseVisualStyleBackColor = true;
-            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
+           
             // 
             // FDanhGiaDA
             // 
@@ -227,8 +206,6 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1000, 700);
             this.Controls.Add(this.btn_Sua);
-            this.Controls.Add(this.btn_Xoa);
-            this.Controls.Add(this.btn_Them);
             this.Controls.Add(this.gv_DanhGiaDA);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.rtxt_NhanXet);
@@ -259,8 +236,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView gv_DanhGiaDA;
         private System.Windows.Forms.Button btn_Sua;
-        private System.Windows.Forms.Button btn_Xoa;
-        private System.Windows.Forms.Button btn_Them;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaDA;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenDuAn;
         private System.Windows.Forms.DataGridViewTextBoxColumn MoTa;

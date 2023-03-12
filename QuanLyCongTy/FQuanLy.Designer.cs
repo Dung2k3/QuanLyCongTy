@@ -1,4 +1,4 @@
-﻿namespace QuanLyCongTy
+namespace QuanLyCongTy
 {
     partial class FQuanLy
     {
@@ -146,6 +146,7 @@
             this.panelName.Name = "panelName";
             this.panelName.Size = new System.Drawing.Size(250, 100);
             this.panelName.TabIndex = 0;
+            this.panelName.Click += new System.EventHandler(this.panelName_Click);
             // 
             // pictureBox1
             // 
@@ -182,17 +183,14 @@
             // 
             // lblTitle
             // 
-            this.lblTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(461, 35);
+            this.lblTitle.Location = new System.Drawing.Point(549, 40);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(24, 37);
+            this.lblTitle.Size = new System.Drawing.Size(27, 44);
             this.lblTitle.TabIndex = 7;
             this.lblTitle.Text = " ";
-            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnCloseForm
             // 
@@ -212,7 +210,7 @@
             // 
             // pnlNoiDung
             // 
-            this.pnlNoiDung.Location = new System.Drawing.Point(250, 100);
+            this.pnlNoiDung.Location = new System.Drawing.Point(281, 125);
             this.pnlNoiDung.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlNoiDung.Name = "pnlNoiDung";
             this.pnlNoiDung.Size = new System.Drawing.Size(1000, 700);

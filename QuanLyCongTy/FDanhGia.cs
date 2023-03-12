@@ -27,19 +27,7 @@ namespace QuanLyCongTy
             this.gv_PhanCong.DataSource = DGdao.LayDanhSachDanhGia();
         }
 
-        private void btn_Them_Click(object sender, EventArgs e)
-        {
-            ClassDanhGia dg = new ClassDanhGia(txt_MaNV.Text, txt_MaDA.Text, rtxt_NhanXet.Text, txt_ChamCong.Text);
-            DGdao.Them(dg);
-            HienThiDanhSach();
-        }
-
-        private void btn_Xoa_Click(object sender, EventArgs e)
-        {
-            ClassDanhGia dg = new ClassDanhGia(txt_MaNV.Text, txt_MaDA.Text, rtxt_NhanXet.Text, txt_ChamCong.Text);
-            DGdao.Xoa(dg);
-            HienThiDanhSach();
-        }
+        
 
         private void btn_Sua_Click(object sender, EventArgs e)
         {
@@ -48,7 +36,7 @@ namespace QuanLyCongTy
             HienThiDanhSach();
         }
 
-        private void gv_PhanCong_DoubleClick(object sender, EventArgs e)
+        private void gv_PhanCong_MouseClick(object sender, MouseEventArgs e)
         {
             int i = gv_PhanCong.CurrentRow.Index;
             txt_MaNV.Text = gv_PhanCong.Rows[i].Cells[0].Value.ToString();

@@ -50,6 +50,7 @@
     <Compile Include="CheckinDao.cs" />
     <Compile Include="CheckoutDao.cs" />
     <Compile Include="ClassDangNhap.cs" />
+    <Compile Include="ClassThongTin.cs" />
     <Compile Include="FCheckinout.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +108,12 @@
     <Compile Include="FQuanLy.Designer.cs">
       <DependentUpon>FQuanLy.cs</DependentUpon>
     </Compile>
+    <Compile Include="FThongTin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FThongTin.Designer.cs">
+      <DependentUpon>FThongTin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FTruongPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +131,7 @@
       <DependentUpon>FPhanCong.cs</DependentUpon>
     </Compile>
     <Compile Include="QuanLyDao.cs" />
+    <Compile Include="ThongTinDAO.cs" />
     <Compile Include="TruongPhongDao.cs" />
     <Compile Include="UC.cs">
       <SubType>UserControl</SubType>
@@ -162,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FQuanLy.resx">
       <DependentUpon>FQuanLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FThongTin.resx">
+      <DependentUpon>FThongTin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FTruongPhong.resx">
       <DependentUpon>FTruongPhong.cs</DependentUpon>
@@ -212,6 +223,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\NhanVienName.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

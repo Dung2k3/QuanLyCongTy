@@ -20,9 +20,13 @@ namespace QuanLyCongTy
             //Application.Run(new FDangNhap());
 
             //Application.Run(new FTruongPhong("NV004"));
-            //Application.Run(new FDangNhap());
-            Application.Run(new Form1("NV017"));
 
+            //Application.Run(new FDangNhap());
+            Application.Run(new FNhanVien("NV017"));
+
+
+            //Application.Run(new FDangNhap());
+            //Application.Run(new FQuanLy("NV001"));
         }
     }
 }

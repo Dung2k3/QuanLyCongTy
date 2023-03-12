@@ -139,6 +139,7 @@
             this.panelName.Name = "panelName";
             this.panelName.Size = new System.Drawing.Size(281, 125);
             this.panelName.TabIndex = 0;
+            this.panelName.Click += new System.EventHandler(this.panelName_Click);
             // 
             // pictureBox1
             // 

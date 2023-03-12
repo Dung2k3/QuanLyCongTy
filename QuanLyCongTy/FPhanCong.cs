@@ -51,8 +51,7 @@ namespace QuanLyCongTy
             PCdao.Sua(pc);
             HienThiDanhSach();
         }
-
-        private void gv_CongViec_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void gv_CongViec_MouseClick(object sender, MouseEventArgs e)
         {
             int i = gv_CongViec.CurrentRow.Index;
             cbo_MaNV.Text = gv_CongViec.Rows[i].Cells[0].Value.ToString();
