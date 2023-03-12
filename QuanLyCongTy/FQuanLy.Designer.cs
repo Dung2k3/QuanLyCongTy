@@ -30,21 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FQuanLy));
             this.pnlMenu = new System.Windows.Forms.Panel();
-            this.btnXinNghi = new System.Windows.Forms.Button();
-            this.btnDanhGiaDA = new System.Windows.Forms.Button();
-            this.btnTaoDA = new System.Windows.Forms.Button();
-            this.btnCheckinout = new System.Windows.Forms.Button();
             this.panelName = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblName = new System.Windows.Forms.Label();
             this.pnlTitle = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnCloseForm = new System.Windows.Forms.Button();
             this.pnlNoiDung = new System.Windows.Forms.Panel();
+            this.btnXinNghi = new System.Windows.Forms.Button();
+            this.btnDanhGiaDA = new System.Windows.Forms.Button();
+            this.btnTaoDA = new System.Windows.Forms.Button();
+            this.btnCheckinout = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlMenu.SuspendLayout();
             this.panelName.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlTitle.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -61,6 +61,77 @@
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(281, 1000);
             this.pnlMenu.TabIndex = 8;
+            // 
+            // panelName
+            // 
+            this.panelName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.panelName.Controls.Add(this.pictureBox1);
+            this.panelName.Controls.Add(this.lblName);
+            this.panelName.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelName.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelName.Location = new System.Drawing.Point(0, 0);
+            this.panelName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelName.Name = "panelName";
+            this.panelName.Size = new System.Drawing.Size(281, 125);
+            this.panelName.TabIndex = 0;
+            this.panelName.Click += new System.EventHandler(this.panelName_Click);
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.White;
+            this.lblName.Location = new System.Drawing.Point(88, 44);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(72, 29);
+            this.lblName.TabIndex = 0;
+            this.lblName.Text = "Name";
+            // 
+            // pnlTitle
+            // 
+            this.pnlTitle.Controls.Add(this.lblTitle);
+            this.pnlTitle.Controls.Add(this.btnCloseForm);
+            this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTitle.Location = new System.Drawing.Point(281, 0);
+            this.pnlTitle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlTitle.Name = "pnlTitle";
+            this.pnlTitle.Size = new System.Drawing.Size(1125, 125);
+            this.pnlTitle.TabIndex = 9;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(549, 40);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(27, 44);
+            this.lblTitle.TabIndex = 7;
+            this.lblTitle.Text = " ";
+            // 
+            // btnCloseForm
+            // 
+            this.btnCloseForm.FlatAppearance.BorderSize = 0;
+            this.btnCloseForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCloseForm.Font = new System.Drawing.Font("Arial Narrow", 18F);
+            this.btnCloseForm.ForeColor = System.Drawing.Color.Black;
+            this.btnCloseForm.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnCloseForm.Location = new System.Drawing.Point(1048, 0);
+            this.btnCloseForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCloseForm.Name = "btnCloseForm";
+            this.btnCloseForm.Size = new System.Drawing.Size(76, 60);
+            this.btnCloseForm.TabIndex = 6;
+            this.btnCloseForm.Text = "X";
+            this.btnCloseForm.UseVisualStyleBackColor = true;
+            this.btnCloseForm.Click += new System.EventHandler(this.btnCloseForm_Click);
+            // 
+            // pnlNoiDung
+            // 
+            this.pnlNoiDung.Location = new System.Drawing.Point(281, 125);
+            this.pnlNoiDung.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlNoiDung.Name = "pnlNoiDung";
+            this.pnlNoiDung.Size = new System.Drawing.Size(1125, 875);
+            this.pnlNoiDung.TabIndex = 10;
             // 
             // btnXinNghi
             // 
@@ -135,19 +206,6 @@
             this.btnCheckinout.UseVisualStyleBackColor = true;
             this.btnCheckinout.Click += new System.EventHandler(this.btnCheckinout_Click);
             // 
-            // panelName
-            // 
-            this.panelName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.panelName.Controls.Add(this.pictureBox1);
-            this.panelName.Controls.Add(this.lblName);
-            this.panelName.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelName.Location = new System.Drawing.Point(0, 0);
-            this.panelName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelName.Name = "panelName";
-            this.panelName.Size = new System.Drawing.Size(281, 125);
-            this.panelName.TabIndex = 0;
-            this.panelName.Click += new System.EventHandler(this.panelName_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::QuanLyCongTy.Properties.Resources.NhanVienName;
@@ -158,63 +216,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.ForeColor = System.Drawing.Color.White;
-            this.lblName.Location = new System.Drawing.Point(88, 44);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(72, 29);
-            this.lblName.TabIndex = 0;
-            this.lblName.Text = "Name";
-            // 
-            // pnlTitle
-            // 
-            this.pnlTitle.Controls.Add(this.lblTitle);
-            this.pnlTitle.Controls.Add(this.btnCloseForm);
-            this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTitle.Location = new System.Drawing.Point(281, 0);
-            this.pnlTitle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnlTitle.Name = "pnlTitle";
-            this.pnlTitle.Size = new System.Drawing.Size(1125, 125);
-            this.pnlTitle.TabIndex = 9;
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(549, 40);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(27, 44);
-            this.lblTitle.TabIndex = 7;
-            this.lblTitle.Text = " ";
-            // 
-            // btnCloseForm
-            // 
-            this.btnCloseForm.FlatAppearance.BorderSize = 0;
-            this.btnCloseForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseForm.Font = new System.Drawing.Font("Arial Narrow", 18F);
-            this.btnCloseForm.ForeColor = System.Drawing.Color.Black;
-            this.btnCloseForm.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnCloseForm.Location = new System.Drawing.Point(1048, 0);
-            this.btnCloseForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCloseForm.Name = "btnCloseForm";
-            this.btnCloseForm.Size = new System.Drawing.Size(76, 60);
-            this.btnCloseForm.TabIndex = 6;
-            this.btnCloseForm.Text = "X";
-            this.btnCloseForm.UseVisualStyleBackColor = true;
-            this.btnCloseForm.Click += new System.EventHandler(this.btnCloseForm_Click);
-            // 
-            // pnlNoiDung
-            // 
-            this.pnlNoiDung.Location = new System.Drawing.Point(281, 125);
-            this.pnlNoiDung.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnlNoiDung.Name = "pnlNoiDung";
-            this.pnlNoiDung.Size = new System.Drawing.Size(1125, 875);
-            this.pnlNoiDung.TabIndex = 10;
             // 
             // FQuanLy
             // 
@@ -234,9 +235,9 @@
             this.pnlMenu.ResumeLayout(false);
             this.panelName.ResumeLayout(false);
             this.panelName.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlTitle.ResumeLayout(false);
             this.pnlTitle.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
