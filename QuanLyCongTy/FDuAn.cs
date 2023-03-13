@@ -59,10 +59,5 @@ namespace QuanLyCongTy
             dtp_deadline.Text = gv_DuAn.Rows[i].Cells[5].Value.ToString();
             rtxt_MoTa.Text= gv_DuAn.Rows[i].Cells[2].Value.ToString();
         }
-
-        private void gv_DuAn_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

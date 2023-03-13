@@ -5,7 +5,11 @@ USE QLCT
 GO
 
 CREATE TABLE dbo.MucLuong(
+<<<<<<< HEAD
 	MaLuong varchar(10) PRIMARY KEY,
+=======
+	MaLuong nchar(10) PRIMARY KEY,
+>>>>>>> e3b538af5aee5705690946a1ada08ab0db7758a7
 	MucLuong int NOT NULL 
 )
 GO
@@ -18,6 +22,7 @@ INSERT INTO MucLuong VALUES('ML_QL01',40000000)--QuanLy
 GO
 
 CREATE TABLE dbo.NhanVien(
+<<<<<<< HEAD
 	MaNV varchar(10) PRIMARY KEY,
 	HoTenNV nvarchar(50),
 	DiaChi nvarchar(50) NULL,
@@ -28,6 +33,18 @@ CREATE TABLE dbo.NhanVien(
 	Email varchar(25) UNIQUE,
 	MaPB varchar(10) NULL,
 	MaLuong varchar(10) REFERENCES MucLuong(MaLuong)
+=======
+	MaNV nchar(10) PRIMARY KEY,
+	HoTenNV nchar(50),
+	DiaChi nchar(50) NULL,
+	Sdt nchar(12) UNIQUE,	
+	NgaySinh date,
+	Phai nchar(10),
+	Cccd nchar(20) UNIQUE,
+	Email nchar(25) UNIQUE,
+	MaPB nchar(10) NULL,
+	MaLuong nchar(10) REFERENCES MucLuong(MaLuong)
+>>>>>>> e3b538af5aee5705690946a1ada08ab0db7758a7
 )
 GO
 
@@ -40,7 +57,11 @@ VALUES('NV003', N'Lê Minh Hùng', 'HCM', '0986810782', '1988-03-03', 'Nam', '09
 INSERT INTO NhanVien 
 VALUES('NV004', N'Phạm Hoài Sơn', 'HCM', '0923232323', '1989-04-04', 'Nam', '098968366861', 'PHS@gmail.com', 'PB_SX', 'ML_QL01')
 INSERT INTO NhanVien 
+<<<<<<< HEAD
 VALUES('NV005', N'Trần Phương Đài', 'HCM', '0986865482', '1988-05-05', N'Nữ', '098353536799', 'TPD@gmail.com', 'PB_SX', 'ML_QL01')
+=======
+VALUES('NV005', N'Trần Phương Đài', 'HCM', '0986810782', '1988-05-05', N'Nữ', '098353536799', 'TPD@gmail.com', 'PB_SX', 'ML_QL01')
+>>>>>>> e3b538af5aee5705690946a1ada08ab0db7758a7
 INSERT INTO NhanVien 
 VALUES('NV006', N'Đỗ Đăng Khoa', 'HCM', '0929192796', '1989-06-06', 'Nam', '090107287746', 'DDK@gmail.com', 'PB_SX', 'ML_QL01')
 INSERT INTO NhanVien 
@@ -68,10 +89,17 @@ VALUES('NV017', N'Hồ Ngọc Hà', 'HCM', '0913632527', '1982-11-21', 'Nam', '0
 GO
 
 CREATE TABLE dbo.PhongBan(
+<<<<<<< HEAD
 	MaPB varchar(10) PRIMARY KEY,
 	TenPB nvarchar(30),
 	MaTrPhong varchar(10) REFERENCES NhanVien(MaNV),
 	ViTri nvarchar(40) NULL,
+=======
+	MaPB nchar(10) PRIMARY KEY,
+	TenPB nchar(30),
+	MaTrPhong nchar(10) REFERENCES NhanVien(MaNV),
+	ViTri nchar(40) NULL,
+>>>>>>> e3b538af5aee5705690946a1ada08ab0db7758a7
 )
 GO
 
@@ -85,9 +113,15 @@ GO
 ALTER TABLE NhanVien WITH CHECK ADD FOREIGN KEY(MaPB) REFERENCES PhongBan(MaPB)
 
 CREATE TABLE dbo.TaiKhoan(
+<<<<<<< HEAD
 	MaNV varchar(10) REFERENCES NhanVien(MaNV),
 	TK varchar(30),
 	MK varchar(30),
+=======
+	MaNV nchar(10) REFERENCES NhanVien(MaNV),
+	TK nchar(30),
+	MK nchar(30),
+>>>>>>> e3b538af5aee5705690946a1ada08ab0db7758a7
 	PRIMARY KEY(MaNV)
 )
 GO
@@ -112,7 +146,11 @@ INSERT INTO TaiKhoan VALUES('NV017','hnh','hnh123')
 GO
 
 CREATE TABLE dbo.Checkin(
+<<<<<<< HEAD
 	MaNV varchar(10) REFERENCES NhanVien(MaNV),
+=======
+	MaNV nchar(10) REFERENCES NhanVien(MaNV),
+>>>>>>> e3b538af5aee5705690946a1ada08ab0db7758a7
 	TGCheckin datetime,
 	PRIMARY KEY(MaNV,TGCheckin)
 )
@@ -172,9 +210,15 @@ INSERT INTO Checkin VALUES('NV017','2023-03-03T07:50:00')
 GO
 
 CREATE TABLE dbo.Checkout(
+<<<<<<< HEAD
 	MaNV varchar(10) REFERENCES NhanVien(MaNV),
 	TGCheckout datetime,
 	PRIMARY KEY(MaNV,TGCheckout)
+=======
+	MaNV nchar(10) REFERENCES NhanVien(MaNV),
+	TGCheckin datetime,
+	PRIMARY KEY(MaNV,TGCheckin)
+>>>>>>> e3b538af5aee5705690946a1ada08ab0db7758a7
 )
 GO
 INSERT INTO Checkout VALUES('NV001','2023-03-01T17:10:00')
@@ -231,7 +275,11 @@ INSERT INTO Checkout VALUES('NV017','2023-03-03T17:10:00')
 GO
 
 CREATE TABLE dbo.XinNghi(
+<<<<<<< HEAD
 	MaNV varchar(10) REFERENCES NhanVien(MaNV),
+=======
+	MaNV nchar(10) REFERENCES NhanVien(MaNV),
+>>>>>>> e3b538af5aee5705690946a1ada08ab0db7758a7
 	NgayNghi date,
 	NgayDiLam date,
 	PRIMARY KEY(MaNV,NgayNghi)
@@ -239,6 +287,7 @@ CREATE TABLE dbo.XinNghi(
 GO
 
 CREATE TABLE dbo.DuAn(
+<<<<<<< HEAD
 	MaDA varchar(10) PRIMARY KEY,
 	TenDuAn nvarchar(50),
 	MoTa nvarchar(200) NULL,
@@ -246,6 +295,15 @@ CREATE TABLE dbo.DuAn(
 	DiaDiem nvarchar(40) NULL,
 	DeadLine date,
 	DanhGia nvarchar(200) NULL,
+=======
+	MaDA nchar(10) PRIMARY KEY,
+	TenDuAn nchar(50),
+	MoTa nchar(200) NULL,
+	MaPB nchar(10) REFERENCES PhongBan(MaPB),
+	DiaDiem nchar(40) NULL,
+	DeadLine date,
+	DanhGia nchar(200) NULL,
+>>>>>>> e3b538af5aee5705690946a1ada08ab0db7758a7
 	Thuong bigint NULL
 )
 GO
@@ -266,11 +324,19 @@ GO
 
 
 CREATE TABLE dbo.PhanCong(
+<<<<<<< HEAD
 	MaNV varchar(10) REFERENCES NhanVien(MaNV),
 	MaDA varchar(10) REFERENCES DuAn(MaDA),
 	CongViec nvarchar(200),
 	DeadLine date,
 	NhanXet nvarchar(50) NULL,
+=======
+	MaNV nchar(10) REFERENCES NhanVien(MaNV),
+	MaDA nchar(10) REFERENCES DuAn(MaDA),
+	CongViec nchar(100),
+	DeadLine date,
+	NhanXet nchar(50) NULL,
+>>>>>>> e3b538af5aee5705690946a1ada08ab0db7758a7
 	ChamCong int NULL,
 	PRIMARY KEY(MaNV,MaDA)
 )
@@ -303,3 +369,13 @@ VALUES('NV010','DA006',N'Liên hệ các nhà báo','2000-04-20', N'Đang Thực
 INSERT INTO PhanCong
 VALUES('NV011','DA006',N'Đăng bài về logo','2000-04-20', N'Đang Thực Hiện', 0)
 GO
+<<<<<<< HEAD
+=======
+
+SELECT * FROM MucLuong
+SELECT * FROM NhanVien
+SELECT * FROM PhongBan
+SELECT * FROM P
+SELECT * FROM PhanCong
+SELECT * FROM PhanCong
+>>>>>>> e3b538af5aee5705690946a1ada08ab0db7758a7

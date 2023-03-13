@@ -52,5 +52,15 @@ namespace QuanLyCongTy
         {
             OpenChildForm(new FCheckinout(maNV));
         }
+
+        private void btnXinNghi_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FXinNghi());
+        }
+
+        private void btn_KPI_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FKPI());
+        }
     }
 }

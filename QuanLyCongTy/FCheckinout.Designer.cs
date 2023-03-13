@@ -34,14 +34,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gvCheckoutList = new System.Windows.Forms.DataGridView();
-            this.btnCheckout = new System.Windows.Forms.Button();
-            this.gvCheckinList = new System.Windows.Forms.DataGridView();
-            this.btnCheckin = new System.Windows.Forms.Button();
-            this.pnlTable = new System.Windows.Forms.Panel();
             this.TGCheckout = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nhanxet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnCheckout = new System.Windows.Forms.Button();
+            this.gvCheckinList = new System.Windows.Forms.DataGridView();
             this.TGCheckin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nhanxet2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnCheckin = new System.Windows.Forms.Button();
+            this.pnlTable = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.gvCheckoutList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvCheckinList)).BeginInit();
             this.pnlTable.SuspendLayout();
@@ -73,13 +73,30 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gvCheckoutList.DefaultCellStyle = dataGridViewCellStyle2;
             this.gvCheckoutList.Dock = System.Windows.Forms.DockStyle.Right;
-            this.gvCheckoutList.Location = new System.Drawing.Point(355, 10);
+            this.gvCheckoutList.Location = new System.Drawing.Point(266, 8);
+            this.gvCheckoutList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gvCheckoutList.Name = "gvCheckoutList";
             this.gvCheckoutList.RowHeadersVisible = false;
             this.gvCheckoutList.RowHeadersWidth = 51;
             this.gvCheckoutList.RowTemplate.Height = 24;
-            this.gvCheckoutList.Size = new System.Drawing.Size(345, 690);
+            this.gvCheckoutList.Size = new System.Drawing.Size(259, 561);
             this.gvCheckoutList.TabIndex = 2;
+            // 
+            // TGCheckout
+            // 
+            this.TGCheckout.DataPropertyName = "TGCheckout";
+            this.TGCheckout.HeaderText = "Thời điểm Checkout";
+            this.TGCheckout.MinimumWidth = 6;
+            this.TGCheckout.Name = "TGCheckout";
+            this.TGCheckout.Width = 155;
+            // 
+            // Nhanxet
+            // 
+            this.Nhanxet.DataPropertyName = "Nhanxet";
+            this.Nhanxet.HeaderText = "Nhận xét";
+            this.Nhanxet.MinimumWidth = 6;
+            this.Nhanxet.Name = "Nhanxet";
+            this.Nhanxet.Width = 90;
             // 
             // btnCheckout
             // 
@@ -88,9 +105,10 @@
             this.btnCheckout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCheckout.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheckout.ForeColor = System.Drawing.Color.White;
-            this.btnCheckout.Location = new System.Drawing.Point(39, 117);
+            this.btnCheckout.Location = new System.Drawing.Point(29, 95);
+            this.btnCheckout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCheckout.Name = "btnCheckout";
-            this.btnCheckout.Size = new System.Drawing.Size(200, 68);
+            this.btnCheckout.Size = new System.Drawing.Size(150, 55);
             this.btnCheckout.TabIndex = 2;
             this.btnCheckout.Text = "CHECKOUT";
             this.btnCheckout.UseVisualStyleBackColor = false;
@@ -121,7 +139,8 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gvCheckinList.DefaultCellStyle = dataGridViewCellStyle4;
             this.gvCheckinList.Dock = System.Windows.Forms.DockStyle.Left;
-            this.gvCheckinList.Location = new System.Drawing.Point(0, 10);
+            this.gvCheckinList.Location = new System.Drawing.Point(0, 8);
+            this.gvCheckinList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gvCheckinList.Name = "gvCheckinList";
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
@@ -134,50 +153,8 @@
             this.gvCheckinList.RowHeadersVisible = false;
             this.gvCheckinList.RowHeadersWidth = 51;
             this.gvCheckinList.RowTemplate.Height = 24;
-            this.gvCheckinList.Size = new System.Drawing.Size(340, 690);
+            this.gvCheckinList.Size = new System.Drawing.Size(255, 561);
             this.gvCheckinList.TabIndex = 0;
-            // 
-            // btnCheckin
-            // 
-            this.btnCheckin.BackColor = System.Drawing.Color.Teal;
-            this.btnCheckin.FlatAppearance.BorderSize = 0;
-            this.btnCheckin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCheckin.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCheckin.ForeColor = System.Drawing.Color.White;
-            this.btnCheckin.Location = new System.Drawing.Point(39, 28);
-            this.btnCheckin.Name = "btnCheckin";
-            this.btnCheckin.Size = new System.Drawing.Size(200, 68);
-            this.btnCheckin.TabIndex = 1;
-            this.btnCheckin.Text = "CHECKIN";
-            this.btnCheckin.UseVisualStyleBackColor = false;
-            this.btnCheckin.Click += new System.EventHandler(this.btnCheckin_Click);
-            // 
-            // pnlTable
-            // 
-            this.pnlTable.Controls.Add(this.gvCheckoutList);
-            this.pnlTable.Controls.Add(this.gvCheckinList);
-            this.pnlTable.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlTable.Location = new System.Drawing.Point(300, 0);
-            this.pnlTable.Name = "pnlTable";
-            this.pnlTable.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.pnlTable.Size = new System.Drawing.Size(700, 700);
-            this.pnlTable.TabIndex = 3;
-            // 
-            // TGCheckout
-            // 
-            this.TGCheckout.DataPropertyName = "TGCheckout";
-            this.TGCheckout.HeaderText = "Thời điểm Checkout";
-            this.TGCheckout.MinimumWidth = 6;
-            this.TGCheckout.Name = "TGCheckout";
-            this.TGCheckout.Width = 155;
-            // 
-            // Nhanxet
-            // 
-            this.Nhanxet.DataPropertyName = "Nhanxet";
-            this.Nhanxet.HeaderText = "Nhận xét";
-            this.Nhanxet.MinimumWidth = 6;
-            this.Nhanxet.Name = "Nhanxet";
-            this.Nhanxet.Width = 90;
             // 
             // TGCheckin
             // 
@@ -195,16 +172,45 @@
             this.Nhanxet2.Name = "Nhanxet2";
             this.Nhanxet2.Width = 90;
             // 
+            // btnCheckin
+            // 
+            this.btnCheckin.BackColor = System.Drawing.Color.Teal;
+            this.btnCheckin.FlatAppearance.BorderSize = 0;
+            this.btnCheckin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCheckin.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckin.ForeColor = System.Drawing.Color.White;
+            this.btnCheckin.Location = new System.Drawing.Point(29, 23);
+            this.btnCheckin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCheckin.Name = "btnCheckin";
+            this.btnCheckin.Size = new System.Drawing.Size(150, 55);
+            this.btnCheckin.TabIndex = 1;
+            this.btnCheckin.Text = "CHECKIN";
+            this.btnCheckin.UseVisualStyleBackColor = false;
+            this.btnCheckin.Click += new System.EventHandler(this.btnCheckin_Click);
+            // 
+            // pnlTable
+            // 
+            this.pnlTable.Controls.Add(this.gvCheckoutList);
+            this.pnlTable.Controls.Add(this.gvCheckinList);
+            this.pnlTable.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlTable.Location = new System.Drawing.Point(225, 0);
+            this.pnlTable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlTable.Name = "pnlTable";
+            this.pnlTable.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
+            this.pnlTable.Size = new System.Drawing.Size(525, 569);
+            this.pnlTable.TabIndex = 3;
+            // 
             // FCheckinout
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1000, 700);
+            this.ClientSize = new System.Drawing.Size(750, 569);
             this.Controls.Add(this.pnlTable);
             this.Controls.Add(this.btnCheckin);
             this.Controls.Add(this.btnCheckout);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FCheckinout";
             this.Text = "Checkin";
             this.Load += new System.EventHandler(this.Checkin_Load);

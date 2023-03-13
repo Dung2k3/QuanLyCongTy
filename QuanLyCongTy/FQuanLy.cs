@@ -60,5 +60,10 @@ namespace QuanLyCongTy
         {
             OpenChildForm(new FDanhGiaDA());
         }
+
+        private void btnXinNghi_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FXinNghi());
+        }
     }
 }

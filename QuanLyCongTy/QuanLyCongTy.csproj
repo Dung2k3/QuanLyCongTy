@@ -49,6 +49,8 @@
     <Compile Include="CheckinDao.cs" />
     <Compile Include="CheckoutDao.cs" />
     <Compile Include="ClassDangNhap.cs" />
+    <Compile Include="ClassKPI.cs" />
+    <Compile Include="ClassXinNghi.cs" />
     <Compile Include="FCheckinout.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +84,12 @@
       <DependentUpon>FDuAn.cs</DependentUpon>
     </Compile>
     <Compile Include="DuAnDAO.cs" />
+    <Compile Include="FKPI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FKPI.Designer.cs">
+      <DependentUpon>FKPI.cs</DependentUpon>
+    </Compile>
     <Compile Include="FNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +113,12 @@
     </Compile>
     <Compile Include="FTruongPhong.Designer.cs">
       <DependentUpon>FTruongPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FXinNghi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FXinNghi.Designer.cs">
+      <DependentUpon>FXinNghi.cs</DependentUpon>
     </Compile>
     <Compile Include="NhanVienDao.cs" />
     <Compile Include="PhanCongDAO.cs" />
@@ -135,6 +149,9 @@
     <EmbeddedResource Include="FDangNhap.resx">
       <DependentUpon>FDangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FKPI.resx">
+      <DependentUpon>FKPI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FNhanVien.resx">
       <DependentUpon>FNhanVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FTruongPhong.resx">
       <DependentUpon>FTruongPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FXinNghi.resx">
+      <DependentUpon>FXinNghi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
