@@ -108,6 +108,12 @@
     <Compile Include="FQuanLy.Designer.cs">
       <DependentUpon>FQuanLy.cs</DependentUpon>
     </Compile>
+    <Compile Include="FQuanLy2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FQuanLy2.Designer.cs">
+      <DependentUpon>FQuanLy2.cs</DependentUpon>
+    </Compile>
     <Compile Include="FThongTin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FQuanLy.resx">
       <DependentUpon>FQuanLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FQuanLy2.resx">
+      <DependentUpon>FQuanLy2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FThongTin.resx">
       <DependentUpon>FThongTin.cs</DependentUpon>

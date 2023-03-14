@@ -41,3 +41,4 @@ D:\hc\CTDH\WinForm\Project\PJ_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.Form1.res
 D:\hc\CTDH\WinForm\Project\PJ_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.ucMenuBtn.resources
 D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.FThongTin.resources
 D:\hc\CTDH\WinForm\Project\PJ_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.FThongTin.resources
+D:\hc\CTDH\WinForm\Project\PJ_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.FQuanLy2.resources

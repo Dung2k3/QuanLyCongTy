@@ -28,13 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.ucMenuBtn5 = new QuanLyCongTy.ucMenuBtn();
             this.ucMenuBtn4 = new QuanLyCongTy.ucMenuBtn();
             this.ucMenuBtn3 = new QuanLyCongTy.ucMenuBtn();
             this.ucMenuBtn2 = new QuanLyCongTy.ucMenuBtn();
             this.ucMenuBtn1 = new QuanLyCongTy.ucMenuBtn();
             this.uc = new QuanLyCongTy.UC();
-            this.ucMenuBtn5 = new QuanLyCongTy.ucMenuBtn();
             this.SuspendLayout();
+            // 
+            // ucMenuBtn5
+            // 
+            this.ucMenuBtn5.Location = new System.Drawing.Point(0, 402);
+            this.ucMenuBtn5.Name = "ucMenuBtn5";
+            this.ucMenuBtn5.Size = new System.Drawing.Size(250, 70);
+            this.ucMenuBtn5.TabIndex = 5;
             // 
             // ucMenuBtn4
             // 
@@ -66,18 +73,10 @@
             // 
             // uc
             // 
-            this.uc.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uc.Location = new System.Drawing.Point(0, 0);
             this.uc.Name = "uc";
-            this.uc.Size = new System.Drawing.Size(1250, 800);
+            this.uc.Size = new System.Drawing.Size(1942, 800);
             this.uc.TabIndex = 0;
-            // 
-            // ucMenuBtn5
-            // 
-            this.ucMenuBtn5.Location = new System.Drawing.Point(0, 402);
-            this.ucMenuBtn5.Name = "ucMenuBtn5";
-            this.ucMenuBtn5.Size = new System.Drawing.Size(250, 70);
-            this.ucMenuBtn5.TabIndex = 5;
             // 
             // Form1
             // 

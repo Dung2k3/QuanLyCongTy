@@ -58,7 +58,7 @@
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(281, 1000);
+            this.pnlMenu.Size = new System.Drawing.Size(250, 800);
             this.pnlMenu.TabIndex = 8;
             // 
             // btnXinNghi
@@ -69,10 +69,10 @@
             this.btnXinNghi.ForeColor = System.Drawing.Color.White;
             this.btnXinNghi.Image = ((System.Drawing.Image)(resources.GetObject("btnXinNghi.Image")));
             this.btnXinNghi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXinNghi.Location = new System.Drawing.Point(0, 389);
+            this.btnXinNghi.Location = new System.Drawing.Point(0, 311);
             this.btnXinNghi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXinNghi.Name = "btnXinNghi";
-            this.btnXinNghi.Size = new System.Drawing.Size(281, 88);
+            this.btnXinNghi.Size = new System.Drawing.Size(250, 70);
             this.btnXinNghi.TabIndex = 5;
             this.btnXinNghi.Text = "Xin Nghỉ";
             this.btnXinNghi.UseVisualStyleBackColor = true;
@@ -86,10 +86,10 @@
             this.btnDanhGiaPC.ForeColor = System.Drawing.Color.White;
             this.btnDanhGiaPC.Image = global::QuanLyCongTy.Properties.Resources.document_32;
             this.btnDanhGiaPC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDanhGiaPC.Location = new System.Drawing.Point(0, 301);
+            this.btnDanhGiaPC.Location = new System.Drawing.Point(0, 241);
             this.btnDanhGiaPC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDanhGiaPC.Name = "btnDanhGiaPC";
-            this.btnDanhGiaPC.Size = new System.Drawing.Size(281, 88);
+            this.btnDanhGiaPC.Size = new System.Drawing.Size(250, 70);
             this.btnDanhGiaPC.TabIndex = 4;
             this.btnDanhGiaPC.Text = "Đánh giá";
             this.btnDanhGiaPC.UseVisualStyleBackColor = true;
@@ -103,10 +103,10 @@
             this.btnTaoPC.ForeColor = System.Drawing.Color.White;
             this.btnTaoPC.Image = ((System.Drawing.Image)(resources.GetObject("btnTaoPC.Image")));
             this.btnTaoPC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTaoPC.Location = new System.Drawing.Point(0, 213);
+            this.btnTaoPC.Location = new System.Drawing.Point(0, 170);
             this.btnTaoPC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTaoPC.Name = "btnTaoPC";
-            this.btnTaoPC.Size = new System.Drawing.Size(281, 88);
+            this.btnTaoPC.Size = new System.Drawing.Size(250, 70);
             this.btnTaoPC.TabIndex = 3;
             this.btnTaoPC.Text = "Tạo Phân Công";
             this.btnTaoPC.UseVisualStyleBackColor = true;
@@ -120,10 +120,10 @@
             this.btnCheckinout.ForeColor = System.Drawing.Color.White;
             this.btnCheckinout.Image = global::QuanLyCongTy.Properties.Resources.arrow_19_32_2_;
             this.btnCheckinout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCheckinout.Location = new System.Drawing.Point(0, 125);
+            this.btnCheckinout.Location = new System.Drawing.Point(0, 100);
             this.btnCheckinout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCheckinout.Name = "btnCheckinout";
-            this.btnCheckinout.Size = new System.Drawing.Size(281, 88);
+            this.btnCheckinout.Size = new System.Drawing.Size(250, 70);
             this.btnCheckinout.TabIndex = 1;
             this.btnCheckinout.Text = "Check in/out";
             this.btnCheckinout.UseVisualStyleBackColor = true;
@@ -137,17 +137,17 @@
             this.panelName.Location = new System.Drawing.Point(0, 0);
             this.panelName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelName.Name = "panelName";
-            this.panelName.Size = new System.Drawing.Size(281, 125);
+            this.panelName.Size = new System.Drawing.Size(250, 100);
             this.panelName.TabIndex = 0;
             this.panelName.Click += new System.EventHandler(this.panelName_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::QuanLyCongTy.Properties.Resources.NhanVienName;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 14);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 11);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(78, 80);
+            this.pictureBox1.Size = new System.Drawing.Size(69, 64);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -157,9 +157,9 @@
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.Color.White;
-            this.lblName.Location = new System.Drawing.Point(87, 45);
+            this.lblName.Location = new System.Drawing.Point(77, 36);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(72, 29);
+            this.lblName.Size = new System.Drawing.Size(59, 24);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Name";
             // 
@@ -167,10 +167,10 @@
             // 
             this.pnlTitle.Controls.Add(this.lblTitle);
             this.pnlTitle.Controls.Add(this.btnCloseForm);
-            this.pnlTitle.Location = new System.Drawing.Point(281, 0);
+            this.pnlTitle.Location = new System.Drawing.Point(250, 0);
             this.pnlTitle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlTitle.Name = "pnlTitle";
-            this.pnlTitle.Size = new System.Drawing.Size(1125, 125);
+            this.pnlTitle.Size = new System.Drawing.Size(1000, 100);
             this.pnlTitle.TabIndex = 9;
             // 
             // lblTitle
@@ -178,9 +178,9 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(502, 45);
+            this.lblTitle.Location = new System.Drawing.Point(446, 36);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(27, 44);
+            this.lblTitle.Size = new System.Drawing.Size(24, 37);
             this.lblTitle.TabIndex = 2;
             this.lblTitle.Text = " ";
             // 
@@ -191,10 +191,10 @@
             this.btnCloseForm.Font = new System.Drawing.Font("Arial Narrow", 18F);
             this.btnCloseForm.ForeColor = System.Drawing.Color.Black;
             this.btnCloseForm.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnCloseForm.Location = new System.Drawing.Point(1054, 0);
+            this.btnCloseForm.Location = new System.Drawing.Point(937, 0);
             this.btnCloseForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCloseForm.Name = "btnCloseForm";
-            this.btnCloseForm.Size = new System.Drawing.Size(71, 48);
+            this.btnCloseForm.Size = new System.Drawing.Size(63, 38);
             this.btnCloseForm.TabIndex = 6;
             this.btnCloseForm.Text = "X";
             this.btnCloseForm.UseVisualStyleBackColor = true;
@@ -202,22 +202,21 @@
             // 
             // pnlNoiDung
             // 
-            this.pnlNoiDung.Location = new System.Drawing.Point(281, 125);
+            this.pnlNoiDung.Location = new System.Drawing.Point(250, 100);
             this.pnlNoiDung.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlNoiDung.Name = "pnlNoiDung";
-            this.pnlNoiDung.Size = new System.Drawing.Size(1125, 875);
+            this.pnlNoiDung.Size = new System.Drawing.Size(1000, 700);
             this.pnlNoiDung.TabIndex = 10;
             // 
             // FTruongPhong
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1407, 1000);
+            this.ClientSize = new System.Drawing.Size(1251, 800);
             this.Controls.Add(this.pnlNoiDung);
             this.Controls.Add(this.pnlTitle);
             this.Controls.Add(this.pnlMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FTruongPhong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FTruongPhong";

@@ -172,6 +172,7 @@ namespace QuanLyCongTy
             // 
             // pnlTitle
             // 
+            this.pnlTitle.Controls.Add(this.pnlNoiDung);
             this.pnlTitle.Controls.Add(this.lblTitle);
             this.pnlTitle.Controls.Add(this.btnCloseForm);
             this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
@@ -188,7 +189,7 @@ namespace QuanLyCongTy
             this.lblTitle.ForeColor = System.Drawing.Color.White;
             this.lblTitle.Location = new System.Drawing.Point(549, 40);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(27, 44);
+            this.lblTitle.Size = new System.Drawing.Size(24, 37);
             this.lblTitle.TabIndex = 7;
             this.lblTitle.Text = " ";
             // 
@@ -210,7 +211,7 @@ namespace QuanLyCongTy
             // 
             // pnlNoiDung
             // 
-            this.pnlNoiDung.Location = new System.Drawing.Point(281, 125);
+            this.pnlNoiDung.Location = new System.Drawing.Point(0, 100);
             this.pnlNoiDung.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlNoiDung.Name = "pnlNoiDung";
             this.pnlNoiDung.Size = new System.Drawing.Size(1000, 700);
@@ -222,7 +223,6 @@ namespace QuanLyCongTy
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1250, 800);
-            this.Controls.Add(this.pnlNoiDung);
             this.Controls.Add(this.pnlTitle);
             this.Controls.Add(this.pnlMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

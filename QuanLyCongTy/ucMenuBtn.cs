@@ -15,6 +15,13 @@ namespace QuanLyCongTy
         Color color;
         UC uc;
         Form childForm;
+        [Browsable(true), EditorBrowsable(EditorBrowsableState.Always), Bindable(true)]
+        [Description("Test text displayed in the textbox"), Category("Data")]
+        public override string Text
+        {
+            get => btn.Text;
+            set => btn.Text = value;
+        }
         public ucMenuBtn()
         {
             InitializeComponent();
