@@ -12,6 +12,7 @@ namespace QuanLyCongTy
 {
     public partial class UC : UserControl
     {
+        FThongTin fthongtin;
         string ma;
         public string Ma 
         {
@@ -19,6 +20,7 @@ namespace QuanLyCongTy
             { 
                 ma = value;
                 lblName.Text = nvDao.GetTenNV(value);
+                fthongtin = new FThongTin(value);
             } 
         }
         NhanVienDao nvDao = new NhanVienDao();
@@ -26,10 +28,21 @@ namespace QuanLyCongTy
         {
             InitializeComponent();
         }
-        public void btn_Click(Button btn)
+        public void ChangeTiltle(Color backcolor,string tiltle)
         {
-            pnlTitle.BackColor = btn.BackColor;
-            lblTitle.Text = btn.Text;
+            pnlTitle.BackColor = backcolor;
+            lblTitle.Text = tiltle;
+        }
+        public void OffColor()
+        {
+            foreach (Control ctrl in Parent.Controls)
+            {
+                if (ctrl is ucMenuBtn)
+                {
+                    ucMenuBtn btns = (ucMenuBtn)ctrl;
+                    btns.BackColor = ColorTranslator.FromHtml("#33334C");
+                }
+            }
         }
         private Form currentFormChild;
         public void AddChildForm(Form childForm)
@@ -57,7 +70,25 @@ namespace QuanLyCongTy
 
         private void UC_Load(object sender, EventArgs e)
         {
+            AddChildForm(fthongtin);
+            panelName_Click(sender, e);
+        }
 
+        private void panelName_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(fthongtin);
+            OffColor();
+            ChangeTiltle(ColorTranslator.FromHtml("#33334C"), "Thông Tin");
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            panelName_Click(sender, e);
+        }
+
+        private void lblName_Click(object sender, EventArgs e)
+        {
+            panelName_Click(sender, e);
         }
     }
 }

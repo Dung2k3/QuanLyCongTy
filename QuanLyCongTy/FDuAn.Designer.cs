@@ -71,7 +71,7 @@
             this.gv_DuAn.RowHeadersVisible = false;
             this.gv_DuAn.RowHeadersWidth = 62;
             this.gv_DuAn.RowTemplate.Height = 40;
-            this.gv_DuAn.Size = new System.Drawing.Size(677, 558);
+            this.gv_DuAn.Size = new System.Drawing.Size(508, 453);
             this.gv_DuAn.TabIndex = 0;
             this.gv_DuAn.DoubleClick += new System.EventHandler(this.gv_DuAn_DoubleClick);
             // 
@@ -267,10 +267,10 @@
             // 
             // FDuAn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1000, 700);
+            this.ClientSize = new System.Drawing.Size(750, 569);
             this.Controls.Add(this.dtp_deadline);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btn_Sua);
@@ -288,7 +288,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.gv_DuAn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FDuAn";
             this.Load += new System.EventHandler(this.DuAn_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gv_DuAn)).EndInit();

@@ -41,6 +41,7 @@
             this.lblTaiKhoan = new System.Windows.Forms.Label();
             this.lblMatKhau = new System.Windows.Forms.Label();
             this.btnDangNhap = new System.Windows.Forms.Button();
+            this.ucTextBox1 = new QuanLyCongTy.ucTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -125,11 +126,18 @@
             this.btnDangNhap.UseVisualStyleBackColor = false;
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
+            // ucTextBox1
+            // 
+            this.ucTextBox1.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.ucTextBox1, "ucTextBox1");
+            this.ucTextBox1.Name = "ucTextBox1";
+            // 
             // FDangNhap
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.ucTextBox1);
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.lblMatKhau);
             this.Controls.Add(this.lblTaiKhoan);
@@ -162,5 +170,6 @@
         private System.Windows.Forms.Label lblMatKhau;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnDangNhap;
+        private ucTextBox ucTextBox1;
     }
 }

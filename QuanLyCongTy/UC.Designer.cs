@@ -30,9 +30,9 @@
         {
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.panelName = new System.Windows.Forms.Panel();
-            this.pnlNoiDung = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblName = new System.Windows.Forms.Label();
+            this.pnlNoiDung = new System.Windows.Forms.Panel();
             this.pnlTitle = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnCloseForm = new System.Windows.Forms.Button();
@@ -64,14 +64,7 @@
             this.panelName.Name = "panelName";
             this.panelName.Size = new System.Drawing.Size(250, 100);
             this.panelName.TabIndex = 0;
-            // 
-            // pnlNoiDung
-            // 
-            this.pnlNoiDung.Location = new System.Drawing.Point(250, 100);
-            this.pnlNoiDung.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnlNoiDung.Name = "pnlNoiDung";
-            this.pnlNoiDung.Size = new System.Drawing.Size(1000, 700);
-            this.pnlNoiDung.TabIndex = 11;
+            this.panelName.Click += new System.EventHandler(this.panelName_Click);
             // 
             // pictureBox1
             // 
@@ -83,17 +76,27 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.Color.White;
             this.lblName.Location = new System.Drawing.Point(78, 35);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(59, 24);
+            this.lblName.Size = new System.Drawing.Size(54, 22);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Name";
+            this.lblName.Click += new System.EventHandler(this.lblName_Click);
+            // 
+            // pnlNoiDung
+            // 
+            this.pnlNoiDung.Location = new System.Drawing.Point(250, 100);
+            this.pnlNoiDung.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlNoiDung.Name = "pnlNoiDung";
+            this.pnlNoiDung.Size = new System.Drawing.Size(1000, 700);
+            this.pnlNoiDung.TabIndex = 11;
             // 
             // pnlTitle
             // 

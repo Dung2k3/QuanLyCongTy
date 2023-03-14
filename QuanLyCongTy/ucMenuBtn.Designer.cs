@@ -37,7 +37,7 @@
             this.btn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn.FlatAppearance.BorderSize = 0;
             this.btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn.Font = new System.Drawing.Font("Calibri", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn.ForeColor = System.Drawing.Color.White;
             this.btn.Image = global::QuanLyCongTy.Properties.Resources.arrow_19_32_2_;
             this.btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;

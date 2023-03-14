@@ -1,4 +1,4 @@
-﻿CREATE DATABASE QLCT
+CREATE DATABASE QLCT
 GO
 
 USE QLCT
@@ -85,9 +85,6 @@ INSERT INTO LoaiPhongBan VALUES('LPBSX', N'Sản Xuất')
 INSERT INTO LoaiPhongBan VALUES('LPBMK', N'Marketing')
 INSERT INTO LoaiPhongBan VALUES('LPBHC', N'Hành Chính')
 INSERT INTO LoaiPhongBan VALUES('LPBTK', N'Thiết Kế')
-GO
-
-CREATE TABLE dbo.PhongBan(
 	MaPB varchar(10) PRIMARY KEY,
 	TenPB nvarchar(30) ,
 	MaLPB varchar(10) REFERENCES LoaiPhongBan(MaLPB),
@@ -156,6 +153,7 @@ INSERT INTO TaiKhoan VALUES('NV034','hvt','hvt123')
 GO
 
 CREATE TABLE dbo.Checkin(
+
 	MaNV varchar(10) REFERENCES NhanVien(MaNV),
 	NgayCheckin date,
 	GioCheckin time,

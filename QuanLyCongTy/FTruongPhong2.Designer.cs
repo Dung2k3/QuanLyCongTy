@@ -1,6 +1,6 @@
 ﻿namespace QuanLyCongTy
 {
-    partial class FQuanLy2
+    partial class FTruongPhong2
     {
         /// <summary>
         /// Required designer variable.
@@ -28,28 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ucbtnDanhGiaDA = new QuanLyCongTy.ucMenuBtn();
-            this.ucbtnTaoDA = new QuanLyCongTy.ucMenuBtn();
+            this.ucbtnXinNghi = new QuanLyCongTy.ucMenuBtn();
+            this.ucbtnDanhGiaPC = new QuanLyCongTy.ucMenuBtn();
+            this.ucbtnTaoPC = new QuanLyCongTy.ucMenuBtn();
             this.ucbtnCheckinout = new QuanLyCongTy.ucMenuBtn();
             this.ucTheme = new QuanLyCongTy.UC();
-            this.ucbtnXinNghi = new QuanLyCongTy.ucMenuBtn();
             this.SuspendLayout();
             // 
-            // ucbtnDanhGiaDA
+            // ucbtnXinNghi
             // 
-            this.ucbtnDanhGiaDA.Location = new System.Drawing.Point(0, 252);
-            this.ucbtnDanhGiaDA.Name = "ucbtnDanhGiaDA";
-            this.ucbtnDanhGiaDA.Size = new System.Drawing.Size(250, 70);
-            this.ucbtnDanhGiaDA.TabIndex = 3;
-            this.ucbtnDanhGiaDA.Text = "Đánh giá";
+            this.ucbtnXinNghi.Location = new System.Drawing.Point(0, 297);
+            this.ucbtnXinNghi.Name = "ucbtnXinNghi";
+            this.ucbtnXinNghi.Size = new System.Drawing.Size(250, 70);
+            this.ucbtnXinNghi.TabIndex = 4;
+            this.ucbtnXinNghi.Text = "Xin Nghỉ";
             // 
-            // ucbtnTaoDA
+            // ucbtnDanhGiaPC
             // 
-            this.ucbtnTaoDA.Location = new System.Drawing.Point(0, 176);
-            this.ucbtnTaoDA.Name = "ucbtnTaoDA";
-            this.ucbtnTaoDA.Size = new System.Drawing.Size(250, 70);
-            this.ucbtnTaoDA.TabIndex = 2;
-            this.ucbtnTaoDA.Text = "Tạo Dự Án";
+            this.ucbtnDanhGiaPC.Location = new System.Drawing.Point(0, 231);
+            this.ucbtnDanhGiaPC.Name = "ucbtnDanhGiaPC";
+            this.ucbtnDanhGiaPC.Size = new System.Drawing.Size(250, 70);
+            this.ucbtnDanhGiaPC.TabIndex = 3;
+            this.ucbtnDanhGiaPC.Text = "Đánh giá";
+            // 
+            // ucbtnTaoPC
+            // 
+            this.ucbtnTaoPC.Location = new System.Drawing.Point(0, 164);
+            this.ucbtnTaoPC.Name = "ucbtnTaoPC";
+            this.ucbtnTaoPC.Size = new System.Drawing.Size(250, 70);
+            this.ucbtnTaoPC.TabIndex = 2;
+            this.ucbtnTaoPC.Text = "Phân công";
             // 
             // ucbtnCheckinout
             // 
@@ -57,8 +65,7 @@
             this.ucbtnCheckinout.Name = "ucbtnCheckinout";
             this.ucbtnCheckinout.Size = new System.Drawing.Size(250, 70);
             this.ucbtnCheckinout.TabIndex = 1;
-            this.ucbtnCheckinout.Text = "Checkin/out";
-            this.ucbtnCheckinout.Load += new System.EventHandler(this.ucbtnCheckinout_Load);
+            this.ucbtnCheckinout.Text = "Check in/out";
             // 
             // ucTheme
             // 
@@ -68,27 +75,19 @@
             this.ucTheme.Size = new System.Drawing.Size(1250, 800);
             this.ucTheme.TabIndex = 0;
             // 
-            // ucbtnXinNghi
-            // 
-            this.ucbtnXinNghi.Location = new System.Drawing.Point(0, 328);
-            this.ucbtnXinNghi.Name = "ucbtnXinNghi";
-            this.ucbtnXinNghi.Size = new System.Drawing.Size(250, 70);
-            this.ucbtnXinNghi.TabIndex = 4;
-            this.ucbtnXinNghi.Text = "Xin nghỉ";
-            // 
-            // FQuanLy2
+            // FTruongPhong2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1250, 800);
             this.Controls.Add(this.ucbtnXinNghi);
-            this.Controls.Add(this.ucbtnDanhGiaDA);
-            this.Controls.Add(this.ucbtnTaoDA);
+            this.Controls.Add(this.ucbtnDanhGiaPC);
+            this.Controls.Add(this.ucbtnTaoPC);
             this.Controls.Add(this.ucbtnCheckinout);
             this.Controls.Add(this.ucTheme);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FQuanLy2";
-            this.Text = "FQuanLy2";
+            this.Name = "FTruongPhong2";
+            this.Text = "FTruongPhong2";
             this.ResumeLayout(false);
 
         }
@@ -97,8 +96,8 @@
 
         private UC ucTheme;
         private ucMenuBtn ucbtnCheckinout;
-        private ucMenuBtn ucbtnTaoDA;
-        private ucMenuBtn ucbtnDanhGiaDA;
+        private ucMenuBtn ucbtnTaoPC;
+        private ucMenuBtn ucbtnDanhGiaPC;
         private ucMenuBtn ucbtnXinNghi;
     }
 }

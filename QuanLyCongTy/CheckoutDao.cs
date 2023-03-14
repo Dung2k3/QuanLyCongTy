@@ -22,16 +22,16 @@ namespace QuanLyCongTy
         }
         public DataTable LayDanhSachCheckout()
         {
-            string sqlStr = string.Format("SELECT TGCheckout FROM Checkout Where MaNV = '{0}'", ma);
+            string sqlStr = string.Format("SELECT NgayCheckout, GioCheckout FROM Checkout Where MaNV = '{0}'", ma);
             DataTable dt = dbConn.LayDanhSach(sqlStr);
             dt.Columns.Add(string.Format("Nhanxet", typeof(string)));
             foreach (DataRow dr in dt.Rows)
             {
-                TimeSpan time = DateTime.Parse(dr[0].ToString()).TimeOfDay;
+                TimeSpan time = DateTime.Parse(dr[1].ToString()).TimeOfDay;
                 if (KTSom(time))
-                    dr[1] = string.Format("Về sớm");
+                    dr[2] = string.Format("Về sớm");
                 else
-                    dr[1] = string.Format("Đúng giờ");
+                    dr[2] = string.Format("Đúng giờ");
             }
             return dt;
         }
@@ -48,7 +48,7 @@ namespace QuanLyCongTy
         }
         public void Them(DateTime current)
         {
-            string sqlStr = string.Format("INSERT INTO Checkout VALUES('{0}' , '{1}T{2}')",
+            string sqlStr = string.Format("INSERT INTO Checkout VALUES('{0}' , '{1}', '{2}')",
                 ma, current.ToString("yyyy-MM-dd"), current.ToString("HH:mm:ss"));
             dbConn.ThucThi(sqlStr);
         }

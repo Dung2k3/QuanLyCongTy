@@ -33,11 +33,11 @@ namespace QuanLyCongTy
                 txtMatKhau.Text = "";
                 Form newForm;
                 if (dnDao.KTQuanLy(MaNV))
-                    newForm = new FQuanLy(MaNV);
+                    newForm = new FQuanLy2(MaNV);
                 else if (dnDao.KTTruongPhong(MaNV))
-                    newForm = new FTruongPhong(MaNV);
+                    newForm = new FTruongPhong2(MaNV);
                 else
-                    newForm = new FNhanVien(MaNV);
+                    newForm = new FNhanVien2(MaNV);
                 newForm.ShowDialog();
                 this.Show();
             }

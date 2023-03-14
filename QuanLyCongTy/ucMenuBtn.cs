@@ -16,11 +16,20 @@ namespace QuanLyCongTy
         UC uc;
         Form childForm;
         [Browsable(true), EditorBrowsable(EditorBrowsableState.Always), Bindable(true)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         [Description("Test text displayed in the textbox"), Category("Data")]
         public override string Text
         {
-            get => btn.Text;
-            set => btn.Text = value;
+            get { return base.Text; }
+            set { base.Text = btn.Text = value; }
+        }
+        [Browsable(true), EditorBrowsable(EditorBrowsableState.Always), Bindable(true)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
+        [Description("Test text displayed in the textbox"), Category("Data")]
+        public override Color BackColor
+        {
+            get { return base.BackColor; }
+            set { base.BackColor = btn.BackColor = value; }
         }
         public ucMenuBtn()
         {
@@ -35,16 +44,9 @@ namespace QuanLyCongTy
         }
         private void btn_Click(object sender, EventArgs e)
         {
-            foreach (Control ctrl in Parent.Controls)
-            {
-                if (ctrl is ucMenuBtn)
-                {
-                    ucMenuBtn btns = (ucMenuBtn)ctrl;
-                    btns.btn.BackColor = ColorTranslator.FromHtml("#33334C");
-                }
-            }
-            btn.BackColor = color;
-            uc.btn_Click(btn);
+            uc.OffColor();
+            BackColor = color;
+            uc.ChangeTiltle(BackColor, Text);
             uc.OpenChildForm(childForm);
         }
     }

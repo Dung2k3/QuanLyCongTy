@@ -74,7 +74,7 @@ namespace QuanLyCongTy
         }
         public void Them(DateTime current)
         { 
-            string sqlStr = string.Format("INSERT INTO Checkin VALUES('{0}' , '{1}T{2}')",
+            string sqlStr = string.Format("INSERT INTO Checkin VALUES('{0}' , '{1}', '{2}')",
                 ma, current.ToString("yyyy-MM-dd"), current.ToString("HH:mm:ss"));
             dbConn.ThucThi(sqlStr);
         }

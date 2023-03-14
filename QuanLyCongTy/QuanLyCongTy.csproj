@@ -51,6 +51,8 @@
     <Compile Include="CheckoutDao.cs" />
     <Compile Include="ClassDangNhap.cs" />
     <Compile Include="ClassThongTin.cs" />
+    <Compile Include="ClassKPI.cs" />
+    <Compile Include="ClassXinNghi.cs" />
     <Compile Include="FCheckinout.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +86,12 @@
       <DependentUpon>FDuAn.cs</DependentUpon>
     </Compile>
     <Compile Include="DuAnDAO.cs" />
+    <Compile Include="FKPI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FKPI.Designer.cs">
+      <DependentUpon>FKPI.cs</DependentUpon>
+    </Compile>
     <Compile Include="FNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,11 +104,11 @@
     <Compile Include="FDangNhap.Designer.cs">
       <DependentUpon>FDangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="FNhanVien2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FNhanVien2.Designer.cs">
+      <DependentUpon>FNhanVien2.cs</DependentUpon>
     </Compile>
     <Compile Include="FQuanLy.cs">
       <SubType>Form</SubType>
@@ -125,6 +133,18 @@
     </Compile>
     <Compile Include="FTruongPhong.Designer.cs">
       <DependentUpon>FTruongPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FTruongPhong2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTruongPhong2.Designer.cs">
+      <DependentUpon>FTruongPhong2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FXinNghi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FXinNghi.Designer.cs">
+      <DependentUpon>FXinNghi.cs</DependentUpon>
     </Compile>
     <Compile Include="NhanVienDao.cs" />
     <Compile Include="PhanCongDAO.cs" />
@@ -151,6 +171,18 @@
     <Compile Include="ucMenuBtn.Designer.cs">
       <DependentUpon>ucMenuBtn.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucTextBox.Designer.cs">
+      <DependentUpon>ucTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XemDuAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XemDuAn.Designer.cs">
+      <DependentUpon>XemDuAn.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FCheckinout.resx">
       <DependentUpon>FCheckinout.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,11 +200,14 @@
     <EmbeddedResource Include="FDangNhap.resx">
       <DependentUpon>FDangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FKPI.resx">
+      <DependentUpon>FKPI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FNhanVien.resx">
       <DependentUpon>FNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FNhanVien2.resx">
+      <DependentUpon>FNhanVien2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FQuanLy.resx">
       <DependentUpon>FQuanLy.cs</DependentUpon>
@@ -185,6 +220,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FTruongPhong.resx">
       <DependentUpon>FTruongPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTruongPhong2.resx">
+      <DependentUpon>FTruongPhong2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FXinNghi.resx">
+      <DependentUpon>FXinNghi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -204,6 +245,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ucMenuBtn.resx">
       <DependentUpon>ucMenuBtn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucTextBox.resx">
+      <DependentUpon>ucTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XemDuAn.resx">
+      <DependentUpon>XemDuAn.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

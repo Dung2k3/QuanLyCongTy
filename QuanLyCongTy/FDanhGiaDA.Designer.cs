@@ -201,10 +201,10 @@ namespace QuanLyCongTy
             // 
             // FDanhGiaDA
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1000, 700);
+            this.ClientSize = new System.Drawing.Size(750, 569);
             this.Controls.Add(this.btn_Sua);
             this.Controls.Add(this.gv_DanhGiaDA);
             this.Controls.Add(this.label4);

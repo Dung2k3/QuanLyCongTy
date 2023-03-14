@@ -83,6 +83,7 @@ namespace QuanLyCongTy
         private void btnXinNghi_Click(object sender, EventArgs e)
         {
             btnClickChangeColor(btnXinNghi, "#364D5B");
+            OpenChildForm(new FXinNghi());
         }
         private void panelName_Click(object sender, EventArgs e)
         {

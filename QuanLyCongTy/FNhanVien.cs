@@ -75,11 +75,6 @@ namespace QuanLyCongTy
             btnClickChangeColor(btnThuong, "#A12059");
         }
 
-        private void btnXinNghi_Click(object sender, EventArgs e)
-        {
-            btnClickChangeColor(btnXinNghi, "#364D5B");
-        }
-
         private void btnCloseForm_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -91,6 +86,17 @@ namespace QuanLyCongTy
             btnClickChangeColor(panelName, "#33334C");
             btnClickChangeColor(pnlTitle, "#33334C");
             lblTitle.Text = "Thông tin nhân viên";
+        }
+
+        private void btnXinNghi_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FXinNghi());
+            btnClickChangeColor(btnXinNghi, "#364D5B");
+        }
+
+        private void btn_KPI_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FKPI());
         }
     }
 }
