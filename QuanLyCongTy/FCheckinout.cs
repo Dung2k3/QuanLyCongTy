@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,20 +13,19 @@ namespace QuanLyCongTy
     public partial class FCheckinout : Form
     {
         string ma;
-        CheckinDao ciDao;
+        CheckinDAO ciDao;
         CheckoutDao coDao;
         public FCheckinout(string ma)
         {
             InitializeComponent();
             this.ma = ma;
-            ciDao = new CheckinDao(ma);
+            ciDao = new CheckinDAO(ma);
             coDao = new CheckoutDao(ma);
         }
         private void CapNhatGVCheckin()
         {
             gvCheckinList.DataSource = ciDao.LayDanhSachCheckin();
-            //DataTable dt = ciDao.LayDanhSachCheckin();
-            //Chart_Checkinout.DataSource = dt.AsEnumerable().Select(r => r.Field<string>("Nhanxet").ToString()).ToList();
+            
         }
         private void CapNhatGVCheckout()
         {
@@ -58,12 +57,12 @@ namespace QuanLyCongTy
 
         private void btnCheckout_Click(object sender, EventArgs e)
         {
-            DateTime curent = DateTime.Now;
-            if (coDao.KTDiemDanh(curent))
+            DateTime current = DateTime.Now;
+            if (coDao.KTDiemDanh(current))
             {
-                coDao.Them(curent);
+                coDao.Them(current);
                 CapNhatGVCheckout();
-                if (coDao.KTSom(curent.TimeOfDay))
+                if (coDao.KTSom(current.TimeOfDay))
                 {
                     MessageBox.Show("Bạn về trước giờ nghỉ");
                 }

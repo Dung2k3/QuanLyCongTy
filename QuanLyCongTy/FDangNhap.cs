@@ -24,7 +24,7 @@ namespace QuanLyCongTy
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            ClassDangNhap dn = new ClassDangNhap(txtTaiKhoan.Text,txtMatKhau.Text);
+            DangNhap dn = new DangNhap(txtTaiKhoan.Text,txtMatKhau.Text);
             string MaNV = dnDao.KTTaiKhoan(dn);
             if (MaNV != null)
             {

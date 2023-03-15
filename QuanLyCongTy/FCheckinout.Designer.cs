@@ -34,14 +34,16 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gvCheckoutList = new System.Windows.Forms.DataGridView();
-            this.TGCheckout = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nhanxet = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnCheckout = new System.Windows.Forms.Button();
             this.gvCheckinList = new System.Windows.Forms.DataGridView();
-            this.TGCheckin = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nhanxet2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnCheckin = new System.Windows.Forms.Button();
             this.pnlTable = new System.Windows.Forms.Panel();
+            this.NgayCheckin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GioCheckin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nhanxet2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayCheckout = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GioCheckout = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nhanxet = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gvCheckoutList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvCheckinList)).BeginInit();
             this.pnlTable.SuspendLayout();
@@ -61,7 +63,8 @@
             this.gvCheckoutList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gvCheckoutList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvCheckoutList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.TGCheckout,
+            this.NgayCheckout,
+            this.GioCheckout,
             this.Nhanxet});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
@@ -81,22 +84,6 @@
             this.gvCheckoutList.RowTemplate.Height = 24;
             this.gvCheckoutList.Size = new System.Drawing.Size(388, 863);
             this.gvCheckoutList.TabIndex = 2;
-            // 
-            // TGCheckout
-            // 
-            this.TGCheckout.DataPropertyName = "TGCheckout";
-            this.TGCheckout.HeaderText = "Thời điểm Checkout";
-            this.TGCheckout.MinimumWidth = 6;
-            this.TGCheckout.Name = "TGCheckout";
-            this.TGCheckout.Width = 155;
-            // 
-            // Nhanxet
-            // 
-            this.Nhanxet.DataPropertyName = "Nhanxet";
-            this.Nhanxet.HeaderText = "Nhận xét";
-            this.Nhanxet.MinimumWidth = 6;
-            this.Nhanxet.Name = "Nhanxet";
-            this.Nhanxet.Width = 90;
             // 
             // btnCheckout
             // 
@@ -128,7 +115,8 @@
             this.gvCheckinList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.gvCheckinList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvCheckinList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.TGCheckin,
+            this.NgayCheckin,
+            this.GioCheckin,
             this.Nhanxet2});
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
@@ -153,24 +141,8 @@
             this.gvCheckinList.RowHeadersVisible = false;
             this.gvCheckinList.RowHeadersWidth = 51;
             this.gvCheckinList.RowTemplate.Height = 24;
-            this.gvCheckinList.Size = new System.Drawing.Size(382, 863);
+            this.gvCheckinList.Size = new System.Drawing.Size(394, 863);
             this.gvCheckinList.TabIndex = 0;
-            // 
-            // TGCheckin
-            // 
-            this.TGCheckin.DataPropertyName = "TGCheckin";
-            this.TGCheckin.HeaderText = "Thời điểm Checkin";
-            this.TGCheckin.MinimumWidth = 6;
-            this.TGCheckin.Name = "TGCheckin";
-            this.TGCheckin.Width = 155;
-            // 
-            // Nhanxet2
-            // 
-            this.Nhanxet2.DataPropertyName = "Nhanxet";
-            this.Nhanxet2.HeaderText = "Nhận xét";
-            this.Nhanxet2.MinimumWidth = 6;
-            this.Nhanxet2.Name = "Nhanxet2";
-            this.Nhanxet2.Width = 90;
             // 
             // btnCheckin
             // 
@@ -200,6 +172,55 @@
             this.pnlTable.Size = new System.Drawing.Size(788, 875);
             this.pnlTable.TabIndex = 3;
             // 
+            // NgayCheckin
+            // 
+            this.NgayCheckin.DataPropertyName = "NgayCheckin";
+            this.NgayCheckin.HeaderText = "Ngày Checkin";
+            this.NgayCheckin.MinimumWidth = 6;
+            this.NgayCheckin.Name = "NgayCheckin";
+            this.NgayCheckin.Width = 155;
+            // 
+            // GioCheckin
+            // 
+            this.GioCheckin.DataPropertyName = "GioCheckin";
+            this.GioCheckin.HeaderText = "Giờ checkin";
+            this.GioCheckin.MinimumWidth = 8;
+            this.GioCheckin.Name = "GioCheckin";
+            this.GioCheckin.Width = 150;
+            // 
+            // Nhanxet2
+            // 
+            this.Nhanxet2.DataPropertyName = "Nhanxet";
+            this.Nhanxet2.HeaderText = "Nhận xét";
+            this.Nhanxet2.MinimumWidth = 6;
+            this.Nhanxet2.Name = "Nhanxet2";
+            this.Nhanxet2.Width = 90;
+            // 
+            // NgayCheckout
+            // 
+            this.NgayCheckout.DataPropertyName = "NgayCheckout";
+            this.NgayCheckout.HeaderText = "Ngày checkout";
+            this.NgayCheckout.MinimumWidth = 6;
+            this.NgayCheckout.Name = "NgayCheckout";
+            this.NgayCheckout.Width = 155;
+            // 
+            // GioCheckout
+            // 
+            this.GioCheckout.DataPropertyName = "GioCheckout";
+            this.GioCheckout.HeaderText = "Giờ checkout";
+            this.GioCheckout.MinimumWidth = 8;
+            this.GioCheckout.Name = "GioCheckout";
+            this.GioCheckout.ReadOnly = true;
+            this.GioCheckout.Width = 150;
+            // 
+            // Nhanxet
+            // 
+            this.Nhanxet.DataPropertyName = "Nhanxet";
+            this.Nhanxet.HeaderText = "Nhận xét";
+            this.Nhanxet.MinimumWidth = 6;
+            this.Nhanxet.Name = "Nhanxet";
+            this.Nhanxet.Width = 90;
+            // 
             // FCheckinout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -227,9 +248,11 @@
         private System.Windows.Forms.DataGridView gvCheckinList;
         private System.Windows.Forms.Button btnCheckin;
         private System.Windows.Forms.Panel pnlTable;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TGCheckout;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nhanxet;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TGCheckin;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayCheckin;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GioCheckin;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nhanxet2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayCheckout;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GioCheckout;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nhanxet;
     }
 }

@@ -50,6 +50,7 @@
     <Compile Include="CheckinDao.cs" />
     <Compile Include="CheckoutDao.cs" />
     <Compile Include="ClassDangNhap.cs" />
+    <Compile Include="ClassTDCaNhan.cs" />
     <Compile Include="ClassThongTin.cs" />
     <Compile Include="FCheckinout.cs">
       <SubType>Form</SubType>
@@ -108,6 +109,12 @@
     <Compile Include="FThongTin.Designer.cs">
       <DependentUpon>FThongTin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FTienDo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTienDo.Designer.cs">
+      <DependentUpon>FTienDo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FTruongPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,8 +132,27 @@
       <DependentUpon>FPhanCong.cs</DependentUpon>
     </Compile>
     <Compile Include="QuanLyDao.cs" />
+    <Compile Include="TDCaNhanDAO.cs" />
     <Compile Include="ThongTinDAO.cs" />
+    <Compile Include="FTienDoCaNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTienDoCaNhan.Designer.cs">
+      <DependentUpon>FTienDoCaNhan.cs</DependentUpon>
+    </Compile>
     <Compile Include="TruongPhongDao.cs" />
+    <Compile Include="UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC.Designer.cs">
+      <DependentUpon>UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucMenuBtn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucMenuBtn.Designer.cs">
+      <DependentUpon>ucMenuBtn.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FCheckinout.resx">
       <DependentUpon>FCheckinout.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,6 +179,9 @@
     <EmbeddedResource Include="FThongTin.resx">
       <DependentUpon>FThongTin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FTienDo.resx">
+      <DependentUpon>FTienDo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FTruongPhong.resx">
       <DependentUpon>FTruongPhong.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,6 +197,15 @@
     </Compile>
     <EmbeddedResource Include="FPhanCong.resx">
       <DependentUpon>FPhanCong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTienDoCaNhan.resx">
+      <DependentUpon>FTienDoCaNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC.resx">
+      <DependentUpon>UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucMenuBtn.resx">
+      <DependentUpon>ucMenuBtn.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

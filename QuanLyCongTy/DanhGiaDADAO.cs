@@ -17,7 +17,7 @@ namespace QuanLyCongTy
             return dbConn.LayDanhSach(sqlStr);
         }
 
-        public void Sua(ClassDanhGiaDA dgda)
+        public void Sua(DanhGiaDA dgda)
         {
             string sqlStr = string.Format("UPDATE DuAn SET  DanhGia = N'{0}', Thuong = '{1}' WHERE MaDA = '{2}'", dgda.NhanXet, dgda.Thuong, dgda.MaDA);
             dbConn.ThucThi(sqlStr);

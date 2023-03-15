@@ -30,21 +30,21 @@ namespace QuanLyCongTy
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
-            ClassDuAn da = new ClassDuAn(txt_MaDA.Text, txt_TenDA.Text, txt_MaPB.Text, txt_DD.Text, dtp_deadline.Value, rtxt_MoTa.Text);
+            DuAn da = new DuAn(txt_MaDA.Text, txt_TenDA.Text, txt_MaPB.Text, txt_DD.Text, dtp_deadline.Value, rtxt_MoTa.Text);
             DAdao.Them(da);
             HienThiDanhSach();
         }
 
         private void btn_Xoa_Click(object sender, EventArgs e)
         {
-            ClassDuAn da = new ClassDuAn(txt_MaDA.Text, txt_TenDA.Text, txt_MaPB.Text, txt_DD.Text, dtp_deadline.Value, rtxt_MoTa.Text);
+            DuAn da = new DuAn(txt_MaDA.Text, txt_TenDA.Text, txt_MaPB.Text, txt_DD.Text, dtp_deadline.Value, rtxt_MoTa.Text);
             DAdao.Xoa(da);
             HienThiDanhSach();
         }
 
         private void btn_Sua_Click(object sender, EventArgs e)
         {
-            ClassDuAn da = new ClassDuAn(txt_MaDA.Text, txt_TenDA.Text, txt_MaPB.Text, txt_DD.Text, dtp_deadline.Value, rtxt_MoTa.Text);
+            DuAn da = new DuAn(txt_MaDA.Text, txt_TenDA.Text, txt_MaPB.Text, txt_DD.Text, dtp_deadline.Value, rtxt_MoTa.Text);
             DAdao.Sua(da);
             HienThiDanhSach();
         }

@@ -21,13 +21,18 @@ namespace QuanLyCongTy
         }
         private void btnClickChangeColor(Control btn, string color)
         {
-            btnCheckinout.BackColor = ColorTranslator.FromHtml("#33334C");
-            btnPhanCong.BackColor = ColorTranslator.FromHtml("#33334C");
-            btnThuong.BackColor = ColorTranslator.FromHtml("#33334C");
-            btnXinNghi.BackColor = ColorTranslator.FromHtml("#33334C");
+            foreach (Control ctrl in pnlMenu.Controls)
+            {
+                if (ctrl is Button)
+                {
+                    Button btns = (Button)ctrl;
+                    btns.BackColor = ColorTranslator.FromHtml("#33334C");
+                }
+            }
             btn.BackColor = ColorTranslator.FromHtml(color);
             pnlTitle.BackColor = ColorTranslator.FromHtml(color);
             lblTitle.Text = btn.Text;
+            
         }
 
         private Form currentFormChild;

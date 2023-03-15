@@ -22,7 +22,7 @@ namespace QuanLyCongTy
 
         private void FThongTin_Load(object sender, EventArgs e)
         {
-            ClassThongTin tt = ttDAO.LayThongTin(MaNV);
+            ThongTin tt = ttDAO.LayThongTin(MaNV);
 
             label11.Text = tt.MaNV;
             label12.Text = tt.HoTenNV;
