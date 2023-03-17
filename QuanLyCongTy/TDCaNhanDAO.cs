@@ -10,14 +10,14 @@ namespace QuanLyCongTy
     public class TDCaNhanDAO
     {
         DBConnection dbConn = new DBConnection();
-        public ClassTDCaNhan LayDanhSachTienDo(string MaNV)
+        public TDCaNhan LayDanhSachTienDo(string MaNV)
         {
             string sqlstr = string.Format("SELECT NhanVien.MaNV, PhanCong.MaDA, HoTenNV, CongViec.TenCV, TienDO, ChamDiem, NgayBD, DeadLine " +
                                             "FROM CongViec, PhanCong, NhanVien  " +
                                             "WHERE PhanCong.MaNV = NhanVien.MaNV and PhanCong.CongViec = CongViec.MaCV " +
                                             "AND NhanVien.MaNV = '{0}'", MaNV);
             DataRow dr = dbConn.LayDanhSach(sqlstr).Rows[0];
-            return new ClassTDCaNhan(
+            return new TDCaNhan(
                 dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), dr[4].ToString(), dr[5].ToString(), DateTime.Parse(dr[6].ToString()), DateTime.Parse(dr[7].ToString()));
         }
 

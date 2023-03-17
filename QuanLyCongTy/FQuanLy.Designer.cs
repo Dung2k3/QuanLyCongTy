@@ -32,7 +32,7 @@ namespace QuanLyCongTy
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.btnXinNghi = new System.Windows.Forms.Button();
             this.btnDanhGiaDA = new System.Windows.Forms.Button();
-            this.btnTaoDA = new System.Windows.Forms.Button();
+            this.btnDA = new System.Windows.Forms.Button();
             this.btnCheckinout = new System.Windows.Forms.Button();
             this.panelName = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -52,14 +52,14 @@ namespace QuanLyCongTy
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.pnlMenu.Controls.Add(this.btnXinNghi);
             this.pnlMenu.Controls.Add(this.btnDanhGiaDA);
-            this.pnlMenu.Controls.Add(this.btnTaoDA);
+            this.pnlMenu.Controls.Add(this.btnDA);
             this.pnlMenu.Controls.Add(this.btnCheckinout);
             this.pnlMenu.Controls.Add(this.panelName);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(316, 1106);
+            this.pnlMenu.Size = new System.Drawing.Size(316, 1050);
             this.pnlMenu.TabIndex = 8;
             // 
             // btnXinNghi
@@ -98,23 +98,23 @@ namespace QuanLyCongTy
             this.btnDanhGiaDA.UseVisualStyleBackColor = true;
             this.btnDanhGiaDA.Click += new System.EventHandler(this.btnDanhGiaDA_Click);
             // 
-            // btnTaoDA
+            // btnDA
             // 
-            this.btnTaoDA.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTaoDA.FlatAppearance.BorderSize = 0;
-            this.btnTaoDA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTaoDA.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTaoDA.ForeColor = System.Drawing.Color.White;
-            this.btnTaoDA.Image = ((System.Drawing.Image)(resources.GetObject("btnTaoDA.Image")));
-            this.btnTaoDA.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTaoDA.Location = new System.Drawing.Point(0, 266);
-            this.btnTaoDA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnTaoDA.Name = "btnTaoDA";
-            this.btnTaoDA.Size = new System.Drawing.Size(316, 110);
-            this.btnTaoDA.TabIndex = 3;
-            this.btnTaoDA.Text = "Tạo Dự Án";
-            this.btnTaoDA.UseVisualStyleBackColor = true;
-            this.btnTaoDA.Click += new System.EventHandler(this.btnTaoDA_Click);
+            this.btnDA.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDA.FlatAppearance.BorderSize = 0;
+            this.btnDA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDA.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDA.ForeColor = System.Drawing.Color.White;
+            this.btnDA.Image = ((System.Drawing.Image)(resources.GetObject("btnDA.Image")));
+            this.btnDA.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDA.Location = new System.Drawing.Point(0, 266);
+            this.btnDA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDA.Name = "btnDA";
+            this.btnDA.Size = new System.Drawing.Size(316, 110);
+            this.btnDA.TabIndex = 3;
+            this.btnDA.Text = "Dự Án";
+            this.btnDA.UseVisualStyleBackColor = true;
+            this.btnDA.Click += new System.EventHandler(this.btnDA_Click);
             // 
             // btnCheckinout
             // 
@@ -177,7 +177,7 @@ namespace QuanLyCongTy
             this.pnlTitle.Location = new System.Drawing.Point(316, 0);
             this.pnlTitle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlTitle.Name = "pnlTitle";
-            this.pnlTitle.Size = new System.Drawing.Size(1266, 156);
+            this.pnlTitle.Size = new System.Drawing.Size(1450, 156);
             this.pnlTitle.TabIndex = 9;
             // 
             // lblTitle
@@ -212,7 +212,7 @@ namespace QuanLyCongTy
             this.pnlNoiDung.Location = new System.Drawing.Point(316, 156);
             this.pnlNoiDung.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlNoiDung.Name = "pnlNoiDung";
-            this.pnlNoiDung.Size = new System.Drawing.Size(1266, 948);
+            this.pnlNoiDung.Size = new System.Drawing.Size(1450, 894);
             this.pnlNoiDung.TabIndex = 10;
             // 
             // FQuanLy
@@ -220,11 +220,11 @@ namespace QuanLyCongTy
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1582, 1106);
+            this.ClientSize = new System.Drawing.Size(1766, 1050);
             this.Controls.Add(this.pnlNoiDung);
             this.Controls.Add(this.pnlTitle);
             this.Controls.Add(this.pnlMenu);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "FQuanLy";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -245,7 +245,7 @@ namespace QuanLyCongTy
         private System.Windows.Forms.Panel pnlMenu;
         private System.Windows.Forms.Button btnXinNghi;
         private System.Windows.Forms.Button btnDanhGiaDA;
-        private System.Windows.Forms.Button btnTaoDA;
+        private System.Windows.Forms.Button btnDA;
         private System.Windows.Forms.Button btnCheckinout;
         private System.Windows.Forms.Panel panelName;
         private System.Windows.Forms.PictureBox pictureBox1;

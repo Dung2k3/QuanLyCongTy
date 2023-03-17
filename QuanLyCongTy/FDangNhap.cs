@@ -12,7 +12,7 @@ namespace QuanLyCongTy
 {
     public partial class FDangNhap : Form
     {
-        DangNhapDao dnDao = new DangNhapDao();
+        DangNhapDAO dnDao = new DangNhapDAO();
         public FDangNhap()
         {
             InitializeComponent();

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QuanLyCongTy
 {
-    public class ClassThongTin
+    public class ThongTin
     {
         string maNV;
         string hoTenNV;
@@ -33,7 +33,7 @@ namespace QuanLyCongTy
         public string TenPB { get { return tenPB; } }
         public string ChucVu { get { return chucVu; } }
 
-        public ClassThongTin(string maNV, string hoTenNV, string diaChi, string sdt, DateTime ngaySinh,
+        public ThongTin(string maNV, string hoTenNV, string diaChi, string sdt, DateTime ngaySinh,
                                 string gioiTinh,string cccd, string email, string maPB, string tenPB, string chucVu)
         {
             this.maNV = maNV;

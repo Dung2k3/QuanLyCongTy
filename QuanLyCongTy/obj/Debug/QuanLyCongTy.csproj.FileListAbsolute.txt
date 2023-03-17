@@ -10,7 +10,6 @@ D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.exe
 D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.pdb
 D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.FDanhGia.resources
 D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.FDanhGiaDA.resources
-D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.FDuAn.resources
 D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.FPhanCong.resources
 D:\hc\CTDH\WinForm\Project\PJ_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.FCheckinout.resources
 D:\hc\CTDH\WinForm\Project\PJ_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.FDanhGiaDA.resources
@@ -45,3 +44,7 @@ D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.UC.resources
 D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.ucMenuBtn.resources
 D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.FTienDo.resources
 D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.FTienDoCaNhan.resources
+D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.FSuaDA.resources
+D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.UCTienDoDA.resources
+D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.FThemDA.resources
+D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.FDuAn.resources

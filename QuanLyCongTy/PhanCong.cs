@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QuanLyCongTy
 {
-    public class ClassPhanCong
+    public class PhanCong
     {
         string maNV;
         string hoTenNV;
@@ -24,7 +24,7 @@ namespace QuanLyCongTy
         public DateTime NgayBD { get { return ngayBD; } }
         public DateTime Deadline { get { return deadline; } }
 
-        public ClassPhanCong(string maNV, string maDA, string congViec, DateTime ngayBD, DateTime deadline)
+        public PhanCong(string maNV, string maDA, string congViec, DateTime ngayBD, DateTime deadline)
         {
             this.maNV = maNV;
             this.maDA = maDA;

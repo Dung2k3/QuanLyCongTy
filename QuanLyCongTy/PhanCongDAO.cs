@@ -66,20 +66,20 @@ namespace QuanLyCongTy
             return dbConn.LayDanhSach(sqlStr);
         }
 
-        public void Them(ClassPhanCong pc)
+        public void Them(PhanCong pc)
         {
             string sqlStr1 = string.Format("INSERT INTO PhanCong (MaNV, MaDA, CongViec,NgayBD, DeadLine) " +
                                             " VALUES ('{0}', '{1}', N'{2}', '{3}', '{4}')",
                                             pc.MaNV, pc.MaDA, pc.CongViec,pc.NgayBD, pc.Deadline);
             dbConn.ThucThi(sqlStr1);
         }
-        public void Xoa(ClassPhanCong pc)
+        public void Xoa(PhanCong pc)
         {
             string sqlStr1 = string.Format("DELETE FROM PhanCong WHERE MaNV = '{0}' AND MaDA = '{1}'", pc.MaNV, pc.MaDA);
             dbConn.ThucThi(sqlStr1);
         }
 
-        public void Sua(ClassPhanCong pc)
+        public void Sua(PhanCong pc)
         {
             string sqlStr = string.Format("UPDATE PhanCong SET MaNV = '{0}', MaDA = '{1}', CongViec = '{2}', DeadLine = '{3}' " +
                                             "WHERE MaNV = '{4}' AND MaDA = '{5}'", 

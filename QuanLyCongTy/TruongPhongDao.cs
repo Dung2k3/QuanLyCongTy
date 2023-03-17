@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace QuanLyCongTy
 {
-    internal class TruongPhongDao
+    internal class TruongPhongDAO
     {
         DBConnection dbConn = new DBConnection();
         public string GetTenTP(string MaTP)

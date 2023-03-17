@@ -22,14 +22,14 @@ namespace QuanLyCongTy
 
         private void btn_ThemDG_Click(object sender, EventArgs e)
         {
-            ClassTDCaNhan td = ttcnDAO.LayDanhSachTienDo(MaNV);
+            TDCaNhan td = ttcnDAO.LayDanhSachTienDo(MaNV);
             ttcnDAO.Sua(MaNV, td.MaDA, txt_Diem.Text);
             MessageBox.Show("Thanh cong");
         }
 
         private void TienDoCaNhan_Load(object sender, EventArgs e)
         {
-            ClassTDCaNhan td = ttcnDAO.LayDanhSachTienDo(MaNV);
+            TDCaNhan td = ttcnDAO.LayDanhSachTienDo(MaNV);
           
             lbl_TenNV.Text = td.TenNV;
             lbl_TenCV.Text = td.CongViec;

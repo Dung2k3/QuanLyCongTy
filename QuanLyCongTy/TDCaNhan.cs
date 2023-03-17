@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QuanLyCongTy
 {
-    public class ClassTDCaNhan
+    public class TDCaNhan
     {
         string maNV;
         string maDA;
@@ -27,7 +27,7 @@ namespace QuanLyCongTy
         public DateTime NgayBD { get { return ngayBD; } }
         public DateTime DeadLine { get { return deadLine; } }
 
-        public ClassTDCaNhan(string maNV, string maDA, string tenNV, string congViec, string tienDO, string chamDiem, DateTime ngayBD, DateTime deadLine)
+        public TDCaNhan(string maNV, string maDA, string tenNV, string congViec, string tienDO, string chamDiem, DateTime ngayBD, DateTime deadLine)
         {
             this.maNV = maNV;
             this.maDA = maDA;

@@ -31,7 +31,7 @@ namespace QuanLyCongTy
 
         private void btn_Sua_Click(object sender, EventArgs e)
         {
-            ClassDanhGia dg = new ClassDanhGia(txt_MaNV.Text, txt_MaDA.Text, rtxt_NhanXet.Text, txt_ChamCong.Text);
+            DanhGia dg = new DanhGia(txt_MaNV.Text, txt_MaDA.Text, rtxt_NhanXet.Text, txt_ChamCong.Text);
             DGdao.Sua(dg);
             HienThiDanhSach();
         }

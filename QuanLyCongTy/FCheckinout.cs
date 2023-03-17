@@ -14,13 +14,13 @@ namespace QuanLyCongTy
     {
         string ma;
         CheckinDAO ciDao;
-        CheckoutDao coDao;
+        CheckoutDAO coDao;
         public FCheckinout(string ma)
         {
             InitializeComponent();
             this.ma = ma;
             ciDao = new CheckinDAO(ma);
-            coDao = new CheckoutDao(ma);
+            coDao = new CheckoutDAO(ma);
         }
         private void CapNhatGVCheckin()
         {

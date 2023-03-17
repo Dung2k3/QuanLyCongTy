@@ -12,52 +12,49 @@ namespace QuanLyCongTy
 {
     public partial class FDuAn : Form
     {
-        DuAnDAO DAdao = new DuAnDAO();
+        DuAnDAO daDAO = new DuAnDAO();
         public FDuAn()
         {
             InitializeComponent();
         }
-
-        private void DuAn_Load(object sender, EventArgs e)
+        private void FDuAn_Load(object sender, EventArgs e)
         {
-            gv_DuAn.DataSource = DAdao.LayDanhSachDuAn();
+            DataTable dt = daDAO.LayDanhSachDuAnChuaHT();
+            foreach (DataRow dr in dt.Rows)
+            {
+                UCTienDoDA uc = new UCTienDoDA(dr[0].ToString());
+                flp_ListDA.Controls.Add(uc);
+            }
         }
 
-        private void HienThiDanhSach()
+        private void btnChuaHT_Click(object sender, EventArgs e)
         {
-            this.gv_DuAn.DataSource = DAdao.LayDanhSachDuAn();
+            flp_ListDA.Controls.Clear();
+            DataTable dt = daDAO.LayDanhSachDuAnChuaHT();
+            foreach (DataRow dr in dt.Rows)
+            {
+                UCTienDoDA uc = new UCTienDoDA(dr[0].ToString());
+                flp_ListDA.Controls.Add(uc);
+            }
         }
 
-        private void btn_Them_Click(object sender, EventArgs e)
+        private void btnDaHT_Click(object sender, EventArgs e)
         {
-            DuAn da = new DuAn(txt_MaDA.Text, txt_TenDA.Text, txt_MaPB.Text, txt_DD.Text, dtp_deadline.Value, rtxt_MoTa.Text);
-            DAdao.Them(da);
-            HienThiDanhSach();
+            flp_ListDA.Controls.Clear();
+            DataTable dt = daDAO.LayDanhSachDuAnDaHT();
+            foreach (DataRow dr in dt.Rows)
+            {
+                UCTienDoDA uc = new UCTienDoDA(dr[0].ToString());
+                flp_ListDA.Controls.Add(uc);
+            }
         }
 
-        private void btn_Xoa_Click(object sender, EventArgs e)
+        private void btnThem_Click(object sender, EventArgs e)
         {
-            DuAn da = new DuAn(txt_MaDA.Text, txt_TenDA.Text, txt_MaPB.Text, txt_DD.Text, dtp_deadline.Value, rtxt_MoTa.Text);
-            DAdao.Xoa(da);
-            HienThiDanhSach();
-        }
-
-        private void btn_Sua_Click(object sender, EventArgs e)
-        {
-            DuAn da = new DuAn(txt_MaDA.Text, txt_TenDA.Text, txt_MaPB.Text, txt_DD.Text, dtp_deadline.Value, rtxt_MoTa.Text);
-            DAdao.Sua(da);
-            HienThiDanhSach();
-        }
-
-        private void gv_DuAn_DoubleClick(object sender, EventArgs e)
-        {
-            int i = gv_DuAn.CurrentRow.Index;
-            txt_MaDA.Text = gv_DuAn.Rows[i].Cells[0].Value.ToString();
-            txt_TenDA.Text = gv_DuAn.Rows[i].Cells[1].Value.ToString();
-            rtxt_MoTa.Text = gv_DuAn.Rows[i].Cells[2].Value.ToString();
-            txt_MaPB.Text = gv_DuAn.Rows[i].Cells[3].Value.ToString();
-            txt_DD.Text= gv_DuAn.Rows[i].Cells[4].Value.ToString();
-            dtp_deadline.Text = gv_DuAn.Rows[i].Cells[5].Value.ToString();
+            Form form = new FThemDA();
+            Enabled = false;
+            form.ShowDialog();
+            Enabled = true;
         }
     }
 }

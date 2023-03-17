@@ -13,7 +13,7 @@ namespace QuanLyCongTy
     public partial class FQuanLy : Form
     {
         string maQL;
-        QuanLyDao qlDao = new QuanLyDao();
+        QuanLyDAO qlDao = new QuanLyDAO();
         public FQuanLy(string maQL)
         {
             InitializeComponent();
@@ -23,7 +23,7 @@ namespace QuanLyCongTy
         private void btnClickChangeColor(Control btn, string color)
         {
             btnCheckinout.BackColor = ColorTranslator.FromHtml("#33334C");
-            btnTaoDA.BackColor = ColorTranslator.FromHtml("#33334C");
+            btnDA.BackColor = ColorTranslator.FromHtml("#33334C");
             btnDanhGiaDA.BackColor = ColorTranslator.FromHtml("#33334C");
             btnXinNghi.BackColor = ColorTranslator.FromHtml("#33334C");
             btn.BackColor = ColorTranslator.FromHtml(color);
@@ -68,12 +68,6 @@ namespace QuanLyCongTy
             lblTitle.Text = "Thông tin nhân viên";
         }
 
-        private void btnTaoDA_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new FDuAn());
-            btnClickChangeColor(btnTaoDA, "#126881");
-        }
-
         private void btnDanhGiaDA_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FDanhGiaDA());
@@ -90,6 +84,12 @@ namespace QuanLyCongTy
             btnClickChangeColor(panelName, "#33334C");
             btnClickChangeColor(pnlTitle, "#33334C");
             lblTitle.Text = "Thông tin nhân viên";
+        }
+
+        private void btnDA_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FDuAn());
+            btnClickChangeColor(btnDA, "#A12059");
         }
     }
 }

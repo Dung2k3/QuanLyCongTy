@@ -25,7 +25,7 @@ namespace QuanLyCongTy
             } 
 
         }
-        NhanVienDao nvDao = new NhanVienDao();
+        NhanVienDAO nvDao = new NhanVienDAO();
         public UC()
         {
             InitializeComponent();

@@ -15,7 +15,7 @@ namespace QuanLyCongTy
         string maTP;
         string maPB;
 
-        TruongPhongDao tpDao = new TruongPhongDao();
+        TruongPhongDAO tpDao = new TruongPhongDAO();
         public FTruongPhong(string maTP)
         {
             InitializeComponent();

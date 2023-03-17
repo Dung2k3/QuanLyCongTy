@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QuanLyCongTy
 {
-    public class ClassDanhGiaDA
+    public class DanhGiaDA
     {
         string maDA;
         string tenDA;
@@ -18,7 +18,7 @@ namespace QuanLyCongTy
         public string NhanXet { get { return nhanXet; } }
         public long Thuong { get { return thuong; } }
 
-        public ClassDanhGiaDA(string maDA, string tenDA, string nhanXet, long thuong)
+        public DanhGiaDA(string maDA, string tenDA, string nhanXet, long thuong)
         {
             this.maDA = maDA;
             this.tenDA = tenDA;
