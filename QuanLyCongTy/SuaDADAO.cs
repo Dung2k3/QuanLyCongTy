@@ -78,14 +78,19 @@ namespace QuanLyCongTy
 
         public void Xoa(string MaDA)
         {
+            string sqlStr2 = string.Format("DELETE FROM HoTro WHERE MaDA = '{0}'", MaDA);
             string sqlStr1 = string.Format("DELETE FROM DuAn WHERE MaDA = '{0}'", MaDA);
+            string sqlStr = string.Format("DELETE FROM PhanCong WHERE MaDA = '{0}'", MaDA);
+            dbConn.ThucThi(sqlStr2);
+            dbConn.ThucThi(sqlStr); 
             dbConn.ThucThi(sqlStr1);
         }
 
         public void Them(ThemDA da, string MaPB)
         {
-            string sqlStr1 = string.Format("INSERT INTO DuAn (MaDA, TenDuAn, MoTa, MaPB, DiaDiem, NgayBD, DeadLine) " +
+            string sqlStr = string.Format("INSERT INTO DuAn (MaDA, TenDuAn, MoTa, MaPB, DiaDiem, NgayBD, DeadLine) " +
                                            "VALUES ( '{0}', N'{1}', N'{2}', '{3}', N'{4}', '{5}', '{6}' )", da.MaDA, da.TenDA, da.MoTa, MaPB, da.DiaDiem, da.NgayBD, da.DeadLine);
+            dbConn.ThucThi(sqlStr);
         }
     }
 }

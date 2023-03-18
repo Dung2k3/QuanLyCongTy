@@ -27,7 +27,9 @@ namespace QuanLyCongTy
             }
         }
 
-        private void btnChuaHT_Click(object sender, EventArgs e)
+        public delegate void FReload();
+
+        private void DAChuaHT()
         {
             flp_ListDA.Controls.Clear();
             DataTable dt = daDAO.LayDanhSachDuAnChuaHT();
@@ -35,18 +37,29 @@ namespace QuanLyCongTy
             {
                 UCTienDoDA uc = new UCTienDoDA(dr[0].ToString());
                 flp_ListDA.Controls.Add(uc);
+                uc.addReLoat(DAChuaHT);
             }
         }
-
-        private void btnDaHT_Click(object sender, EventArgs e)
+        private void DADaHT()
         {
             flp_ListDA.Controls.Clear();
             DataTable dt = daDAO.LayDanhSachDuAnDaHT();
             foreach (DataRow dr in dt.Rows)
             {
-                UCTienDoDA uc = new UCTienDoDA(dr[0].ToString());
+                UCSailorStar uc = new UCSailorStar(dr[0].ToString());
                 flp_ListDA.Controls.Add(uc);
+                uc.addReLoat(DADaHT);
             }
+        }
+
+        private void btnChuaHT_Click(object sender, EventArgs e)
+        {
+            DAChuaHT();
+        }
+
+        private void btnDaHT_Click(object sender, EventArgs e)
+        {
+            DADaHT();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -55,6 +68,7 @@ namespace QuanLyCongTy
             Enabled = false;
             form.ShowDialog();
             Enabled = true;
+            DAChuaHT();
         }
     }
 }

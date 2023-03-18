@@ -48,3 +48,4 @@ D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.FSuaDA.resource
 D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.UCTienDoDA.resources
 D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.FThemDA.resources
 D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.FDuAn.resources
+D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.UCSailorStar.resources

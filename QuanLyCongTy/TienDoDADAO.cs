@@ -25,8 +25,10 @@ namespace QuanLyCongTy
         {
             string sqlStr = string.Format("SELECT AVG(TienDo)" +
                                             "FROM  PhanCong WHERE MaDA = '{0}'", MaDA);
-            DataTable dt = dbConn.LayDanhSach(sqlStr);
-            return (int)dt.Rows[0][0];
+            DataTable dt = dbConn.LayDanhSach(sqlStr) ;
+            if (!(dt.Rows[0][0] is DBNull))
+                return (int)dt.Rows[0][0];
+            else return 0;
         }
     }
 }

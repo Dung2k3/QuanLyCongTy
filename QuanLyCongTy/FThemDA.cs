@@ -24,9 +24,8 @@ namespace QuanLyCongTy
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
-            
             ThemDA da = new ThemDA(txt_MaDA.Text, txt_TenDA.Text, rtxt_MoTa.Text, cmb_TenLPB.Text, cmb_TenPB.Text, txtDiaDiem.Text, dtp_NgayBD.Value, dtp_DeadLine.Value);
-            MaPB = suadaDAO.GetMaPB(cmb_TenLPB.Text);
+            MaPB = suadaDAO.GetMaPB(cmb_TenPB.Text);
             suadaDAO.Them(da, MaPB);
             Close();
         }

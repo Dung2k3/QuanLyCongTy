@@ -28,6 +28,7 @@ namespace QuanLyCongTy
             Application.Run(new FQuanLy("NV001"));
             //Application.Run(new FDuAn());
             //Application.Run(new FThemDA());
+            //Application.Run(new UCSailorStar("NV004"));
         }
     }
 }

@@ -15,6 +15,7 @@ namespace QuanLyCongTy
         TienDoDADAO ttdaDAO = new TienDoDADAO();
         SuaDADAO suaDADAO = new SuaDADAO();
         string MaDA;
+        FDuAn.FReload HamRL;
         public UCTienDoDA(string MaDA)
         {
             InitializeComponent();
@@ -40,11 +41,18 @@ namespace QuanLyCongTy
             Enabled = false;
             form.ShowDialog();
             Enabled = true;
+            HamRL();
         }
 
         private void btn_Xoa_Click(object sender, EventArgs e)
         {
             suaDADAO.Xoa(MaDA);
+            HamRL();
+        }
+
+        public void addReLoat(FDuAn.FReload HamRL)
+        {
+            this.HamRL = HamRL;
         }
     }
 }
