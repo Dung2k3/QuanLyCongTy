@@ -15,16 +15,12 @@ namespace QuanLyCongTy
         public FQuanLy2(string ma)
         {
             InitializeComponent();
-            ucTheme.Ma = ma;
+            ucTheme.Setma(ma);
             ucbtnCheckinout.SetupButon(ColorTranslator.FromHtml("#8BC240"), ucTheme, new FCheckinout(ma));
             ucbtnTaoDA.SetupButon(ColorTranslator.FromHtml("#126881"), ucTheme, new FDuAn());
             ucbtnDanhGiaDA.SetupButon(ColorTranslator.FromHtml("#A12059"), ucTheme, new FDanhGiaDA());
             ucbtnXinNghi.SetupButon(ColorTranslator.FromHtml("#8BC240"), ucTheme, new FXinNghi());
         }
 
-        private void ucbtnCheckinout_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

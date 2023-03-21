@@ -33,9 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.gvCheckoutList = new System.Windows.Forms.DataGridView();
             this.NgayCheckout = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GioCheckout = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,11 +44,9 @@
             this.Nhanxet2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnCheckin = new System.Windows.Forms.Button();
             this.pnlTable = new System.Windows.Forms.Panel();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.gvCheckoutList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvCheckinList)).BeginInit();
             this.pnlTable.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // gvCheckoutList
@@ -225,29 +220,12 @@
             this.pnlTable.Size = new System.Drawing.Size(722, 700);
             this.pnlTable.TabIndex = 3;
             // 
-            // chart1
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(13, 205);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(233, 223);
-            this.chart1.TabIndex = 4;
-            this.chart1.Text = "chart1";
-            // 
             // FCheckinout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1000, 700);
-            this.Controls.Add(this.chart1);
             this.Controls.Add(this.pnlTable);
             this.Controls.Add(this.btnCheckin);
             this.Controls.Add(this.btnCheckout);
@@ -259,7 +237,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvCheckoutList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvCheckinList)).EndInit();
             this.pnlTable.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -276,6 +253,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayCheckout;
         private System.Windows.Forms.DataGridViewTextBoxColumn GioCheckout;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nhanxet;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }

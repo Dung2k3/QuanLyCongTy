@@ -49,17 +49,55 @@
   <ItemGroup>
     <Compile Include="CheckinDao.cs" />
     <Compile Include="CheckoutDao.cs" />
-    <Compile Include="ClassDangNhap.cs" />
-    <Compile Include="ClassThongTin.cs" />
-    <Compile Include="ClassKPI.cs" />
-    <Compile Include="ClassXinNghi.cs" />
+    <Compile Include="DangNhap.cs" />
+    <Compile Include="FChinhPhanCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FChinhPhanCong.Designer.cs">
+      <DependentUpon>FChinhPhanCong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FThemTroGiup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FThemTroGiup.Designer.cs">
+      <DependentUpon>FThemTroGiup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FThongTinDA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FThongTinDA.Designer.cs">
+      <DependentUpon>FThongTinDA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongTin.cs" />
+    <Compile Include="KPI.cs" />
+    <Compile Include="HoTro.cs" />
+    <Compile Include="ThongTinDADAO.cs" />
+    <Compile Include="UCTienDo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCTienDo.Designer.cs">
+      <DependentUpon>UCTienDo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCXemPhanCong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCXemPhanCong.Designer.cs">
+      <DependentUpon>UCXemPhanCong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XinNghi.cs" />
     <Compile Include="FCheckinout.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FCheckinout.Designer.cs">
       <DependentUpon>FCheckinout.cs</DependentUpon>
     </Compile>
-    <Compile Include="ClassDanhGiaDA.cs" />
+    <Compile Include="DanhGiaDA.cs" />
     <Compile Include="DangNhapDao.cs" />
     <Compile Include="FDanhGiaDA.cs">
       <SubType>Form</SubType>
@@ -67,9 +105,9 @@
     <Compile Include="FDanhGiaDA.Designer.cs">
       <DependentUpon>FDanhGiaDA.cs</DependentUpon>
     </Compile>
-    <Compile Include="ClassDanhGia.cs" />
-    <Compile Include="ClassDuAn.cs" />
-    <Compile Include="ClassPhanCong.cs" />
+    <Compile Include="DanhGia.cs" />
+    <Compile Include="DuAn.cs" />
+    <Compile Include="PhanCong.cs" />
     <Compile Include="FDanhGia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,7 +184,7 @@
     <Compile Include="FXinNghi.Designer.cs">
       <DependentUpon>FXinNghi.cs</DependentUpon>
     </Compile>
-    <Compile Include="NhanVienDao.cs" />
+    <Compile Include="NhanVienDAO.cs" />
     <Compile Include="PhanCongDAO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -156,9 +194,9 @@
     <Compile Include="FPhanCong.Designer.cs">
       <DependentUpon>FPhanCong.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuanLyDao.cs" />
+    <Compile Include="QuanLyDAO.cs" />
     <Compile Include="ThongTinDAO.cs" />
-    <Compile Include="TruongPhongDao.cs" />
+    <Compile Include="TruongPhongDAO.cs" />
     <Compile Include="UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -171,20 +209,11 @@
     <Compile Include="ucMenuBtn.Designer.cs">
       <DependentUpon>ucMenuBtn.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucTextBox.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ucTextBox.Designer.cs">
-      <DependentUpon>ucTextBox.cs</DependentUpon>
-    </Compile>
-    <Compile Include="XemDuAn.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="XemDuAn.Designer.cs">
-      <DependentUpon>XemDuAn.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="FCheckinout.resx">
       <DependentUpon>FCheckinout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FChinhPhanCong.resx">
+      <DependentUpon>FChinhPhanCong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FDanhGia.resx">
       <DependentUpon>FDanhGia.cs</DependentUpon>
@@ -209,6 +238,9 @@
     <EmbeddedResource Include="FNhanVien2.resx">
       <DependentUpon>FNhanVien2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FQuanLy.resx">
       <DependentUpon>FQuanLy.cs</DependentUpon>
     </EmbeddedResource>
@@ -217,6 +249,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FThongTin.resx">
       <DependentUpon>FThongTin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FThongTinDA.resx">
+      <DependentUpon>FThongTinDA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FTruongPhong.resx">
       <DependentUpon>FTruongPhong.cs</DependentUpon>
@@ -240,17 +275,20 @@
     <EmbeddedResource Include="FPhanCong.resx">
       <DependentUpon>FPhanCong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FThemTroGiup.resx">
+      <DependentUpon>FThemTroGiup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC.resx">
       <DependentUpon>UC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucMenuBtn.resx">
       <DependentUpon>ucMenuBtn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucTextBox.resx">
-      <DependentUpon>ucTextBox.cs</DependentUpon>
+    <EmbeddedResource Include="UCTienDo.resx">
+      <DependentUpon>UCTienDo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="XemDuAn.resx">
-      <DependentUpon>XemDuAn.cs</DependentUpon>
+    <EmbeddedResource Include="UCXemPhanCong.resx">
+      <DependentUpon>UCXemPhanCong.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -282,6 +320,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PictureLoad1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PictureLoad3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackUCXemPC.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

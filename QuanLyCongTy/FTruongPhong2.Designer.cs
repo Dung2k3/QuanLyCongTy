@@ -73,7 +73,7 @@
             this.ucTheme.Location = new System.Drawing.Point(0, 0);
             this.ucTheme.Name = "ucTheme";
             this.ucTheme.Size = new System.Drawing.Size(1250, 800);
-            this.ucTheme.TabIndex = 0;
+            this.ucTheme.TabIndex = 5;
             // 
             // FTruongPhong2
             // 
@@ -93,11 +93,10 @@
         }
 
         #endregion
-
-        private UC ucTheme;
         private ucMenuBtn ucbtnCheckinout;
         private ucMenuBtn ucbtnTaoPC;
         private ucMenuBtn ucbtnDanhGiaPC;
         private ucMenuBtn ucbtnXinNghi;
+        private UC ucTheme;
     }
 }

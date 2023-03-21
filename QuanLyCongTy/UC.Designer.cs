@@ -76,7 +76,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.Click += new System.EventHandler(this.panelName_Click);
             // 
             // lblName
             // 
@@ -88,7 +88,7 @@
             this.lblName.Size = new System.Drawing.Size(54, 22);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Name";
-            this.lblName.Click += new System.EventHandler(this.lblName_Click);
+            this.lblName.Click += new System.EventHandler(this.panelName_Click);
             // 
             // pnlNoiDung
             // 
@@ -148,7 +148,7 @@
             this.Controls.Add(this.pnlMenu);
             this.Name = "UC";
             this.Size = new System.Drawing.Size(1250, 800);
-            this.Load += new System.EventHandler(this.UC_Load);
+            this.Load += new System.EventHandler(this.panelName_Click);
             this.pnlMenu.ResumeLayout(false);
             this.panelName.ResumeLayout(false);
             this.panelName.PerformLayout();

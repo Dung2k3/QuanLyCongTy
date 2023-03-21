@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace QuanLyCongTy
 {
-    public partial class XemDuAn : Form
+    public partial class Form1 : Form
     {
-        public XemDuAn()
+        public Form1()
         {
             InitializeComponent();
+            ucXemPhanCong1.Set("PBTK2", "DA005", "CVTK002");
         }
+        
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QuanLyCongTy
 {
-    public class ClassXinNghi
+    public class XinNghi
     {
         DateTime daystart;
         DateTime dayend;
@@ -20,7 +20,7 @@ namespace QuanLyCongTy
         public string MinhChung { get { return minhchung; } }
 
 
-        public ClassXinNghi(DateTime daystart, DateTime dayend, string lydo, string minhchung)
+        public XinNghi(DateTime daystart, DateTime dayend, string lydo, string minhchung)
         {
             this.daystart = daystart;
             this.dayend = dayend;

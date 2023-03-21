@@ -85,6 +85,8 @@ INSERT INTO LoaiPhongBan VALUES('LPBSX', N'Sản Xuất')
 INSERT INTO LoaiPhongBan VALUES('LPBMK', N'Marketing')
 INSERT INTO LoaiPhongBan VALUES('LPBHC', N'Hành Chính')
 INSERT INTO LoaiPhongBan VALUES('LPBTK', N'Thiết Kế')
+
+CREATE TABLE dbo.PhongBan(
 	MaPB varchar(10) PRIMARY KEY,
 	TenPB nvarchar(30) ,
 	MaLPB varchar(10) REFERENCES LoaiPhongBan(MaLPB),
@@ -422,57 +424,78 @@ CREATE TABLE dbo.DuAn(
 	MoTa nvarchar(200) NULL,
 	MaPB varchar(10) REFERENCES PhongBan(MaPB),
 	DiaDiem nvarchar(40) NULL,
+	NgayBD date,
 	DeadLine date,
 	DanhGia nvarchar(200) NULL,
+	ChamDiem int NULL,
 	Thuong bigint NULL
 )
 GO
 
 INSERT INTO DuAn
-VALUES('DA001',N'Thiết kế nhãn nước trái cây', N'Làm nổi bật vị của nước ngọt'+ CHAR(13)+CHAR(10)+ N'Màu sắc dễ chú ý','PBTK1', N'Công ty', '2000-03-02',N'Hoàn Thành Tốt',10000000)
+VALUES('DA001',N'Thiết kế nhãn nước trái cây', N'Làm nổi bật vị của nước ngọt'+ CHAR(13)+CHAR(10)+ N'Màu sắc dễ chú ý','PBTK1', N'Công ty','2000-01-15', '2000-03-02',N'Hoàn Thành Tốt',100,10000000)
 INSERT INTO DuAn
-VALUES('DA002',N'Đăng ký bản quyền nước trái cây', N'Có chữ ký của Ủy bản kiểm định chất lượng sản phẩm ','PBHC1', N'Công ty', '2000-03-02',N'Trễ Hạn 1 tháng ',0)
+VALUES('DA002',N'Đăng ký bản quyền nước trái cây', N'Có chữ ký của Ủy bản kiểm định chất lượng sản phẩm ','PBHC1', N'Công ty', '2000-01-15', '2000-03-02',N'Trễ Hạn 1 tháng ',20,0)
 INSERT INTO DuAn
-VALUES('DA003',N'Thiết kết và thi công dây chuyền SX nước trái cây', N'Kinh phí dưới 10 tỷ'+ CHAR(13)+CHAR(10)+ N'Đáp ứng 10000 chai 1 ngày','PBSX1', N'Nhà máy số 1', '2000-08-02',N'Hoàn Thành',100000000)
+VALUES('DA003',N'Thiết kết và thi công dây chuyền SX nước trái cây', N'Kinh phí dưới 10 tỷ'+ CHAR(13)+CHAR(10)+ N'Đáp ứng 10000 chai 1 ngày','PBSX1', N'Nhà máy số 1', '2000-02-15', '2000-08-02',N'Hoàn Thành',80,100000000)
 INSERT INTO DuAn
-VALUES('DA004',N'Làm video quảng cáo nước trái cây', N'Video đăng trên titok'+ CHAR(13)+CHAR(10)+ N'Thuê tiktoker','PBMK1', N'Công ty', '2000-08-02',N'Hoàn Thành Tốt',10000000)
+VALUES('DA004',N'Làm video quảng cáo nước trái cây', N'Video đăng trên titok'+ CHAR(13)+CHAR(10)+ N'Thuê tiktoker','PBMK1', N'Công ty', '2000-03-05', '2000-08-02',N'Hoàn Thành Tốt',100,10000000)
 INSERT INTO DuAn
-VALUES('DA005',N'Chỉnh sửa logo công ty', N'Bo góc logo cũ','PBTK2', N'Công Ty', '2023-02-02',N'Hoàn Thành Tốt',10000000)
+VALUES('DA005',N'Chỉnh sửa logo công ty', N'Bo góc logo cũ','PBTK2', N'Công Ty','2023-01-15', '2023-05-03','',0,0)
 INSERT INTO DuAn
-VALUES('DA006',N'Quảng bá logo mới', N'Công khai số tiền thiết kế logo là 7 tỷ','PBMK2', N'Công ty', '2023-05-03',N'Đang Thực Hiện',0)
+VALUES('DA006',N'Quảng bá logo mới', N'Công khai số tiền thiết kế logo là 7 tỷ','PBMK2', N'Công ty', '2023-02-01', '2023-05-03','',0,0)
 GO
 
 
 CREATE TABLE dbo.PhanCong(
-	MaNV varchar(10) REFERENCES NhanVien(MaNV),
 	MaDA varchar(10) REFERENCES DuAn(MaDA),
-	CongViec varchar(10) REFERENCES CongViec(MaCV),
+	MaCV varchar(10) REFERENCES CongViec(MaCV),
+	MaNV varchar(10) REFERENCES NhanVien(MaNV),
 	NgayBD date,
 	DeadLine date,
 	TienDo int,
 	Danhgia nvarchar(50) NULL,
 	ChamDiem int NULL,
-	PRIMARY KEY(MaNV,MaDA,CongViec)
+	PRIMARY KEY(MaDA,MaCV)
 )
 GO
 
-INSERT INTO PhanCong VALUES('NV016','DA001','CVTK003','2000-01-20','2000-01-25',100, N'Hoàn Thành Tốt', 100)
-INSERT INTO PhanCong VALUES('NV017','DA001','CVTK001','2000-01-25','2000-02-05',100, N'Hoàn Thành Tốt', 100)
-INSERT INTO PhanCong VALUES('NV018','DA001','CVTK004','2000-02-05','2000-02-07',100, N'Hoàn Thành Tốt', 100)
+INSERT INTO PhanCong VALUES('DA001','CVTK003','NV016','2000-01-20','2000-01-25',100, N'Hoàn Thành Tốt', 100)
+INSERT INTO PhanCong VALUES('DA001','CVTK001','NV017','2000-01-25','2000-02-05',100, N'Hoàn Thành Tốt', 100)
+INSERT INTO PhanCong VALUES('DA001','CVTK004','NV018','2000-02-05','2000-02-07',100, N'Hoàn Thành Tốt', 100)
 
-INSERT INTO PhanCong VALUES('NV013','DA002','CVHC002','2000-01-20','2000-02-20',100, N'Trễ Hạn 2 Ngày', 40)
-INSERT INTO PhanCong VALUES('NV014','DA002','CVHC003','2000-02-10','2000-02-20',100, N'Trễ Hạn 1 Ngày', 80)
+INSERT INTO PhanCong VALUES('DA002','CVHC002','NV013','2000-01-20','2000-02-20',100, N'Trễ Hạn 2 Ngày', 40)
+INSERT INTO PhanCong VALUES('DA002','CVHC003','NV014','2000-02-10','2000-02-20',100, N'Trễ Hạn 1 Ngày', 80)
 
-INSERT INTO PhanCong VALUES('NV005','DA003','CVSX001','2000-02-20','2000-02-25',100, N'Hoàn Thành Tốt', 100)
-INSERT INTO PhanCong VALUES('NV006','DA003','CVSX002','2000-02-25','2000-03-05',100, N'Hoàn Thành Tốt', 100)
-INSERT INTO PhanCong VALUES('NV007','DA003','CVSX003','2000-03-05','2000-03-07',100, N'Hoàn Thành Tốt', 100)
-INSERT INTO PhanCong VALUES('NV008','DA003','CVSX004','2000-03-05','2000-03-07',100, N'Trễ Hạn 2 Ngày', 40)
+INSERT INTO PhanCong VALUES('DA003','CVSX001','NV005','2000-02-20','2000-02-25',100, N'Hoàn Thành Tốt', 100)
+INSERT INTO PhanCong VALUES('DA003','CVSX002','NV006','2000-02-25','2000-03-05',100, N'Hoàn Thành Tốt', 100)
+INSERT INTO PhanCong VALUES('DA003','CVSX003','NV007','2000-03-05','2000-03-07',100, N'Hoàn Thành Tốt', 100)
+INSERT INTO PhanCong VALUES('DA003','CVSX004','NV008','2000-03-05','2000-03-07',100, N'Trễ Hạn 2 Ngày', 40)
 
-INSERT INTO PhanCong VALUES('NV010','DA004','CVMK005','2000-03-07','2000-03-20',100, N'Hoàn Thành Tốt', 100)
-INSERT INTO PhanCong VALUES('NV011','DA004','CVMK004','2000-03-20','2000-04-25',100, N'Hoàn Thành Tốt', 100)
-INSERT INTO PhanCong VALUES('NV019','DA004','CVMK003','2000-03-20','2000-04-25',100, N'Hoàn Thành Tốt', 100)
+INSERT INTO PhanCong VALUES('DA004','CVMK005','NV010','2000-03-07','2000-03-20',100, N'Hoàn Thành Tốt', 100)
+INSERT INTO PhanCong VALUES('DA004','CVMK004','NV011','2000-03-20','2000-04-25',100, N'Hoàn Thành Tốt', 100)
+INSERT INTO PhanCong VALUES('DA004','CVMK003','NV019','2000-03-20','2000-04-25',100, N'Hoàn Thành Tốt', 100)
 
-INSERT INTO PhanCong VALUES('NV033','DA005','CVTK002','2023-01-20','2023-02-01',100, N'Hoàn Thành Tốt', 100)
-INSERT INTO PhanCong VALUES('NV034','DA005','CVTK004','2023-02-01','2023-02-02',100, N'Hoàn Thành Tốt', 100)
-INSERT INTO PhanCong VALUES('NV027','DA006','CVMK002','2023-02-02','2023-02-05',100, N'Hoàn Thành Tốt', 100)
-INSERT INTO PhanCong VALUES('NV028','DA006','CVMK004','2023-02-05','2023-02-20',100, N'Hoàn Thành Tốt', 100)
+INSERT INTO PhanCong VALUES('DA005','CVTK002','NV033','2023-01-20','2023-02-01',50, '', 0)
+INSERT INTO PhanCong VALUES('DA005','CVTK004','NV034','2023-02-01','2023-02-02',70, '', 0)
+
+INSERT INTO PhanCong VALUES('DA006','CVMK002','NV027','2023-02-02','2023-02-05',50, '', 0)
+INSERT INTO PhanCong VALUES('DA006','CVMK004','NV028','2023-02-05','2023-02-20',60, '', 0)
+GO
+
+CREATE TABLE dbo.HoTro(
+	MaDA varchar(10) NOT NULL,
+	MaCV varchar(10) NOT NULL,
+	MaNV varchar(10) REFERENCES NhanVien(MaNV),
+	FOREIGN KEY(MaDA,MaCV) REFERENCES PhanCong(MaDa,MaCV),
+	PRIMARY KEY(MaDA,MaCV,MaNV)
+)
+GO
+
+INSERT INTO HoTro VALUES('DA002','CVHC003','NV030')
+INSERT INTO HoTro VALUES('DA003','CVSX001','NV022')
+INSERT INTO HoTro VALUES('DA003','CVSX002','NV023')
+INSERT INTO HoTro VALUES('DA003','CVSX003','NV024')
+INSERT INTO HoTro VALUES('DA003','CVSX003','NV025')
+INSERT INTO HoTro VALUES('DA005','CVTK002','NV017')
+GO

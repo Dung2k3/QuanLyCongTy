@@ -63,6 +63,16 @@ namespace QuanLyCongTy.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Add {
+            get {
+                object obj = ResourceManager.GetObject("Add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap arrow_19_32_1_ {
             get {
                 object obj = ResourceManager.GetObject("arrow-19-32(1)", resourceCulture);
@@ -83,9 +93,29 @@ namespace QuanLyCongTy.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BackUCXemPC {
+            get {
+                object obj = ResourceManager.GetObject("BackUCXemPC", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DangNhap {
             get {
                 object obj = ResourceManager.GetObject("DangNhap", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap delete {
+            get {
+                object obj = ResourceManager.GetObject("delete", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -116,6 +146,26 @@ namespace QuanLyCongTy.Properties {
         internal static System.Drawing.Bitmap NhanVienName {
             get {
                 object obj = ResourceManager.GetObject("NhanVienName", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PictureLoad1 {
+            get {
+                object obj = ResourceManager.GetObject("PictureLoad1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PictureLoad3 {
+            get {
+                object obj = ResourceManager.GetObject("PictureLoad3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

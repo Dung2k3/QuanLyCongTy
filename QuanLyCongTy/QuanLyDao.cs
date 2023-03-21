@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace QuanLyCongTy
 {
-    internal class QuanLyDao
+    internal class QuanLyDAO
     {
         DBConnection dbConn = new DBConnection();
         public string GetTenQL(string MaNV)

@@ -29,7 +29,7 @@ namespace QuanLyCongTy
 
         private void btn_Sua_Click(object sender, EventArgs e)
         {
-            ClassDanhGiaDA dgda = new ClassDanhGiaDA(txt_MaDA.Text, txt_TenDA.Text, rtxt_NhanXet.Text, long.Parse(txt_Thuong.Text));
+            DanhGiaDA dgda = new DanhGiaDA(txt_MaDA.Text, txt_TenDA.Text, rtxt_NhanXet.Text, long.Parse(txt_Thuong.Text));
             DGDAdao.Sua(dgda);
             HienThiDanhSach();
         }

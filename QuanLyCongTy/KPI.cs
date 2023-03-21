@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QuanLyCongTy
 {
-    public class ClassKPI
+    public class KPI
     {
         
         string tenDA;
@@ -17,7 +17,7 @@ namespace QuanLyCongTy
         public string TienDo { get { return tienDo; } }
 
 
-        public ClassKPI(string tenDA, string tienDo)
+        public KPI(string tenDA, string tienDo)
         {
             this.tenDA= tenDA;  
             this.tienDo= tienDo;

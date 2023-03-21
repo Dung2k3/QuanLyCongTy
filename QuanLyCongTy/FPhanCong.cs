@@ -12,51 +12,56 @@ namespace QuanLyCongTy
 {
     public partial class FPhanCong : Form
     {
-        string MaPB;
-        PhanCongDAO PCdao = new PhanCongDAO();
-        public FPhanCong(string maPB)
-        {
+        PhanCongDAO PCdao;
+        string maDA;
+        public FPhanCong(string maDA,string maPB)
+        { 
             InitializeComponent();
-            MaPB = maPB;
+            PCdao = new PhanCongDAO(maPB);
+            this.maDA = maDA;
         }
 
         private void PhanCong_Load(object sender, EventArgs e)
         {
             HienThiDanhSach();
-            cbo_MaNV.DataSource = PCdao.LayDanhSachMaNhanVien();
-            cbo_MaDA.DataSource = PCdao.LayDanhSachMaDuAn();
+            cboNhanVien.DataSource = PCdao.LayDSTenNV();
+            cboCongViec.DataSource = PCdao.LayDSCongViec();
         }
         private void HienThiDanhSach()
         {   
-            this.gv_CongViec.DataSource = PCdao.LayDanhSachPhanCong();          
+            this.gv_CongViec.DataSource = PCdao.LayDSTinhTrangNV();          
         }
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
-            ClassPhanCong pc = new ClassPhanCong(cbo_MaNV.Text, cbo_MaDA.Text, rtxt_CongViec.Text, dtp_Deadline.Value);
+            PhanCong pc = new PhanCong(cboNhanVien.Text,
+                                       maDA,
+                                       cboCongViec.Text,
+                                       textBox1.Text,
+                                       dtpDBLam.Value,
+                                       dtpDeadline.Value);
             PCdao.Them(pc);
-            HienThiDanhSach();
+            Close();
         }
 
-        private void btn_Xoa_Click(object sender, EventArgs e)
+        private void btnHuy_Click(object sender, EventArgs e)
         {
-            ClassPhanCong pc = new ClassPhanCong(cbo_MaNV.Text, cbo_MaDA.Text, rtxt_CongViec.Text, dtp_Deadline.Value);
-            PCdao.Xoa(pc);
-            HienThiDanhSach();
+            Close();
         }
 
-        private void btn_Sua_Click(object sender, EventArgs e)
+        private void cboCongViec_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ClassPhanCong pc = new ClassPhanCong(cbo_MaNV.Text, cbo_MaDA.Text, rtxt_CongViec.Text, dtp_Deadline.Value);
-            PCdao.Sua(pc);
-            HienThiDanhSach();
-        }
-        private void gv_CongViec_MouseClick(object sender, MouseEventArgs e)
-        {
-            int i = gv_CongViec.CurrentRow.Index;
-            cbo_MaNV.Text = gv_CongViec.Rows[i].Cells[0].Value.ToString();
-            cbo_MaDA.Text = gv_CongViec.Rows[i].Cells[1].Value.ToString();
-            rtxt_CongViec.Text = gv_CongViec.Rows[i].Cells[2].Value.ToString();
+            if (cboCongViec.Text == "Khác")
+            {
+                textBox1.Show();
+                panel1.Location = new Point(textBox1.Location.X, textBox1.Location.Y + textBox1.Size.Height + 1);
+            }
+            else
+            {
+                textBox1.Hide();
+                panel1.Location = new Point(cboCongViec.Location.X, cboCongViec.Location.Y + cboCongViec.Size.Height + 1);
+            }
+            
         }
     }
 }

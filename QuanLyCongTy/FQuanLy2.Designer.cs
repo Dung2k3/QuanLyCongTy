@@ -31,8 +31,8 @@
             this.ucbtnDanhGiaDA = new QuanLyCongTy.ucMenuBtn();
             this.ucbtnTaoDA = new QuanLyCongTy.ucMenuBtn();
             this.ucbtnCheckinout = new QuanLyCongTy.ucMenuBtn();
-            this.ucTheme = new QuanLyCongTy.UC();
             this.ucbtnXinNghi = new QuanLyCongTy.ucMenuBtn();
+            this.ucTheme = new QuanLyCongTy.UC();
             this.SuspendLayout();
             // 
             // ucbtnDanhGiaDA
@@ -58,7 +58,6 @@
             this.ucbtnCheckinout.Size = new System.Drawing.Size(250, 70);
             this.ucbtnCheckinout.TabIndex = 1;
             this.ucbtnCheckinout.Text = "Checkin/out";
-            this.ucbtnCheckinout.Load += new System.EventHandler(this.ucbtnCheckinout_Load);
             // 
             // ucTheme
             // 

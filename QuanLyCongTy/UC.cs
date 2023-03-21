@@ -13,17 +13,14 @@ namespace QuanLyCongTy
     public partial class UC : UserControl
     {
         FThongTin fthongtin;
-        string ma;
-        public string Ma 
+        Form currentFormChild;
+        readonly NhanVienDAO nvDao = new NhanVienDAO();
+        public void Setma(string ma)
         {
-            set 
-            { 
-                ma = value;
-                lblName.Text = nvDao.GetTenNV(value);
-                fthongtin = new FThongTin(value);
-            } 
+            lblName.Text = nvDao.GetTenNV(ma);
+            fthongtin = new FThongTin(ma);
+            AddChildForm(fthongtin);
         }
-        NhanVienDao nvDao = new NhanVienDao();
         public UC()
         {
             InitializeComponent();
@@ -44,7 +41,6 @@ namespace QuanLyCongTy
                 }
             }
         }
-        private Form currentFormChild;
         public void AddChildForm(Form childForm)
         {
             childForm.TopLevel = false;
@@ -68,27 +64,12 @@ namespace QuanLyCongTy
             ParentForm.Close();
         }
 
-        private void UC_Load(object sender, EventArgs e)
-        {
-            AddChildForm(fthongtin);
-            panelName_Click(sender, e);
-        }
-
         private void panelName_Click(object sender, EventArgs e)
         {
-            OpenChildForm(fthongtin);
+            if(fthongtin != null)
+                OpenChildForm(fthongtin);
             OffColor();
             ChangeTiltle(ColorTranslator.FromHtml("#33334C"), "Thông Tin");
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            panelName_Click(sender, e);
-        }
-
-        private void lblName_Click(object sender, EventArgs e)
-        {
-            panelName_Click(sender, e);
         }
     }
 }

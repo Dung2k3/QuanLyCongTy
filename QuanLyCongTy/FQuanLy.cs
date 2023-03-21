@@ -13,7 +13,7 @@ namespace QuanLyCongTy
     public partial class FQuanLy : Form
     {
         string maQL;
-        QuanLyDao qlDao = new QuanLyDao();
+        QuanLyDAO qlDao = new QuanLyDAO();
         public FQuanLy(string maQL)
         {
             InitializeComponent();

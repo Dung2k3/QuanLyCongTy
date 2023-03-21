@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace QuanLyCongTy
 {
-    internal class NhanVienDao
+    internal class NhanVienDAO
     {
         DBConnection dbConn = new DBConnection();
         public string GetTenNV(string MaNV)
@@ -16,5 +16,6 @@ namespace QuanLyCongTy
             DataTable dt = dbConn.LayDanhSach(sqlStr);
             return dt.Rows[0][0].ToString();
         }
+
     }
 }

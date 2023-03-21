@@ -6,24 +6,24 @@ using System.Threading.Tasks;
 
 namespace QuanLyCongTy
 {
-    public class ClassDanhGiaDA
+    public class DanhGia
     {
+        string maNV;
         string maDA;
-        string tenDA;
         string nhanXet;
-        long thuong;
+        string chamCong;
 
+        public string MaNV { get { return maNV; } }
         public string MaDA { get { return maDA; } }
-        public string TenDA { get { return tenDA; } }
         public string NhanXet { get { return nhanXet; } }
-        public long Thuong { get { return thuong; } }
+        public string ChamCong { get { return chamCong; } }
 
-        public ClassDanhGiaDA(string maDA, string tenDA, string nhanXet, long thuong)
+        public DanhGia(string maNV, string maDA, string nhanXet, string chamCong)
         {
+            this.maNV = maNV;
             this.maDA = maDA;
-            this.tenDA = tenDA;
             this.nhanXet = nhanXet;
-            this.thuong = thuong;
+            this.chamCong = chamCong;
         }
     }
 }

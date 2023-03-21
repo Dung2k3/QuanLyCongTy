@@ -37,6 +37,7 @@
             // 
             // ucbtnXinNghi
             // 
+            this.ucbtnXinNghi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.ucbtnXinNghi.Location = new System.Drawing.Point(0, 310);
             this.ucbtnXinNghi.Name = "ucbtnXinNghi";
             this.ucbtnXinNghi.Size = new System.Drawing.Size(250, 70);
@@ -45,6 +46,7 @@
             // 
             // ucbtnKPI
             // 
+            this.ucbtnKPI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.ucbtnKPI.Location = new System.Drawing.Point(0, 240);
             this.ucbtnKPI.Name = "ucbtnKPI";
             this.ucbtnKPI.Size = new System.Drawing.Size(250, 70);
@@ -53,6 +55,7 @@
             // 
             // ucbtnPhanCong
             // 
+            this.ucbtnPhanCong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.ucbtnPhanCong.Location = new System.Drawing.Point(0, 170);
             this.ucbtnPhanCong.Name = "ucbtnPhanCong";
             this.ucbtnPhanCong.Size = new System.Drawing.Size(250, 70);
@@ -61,6 +64,7 @@
             // 
             // ucbtnCheckinout
             // 
+            this.ucbtnCheckinout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.ucbtnCheckinout.Location = new System.Drawing.Point(0, 100);
             this.ucbtnCheckinout.Name = "ucbtnCheckinout";
             this.ucbtnCheckinout.Size = new System.Drawing.Size(250, 70);

@@ -6,23 +6,29 @@ using System.Threading.Tasks;
 
 namespace QuanLyCongTy
 {
-    public class ClassPhanCong
+    public class PhanCong
     {
-        string maNV;
         string maDA;
         string congViec;
+        string hoTenNV;
+        string cVMoi;
+        DateTime ngayBatDau;
         DateTime deadline;
 
-        public string MaNV { get { return maNV; } }
+        public string HoTenNV { get { return hoTenNV; } }
         public string MaDA { get { return maDA; } }
         public string CongViec { get { return congViec; } }
+        public string CVMoi { get { return cVMoi; } }
+        public DateTime NgayBatDau {get {return ngayBatDau;}}
         public DateTime Deadline { get { return deadline; } }
 
-        public ClassPhanCong(string maNV, string maDA, string congViec, DateTime deadline)
+        public PhanCong(string hoTenNV, string maDA, string congViec, string cVMoi, DateTime NgayBatDau, DateTime deadline)
         {
-            this.maNV = maNV;
+            this.hoTenNV = hoTenNV;
             this.maDA = maDA;
             this.congViec = congViec;
+            this.cVMoi = cVMoi;
+            this.ngayBatDau = NgayBatDau;
             this.deadline = deadline;
         }
     }

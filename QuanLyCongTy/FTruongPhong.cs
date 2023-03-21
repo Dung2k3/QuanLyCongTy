@@ -13,7 +13,7 @@ namespace QuanLyCongTy
     public partial class FTruongPhong : Form
     {
         string maTP;
-        TruongPhongDao tpDao = new TruongPhongDao();
+        TruongPhongDAO tpDao = new TruongPhongDAO();
         public FTruongPhong(string maTP)
         {
             InitializeComponent();
@@ -67,7 +67,7 @@ namespace QuanLyCongTy
 
         private void btnTaoPC_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FPhanCong(maTP));
+            OpenChildForm(new FPhanCong(maTP,""));
             btnClickChangeColor(btnTaoPC, "#126881");
         }
 

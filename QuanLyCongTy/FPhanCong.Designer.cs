@@ -28,244 +28,260 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label4 = new System.Windows.Forms.Label();
-            this.dtp_Deadline = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btn_Sua = new System.Windows.Forms.Button();
-            this.btn_Xoa = new System.Windows.Forms.Button();
-            this.btn_Them = new System.Windows.Forms.Button();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.lblThoiHan = new System.Windows.Forms.Label();
+            this.dtpDeadline = new System.Windows.Forms.DateTimePicker();
+            this.lblCongViec = new System.Windows.Forms.Label();
+            this.btnTaoPC = new System.Windows.Forms.Button();
             this.gv_CongViec = new System.Windows.Forms.DataGridView();
-            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaDA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CongViec = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DeadLine = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ChamCong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cbo_MaNV = new System.Windows.Forms.ComboBox();
-            this.cbo_MaDA = new System.Windows.Forms.ComboBox();
-            this.rtxt_CongViec = new System.Windows.Forms.RichTextBox();
+            this.HoTenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cboNhanVien = new System.Windows.Forms.ComboBox();
+            this.cboCongViec = new System.Windows.Forms.ComboBox();
+            this.lblNhanVien = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblNgayBatDau = new System.Windows.Forms.Label();
+            this.dtpDBLam = new System.Windows.Forms.DateTimePicker();
+            this.btnHuy = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.gv_CongViec)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label4
+            // lblThoiHan
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 460);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 16);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "Thời hạn: ";
+            this.lblThoiHan.AutoSize = true;
+            this.lblThoiHan.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThoiHan.Location = new System.Drawing.Point(6, 77);
+            this.lblThoiHan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblThoiHan.Name = "lblThoiHan";
+            this.lblThoiHan.Size = new System.Drawing.Size(80, 21);
+            this.lblThoiHan.TabIndex = 13;
+            this.lblThoiHan.Text = "Thời hạn: ";
             // 
-            // dtp_Deadline
+            // dtpDeadline
             // 
-            this.dtp_Deadline.Location = new System.Drawing.Point(13, 512);
-            this.dtp_Deadline.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dtp_Deadline.Name = "dtp_Deadline";
-            this.dtp_Deadline.Size = new System.Drawing.Size(314, 22);
-            this.dtp_Deadline.TabIndex = 12;
+            this.dtpDeadline.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDeadline.Location = new System.Drawing.Point(0, 102);
+            this.dtpDeadline.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpDeadline.Name = "dtpDeadline";
+            this.dtpDeadline.Size = new System.Drawing.Size(314, 28);
+            this.dtpDeadline.TabIndex = 12;
             // 
-            // label3
+            // lblCongViec
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 243);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 16);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Công việc:";
+            this.lblCongViec.AutoSize = true;
+            this.lblCongViec.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCongViec.Location = new System.Drawing.Point(14, 125);
+            this.lblCongViec.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCongViec.Name = "lblCongViec";
+            this.lblCongViec.Size = new System.Drawing.Size(81, 21);
+            this.lblCongViec.TabIndex = 11;
+            this.lblCongViec.Text = "Công việc:";
             // 
-            // label2
+            // btnTaoPC
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 135);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 16);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Mã dự án:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 34);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 16);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Mã nhân viên:";
-            // 
-            // btn_Sua
-            // 
-            this.btn_Sua.Location = new System.Drawing.Point(385, 626);
-            this.btn_Sua.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btn_Sua.Name = "btn_Sua";
-            this.btn_Sua.Size = new System.Drawing.Size(73, 26);
-            this.btn_Sua.TabIndex = 21;
-            this.btn_Sua.Text = "Sửa";
-            this.btn_Sua.UseVisualStyleBackColor = true;
-            this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
-            // 
-            // btn_Xoa
-            // 
-            this.btn_Xoa.Location = new System.Drawing.Point(219, 626);
-            this.btn_Xoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btn_Xoa.Name = "btn_Xoa";
-            this.btn_Xoa.Size = new System.Drawing.Size(73, 26);
-            this.btn_Xoa.TabIndex = 20;
-            this.btn_Xoa.Text = "Xóa";
-            this.btn_Xoa.UseVisualStyleBackColor = true;
-            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
-            // 
-            // btn_Them
-            // 
-            this.btn_Them.Location = new System.Drawing.Point(47, 626);
-            this.btn_Them.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btn_Them.Name = "btn_Them";
-            this.btn_Them.Size = new System.Drawing.Size(73, 26);
-            this.btn_Them.TabIndex = 19;
-            this.btn_Them.Text = "Thêm";
-            this.btn_Them.UseVisualStyleBackColor = true;
-            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
+            this.btnTaoPC.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnTaoPC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTaoPC.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTaoPC.Location = new System.Drawing.Point(813, 484);
+            this.btnTaoPC.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTaoPC.Name = "btnTaoPC";
+            this.btnTaoPC.Size = new System.Drawing.Size(150, 40);
+            this.btnTaoPC.TabIndex = 19;
+            this.btnTaoPC.Text = "Thêm";
+            this.btnTaoPC.UseVisualStyleBackColor = true;
+            this.btnTaoPC.Click += new System.EventHandler(this.btn_Them_Click);
             // 
             // gv_CongViec
             // 
+            this.gv_CongViec.BackgroundColor = System.Drawing.Color.White;
+            this.gv_CongViec.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gv_CongViec.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gv_CongViec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gv_CongViec.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaNV,
-            this.MaDA,
-            this.CongViec,
-            this.DeadLine,
-            this.ChamCong});
-            this.gv_CongViec.Dock = System.Windows.Forms.DockStyle.Right;
-            this.gv_CongViec.Location = new System.Drawing.Point(367, 0);
+            this.HoTenNV,
+            this.TinhTrang,
+            this.DL});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gv_CongViec.DefaultCellStyle = dataGridViewCellStyle2;
+            this.gv_CongViec.Location = new System.Drawing.Point(414, 18);
             this.gv_CongViec.Margin = new System.Windows.Forms.Padding(10, 10, 4, 4);
             this.gv_CongViec.Name = "gv_CongViec";
             this.gv_CongViec.RowHeadersVisible = false;
             this.gv_CongViec.RowHeadersWidth = 62;
             this.gv_CongViec.RowTemplate.Height = 28;
-            this.gv_CongViec.Size = new System.Drawing.Size(633, 700);
+            this.gv_CongViec.Size = new System.Drawing.Size(536, 458);
             this.gv_CongViec.TabIndex = 22;
-            this.gv_CongViec.MouseClick += new System.Windows.Forms.MouseEventHandler(this.gv_CongViec_MouseClick);
             // 
-            // MaNV
+            // HoTenNV
             // 
-            this.MaNV.DataPropertyName = "MaNV";
-            this.MaNV.HeaderText = "Mã nhân viên";
-            this.MaNV.MinimumWidth = 8;
-            this.MaNV.Name = "MaNV";
-            this.MaNV.ReadOnly = true;
-            this.MaNV.Width = 150;
+            this.HoTenNV.DataPropertyName = "HoTenNV";
+            this.HoTenNV.HeaderText = "Tên Nhân Viên";
+            this.HoTenNV.MinimumWidth = 6;
+            this.HoTenNV.Name = "HoTenNV";
+            this.HoTenNV.Width = 150;
             // 
-            // MaDA
+            // TinhTrang
             // 
-            this.MaDA.DataPropertyName = "MaDA";
-            this.MaDA.HeaderText = "Mã dự án";
-            this.MaDA.MinimumWidth = 8;
-            this.MaDA.Name = "MaDA";
-            this.MaDA.ReadOnly = true;
-            this.MaDA.Width = 150;
+            this.TinhTrang.DataPropertyName = "TinhTrang";
+            this.TinhTrang.HeaderText = "Tình Trạng";
+            this.TinhTrang.MinimumWidth = 6;
+            this.TinhTrang.Name = "TinhTrang";
+            this.TinhTrang.Width = 125;
             // 
-            // CongViec
+            // DL
             // 
-            this.CongViec.DataPropertyName = "CongViec";
-            this.CongViec.HeaderText = "Công việc";
-            this.CongViec.MinimumWidth = 8;
-            this.CongViec.Name = "CongViec";
-            this.CongViec.ReadOnly = true;
-            this.CongViec.Width = 150;
+            this.DL.DataPropertyName = "DL";
+            this.DL.HeaderText = "Hạn gần nhất";
+            this.DL.MinimumWidth = 6;
+            this.DL.Name = "DL";
+            this.DL.Width = 125;
             // 
-            // DeadLine
+            // cboNhanVien
             // 
-            this.DeadLine.DataPropertyName = "DeadLine";
-            this.DeadLine.HeaderText = "Thời hạn";
-            this.DeadLine.MinimumWidth = 8;
-            this.DeadLine.Name = "DeadLine";
-            this.DeadLine.ReadOnly = true;
-            this.DeadLine.Width = 150;
+            this.cboNhanVien.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboNhanVien.FormattingEnabled = true;
+            this.cboNhanVien.Location = new System.Drawing.Point(14, 80);
+            this.cboNhanVien.Margin = new System.Windows.Forms.Padding(4);
+            this.cboNhanVien.Name = "cboNhanVien";
+            this.cboNhanVien.Size = new System.Drawing.Size(271, 32);
+            this.cboNhanVien.TabIndex = 23;
             // 
-            // ChamCong
+            // cboCongViec
             // 
-            this.ChamCong.DataPropertyName = "ChamCong";
-            this.ChamCong.HeaderText = "Chấm công";
-            this.ChamCong.MinimumWidth = 8;
-            this.ChamCong.Name = "ChamCong";
-            this.ChamCong.ReadOnly = true;
-            this.ChamCong.Width = 150;
+            this.cboCongViec.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboCongViec.FormattingEnabled = true;
+            this.cboCongViec.Location = new System.Drawing.Point(14, 150);
+            this.cboCongViec.Margin = new System.Windows.Forms.Padding(4);
+            this.cboCongViec.Name = "cboCongViec";
+            this.cboCongViec.Size = new System.Drawing.Size(330, 32);
+            this.cboCongViec.TabIndex = 24;
+            this.cboCongViec.SelectedIndexChanged += new System.EventHandler(this.cboCongViec_SelectedIndexChanged);
             // 
-            // cbo_MaNV
+            // lblNhanVien
             // 
-            this.cbo_MaNV.FormattingEnabled = true;
-            this.cbo_MaNV.Location = new System.Drawing.Point(13, 80);
-            this.cbo_MaNV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cbo_MaNV.Name = "cbo_MaNV";
-            this.cbo_MaNV.Size = new System.Drawing.Size(245, 24);
-            this.cbo_MaNV.TabIndex = 23;
+            this.lblNhanVien.AutoSize = true;
+            this.lblNhanVien.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNhanVien.Location = new System.Drawing.Point(15, 55);
+            this.lblNhanVien.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNhanVien.Name = "lblNhanVien";
+            this.lblNhanVien.Size = new System.Drawing.Size(85, 21);
+            this.lblNhanVien.TabIndex = 9;
+            this.lblNhanVien.Text = "Nhân viên:";
             // 
-            // cbo_MaDA
+            // textBox1
             // 
-            this.cbo_MaDA.FormattingEnabled = true;
-            this.cbo_MaDA.Location = new System.Drawing.Point(13, 177);
-            this.cbo_MaDA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cbo_MaDA.Name = "cbo_MaDA";
-            this.cbo_MaDA.Size = new System.Drawing.Size(245, 24);
-            this.cbo_MaDA.TabIndex = 24;
+            this.textBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(14, 204);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(330, 151);
+            this.textBox1.TabIndex = 25;
             // 
-            // rtxt_CongViec
+            // lblNgayBatDau
             // 
-            this.rtxt_CongViec.Location = new System.Drawing.Point(13, 288);
-            this.rtxt_CongViec.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.rtxt_CongViec.Name = "rtxt_CongViec";
-            this.rtxt_CongViec.Size = new System.Drawing.Size(314, 131);
-            this.rtxt_CongViec.TabIndex = 25;
-            this.rtxt_CongViec.Text = "";
+            this.lblNgayBatDau.AutoSize = true;
+            this.lblNgayBatDau.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNgayBatDau.Location = new System.Drawing.Point(4, 7);
+            this.lblNgayBatDau.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNgayBatDau.Name = "lblNgayBatDau";
+            this.lblNgayBatDau.Size = new System.Drawing.Size(102, 21);
+            this.lblNgayBatDau.TabIndex = 27;
+            this.lblNgayBatDau.Text = "Ngày bắt đầu";
+            // 
+            // dtpDBLam
+            // 
+            this.dtpDBLam.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDBLam.Location = new System.Drawing.Point(0, 32);
+            this.dtpDBLam.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpDBLam.Name = "dtpDBLam";
+            this.dtpDBLam.Size = new System.Drawing.Size(314, 28);
+            this.dtpDBLam.TabIndex = 26;
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHuy.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuy.Location = new System.Drawing.Point(626, 484);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(150, 40);
+            this.btnHuy.TabIndex = 28;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.lblNgayBatDau);
+            this.panel1.Controls.Add(this.dtpDBLam);
+            this.panel1.Controls.Add(this.lblThoiHan);
+            this.panel1.Controls.Add(this.dtpDeadline);
+            this.panel1.Location = new System.Drawing.Point(14, 361);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(330, 143);
+            this.panel1.TabIndex = 29;
             // 
             // FPhanCong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 700);
-            this.Controls.Add(this.rtxt_CongViec);
-            this.Controls.Add(this.cbo_MaDA);
-            this.Controls.Add(this.cbo_MaNV);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1000, 540);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnHuy);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cboCongViec);
+            this.Controls.Add(this.cboNhanVien);
             this.Controls.Add(this.gv_CongViec);
-            this.Controls.Add(this.btn_Sua);
-            this.Controls.Add(this.btn_Xoa);
-            this.Controls.Add(this.btn_Them);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.dtp_Deadline);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnTaoPC);
+            this.Controls.Add(this.lblCongViec);
+            this.Controls.Add(this.lblNhanVien);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FPhanCong";
             this.Text = "PhanCong";
             this.Load += new System.EventHandler(this.PhanCong_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gv_CongViec)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dtp_Deadline;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btn_Sua;
-        private System.Windows.Forms.Button btn_Xoa;
-        private System.Windows.Forms.Button btn_Them;
+        private System.Windows.Forms.Label lblThoiHan;
+        private System.Windows.Forms.DateTimePicker dtpDeadline;
+        private System.Windows.Forms.Label lblCongViec;
+        private System.Windows.Forms.Button btnTaoPC;
         private System.Windows.Forms.DataGridView gv_CongViec;
-        private System.Windows.Forms.ComboBox cbo_MaNV;
-        private System.Windows.Forms.ComboBox cbo_MaDA;
-        private System.Windows.Forms.RichTextBox rtxt_CongViec;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaNV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaDA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CongViec;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DeadLine;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ChamCong;
+        private System.Windows.Forms.ComboBox cboNhanVien;
+        private System.Windows.Forms.ComboBox cboCongViec;
+        private System.Windows.Forms.Label lblNhanVien;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lblNgayBatDau;
+        private System.Windows.Forms.DateTimePicker dtpDBLam;
+        private System.Windows.Forms.Button btnHuy;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HoTenNV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TinhTrang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DL;
     }
 }

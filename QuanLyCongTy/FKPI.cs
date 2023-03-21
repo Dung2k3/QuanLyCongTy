@@ -13,7 +13,7 @@ namespace QuanLyCongTy
     public partial class FKPI : Form
     {
         DuAnDAO DAdao = new DuAnDAO();
-        PhanCongDAO PCdao = new PhanCongDAO();
+        PhanCongDAO PCdao = new PhanCongDAO("");
         public FKPI()
         {
             InitializeComponent();
@@ -22,11 +22,11 @@ namespace QuanLyCongTy
         private void FKPI_Load(object sender, EventArgs e)
         {
             HienThiDanhSach();
-            cbo_DuAn.DataSource = PCdao.LayDanhSachMaDuAn();
+            cbo_DuAn.DataSource = PCdao.LayDSTenNV();
         }
         private void HienThiDanhSach()
         {
-            this.gv_PhanCong.DataSource = PCdao.LayDanhSachPhanCong();
+            this.gv_PhanCong.DataSource = PCdao.LayDSTenNV();
             this.gv_DuAn.DataSource = DAdao.LayDanhSachDuAn();
         }
     }

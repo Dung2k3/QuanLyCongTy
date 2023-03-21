@@ -15,7 +15,7 @@ namespace QuanLyCongTy
         public FNhanVien2(string ma)
         {
             InitializeComponent();
-            ucTheme.Ma = ma;
+            ucTheme.Setma(ma);
             ucbtnCheckinout.SetupButon(ColorTranslator.FromHtml("#8BC240"), ucTheme, new FCheckinout(ma));
             ucbtnPhanCong.SetupButon(ColorTranslator.FromHtml("#126881"), ucTheme, new FKPI());
             ucbtnKPI.SetupButon(ColorTranslator.FromHtml("#A12059"), ucTheme, new FKPI());
