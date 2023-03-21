@@ -28,33 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_Xoa = new System.Windows.Forms.Button();
-            this.btn_Sua = new System.Windows.Forms.Button();
             this.lbl_NgayCL = new System.Windows.Forms.Label();
             this.pgb_TDDA = new System.Windows.Forms.ProgressBar();
             this.lbl_TenPhong = new System.Windows.Forms.Label();
             this.lbl_tenDA = new System.Windows.Forms.Label();
+            this.ptbDelete = new System.Windows.Forms.PictureBox();
+            this.ptbSetting = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbDelete)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbSetting)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btn_Xoa
-            // 
-            this.btn_Xoa.Location = new System.Drawing.Point(565, 34);
-            this.btn_Xoa.Name = "btn_Xoa";
-            this.btn_Xoa.Size = new System.Drawing.Size(52, 54);
-            this.btn_Xoa.TabIndex = 17;
-            this.btn_Xoa.Text = "Xóa";
-            this.btn_Xoa.UseVisualStyleBackColor = true;
-            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
-            // 
-            // btn_Sua
-            // 
-            this.btn_Sua.Location = new System.Drawing.Point(507, 34);
-            this.btn_Sua.Name = "btn_Sua";
-            this.btn_Sua.Size = new System.Drawing.Size(52, 54);
-            this.btn_Sua.TabIndex = 16;
-            this.btn_Sua.Text = "Sửa";
-            this.btn_Sua.UseVisualStyleBackColor = true;
-            this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
             // 
             // lbl_NgayCL
             // 
@@ -91,13 +73,35 @@
             this.lbl_tenDA.TabIndex = 12;
             this.lbl_tenDA.Text = "Tên dự án";
             // 
+            // ptbDelete
+            // 
+            this.ptbDelete.Image = global::QuanLyCongTy.Properties.Resources.trash;
+            this.ptbDelete.Location = new System.Drawing.Point(565, 34);
+            this.ptbDelete.Name = "ptbDelete";
+            this.ptbDelete.Size = new System.Drawing.Size(53, 44);
+            this.ptbDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbDelete.TabIndex = 19;
+            this.ptbDelete.TabStop = false;
+            this.ptbDelete.Click += new System.EventHandler(this.ptbDelete_Click);
+            // 
+            // ptbSetting
+            // 
+            this.ptbSetting.Image = global::QuanLyCongTy.Properties.Resources.settings1;
+            this.ptbSetting.Location = new System.Drawing.Point(506, 34);
+            this.ptbSetting.Name = "ptbSetting";
+            this.ptbSetting.Size = new System.Drawing.Size(53, 44);
+            this.ptbSetting.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbSetting.TabIndex = 18;
+            this.ptbSetting.TabStop = false;
+            this.ptbSetting.Click += new System.EventHandler(this.ptbSetting_Click);
+            // 
             // UCTienDoDA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.btn_Xoa);
-            this.Controls.Add(this.btn_Sua);
+            this.Controls.Add(this.ptbDelete);
+            this.Controls.Add(this.ptbSetting);
             this.Controls.Add(this.lbl_NgayCL);
             this.Controls.Add(this.pgb_TDDA);
             this.Controls.Add(this.lbl_TenPhong);
@@ -105,18 +109,19 @@
             this.Name = "UCTienDoDA";
             this.Size = new System.Drawing.Size(650, 200);
             this.Load += new System.EventHandler(this.UCTienDoDA_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.ptbDelete)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbSetting)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btn_Xoa;
-        private System.Windows.Forms.Button btn_Sua;
         private System.Windows.Forms.Label lbl_NgayCL;
         private System.Windows.Forms.ProgressBar pgb_TDDA;
         private System.Windows.Forms.Label lbl_TenPhong;
         private System.Windows.Forms.Label lbl_tenDA;
+        private System.Windows.Forms.PictureBox ptbSetting;
+        private System.Windows.Forms.PictureBox ptbDelete;
     }
 }

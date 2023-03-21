@@ -79,6 +79,7 @@
             this.Name = "UCSailorStar";
             this.Size = new System.Drawing.Size(648, 198);
             this.Load += new System.EventHandler(this.UCSailorStar_Load);
+            this.Click += new System.EventHandler(this.UCSailorStar_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
 

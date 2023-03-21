@@ -29,7 +29,7 @@ namespace QuanLyCongTy
             lbl_TenPhong.Text = da.TenPB;
             pgb_TDDA.Minimum = 0;
             pgb_TDDA.Maximum = 100;
-            pgb_TDDA.Value = ttdaDAO.LayTienDo(MaDA);
+            pgb_TDDA.Value = 100;
             
             int t = int.Parse(daDAO.LayDiemDA(MaDA));
             int s = 100 - t;
@@ -58,6 +58,15 @@ namespace QuanLyCongTy
         public void addReLoat(FDuAn.FReload HamRL)
         {
             this.HamRL = HamRL;
+        }
+
+        private void UCSailorStar_Click(object sender, EventArgs e)
+        {
+            Form form = new FNhanXet(MaDA);
+            Enabled = false;
+            form.ShowDialog();
+            Enabled = true;
+            HamRL();
         }
     }
 }

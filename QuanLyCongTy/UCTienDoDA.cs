@@ -35,7 +35,7 @@ namespace QuanLyCongTy
             pgb_TDDA.Value = ttdaDAO.LayTienDo(MaDA);
         }
 
-        private void btn_Sua_Click(object sender, EventArgs e)
+        private void ptbSetting_Click(object sender, EventArgs e)
         {
             Form form = new FSuaDA(MaDA);
             Enabled = false;
@@ -44,15 +44,15 @@ namespace QuanLyCongTy
             HamRL();
         }
 
-        private void btn_Xoa_Click(object sender, EventArgs e)
+        private void ptbDelete_Click(object sender, EventArgs e)
         {
             suaDADAO.Xoa(MaDA);
             HamRL();
         }
-
         public void addReLoat(FDuAn.FReload HamRL)
         {
             this.HamRL = HamRL;
         }
+
     }
 }
