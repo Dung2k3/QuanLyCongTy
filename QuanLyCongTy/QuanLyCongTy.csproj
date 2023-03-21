@@ -89,14 +89,7 @@
     <Compile Include="FCheckinout.Designer.cs">
       <DependentUpon>FCheckinout.cs</DependentUpon>
     </Compile>
-    <Compile Include="DanhGiaDA.cs" />
     <Compile Include="DangNhapDAO.cs" />
-    <Compile Include="FDanhGiaDA.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FDanhGiaDA.Designer.cs">
-      <DependentUpon>FDanhGiaDA.cs</DependentUpon>
-    </Compile>
     <Compile Include="DanhGia.cs" />
     <Compile Include="PhanCong.cs" />
     <Compile Include="FDanhGia.cs">
@@ -105,7 +98,6 @@
     <Compile Include="FDanhGia.Designer.cs">
       <DependentUpon>FDanhGia.cs</DependentUpon>
     </Compile>
-    <Compile Include="DanhGiaDADAO.cs" />
     <Compile Include="DanhGiaDAO.cs" />
     <Compile Include="DBConnection.cs" />
     <Compile Include="FNhanVien.cs">
@@ -196,9 +188,6 @@
     <EmbeddedResource Include="FDanhGia.resx">
       <DependentUpon>FDanhGia.cs</DependentUpon>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FDanhGiaDA.resx">
-      <DependentUpon>FDanhGiaDA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FDangNhap.resx">
       <DependentUpon>FDangNhap.cs</DependentUpon>
@@ -306,6 +295,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\trash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F11.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

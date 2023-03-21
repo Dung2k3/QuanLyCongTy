@@ -24,7 +24,7 @@ namespace QuanLyCongTy
         {
             btnCheckinout.BackColor = ColorTranslator.FromHtml("#33334C");
             btnDA.BackColor = ColorTranslator.FromHtml("#33334C");
-            btnDanhGiaDA.BackColor = ColorTranslator.FromHtml("#33334C");
+            //btnDanhGiaDA.BackColor = ColorTranslator.FromHtml("#33334C");
             btnXinNghi.BackColor = ColorTranslator.FromHtml("#33334C");
             btn.BackColor = ColorTranslator.FromHtml(color);
             pnlTitle.BackColor = ColorTranslator.FromHtml(color);
@@ -66,12 +66,6 @@ namespace QuanLyCongTy
             OpenChildForm(new FThongTin(maQL));
             btnClickChangeColor(pnlTitle, "#33334C");
             lblTitle.Text = "Thông tin nhân viên";
-        }
-
-        private void btnDanhGiaDA_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new FDanhGiaDA());
-            btnClickChangeColor(btnDanhGiaDA, "#A12059");
         }
 
         private void btnXinNghi_Click(object sender, EventArgs e)

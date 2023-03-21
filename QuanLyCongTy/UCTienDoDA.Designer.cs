@@ -41,10 +41,11 @@
             // lbl_NgayCL
             // 
             this.lbl_NgayCL.AutoSize = true;
+            this.lbl_NgayCL.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_NgayCL.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.lbl_NgayCL.Location = new System.Drawing.Point(33, 146);
             this.lbl_NgayCL.Name = "lbl_NgayCL";
-            this.lbl_NgayCL.Size = new System.Drawing.Size(94, 20);
+            this.lbl_NgayCL.Size = new System.Drawing.Size(111, 24);
             this.lbl_NgayCL.TabIndex = 15;
             this.lbl_NgayCL.Text = "Ngày còn lại";
             // 
@@ -58,18 +59,20 @@
             // lbl_TenPhong
             // 
             this.lbl_TenPhong.AutoSize = true;
+            this.lbl_TenPhong.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_TenPhong.Location = new System.Drawing.Point(33, 77);
             this.lbl_TenPhong.Name = "lbl_TenPhong";
-            this.lbl_TenPhong.Size = new System.Drawing.Size(85, 20);
+            this.lbl_TenPhong.Size = new System.Drawing.Size(116, 29);
             this.lbl_TenPhong.TabIndex = 13;
             this.lbl_TenPhong.Text = "Tên phòng";
             // 
             // lbl_tenDA
             // 
             this.lbl_tenDA.AutoSize = true;
+            this.lbl_tenDA.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_tenDA.Location = new System.Drawing.Point(33, 34);
             this.lbl_tenDA.Name = "lbl_tenDA";
-            this.lbl_tenDA.Size = new System.Drawing.Size(80, 20);
+            this.lbl_tenDA.Size = new System.Drawing.Size(112, 29);
             this.lbl_tenDA.TabIndex = 12;
             this.lbl_tenDA.Text = "Tên dự án";
             // 
@@ -86,7 +89,7 @@
             // 
             // ptbSetting
             // 
-            this.ptbSetting.Image = global::QuanLyCongTy.Properties.Resources.settings1;
+            this.ptbSetting.Image = global::QuanLyCongTy.Properties.Resources.edit;
             this.ptbSetting.Location = new System.Drawing.Point(506, 34);
             this.ptbSetting.Name = "ptbSetting";
             this.ptbSetting.Size = new System.Drawing.Size(53, 44);

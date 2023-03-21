@@ -44,18 +44,20 @@
             // lbl_TenPhong
             // 
             this.lbl_TenPhong.AutoSize = true;
+            this.lbl_TenPhong.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_TenPhong.Location = new System.Drawing.Point(25, 66);
             this.lbl_TenPhong.Name = "lbl_TenPhong";
-            this.lbl_TenPhong.Size = new System.Drawing.Size(85, 20);
+            this.lbl_TenPhong.Size = new System.Drawing.Size(116, 29);
             this.lbl_TenPhong.TabIndex = 19;
             this.lbl_TenPhong.Text = "Tên phòng";
             // 
             // lbl_tenDA
             // 
             this.lbl_tenDA.AutoSize = true;
+            this.lbl_tenDA.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_tenDA.Location = new System.Drawing.Point(25, 27);
             this.lbl_tenDA.Name = "lbl_tenDA";
-            this.lbl_tenDA.Size = new System.Drawing.Size(80, 20);
+            this.lbl_tenDA.Size = new System.Drawing.Size(112, 29);
             this.lbl_tenDA.TabIndex = 18;
             this.lbl_tenDA.Text = "Tên dự án";
             // 

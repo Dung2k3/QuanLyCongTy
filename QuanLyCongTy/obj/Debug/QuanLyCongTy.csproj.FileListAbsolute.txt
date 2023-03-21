@@ -9,7 +9,6 @@ D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.csproj.CoreComp
 D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.exe
 D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.pdb
 D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.FDanhGia.resources
-D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.FDanhGiaDA.resources
 D:\K2N2\Winform\Project_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.FPhanCong.resources
 D:\hc\CTDH\WinForm\Project\PJ_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.FCheckinout.resources
 D:\hc\CTDH\WinForm\Project\PJ_QLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.FDanhGiaDA.resources

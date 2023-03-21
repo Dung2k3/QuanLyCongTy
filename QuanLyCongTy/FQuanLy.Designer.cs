@@ -31,7 +31,6 @@ namespace QuanLyCongTy
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FQuanLy));
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.btnXinNghi = new System.Windows.Forms.Button();
-            this.btnDanhGiaDA = new System.Windows.Forms.Button();
             this.btnDA = new System.Windows.Forms.Button();
             this.btnCheckinout = new System.Windows.Forms.Button();
             this.panelName = new System.Windows.Forms.Panel();
@@ -51,7 +50,6 @@ namespace QuanLyCongTy
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.pnlMenu.Controls.Add(this.btnXinNghi);
-            this.pnlMenu.Controls.Add(this.btnDanhGiaDA);
             this.pnlMenu.Controls.Add(this.btnDA);
             this.pnlMenu.Controls.Add(this.btnCheckinout);
             this.pnlMenu.Controls.Add(this.panelName);
@@ -71,7 +69,7 @@ namespace QuanLyCongTy
             this.btnXinNghi.ForeColor = System.Drawing.Color.White;
             this.btnXinNghi.Image = ((System.Drawing.Image)(resources.GetObject("btnXinNghi.Image")));
             this.btnXinNghi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXinNghi.Location = new System.Drawing.Point(0, 486);
+            this.btnXinNghi.Location = new System.Drawing.Point(0, 376);
             this.btnXinNghi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXinNghi.Name = "btnXinNghi";
             this.btnXinNghi.Size = new System.Drawing.Size(316, 110);
@@ -79,24 +77,6 @@ namespace QuanLyCongTy
             this.btnXinNghi.Text = "Xin Nghỉ";
             this.btnXinNghi.UseVisualStyleBackColor = true;
             this.btnXinNghi.Click += new System.EventHandler(this.btnXinNghi_Click);
-            // 
-            // btnDanhGiaDA
-            // 
-            this.btnDanhGiaDA.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDanhGiaDA.FlatAppearance.BorderSize = 0;
-            this.btnDanhGiaDA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDanhGiaDA.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDanhGiaDA.ForeColor = System.Drawing.Color.White;
-            this.btnDanhGiaDA.Image = global::QuanLyCongTy.Properties.Resources.document_32;
-            this.btnDanhGiaDA.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDanhGiaDA.Location = new System.Drawing.Point(0, 376);
-            this.btnDanhGiaDA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnDanhGiaDA.Name = "btnDanhGiaDA";
-            this.btnDanhGiaDA.Size = new System.Drawing.Size(316, 110);
-            this.btnDanhGiaDA.TabIndex = 4;
-            this.btnDanhGiaDA.Text = "Đánh giá Dự án";
-            this.btnDanhGiaDA.UseVisualStyleBackColor = true;
-            this.btnDanhGiaDA.Click += new System.EventHandler(this.btnDanhGiaDA_Click);
             // 
             // btnDA
             // 
@@ -244,7 +224,6 @@ namespace QuanLyCongTy
 
         private System.Windows.Forms.Panel pnlMenu;
         private System.Windows.Forms.Button btnXinNghi;
-        private System.Windows.Forms.Button btnDanhGiaDA;
         private System.Windows.Forms.Button btnDA;
         private System.Windows.Forms.Button btnCheckinout;
         private System.Windows.Forms.Panel panelName;
