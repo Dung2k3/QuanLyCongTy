@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLyCongTy
 {
-    public partial class Form1 : Form
+    public partial class FTienDo : Form
     {
-        public Form1()
+        public FTienDo()
         {
             InitializeComponent();
         }
