@@ -27,7 +27,6 @@ namespace QuanLyCongTy
         private void HienThiDanhSach()
         {
             this.gv_PhanCong.DataSource = PCdao.LayDSTenNV();
-            this.gv_DuAn.DataSource = DAdao.LayDanhSachDuAn();
         }
     }
 }

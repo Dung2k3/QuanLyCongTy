@@ -8,11 +8,11 @@ using System.Windows.Forms;
 
 namespace QuanLyCongTy
 {
-    internal class CheckoutDao
+    internal class CheckoutDAO
     {
         DBConnection dbConn = new DBConnection();
         string ma;
-        public CheckoutDao(string ma)
+        public CheckoutDAO(string ma)
         {
             this.ma = ma;
         }

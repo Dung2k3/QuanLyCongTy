@@ -8,11 +8,11 @@ using System.Windows.Forms;
 
 namespace QuanLyCongTy
 {
-    internal class CheckinDao
+    internal class CheckinDAO
     {
         DBConnection dbConn = new DBConnection();
         string ma;
-        public CheckinDao(string ma)
+        public CheckinDAO(string ma)
         {
             this.ma = ma;
         }
@@ -22,7 +22,7 @@ namespace QuanLyCongTy
         }
         public DataTable LayDanhSachCheckin()
         {
-            string sqlStr = string.Format("SELECT NgayCheckin,GioCheckin FROM Checkin Where MaNV = '{0}'", ma);
+            string sqlStr = string.Format("SELECT NgayCheckin, GioCheckin FROM Checkin Where MaNV = '{0}'", ma);
             DataTable dt = dbConn.LayDanhSach(sqlStr);
             dt.Columns.Add(string.Format("Nhanxet"), typeof(string));
             foreach (DataRow dr in dt.Rows)

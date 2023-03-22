@@ -12,7 +12,7 @@ namespace QuanLyCongTy
 {
     public partial class FDangNhap : Form
     {
-        DangNhapDao dnDao = new DangNhapDao();
+        DangNhapDAO dnDao = new DangNhapDAO();
         public FDangNhap()
         {
             InitializeComponent();
@@ -33,11 +33,11 @@ namespace QuanLyCongTy
                 txtMatKhau.Text = "";
                 Form newForm;
                 if (dnDao.KTQuanLy(MaNV))
-                    newForm = new FQuanLy2(MaNV);
+                    newForm = new FQuanLy(MaNV);
                 else if (dnDao.KTTruongPhong(MaNV))
-                    newForm = new FTruongPhong2(MaNV);
+                    newForm = new FTruongPhong(MaNV);
                 else
-                    newForm = new FNhanVien2(MaNV);
+                    newForm = new FNhanVien(MaNV);
                 newForm.ShowDialog();
                 this.Show();
             }

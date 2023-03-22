@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace QuanLyCongTy
 {
-    internal class DangNhapDao
+    internal class DangNhapDAO
     {
         DBConnection dbConn = new DBConnection();
         public string KTTaiKhoan(DangNhap dn)
@@ -27,7 +27,7 @@ namespace QuanLyCongTy
         {
             string sqlStr = string.Format("SELECT MaPB FROM NhanVien Where MaNV = '{0}'", MaNV);
             DataTable dt = dbConn.LayDanhSach(sqlStr);
-            return dt.Rows[0][0].ToString() == "PB_QL";
+            return dt.Rows[0][0].ToString() == "PBQL1";
         }
         public bool KTTruongPhong(string MaNV)
         {

@@ -30,6 +30,7 @@
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pbThem = new System.Windows.Forms.PictureBox();
             this.txtTenDa = new System.Windows.Forms.TextBox();
             this.txtMoTa = new System.Windows.Forms.TextBox();
             this.lblMoTaTitle = new System.Windows.Forms.Label();
@@ -39,7 +40,6 @@
             this.lblNgayBDTitle = new System.Windows.Forms.Label();
             this.lblDiaDiem = new System.Windows.Forms.Label();
             this.lblDiaDiemTitle = new System.Windows.Forms.Label();
-            this.pbThem = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbThem)).BeginInit();
             this.SuspendLayout();
@@ -72,6 +72,21 @@
             this.panel1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.panel1.Size = new System.Drawing.Size(1000, 200);
             this.panel1.TabIndex = 1;
+            // 
+            // pbThem
+            // 
+            this.pbThem.BackColor = System.Drawing.SystemColors.Control;
+            this.pbThem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbThem.Image = global::QuanLyCongTy.Properties.Resources.Add;
+            this.pbThem.Location = new System.Drawing.Point(925, 127);
+            this.pbThem.Name = "pbThem";
+            this.pbThem.Size = new System.Drawing.Size(50, 50);
+            this.pbThem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbThem.TabIndex = 11;
+            this.pbThem.TabStop = false;
+            this.pbThem.Click += new System.EventHandler(this.pbThem_Click);
+            this.pbThem.MouseEnter += new System.EventHandler(this.pbThem_MouseEnter);
+            this.pbThem.MouseLeave += new System.EventHandler(this.pbThem_MouseLeave);
             // 
             // txtTenDa
             // 
@@ -170,21 +185,6 @@
             this.lblDiaDiemTitle.Size = new System.Drawing.Size(84, 24);
             this.lblDiaDiemTitle.TabIndex = 2;
             this.lblDiaDiemTitle.Text = "Địa điểm";
-            // 
-            // pbThem
-            // 
-            this.pbThem.BackColor = System.Drawing.SystemColors.Control;
-            this.pbThem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbThem.Image = global::QuanLyCongTy.Properties.Resources.Add;
-            this.pbThem.Location = new System.Drawing.Point(938, 127);
-            this.pbThem.Name = "pbThem";
-            this.pbThem.Size = new System.Drawing.Size(50, 50);
-            this.pbThem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbThem.TabIndex = 11;
-            this.pbThem.TabStop = false;
-            this.pbThem.Click += new System.EventHandler(this.pbThem_Click);
-            this.pbThem.MouseEnter += new System.EventHandler(this.pbThem_MouseEnter);
-            this.pbThem.MouseLeave += new System.EventHandler(this.pbThem_MouseLeave);
             // 
             // FThongTinDA
             // 

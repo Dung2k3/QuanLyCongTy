@@ -13,14 +13,14 @@ namespace QuanLyCongTy
     public partial class FCheckinout : Form
     {
         string ma;
-        CheckinDao ciDao;
-        CheckoutDao coDao;
+        CheckinDAO ciDao;
+        CheckoutDAO coDao;
         public FCheckinout(string ma)
         {
             InitializeComponent();
             this.ma = ma;
-            ciDao = new CheckinDao(ma);
-            coDao = new CheckoutDao(ma);
+            ciDao = new CheckinDAO(ma);
+            coDao = new CheckoutDAO(ma);
         }
         private void CapNhatGVCheckin()
         {

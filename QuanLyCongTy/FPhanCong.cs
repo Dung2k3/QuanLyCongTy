@@ -51,7 +51,7 @@ namespace QuanLyCongTy
 
         private void cboCongViec_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cboCongViec.Text == "Khác")
+            if (cboCongViec.Text == "Khï¿½c")
             {
                 textBox1.Show();
                 panel1.Location = new Point(textBox1.Location.X, textBox1.Location.Y + textBox1.Size.Height + 1);

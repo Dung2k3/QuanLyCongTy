@@ -12,81 +12,15 @@ namespace QuanLyCongTy
 {
     public partial class FTruongPhong : Form
     {
-        string maTP;
         TruongPhongDAO tpDao = new TruongPhongDAO();
-        public FTruongPhong(string maTP)
+        public FTruongPhong(string ma)
         {
             InitializeComponent();
-            this.maTP = maTP;
-        }
-
-        private void btnClickChangeColor(Control btn, string color)
-        {
-            btnCheckinout.BackColor = ColorTranslator.FromHtml("#33334C");
-            btnTaoPC.BackColor = ColorTranslator.FromHtml("#33334C");
-            btnDanhGiaPC.BackColor = ColorTranslator.FromHtml("#33334C");
-            btnXinNghi.BackColor = ColorTranslator.FromHtml("#33334C");
-            btn.BackColor = ColorTranslator.FromHtml(color);
-            pnlTitle.BackColor = ColorTranslator.FromHtml(color);
-            lblTitle.Text = btn.Text;
-        }
-        private Form currentFormChild;
-        private void OpenChildForm(Form childForm)
-        {
-            if (currentFormChild != null)
-            {
-                currentFormChild.Close();
-            }
-            currentFormChild = childForm;
-            childForm.TopLevel = false;
-            childForm.Dock = DockStyle.Fill;
-            pnlNoiDung.Controls.Add(childForm);
-            pnlNoiDung.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
-        }
-
-        private void btnCheckinout_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new FCheckinout(maTP));
-            btnClickChangeColor(btnCheckinout, "#8BC240");
-        }
-
-        private void btnCloseForm_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void FTruongPhong_Load(object sender, EventArgs e)
-        {
-            lblName.Text = tpDao.GetTenTP(this.maTP);
-            OpenChildForm(new FThongTin(maTP));
-            btnClickChangeColor(pnlTitle, "#33334C");
-            lblTitle.Text = "Thông tin nhân viên";
-        }
-
-        private void btnTaoPC_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new FPhanCong(maTP,""));
-            btnClickChangeColor(btnTaoPC, "#126881");
-        }
-
-        private void btnDanhGiaPC_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new FDanhGia());
-            btnClickChangeColor(btnDanhGiaPC, "#A12059");
-        }
-
-        private void btnXinNghi_Click(object sender, EventArgs e)
-        {
-            btnClickChangeColor(btnXinNghi, "#364D5B");
-        }
-        private void panelName_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new FThongTin(maTP));
-            btnClickChangeColor(panelName, "#33334C");
-            btnClickChangeColor(pnlTitle, "#33334C");
-            lblTitle.Text = "Thông tin nhân viên";
+            ucTheme.Setma(ma);
+            string maTP = tpDao.GetMaPB(ma);
+            ucbtnCheckinout.SetupButon(ColorTranslator.FromHtml("#8BC240"), ucTheme, new FCheckinout(ma));
+            ucbtnTaoPC.SetupButon(ColorTranslator.FromHtml("#126881"), ucTheme, new FXemDuAn(ma));
+            ucbtnXinNghi.SetupButon(ColorTranslator.FromHtml("#8BC240"), ucTheme, new FXinNghi());
         }
     }
 }
