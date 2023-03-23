@@ -70,9 +70,9 @@ namespace QuanLyCongTy
 
         public void Sua(SuaDA da, string MaPB)
         {
-            string sqlStr = string.Format("UPDATE DuAn SET MaDA = '{0}', TenDuAn = N'{1}', MoTa = N'{2}',MaPB = '{3}', DiaDiem = N'{4}',NgayBD = '{5}', DeadLine = '{6}' " +
+            string sqlStr = string.Format("UPDATE DuAn SET TenDuAn = N'{0}', MoTa = N'{1}',MaPB = '{2}', DiaDiem = N'{3}',NgayBD = '{4}', DeadLine = '{5}' " +
                                           "WHERE MaDA = '{6}'",
-                                            da.MaDA, da.TenDA, da.MoTa, MaPB, da.DiaDiem, da.NgayBD, da.DeadLine, da.MaDA);
+                                             da.TenDA, da.MoTa, MaPB, da.DiaDiem, da.NgayBD, da.DeadLine, da.MaDA);
             dbConn.ThucThi(sqlStr);
         }
 

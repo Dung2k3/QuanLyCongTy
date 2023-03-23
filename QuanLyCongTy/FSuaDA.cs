@@ -19,7 +19,7 @@ namespace QuanLyCongTy
         public FSuaDA(string maDA)
         {
             InitializeComponent();
-            MaDA = maDA;
+            this.MaDA = maDA;
         }
 
         private void FSuaDA_Load(object sender, EventArgs e)
@@ -27,6 +27,7 @@ namespace QuanLyCongTy
             SuaDA da = suadaDAO.LayThongTinDA(MaDA);
             MaLPB = suadaDAO.GetMaLPB1(MaDA);
             cmb_TenPB.DataSource = suadaDAO.LayDanhSachTenPhongBan(MaLPB);
+            MaPB = suadaDAO.GetMaPB(cmb_TenPB.Text);
             HienThiDanhSach();
 
             txt_TenDA.Text = da.TenDA;
@@ -39,7 +40,7 @@ namespace QuanLyCongTy
 
         private void btn_Sua_Click(object sender, EventArgs e)
         {
-            SuaDA da = new SuaDA(MaDA, txt_TenDA.Text, txt_MoTa.Text, cmb_TenPB.Text,txtDiaDiem.Text, dtp_NgayBD.Value, dtp_DeadLine.Value);
+            SuaDA da = new SuaDA(MaDA, txt_TenDA.Text, txt_MoTa.Text, cmb_TenPB.Text, txtDiaDiem.Text, dtp_NgayBD.Value, dtp_DeadLine.Value);
             suadaDAO.Sua(da, MaPB);
             Close();
         }
