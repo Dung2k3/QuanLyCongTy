@@ -44,7 +44,10 @@ namespace QuanLyCongTy
 
         private void ptbDelete_Click(object sender, EventArgs e)
         {
-            suaDADAO.Xoa(MaDA);
+            Form form = new FThongBao(MaDA);
+            Enabled = false;
+            form.ShowDialog();
+            Enabled = true;
             HamRL();
         }
         public void addReLoat(FDuAn.FReload HamRL)

@@ -62,6 +62,12 @@
     <Compile Include="FThemTroGiup.Designer.cs">
       <DependentUpon>FThemTroGiup.cs</DependentUpon>
     </Compile>
+    <Compile Include="FThongBao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FThongBao.Designer.cs">
+      <DependentUpon>FThongBao.cs</DependentUpon>
+    </Compile>
     <Compile Include="FThongTinDA.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,12 +189,6 @@
     <Compile Include="FThongTin.Designer.cs">
       <DependentUpon>FThongTin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FTienDo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FTienDo.Designer.cs">
-      <DependentUpon>FTienDo.cs</DependentUpon>
-    </Compile>
     <Compile Include="FTruongPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -281,14 +281,14 @@
     <EmbeddedResource Include="FThemDA.resx">
       <DependentUpon>FThemDA.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FThongBao.resx">
+      <DependentUpon>FThongBao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FThongTin.resx">
       <DependentUpon>FThongTin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FThongTinDA.resx">
       <DependentUpon>FThongTinDA.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FTienDo.resx">
-      <DependentUpon>FTienDo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FTruongPhong.resx">
       <DependentUpon>FTruongPhong.cs</DependentUpon>
@@ -415,6 +415,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\F11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PictureNX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PictureNX1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThemDA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThemDA1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PictureNX2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThemDA2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

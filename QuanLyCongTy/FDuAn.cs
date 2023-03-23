@@ -19,12 +19,7 @@ namespace QuanLyCongTy
         }
         private void FDuAn_Load(object sender, EventArgs e)
         {
-            DataTable dt = daDAO.LayDanhSachDuAnChuaHT();
-            foreach (DataRow dr in dt.Rows)
-            {
-                UCTienDoDA uc = new UCTienDoDA(dr[0].ToString());
-                flp_ListDA.Controls.Add(uc);
-            }
+            DAChuaHT();
         }
 
         public delegate void FReload();

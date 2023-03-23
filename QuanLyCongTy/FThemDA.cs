@@ -40,5 +40,18 @@ namespace QuanLyCongTy
             MaLPB = suadaDAO.GetMaLPB2(cmb_TenLPB.Text);
             cmb_TenPB.DataSource = suadaDAO.LayDanhSachTenPhongBan(MaLPB);
         }
+
+        private void HienThiDanhSach()
+        {
+            this.gvPhongBanRanh.DataSource = suadaDAO.LayDSTinhTrangPB();
+        }
+
+        private void FThemDA_Load(object sender, EventArgs e)
+        {
+            HienThiDanhSach();
+            txt_MaDA.Text = suadaDAO.TaoMaDA();
+            txt_MaDA.Enabled = false;
+            txt_MaDA.BackColor = Color.White;
+        }
     }
 }

@@ -92,5 +92,58 @@ namespace QuanLyCongTy
                                            "VALUES ( '{0}', N'{1}', N'{2}', '{3}', N'{4}', '{5}', '{6}' )", da.MaDA, da.TenDA, da.MoTa, MaPB, da.DiaDiem, da.NgayBD, da.DeadLine);
             dbConn.ThucThi(sqlStr);
         }
+
+        public DataTable LayDSTinhTrangPB()
+        {
+            string sqlStr = string.Format(
+                "SELECT TenPB,Max(DeadLine) as DL " +
+                "FROM DuAn " + 
+                      "RIGHT OUTER JOIN PhongBan " +
+                      "ON PhongBan.MaPB = DuAn.MaPB " +
+                "GROUP BY TenPB " +
+                "ORDER BY DL") ;
+            DataTable dt = dbConn.LayDanhSach(sqlStr);
+            dt.Columns.Add(string.Format("TinhTrang"), typeof(string));
+            DateTime current = DateTime.Now;
+            foreach (DataRow dr in dt.Rows)
+            {
+                if (!(dr[1] is DBNull) && current.CompareTo(DateTime.Parse(dr[1].ToString())) <= 0)
+                    dr[2] = "Bận";
+                else
+                    dr[2] = "Rảnh";
+            }
+            return dt;
+        }
+
+        public DataTable LayDSTinhTrangLPB(string MaLPB)
+        {
+            string sqlStr = string.Format(
+                "SELECT TenPB,Max(DeadLine) as DL " +
+                "FROM DuAn " +
+                      "RIGHT OUTER JOIN PhongBan " +
+                      "ON PhongBan.MaPB = DuAn.MaPB " +
+                "WHERE PhongBan.MaLPB = '{0}' "+
+                "GROUP BY TenPB " +
+                "ORDER BY DL", MaLPB);
+            DataTable dt = dbConn.LayDanhSach(sqlStr);
+            dt.Columns.Add(string.Format("TinhTrang"), typeof(string));
+            DateTime current = DateTime.Now;
+            foreach (DataRow dr in dt.Rows)
+            {
+                if (!(dr[1] is DBNull) && current.CompareTo(DateTime.Parse(dr[1].ToString())) <= 0)
+                    dr[2] = "Bận";
+                else
+                    dr[2] = "Rảnh";
+            }
+            return dt;
+        }
+
+        public string TaoMaDA()
+        {
+            string sqlStr = string.Format("SELECT max(MaDA)" +
+                                            "FROM DuAN ");
+            string temp = dbConn.LayDanhSach(sqlStr).Rows[0][0].ToString();
+            return temp.Substring(0, 2) + (int.Parse(temp.Substring(2, 3)) + 1).ToString("D3");
+        }
     }
 }
