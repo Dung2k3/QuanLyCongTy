@@ -43,12 +43,10 @@ D:\K2N2\Winform\PRJ_QuanLyCongTy\QuanLyCongTy\obj\Debug\QuanLyCongTy.csproj.Asse
 D:\K2N2\Winform\PRJ_QuanLyCongTy\QuanLyCongTy\obj\Debug\QuanLyCongTy.csproj.SuggestedBindingRedirects.cache
 D:\K2N2\Winform\PRJ_QuanLyCongTy\QuanLyCongTy\obj\Debug\QuanLyCongTy.FCheckinout.resources
 D:\K2N2\Winform\PRJ_QuanLyCongTy\QuanLyCongTy\obj\Debug\QuanLyCongTy.FChinhPhanCong.resources
-D:\K2N2\Winform\PRJ_QuanLyCongTy\QuanLyCongTy\obj\Debug\QuanLyCongTy.FDanhGia.resources
 D:\K2N2\Winform\PRJ_QuanLyCongTy\QuanLyCongTy\obj\Debug\QuanLyCongTy.FDangNhap.resources
 D:\K2N2\Winform\PRJ_QuanLyCongTy\QuanLyCongTy\obj\Debug\QuanLyCongTy.FDuAn.resources
 D:\K2N2\Winform\PRJ_QuanLyCongTy\QuanLyCongTy\obj\Debug\QuanLyCongTy.FKPI.resources
 D:\K2N2\Winform\PRJ_QuanLyCongTy\QuanLyCongTy\obj\Debug\QuanLyCongTy.FNhanVien.resources
-D:\K2N2\Winform\PRJ_QuanLyCongTy\QuanLyCongTy\obj\Debug\QuanLyCongTy.FNhanXet.resources
 D:\K2N2\Winform\PRJ_QuanLyCongTy\QuanLyCongTy\obj\Debug\QuanLyCongTy.FQuanLy.resources
 D:\K2N2\Winform\PRJ_QuanLyCongTy\QuanLyCongTy\obj\Debug\QuanLyCongTy.FSuaDA.resources
 D:\K2N2\Winform\PRJ_QuanLyCongTy\QuanLyCongTy\obj\Debug\QuanLyCongTy.FThemDA.resources
@@ -74,3 +72,7 @@ D:\K2N2\Winform\PRJ_QuanLyCongTy\QuanLyCongTy\obj\Debug\QuanLyCongTy.csproj.Core
 D:\K2N2\Winform\PRJ_QuanLyCongTy\QuanLyCongTy\obj\Debug\QuanLyCongTy.exe
 D:\K2N2\Winform\PRJ_QuanLyCongTy\QuanLyCongTy\obj\Debug\QuanLyCongTy.pdb
 D:\K2N2\Winform\PRJ_QuanLyCongTy\QuanLyCongTy\obj\Debug\QuanLyCongTy.FThongBao.resources
+D:\K2N2\Winform\PRJ_QuanLyCongTy\QuanLyCongTy\obj\Debug\QuanLyCongTy.FLich.resources
+D:\K2N2\Winform\PRJ_QuanLyCongTy\QuanLyCongTy\obj\Debug\QuanLyCongTy.FNhanXetDA.resources
+D:\K2N2\Winform\PRJ_QuanLyCongTy\QuanLyCongTy\obj\Debug\QuanLyCongTy.UCNgay.resources
+D:\K2N2\Winform\PRJ_QuanLyCongTy\QuanLyCongTy\obj\Debug\QuanLyCongTy.UCBlank.resources

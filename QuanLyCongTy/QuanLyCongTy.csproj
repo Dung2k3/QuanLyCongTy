@@ -47,6 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CTButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CheckinDao.cs" />
     <Compile Include="CheckoutDao.cs" />
     <Compile Include="DangNhap.cs" />
@@ -55,6 +58,12 @@
     </Compile>
     <Compile Include="FChinhPhanCong.Designer.cs">
       <DependentUpon>FChinhPhanCong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLich.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLich.Designer.cs">
+      <DependentUpon>FLich.cs</DependentUpon>
     </Compile>
     <Compile Include="FThemTroGiup.cs">
       <SubType>Form</SubType>
@@ -84,6 +93,18 @@
     <Compile Include="KPI.cs" />
     <Compile Include="HoTro.cs" />
     <Compile Include="ThongTinDADAO.cs" />
+    <Compile Include="UCBlank.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCBlank.Designer.cs">
+      <DependentUpon>UCBlank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCNgay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCNgay.Designer.cs">
+      <DependentUpon>UCNgay.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCTienDo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -120,12 +141,6 @@
     <Compile Include="DanhGia.cs" />
     <Compile Include="DuAn.cs" />
     <Compile Include="PhanCong.cs" />
-    <Compile Include="FDanhGia.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FDanhGia.Designer.cs">
-      <DependentUpon>FDanhGia.cs</DependentUpon>
-    </Compile>
     <Compile Include="DanhGiaDAO.cs" />
     <Compile Include="DBConnection.cs" />
     <Compile Include="FDuAn.cs">
@@ -141,11 +156,11 @@
     <Compile Include="FKPI.Designer.cs">
       <DependentUpon>FKPI.cs</DependentUpon>
     </Compile>
-    <Compile Include="FNhanXet.cs">
+    <Compile Include="FNhanXetDA.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FNhanXet.Designer.cs">
-      <DependentUpon>FNhanXet.cs</DependentUpon>
+    <Compile Include="FNhanXetDA.Designer.cs">
+      <DependentUpon>FNhanXetDA.cs</DependentUpon>
     </Compile>
     <Compile Include="FSuaDA.cs">
       <SubType>Form</SubType>
@@ -253,10 +268,6 @@
     <EmbeddedResource Include="FChinhPhanCong.resx">
       <DependentUpon>FChinhPhanCong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FDanhGia.resx">
-      <DependentUpon>FDanhGia.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="FDangNhap.resx">
       <DependentUpon>FDangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -266,11 +277,14 @@
     <EmbeddedResource Include="FKPI.resx">
       <DependentUpon>FKPI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FLich.resx">
+      <DependentUpon>FLich.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FNhanVien.resx">
       <DependentUpon>FNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FNhanXet.resx">
-      <DependentUpon>FNhanXet.cs</DependentUpon>
+    <EmbeddedResource Include="FNhanXetDA.resx">
+      <DependentUpon>FNhanXetDA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FQuanLy.resx">
       <DependentUpon>FQuanLy.cs</DependentUpon>
@@ -324,6 +338,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ucMenuBtn.resx">
       <DependentUpon>ucMenuBtn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCBlank.resx">
+      <DependentUpon>UCBlank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCNgay.resx">
+      <DependentUpon>UCNgay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCTienDo.resx">
       <DependentUpon>UCTienDo.cs</DependentUpon>
@@ -448,6 +468,54 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Picture3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nhãnet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nhãnet1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\angle-left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\angle-right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\angle-right1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\angle-left1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\angle-left2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\angle-right2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\angle-left3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\angle-right3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\angle-leftsadasd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture21.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -21,6 +21,7 @@ namespace QuanLyCongTy
             ucbtnCheckinout.SetupButon(ColorTranslator.FromHtml("#8BC240"), ucTheme, new FCheckinout(ma));
             ucbtnTaoPC.SetupButon(ColorTranslator.FromHtml("#126881"), ucTheme, new FXemDuAn(ma));
             ucbtnXinNghi.SetupButon(ColorTranslator.FromHtml("#8BC240"), ucTheme, new FXinNghi());
+            ucbtnLich.SetupButon(ColorTranslator.FromHtml("#E41A4A"), ucTheme, new FLich());
         }
     }
 }

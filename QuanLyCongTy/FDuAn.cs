@@ -57,13 +57,25 @@ namespace QuanLyCongTy
             DADaHT();
         }
 
-        private void btnThem_Click(object sender, EventArgs e)
+        private void pbThem_Click(object sender, EventArgs e)
         {
             Form form = new FThemDA();
             Enabled = false;
             form.ShowDialog();
             Enabled = true;
             DAChuaHT();
+        }
+
+        private void pbThem_MouseLeave(object sender, EventArgs e)
+        {
+            pbThem.Size = new Size(pbThem.Size.Height - 10, pbThem.Size.Height - 10);
+            pbThem.Location = new Point(pbThem.Location.X + 5, pbThem.Location.Y + 5);
+        }
+
+        private void pbThem_MouseEnter(object sender, EventArgs e)
+        {
+            pbThem.Size = new Size(pbThem.Size.Height + 10, pbThem.Size.Height + 10);
+            pbThem.Location = new Point(pbThem.Location.X - 5, pbThem.Location.Y - 5);
         }
     }
 }

@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace QuanLyCongTy
 {
-    public partial class FNhanXet : Form
+    public partial class FNhanXetDA : Form
     {
         NhanXetDADAO nxdaDAO = new NhanXetDADAO();
         string MaDA;
         int Diem;
 
-        public FNhanXet(string MaDA)
+        public FNhanXetDA(string MaDA)
         {
             InitializeComponent();
             this.MaDA = MaDA;

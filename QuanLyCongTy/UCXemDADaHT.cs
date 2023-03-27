@@ -59,7 +59,7 @@ namespace QuanLyCongTy
 
         private void UCSailorStar_Click(object sender, EventArgs e)
         {
-            Form form = new FNhanXet(MaDA);
+            Form form = new FNhanXetDA(MaDA);
             Enabled = false;
             form.ShowDialog();
             Enabled = true;

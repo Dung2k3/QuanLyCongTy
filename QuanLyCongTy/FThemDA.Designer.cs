@@ -65,7 +65,7 @@
             // 
             this.txtDiaDiem.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDiaDiem.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiaDiem.Location = new System.Drawing.Point(261, 454);
+            this.txtDiaDiem.Location = new System.Drawing.Point(261, 469);
             this.txtDiaDiem.Name = "txtDiaDiem";
             this.txtDiaDiem.Size = new System.Drawing.Size(323, 30);
             this.txtDiaDiem.TabIndex = 46;
@@ -73,7 +73,7 @@
             // dtp_DeadLine
             // 
             this.dtp_DeadLine.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtp_DeadLine.Location = new System.Drawing.Point(261, 561);
+            this.dtp_DeadLine.Location = new System.Drawing.Point(261, 576);
             this.dtp_DeadLine.Name = "dtp_DeadLine";
             this.dtp_DeadLine.Size = new System.Drawing.Size(323, 32);
             this.dtp_DeadLine.TabIndex = 45;
@@ -81,7 +81,7 @@
             // dtp_NgayBD
             // 
             this.dtp_NgayBD.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtp_NgayBD.Location = new System.Drawing.Point(261, 509);
+            this.dtp_NgayBD.Location = new System.Drawing.Point(261, 524);
             this.dtp_NgayBD.Name = "dtp_NgayBD";
             this.dtp_NgayBD.Size = new System.Drawing.Size(323, 32);
             this.dtp_NgayBD.TabIndex = 44;
@@ -91,7 +91,7 @@
             this.cmb_TenPB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmb_TenPB.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_TenPB.FormattingEnabled = true;
-            this.cmb_TenPB.Location = new System.Drawing.Point(261, 404);
+            this.cmb_TenPB.Location = new System.Drawing.Point(261, 419);
             this.cmb_TenPB.Name = "cmb_TenPB";
             this.cmb_TenPB.Size = new System.Drawing.Size(323, 37);
             this.cmb_TenPB.TabIndex = 43;
@@ -101,7 +101,7 @@
             this.lbl_DeadLine.AutoSize = true;
             this.lbl_DeadLine.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbl_DeadLine.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_DeadLine.Location = new System.Drawing.Point(67, 560);
+            this.lbl_DeadLine.Location = new System.Drawing.Point(67, 575);
             this.lbl_DeadLine.Name = "lbl_DeadLine";
             this.lbl_DeadLine.Size = new System.Drawing.Size(107, 29);
             this.lbl_DeadLine.TabIndex = 42;
@@ -112,7 +112,7 @@
             this.lbl_NgayBD.AutoSize = true;
             this.lbl_NgayBD.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbl_NgayBD.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_NgayBD.Location = new System.Drawing.Point(68, 511);
+            this.lbl_NgayBD.Location = new System.Drawing.Point(68, 526);
             this.lbl_NgayBD.Name = "lbl_NgayBD";
             this.lbl_NgayBD.Size = new System.Drawing.Size(150, 29);
             this.lbl_NgayBD.TabIndex = 41;
@@ -123,7 +123,7 @@
             this.lbl_DiaDiem.AutoSize = true;
             this.lbl_DiaDiem.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbl_DiaDiem.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_DiaDiem.Location = new System.Drawing.Point(68, 462);
+            this.lbl_DiaDiem.Location = new System.Drawing.Point(68, 477);
             this.lbl_DiaDiem.Name = "lbl_DiaDiem";
             this.lbl_DiaDiem.Size = new System.Drawing.Size(107, 29);
             this.lbl_DiaDiem.TabIndex = 40;
@@ -134,7 +134,7 @@
             this.lbl_TenPB.AutoSize = true;
             this.lbl_TenPB.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbl_TenPB.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TenPB.Location = new System.Drawing.Point(68, 410);
+            this.lbl_TenPB.Location = new System.Drawing.Point(68, 425);
             this.lbl_TenPB.Name = "lbl_TenPB";
             this.lbl_TenPB.Size = new System.Drawing.Size(170, 29);
             this.lbl_TenPB.TabIndex = 39;
@@ -142,7 +142,8 @@
             // 
             // btn_Huy
             // 
-            this.btn_Huy.Location = new System.Drawing.Point(360, 661);
+            this.btn_Huy.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Huy.Location = new System.Drawing.Point(360, 676);
             this.btn_Huy.Name = "btn_Huy";
             this.btn_Huy.Size = new System.Drawing.Size(122, 42);
             this.btn_Huy.TabIndex = 38;
@@ -152,7 +153,8 @@
             // 
             // btn_Them
             // 
-            this.btn_Them.Location = new System.Drawing.Point(488, 661);
+            this.btn_Them.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Them.Location = new System.Drawing.Point(488, 676);
             this.btn_Them.Name = "btn_Them";
             this.btn_Them.Size = new System.Drawing.Size(126, 42);
             this.btn_Them.TabIndex = 37;
@@ -185,18 +187,18 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gvPhongBanRanh.DefaultCellStyle = dataGridViewCellStyle2;
-            this.gvPhongBanRanh.Location = new System.Drawing.Point(664, 25);
+            this.gvPhongBanRanh.Location = new System.Drawing.Point(664, 40);
             this.gvPhongBanRanh.Name = "gvPhongBanRanh";
             this.gvPhongBanRanh.RowHeadersVisible = false;
             this.gvPhongBanRanh.RowHeadersWidth = 62;
             this.gvPhongBanRanh.RowTemplate.Height = 28;
-            this.gvPhongBanRanh.Size = new System.Drawing.Size(563, 649);
+            this.gvPhongBanRanh.Size = new System.Drawing.Size(627, 649);
             this.gvPhongBanRanh.TabIndex = 36;
             // 
             // rtxt_MoTa
             // 
             this.rtxt_MoTa.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtxt_MoTa.Location = new System.Drawing.Point(73, 239);
+            this.rtxt_MoTa.Location = new System.Drawing.Point(73, 254);
             this.rtxt_MoTa.Name = "rtxt_MoTa";
             this.rtxt_MoTa.Size = new System.Drawing.Size(512, 74);
             this.rtxt_MoTa.TabIndex = 34;
@@ -207,7 +209,7 @@
             this.lbl_MoTa.AutoSize = true;
             this.lbl_MoTa.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbl_MoTa.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_MoTa.Location = new System.Drawing.Point(67, 207);
+            this.lbl_MoTa.Location = new System.Drawing.Point(67, 222);
             this.lbl_MoTa.Name = "lbl_MoTa";
             this.lbl_MoTa.Size = new System.Drawing.Size(78, 29);
             this.lbl_MoTa.TabIndex = 33;
@@ -217,7 +219,7 @@
             // 
             this.txt_MaDA.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_MaDA.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_MaDA.Location = new System.Drawing.Point(198, 61);
+            this.txt_MaDA.Location = new System.Drawing.Point(198, 76);
             this.txt_MaDA.Name = "txt_MaDA";
             this.txt_MaDA.Size = new System.Drawing.Size(396, 30);
             this.txt_MaDA.TabIndex = 32;
@@ -227,7 +229,7 @@
             this.lbl_TenDA.AutoSize = true;
             this.lbl_TenDA.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbl_TenDA.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TenDA.Location = new System.Drawing.Point(68, 138);
+            this.lbl_TenDA.Location = new System.Drawing.Point(68, 153);
             this.lbl_TenDA.Name = "lbl_TenDA";
             this.lbl_TenDA.Size = new System.Drawing.Size(116, 29);
             this.lbl_TenDA.TabIndex = 31;
@@ -238,7 +240,7 @@
             this.lbl_MaDA.AutoSize = true;
             this.lbl_MaDA.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbl_MaDA.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_MaDA.Location = new System.Drawing.Point(68, 61);
+            this.lbl_MaDA.Location = new System.Drawing.Point(68, 76);
             this.lbl_MaDA.Name = "lbl_MaDA";
             this.lbl_MaDA.Size = new System.Drawing.Size(114, 29);
             this.lbl_MaDA.TabIndex = 30;
@@ -249,7 +251,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(67, 360);
+            this.label1.Location = new System.Drawing.Point(67, 375);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(171, 29);
             this.label1.TabIndex = 47;
@@ -260,7 +262,7 @@
             this.cmb_TenLPB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmb_TenLPB.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_TenLPB.FormattingEnabled = true;
-            this.cmb_TenLPB.Location = new System.Drawing.Point(261, 352);
+            this.cmb_TenLPB.Location = new System.Drawing.Point(261, 367);
             this.cmb_TenLPB.Name = "cmb_TenLPB";
             this.cmb_TenLPB.Size = new System.Drawing.Size(323, 37);
             this.cmb_TenLPB.TabIndex = 48;
@@ -270,7 +272,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(184, 143);
+            this.label2.Location = new System.Drawing.Point(184, 158);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(409, 29);
             this.label2.TabIndex = 53;
@@ -280,7 +282,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(257, 369);
+            this.label3.Location = new System.Drawing.Point(257, 384);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(337, 29);
             this.label3.TabIndex = 54;
@@ -290,7 +292,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(257, 420);
+            this.label4.Location = new System.Drawing.Point(257, 435);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(337, 29);
             this.label4.TabIndex = 55;
@@ -300,7 +302,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(256, 463);
+            this.label5.Location = new System.Drawing.Point(256, 478);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(337, 29);
             this.label5.TabIndex = 56;
@@ -310,7 +312,7 @@
             // 
             this.txt_TenDA.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_TenDA.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_TenDA.Location = new System.Drawing.Point(188, 135);
+            this.txt_TenDA.Location = new System.Drawing.Point(188, 150);
             this.txt_TenDA.Name = "txt_TenDA";
             this.txt_TenDA.Size = new System.Drawing.Size(396, 30);
             this.txt_TenDA.TabIndex = 57;
@@ -319,7 +321,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox1.Image = global::QuanLyCongTy.Properties.Resources.Picture2;
-            this.pictureBox1.Location = new System.Drawing.Point(42, 25);
+            this.pictureBox1.Location = new System.Drawing.Point(42, 40);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(586, 607);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -340,10 +342,11 @@
             // 
             this.Deadline.DataPropertyName = "DL";
             this.Deadline.Frozen = true;
-            this.Deadline.HeaderText = "Thời hạn";
+            this.Deadline.HeaderText = "Thời hạn gần nhất";
             this.Deadline.MinimumWidth = 8;
             this.Deadline.Name = "Deadline";
             this.Deadline.ReadOnly = true;
+            this.Deadline.Width = 150;
             // 
             // TinhTrang
             // 
@@ -353,14 +356,14 @@
             this.TinhTrang.MinimumWidth = 8;
             this.TinhTrang.Name = "TinhTrang";
             this.TinhTrang.ReadOnly = true;
-            this.TinhTrang.Width = 120;
+            this.TinhTrang.Width = 110;
             // 
             // FThemDA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1281, 744);
+            this.ClientSize = new System.Drawing.Size(1335, 744);
             this.Controls.Add(this.txt_TenDA);
             this.Controls.Add(this.txtDiaDiem);
             this.Controls.Add(this.cmb_TenLPB);

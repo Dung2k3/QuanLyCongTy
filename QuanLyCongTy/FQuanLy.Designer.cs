@@ -28,65 +28,63 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ucbtnDanhGiaDA = new QuanLyCongTy.ucMenuBtn();
             this.ucbtnTaoDA = new QuanLyCongTy.ucMenuBtn();
             this.ucbtnCheckinout = new QuanLyCongTy.ucMenuBtn();
             this.ucbtnXinNghi = new QuanLyCongTy.ucMenuBtn();
             this.ucTheme = new QuanLyCongTy.UC();
             this.SuspendLayout();
             // 
-            // ucbtnDanhGiaDA
-            // 
-            this.ucbtnDanhGiaDA.Location = new System.Drawing.Point(0, 252);
-            this.ucbtnDanhGiaDA.Name = "ucbtnDanhGiaDA";
-            this.ucbtnDanhGiaDA.Size = new System.Drawing.Size(250, 70);
-            this.ucbtnDanhGiaDA.TabIndex = 3;
-            this.ucbtnDanhGiaDA.Text = "Đánh giá";
-            // 
             // ucbtnTaoDA
             // 
-            this.ucbtnTaoDA.Location = new System.Drawing.Point(0, 176);
+            this.ucbtnTaoDA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.ucbtnTaoDA.Location = new System.Drawing.Point(0, 143);
+            this.ucbtnTaoDA.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ucbtnTaoDA.Name = "ucbtnTaoDA";
-            this.ucbtnTaoDA.Size = new System.Drawing.Size(250, 70);
+            this.ucbtnTaoDA.Size = new System.Drawing.Size(187, 57);
             this.ucbtnTaoDA.TabIndex = 2;
             this.ucbtnTaoDA.Text = "Tạo Dự Án";
             // 
             // ucbtnCheckinout
             // 
-            this.ucbtnCheckinout.Location = new System.Drawing.Point(0, 100);
+            this.ucbtnCheckinout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.ucbtnCheckinout.Location = new System.Drawing.Point(0, 81);
+            this.ucbtnCheckinout.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ucbtnCheckinout.Name = "ucbtnCheckinout";
-            this.ucbtnCheckinout.Size = new System.Drawing.Size(250, 70);
+            this.ucbtnCheckinout.Size = new System.Drawing.Size(187, 57);
             this.ucbtnCheckinout.TabIndex = 1;
             this.ucbtnCheckinout.Text = "Checkin/out";
+            // 
+            // ucbtnXinNghi
+            // 
+            this.ucbtnXinNghi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.ucbtnXinNghi.Location = new System.Drawing.Point(0, 207);
+            this.ucbtnXinNghi.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.ucbtnXinNghi.Name = "ucbtnXinNghi";
+            this.ucbtnXinNghi.Size = new System.Drawing.Size(187, 57);
+            this.ucbtnXinNghi.TabIndex = 4;
+            this.ucbtnXinNghi.Text = "Xin nghỉ";
             // 
             // ucTheme
             // 
             this.ucTheme.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucTheme.Location = new System.Drawing.Point(0, 0);
+            this.ucTheme.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ucTheme.Name = "ucTheme";
-            this.ucTheme.Size = new System.Drawing.Size(1250, 800);
+            this.ucTheme.Size = new System.Drawing.Size(937, 650);
             this.ucTheme.TabIndex = 0;
             // 
-            // ucbtnXinNghi
+            // FQuanLy
             // 
-            this.ucbtnXinNghi.Location = new System.Drawing.Point(0, 328);
-            this.ucbtnXinNghi.Name = "ucbtnXinNghi";
-            this.ucbtnXinNghi.Size = new System.Drawing.Size(250, 70);
-            this.ucbtnXinNghi.TabIndex = 4;
-            this.ucbtnXinNghi.Text = "Xin nghỉ";
-            // 
-            // FQuanLy2
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1250, 800);
+            this.ClientSize = new System.Drawing.Size(937, 650);
             this.Controls.Add(this.ucbtnXinNghi);
-            this.Controls.Add(this.ucbtnDanhGiaDA);
             this.Controls.Add(this.ucbtnTaoDA);
             this.Controls.Add(this.ucbtnCheckinout);
             this.Controls.Add(this.ucTheme);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FQuanLy2";
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Name = "FQuanLy";
             this.Text = "FQuanLy2";
             this.ResumeLayout(false);
 
@@ -97,7 +95,6 @@
         private UC ucTheme;
         private ucMenuBtn ucbtnCheckinout;
         private ucMenuBtn ucbtnTaoDA;
-        private ucMenuBtn ucbtnDanhGiaDA;
         private ucMenuBtn ucbtnXinNghi;
     }
 }

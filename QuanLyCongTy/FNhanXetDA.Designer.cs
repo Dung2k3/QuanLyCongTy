@@ -1,6 +1,6 @@
 ﻿namespace QuanLyCongTy
 {
-    partial class FNhanXet
+    partial class FNhanXetDA
     {
         /// <summary>
         /// Required designer variable.
@@ -33,28 +33,28 @@
             this.btnNhanXet = new System.Windows.Forms.Button();
             this.lbl_ChamDiem = new System.Windows.Forms.Label();
             this.lblNhanXet = new System.Windows.Forms.Label();
+            this.lbl_TenDA = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.ptbSao5 = new System.Windows.Forms.PictureBox();
             this.ptbSao4 = new System.Windows.Forms.PictureBox();
             this.ptbSao3 = new System.Windows.Forms.PictureBox();
             this.ptbSao2 = new System.Windows.Forms.PictureBox();
             this.ptbSao1 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lbl_TenDA = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbSao5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbSao4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbSao3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbSao2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbSao1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txt_NhanXet
             // 
             this.txt_NhanXet.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_NhanXet.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_NhanXet.Location = new System.Drawing.Point(65, 172);
+            this.txt_NhanXet.Location = new System.Drawing.Point(66, 187);
             this.txt_NhanXet.Multiline = true;
             this.txt_NhanXet.Name = "txt_NhanXet";
             this.txt_NhanXet.Size = new System.Drawing.Size(811, 168);
@@ -63,9 +63,9 @@
             // btnHuy
             // 
             this.btnHuy.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.Location = new System.Drawing.Point(637, 419);
+            this.btnHuy.Location = new System.Drawing.Point(640, 433);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(127, 40);
+            this.btnHuy.Size = new System.Drawing.Size(127, 47);
             this.btnHuy.TabIndex = 2;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
@@ -74,9 +74,9 @@
             // btnNhanXet
             // 
             this.btnNhanXet.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNhanXet.Location = new System.Drawing.Point(770, 419);
+            this.btnNhanXet.Location = new System.Drawing.Point(773, 433);
             this.btnNhanXet.Name = "btnNhanXet";
-            this.btnNhanXet.Size = new System.Drawing.Size(127, 40);
+            this.btnNhanXet.Size = new System.Drawing.Size(127, 47);
             this.btnNhanXet.TabIndex = 3;
             this.btnNhanXet.Text = "Nhận Xét";
             this.btnNhanXet.UseVisualStyleBackColor = true;
@@ -88,7 +88,7 @@
             this.lbl_ChamDiem.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbl_ChamDiem.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_ChamDiem.ForeColor = System.Drawing.Color.Black;
-            this.lbl_ChamDiem.Location = new System.Drawing.Point(456, 423);
+            this.lbl_ChamDiem.Location = new System.Drawing.Point(456, 443);
             this.lbl_ChamDiem.Name = "lbl_ChamDiem";
             this.lbl_ChamDiem.Size = new System.Drawing.Size(74, 29);
             this.lbl_ChamDiem.TabIndex = 9;
@@ -97,20 +97,40 @@
             // lblNhanXet
             // 
             this.lblNhanXet.AutoSize = true;
-            this.lblNhanXet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(217)))), ((int)(((byte)(102)))));
+            this.lblNhanXet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
             this.lblNhanXet.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNhanXet.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lblNhanXet.Location = new System.Drawing.Point(417, 123);
+            this.lblNhanXet.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblNhanXet.Location = new System.Drawing.Point(111, 118);
             this.lblNhanXet.Name = "lblNhanXet";
             this.lblNhanXet.Size = new System.Drawing.Size(107, 29);
             this.lblNhanXet.TabIndex = 11;
             this.lblNhanXet.Text = "Nhận xét:";
             // 
+            // lbl_TenDA
+            // 
+            this.lbl_TenDA.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_TenDA.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_TenDA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbl_TenDA.Location = new System.Drawing.Point(0, 0);
+            this.lbl_TenDA.Name = "lbl_TenDA";
+            this.lbl_TenDA.Size = new System.Drawing.Size(811, 48);
+            this.lbl_TenDA.TabIndex = 12;
+            this.lbl_TenDA.Text = "Tên dự án";
+            this.lbl_TenDA.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.lbl_TenDA);
+            this.panel1.Location = new System.Drawing.Point(65, 32);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(811, 48);
+            this.panel1.TabIndex = 13;
+            // 
             // ptbSao5
             // 
             this.ptbSao5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ptbSao5.Image = global::QuanLyCongTy.Properties.Resources.VienSaoVang;
-            this.ptbSao5.Location = new System.Drawing.Point(277, 414);
+            this.ptbSao5.Location = new System.Drawing.Point(267, 435);
             this.ptbSao5.Name = "ptbSao5";
             this.ptbSao5.Size = new System.Drawing.Size(47, 45);
             this.ptbSao5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -122,7 +142,7 @@
             // 
             this.ptbSao4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ptbSao4.Image = global::QuanLyCongTy.Properties.Resources.VienSaoVang;
-            this.ptbSao4.Location = new System.Drawing.Point(224, 414);
+            this.ptbSao4.Location = new System.Drawing.Point(214, 435);
             this.ptbSao4.Name = "ptbSao4";
             this.ptbSao4.Size = new System.Drawing.Size(47, 45);
             this.ptbSao4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -134,7 +154,7 @@
             // 
             this.ptbSao3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ptbSao3.Image = global::QuanLyCongTy.Properties.Resources.VienSaoVang;
-            this.ptbSao3.Location = new System.Drawing.Point(171, 414);
+            this.ptbSao3.Location = new System.Drawing.Point(161, 435);
             this.ptbSao3.Name = "ptbSao3";
             this.ptbSao3.Size = new System.Drawing.Size(47, 45);
             this.ptbSao3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -146,7 +166,7 @@
             // 
             this.ptbSao2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ptbSao2.Image = global::QuanLyCongTy.Properties.Resources.VienSaoVang;
-            this.ptbSao2.Location = new System.Drawing.Point(118, 414);
+            this.ptbSao2.Location = new System.Drawing.Point(108, 435);
             this.ptbSao2.Name = "ptbSao2";
             this.ptbSao2.Size = new System.Drawing.Size(47, 45);
             this.ptbSao2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -158,7 +178,7 @@
             // 
             this.ptbSao1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ptbSao1.Image = global::QuanLyCongTy.Properties.Resources.VienSaoVang;
-            this.ptbSao1.Location = new System.Drawing.Point(65, 414);
+            this.ptbSao1.Location = new System.Drawing.Point(55, 435);
             this.ptbSao1.Name = "ptbSao1";
             this.ptbSao1.Size = new System.Drawing.Size(47, 45);
             this.ptbSao1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -168,33 +188,13 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::QuanLyCongTy.Properties.Resources.PictureNX1;
+            this.pictureBox1.Image = global::QuanLyCongTy.Properties.Resources.nhãnet1;
             this.pictureBox1.Location = new System.Drawing.Point(3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(938, 507);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
-            // 
-            // lbl_TenDA
-            // 
-            this.lbl_TenDA.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_TenDA.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TenDA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbl_TenDA.Location = new System.Drawing.Point(0, 0);
-            this.lbl_TenDA.Name = "lbl_TenDA";
-            this.lbl_TenDA.Size = new System.Drawing.Size(801, 48);
-            this.lbl_TenDA.TabIndex = 12;
-            this.lbl_TenDA.Text = "Tên dự án";
-            this.lbl_TenDA.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.lbl_TenDA);
-            this.panel1.Location = new System.Drawing.Point(75, 50);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(801, 48);
-            this.panel1.TabIndex = 13;
             // 
             // FNhanXet
             // 
@@ -218,13 +218,13 @@
             this.Name = "FNhanXet";
             this.Text = "FNhanXet";
             this.Load += new System.EventHandler(this.FNhanXet_Load);
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ptbSao5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbSao4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbSao3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbSao2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbSao1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

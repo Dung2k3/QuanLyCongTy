@@ -16,6 +16,7 @@ namespace QuanLyCongTy
         SuaDADAO suaDADAO = new SuaDADAO();
         string MaDA;
         FDuAn.FReload HamRL;
+        UCTienDoDA uctd;
         public UCTienDoDA(string MaDA)
         {
             InitializeComponent();
@@ -54,6 +55,5 @@ namespace QuanLyCongTy
         {
             this.HamRL = HamRL;
         }
-
     }
 }
