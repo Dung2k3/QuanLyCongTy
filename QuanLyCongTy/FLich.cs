@@ -58,6 +58,8 @@ namespace QuanLyCongTy
             {
                 UCNgay ucngay = new UCNgay();
                 ucngay.songay(i);
+                ucngay.kiemtraDL(datecal.Year, datecal.Month, i);
+                ucngay.kiemtraBD(datecal.Year, datecal.Month, i);
                 fpnlDays.Controls.Add(ucngay);
             }
         }

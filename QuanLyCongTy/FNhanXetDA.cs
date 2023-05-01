@@ -71,11 +71,16 @@ namespace QuanLyCongTy
             ptbSao5.Image = Properties.Resources.VienSaoVang;
         }
 
-        private void btnNhanXet_Click(object sender, EventArgs e)
+        private void tangSize(PictureBox ptb)
         {
-            NhanXetDA nx = new NhanXetDA(MaDA, lbl_TenDA.Text, txt_NhanXet.Text, Diem);
-            nxdaDAO.Sua(nx);
-            Close();
+            ptb.Size = new Size(ptb.Size.Width + 2, ptb.Size.Height + 2);
+            ptb.Location = new Point(ptb.Location.X - 1, ptb.Location.Y - 1);
+        }
+
+        private void giamSize(PictureBox ptb)
+        {
+            ptb.Size = new Size(ptb.Size.Width - 2, ptb.Size.Height - 2);
+            ptb.Location = new Point(ptb.Location.X + 1, ptb.Location.Y + 1);
         }
         private void FNhanXet_Load(object sender, EventArgs e)
         {
@@ -86,11 +91,6 @@ namespace QuanLyCongTy
             txt_NhanXet.Text = nx.DanhGia;
             lbl_ChamDiem.Text = nxdaDAO.LayChamDiem(nx.ChamDiem);
             ThemSao(nx.ChamDiem);
-        }
-
-        private void btnHuy_Click(object sender, EventArgs e)
-        {
-            Close();
         }
 
         private void ptbSao1_Click(object sender, EventArgs e)
@@ -131,6 +131,38 @@ namespace QuanLyCongTy
             Diem = 100;
             TatSao();
             ThemSao(Diem);
+        }
+
+        private void ptbHuy_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void ptbHuy_MouseEnter(object sender, EventArgs e)
+        {
+            tangSize(ptbHuy);
+        }
+
+        private void ptbHuy_MouseLeave(object sender, EventArgs e)
+        {
+            giamSize(ptbHuy);
+        }
+
+        private void ptbNhanXet_Click(object sender, EventArgs e)
+        {
+            NhanXetDA nx = new NhanXetDA(MaDA, lbl_TenDA.Text, txt_NhanXet.Text, Diem);
+            nxdaDAO.Sua(nx);
+            Close();
+        }
+
+        private void ptbNhanXet_MouseEnter(object sender, EventArgs e)
+        {
+            tangSize(ptbNhanXet);
+        }
+
+        private void ptbNhanXet_MouseLeave(object sender, EventArgs e)
+        {
+            giamSize(ptbNhanXet);
         }
     }
 }

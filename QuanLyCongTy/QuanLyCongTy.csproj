@@ -89,6 +89,8 @@
     <Compile Include="FXemDuAn.Designer.cs">
       <DependentUpon>FXemDuAn.cs</DependentUpon>
     </Compile>
+    <Compile Include="LichDA.cs" />
+    <Compile Include="LichDAO.cs" />
     <Compile Include="ThongTin.cs" />
     <Compile Include="KPI.cs" />
     <Compile Include="HoTro.cs" />
@@ -516,6 +518,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Picture21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ptHUY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ptNX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ptHUY1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ptNX1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ptHUY2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ptNX2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ptChuaHT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ptDaHT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-button.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

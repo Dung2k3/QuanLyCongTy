@@ -12,6 +12,7 @@ namespace QuanLyCongTy
 {
     public partial class UCNgay : UserControl
     {
+        LichDAO lichDAO = new LichDAO();
         public UCNgay()
         {
             InitializeComponent();
@@ -21,9 +22,31 @@ namespace QuanLyCongTy
             lblDay.Text = ngay + " ";
         }
 
+        public void kiemtraDL(int year, int month, int day)
+        {
+            DateTime datecheck = new DateTime(year, month, day);
+            LichDA lda = lichDAO.KiemtraDL(datecheck);
+
+            if (lda != null)
+            {
+                lbldl.Text = "dl da";
+                this.BackColor = Color.Pink;
+            }
+        }
+        public void kiemtraBD(int year, int month, int day)
+        {
+            DateTime datecheck = new DateTime(year, month, day);
+            LichDA lda = lichDAO.KiemtraBD(datecheck);
+
+            if (lda != null)
+            {
+                lbldl.Text = "bd da";
+                this.BackColor = Color.Green;
+            }
+        }
+
         private void UCNgay_Load(object sender, EventArgs e)
         {
-
         }
     }
 }
