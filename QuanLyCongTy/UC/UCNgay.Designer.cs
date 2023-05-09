@@ -35,18 +35,20 @@
             // lblDay
             // 
             this.lblDay.AutoSize = true;
+            this.lblDay.Font = new System.Drawing.Font("Calibri", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDay.Location = new System.Drawing.Point(17, 15);
             this.lblDay.Name = "lblDay";
-            this.lblDay.Size = new System.Drawing.Size(34, 20);
+            this.lblDay.Size = new System.Drawing.Size(40, 24);
             this.lblDay.TabIndex = 0;
             this.lblDay.Text = "day";
             // 
             // lbldl
             // 
             this.lbldl.AutoSize = true;
-            this.lbldl.Location = new System.Drawing.Point(27, 56);
+            this.lbldl.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbldl.Location = new System.Drawing.Point(17, 61);
             this.lbldl.Name = "lbldl";
-            this.lbldl.Size = new System.Drawing.Size(13, 20);
+            this.lbldl.Size = new System.Drawing.Size(13, 19);
             this.lbldl.TabIndex = 1;
             this.lbldl.Text = " ";
             // 

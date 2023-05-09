@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FTruongPhong));
             this.ucbtnLich = new QuanLyCongTy.ucMenuBtn();
             this.ucbtnXinNghi = new QuanLyCongTy.ucMenuBtn();
             this.ucbtnTaoPC = new QuanLyCongTy.ucMenuBtn();
@@ -77,7 +78,6 @@
             // 
             // ucTheme
             // 
-            this.ucTheme.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucTheme.Location = new System.Drawing.Point(0, 0);
             this.ucTheme.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.ucTheme.Name = "ucTheme";
@@ -94,7 +94,8 @@
             this.Controls.Add(this.ucbtnTaoPC);
             this.Controls.Add(this.ucbtnCheckinout);
             this.Controls.Add(this.ucTheme);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FTruongPhong";
             this.Text = "FTruongPhong2";
             this.ResumeLayout(false);

@@ -29,7 +29,7 @@ namespace QuanLyCongTy
 
             if (lda != null)
             {
-                lbldl.Text = "dl da";
+                lbldl.Text = "Deadline dự án";
                 this.BackColor = Color.Pink;
             }
         }
@@ -40,7 +40,7 @@ namespace QuanLyCongTy
 
             if (lda != null)
             {
-                lbldl.Text = "bd da";
+                lbldl.Text = "Bắt đầu dự án";
                 this.BackColor = Color.Green;
             }
         }
