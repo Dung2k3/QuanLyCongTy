@@ -47,9 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CheckinDao.cs" />
-    <Compile Include="CheckoutDao.cs" />
-    <Compile Include="DangNhap.cs" />
+    <Compile Include="DataAccessObj\CheckinDao.cs" />
+    <Compile Include="DataAccessObj\CheckoutDao.cs" />
+    <Compile Include="Object\DangNhap.cs" />
     <Compile Include="FChinhPhanCong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,61 +74,61 @@
     <Compile Include="FXemDuAn.Designer.cs">
       <DependentUpon>FXemDuAn.cs</DependentUpon>
     </Compile>
-    <Compile Include="ThongTin.cs" />
-    <Compile Include="KPI.cs" />
-    <Compile Include="HoTro.cs" />
-    <Compile Include="ThongTinDADAO.cs" />
-    <Compile Include="UCTienDo.cs">
+    <Compile Include="Object\ThongTin.cs" />
+    <Compile Include="Object\KPI.cs" />
+    <Compile Include="Object\HoTro.cs" />
+    <Compile Include="DataAccessObj\ThongTinDADAO.cs" />
+    <Compile Include="UC\UCTienDo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCTienDo.Designer.cs">
+    <Compile Include="UC\UCTienDo.Designer.cs">
       <DependentUpon>UCTienDo.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCXemDAChuaHT.cs">
+    <Compile Include="UC\UCXemDAChuaHT.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCXemDAChuaHT.Designer.cs">
+    <Compile Include="UC\UCXemDAChuaHT.Designer.cs">
       <DependentUpon>UCXemDAChuaHT.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCXemDADaHT.cs">
+    <Compile Include="UC\UCXemDADaHT.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCXemDADaHT.Designer.cs">
+    <Compile Include="UC\UCXemDADaHT.Designer.cs">
       <DependentUpon>UCXemDADaHT.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCXemPhanCong.cs">
+    <Compile Include="UC\UCXemPhanCong.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCXemPhanCong.Designer.cs">
+    <Compile Include="UC\UCXemPhanCong.Designer.cs">
       <DependentUpon>UCXemPhanCong.cs</DependentUpon>
     </Compile>
-    <Compile Include="XemDADAO.cs" />
-    <Compile Include="XinNghi.cs" />
+    <Compile Include="DataAccessObj\XemDADAO.cs" />
+    <Compile Include="Object\XinNghi.cs" />
     <Compile Include="FCheckinout.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FCheckinout.Designer.cs">
       <DependentUpon>FCheckinout.cs</DependentUpon>
     </Compile>
-    <Compile Include="DangNhapDao.cs" />
-    <Compile Include="DanhGia.cs" />
-    <Compile Include="DuAn.cs" />
-    <Compile Include="PhanCong.cs" />
+    <Compile Include="DataAccessObj\DangNhapDao.cs" />
+    <Compile Include="Object\DanhGia.cs" />
+    <Compile Include="Object\DuAn.cs" />
+    <Compile Include="Object\PhanCong.cs" />
     <Compile Include="FDanhGia.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FDanhGia.Designer.cs">
       <DependentUpon>FDanhGia.cs</DependentUpon>
     </Compile>
-    <Compile Include="DanhGiaDAO.cs" />
-    <Compile Include="DBConnection.cs" />
+    <Compile Include="DataAccessObj\DanhGiaDAO.cs" />
+    <Compile Include="DataAccessObj\DBConnection.cs" />
     <Compile Include="FDuAn.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FDuAn.Designer.cs">
       <DependentUpon>FDuAn.cs</DependentUpon>
     </Compile>
-    <Compile Include="DuAnDAO.cs" />
+    <Compile Include="DataAccessObj\DuAnDAO.cs" />
     <Compile Include="FKPI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,12 +153,12 @@
     <Compile Include="FThemDA.Designer.cs">
       <DependentUpon>FThemDA.cs</DependentUpon>
     </Compile>
-    <Compile Include="NhanXetDA.cs" />
-    <Compile Include="NhanXetDADAO.cs" />
-    <Compile Include="SuaDA.cs" />
-    <Compile Include="SuaDADAO.cs" />
-    <Compile Include="TDCaNhan.cs" />
-    <Compile Include="ThemDA.cs" />
+    <Compile Include="Object\NhanXetDA.cs" />
+    <Compile Include="DataAccessObj\NhanXetDADAO.cs" />
+    <Compile Include="Object\SuaDA.cs" />
+    <Compile Include="DataAccessObj\SuaDADAO.cs" />
+    <Compile Include="Object\TDCaNhan.cs" />
+    <Compile Include="Object\ThemDA.cs" />
     <Compile Include="FDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,8 +201,8 @@
     <Compile Include="FXinNghi.Designer.cs">
       <DependentUpon>FXinNghi.cs</DependentUpon>
     </Compile>
-    <Compile Include="NhanVienDAO.cs" />
-    <Compile Include="PhanCongDAO.cs" />
+    <Compile Include="DataAccessObj\NhanVienDAO.cs" />
+    <Compile Include="DataAccessObj\PhanCongDAO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FPhanCong.cs">
@@ -211,41 +211,53 @@
     <Compile Include="FPhanCong.Designer.cs">
       <DependentUpon>FPhanCong.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuanLyDAO.cs" />
-    <Compile Include="TDCaNhanDAO.cs" />
-    <Compile Include="ThongTinDAO.cs" />
+    <Compile Include="DataAccessObj\QuanLyDAO.cs" />
+    <Compile Include="DataAccessObj\TDCaNhanDAO.cs" />
+    <Compile Include="DataAccessObj\ThongTinDAO.cs" />
     <Compile Include="FTienDoCaNhan.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FTienDoCaNhan.Designer.cs">
       <DependentUpon>FTienDoCaNhan.cs</DependentUpon>
     </Compile>
-    <Compile Include="TienDoDA.cs" />
-    <Compile Include="TienDoDADAO.cs" />
-    <Compile Include="TruongPhongDAO.cs" />
-    <Compile Include="UC.cs">
+    <Compile Include="Object\TienDoDA.cs" />
+    <Compile Include="DataAccessObj\TienDoDADAO.cs" />
+    <Compile Include="DataAccessObj\TruongPhongDAO.cs" />
+    <Compile Include="UC\UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC.Designer.cs">
+    <Compile Include="UC\UC.Designer.cs">
       <DependentUpon>UC.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucMenuBtn.cs">
+    <Compile Include="UC\ucMenuBtn.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucMenuBtn.Designer.cs">
+    <Compile Include="UC\ucMenuBtn.Designer.cs">
       <DependentUpon>ucMenuBtn.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCSailorStar.cs">
+    <Compile Include="UC\UCSailorStar.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCSailorStar.Designer.cs">
+    <Compile Include="UC\UCSailorStar.Designer.cs">
       <DependentUpon>UCSailorStar.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCTienDoDA.cs">
+    <Compile Include="UC\UCTienDoDA.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCTienDoDA.Designer.cs">
+    <Compile Include="UC\UCTienDoDA.Designer.cs">
       <DependentUpon>UCTienDoDA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add.Designer.cs">
+      <DependentUpon>Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_XinNghi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_XinNghi.Designer.cs">
+      <DependentUpon>F_XinNghi.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FCheckinout.resx">
       <DependentUpon>FCheckinout.cs</DependentUpon>
@@ -299,6 +311,12 @@
     <EmbeddedResource Include="FXinNghi.resx">
       <DependentUpon>FXinNghi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Add.resx">
+      <DependentUpon>Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_XinNghi.resx">
+      <DependentUpon>F_XinNghi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -319,28 +337,28 @@
     <EmbeddedResource Include="FTienDoCaNhan.resx">
       <DependentUpon>FTienDoCaNhan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC.resx">
+    <EmbeddedResource Include="UC\UC.resx">
       <DependentUpon>UC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucMenuBtn.resx">
+    <EmbeddedResource Include="UC\ucMenuBtn.resx">
       <DependentUpon>ucMenuBtn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCTienDo.resx">
+    <EmbeddedResource Include="UC\UCTienDo.resx">
       <DependentUpon>UCTienDo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCTienDoDA.resx">
+    <EmbeddedResource Include="UC\UCTienDoDA.resx">
       <DependentUpon>UCTienDoDA.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCXemDAChuaHT.resx">
+    <EmbeddedResource Include="UC\UCXemDAChuaHT.resx">
       <DependentUpon>UCXemDAChuaHT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCXemDADaHT.resx">
+    <EmbeddedResource Include="UC\UCXemDADaHT.resx">
       <DependentUpon>UCXemDADaHT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCXemPhanCong.resx">
+    <EmbeddedResource Include="UC\UCXemPhanCong.resx">
       <DependentUpon>UCXemPhanCong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCSailorStar.resx">
+    <EmbeddedResource Include="UC\UCSailorStar.resx">
       <DependentUpon>UCSailorStar.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
