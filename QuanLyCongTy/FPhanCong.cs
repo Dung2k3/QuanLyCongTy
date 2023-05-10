@@ -38,6 +38,7 @@ namespace QuanLyCongTy
                                        maDA,
                                        cboCongViec.Text,
                                        textBox1.Text,
+                                       0,
                                        dtpDBLam.Value,
                                        dtpDeadline.Value);
             PCdao.Them(pc);

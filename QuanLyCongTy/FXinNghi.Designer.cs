@@ -28,121 +28,212 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FXinNghi));
+            this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.txt_Lydo = new System.Windows.Forms.TextBox();
-            this.txt_Minhchung = new System.Windows.Forms.TextBox();
+            this.btn_Minisize = new System.Windows.Forms.PictureBox();
+            this.btn_Maxnimize = new System.Windows.Forms.PictureBox();
+            this.btn_Close = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_Add = new System.Windows.Forms.PictureBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btn_search = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.txt_Search = new System.Windows.Forms.TextBox();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Minisize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Maxnimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Close)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Add)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_search)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // panel1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(81, 99);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Ngày Bắt Đầu:";
+            this.panel1.BackColor = System.Drawing.Color.LightBlue;
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.btn_Minisize);
+            this.panel1.Controls.Add(this.btn_Maxnimize);
+            this.panel1.Controls.Add(this.btn_Close);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(0, -1);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1369, 46);
+            this.panel1.TabIndex = 0;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(81, 167);
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label2.Location = new System.Drawing.Point(55, 10);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Ngày Kết Thúc:";
+            this.label2.Size = new System.Drawing.Size(149, 31);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "XIN NGHỈ ";
             // 
-            // label3
+            // btn_Minisize
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(81, 251);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 16);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Lý Do:";
+            this.btn_Minisize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Minisize.Image = ((System.Drawing.Image)(resources.GetObject("btn_Minisize.Image")));
+            this.btn_Minisize.Location = new System.Drawing.Point(1235, 2);
+            this.btn_Minisize.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Minisize.Name = "btn_Minisize";
+            this.btn_Minisize.Size = new System.Drawing.Size(43, 39);
+            this.btn_Minisize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_Minisize.TabIndex = 3;
+            this.btn_Minisize.TabStop = false;
+            this.btn_Minisize.Click += new System.EventHandler(this.btn_Minisize_Click);
             // 
-            // label4
+            // btn_Maxnimize
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(81, 443);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(104, 16);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "File Minh Chứng:";
+            this.btn_Maxnimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Maxnimize.Image = ((System.Drawing.Image)(resources.GetObject("btn_Maxnimize.Image")));
+            this.btn_Maxnimize.Location = new System.Drawing.Point(1279, 2);
+            this.btn_Maxnimize.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Maxnimize.Name = "btn_Maxnimize";
+            this.btn_Maxnimize.Size = new System.Drawing.Size(43, 39);
+            this.btn_Maxnimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_Maxnimize.TabIndex = 2;
+            this.btn_Maxnimize.TabStop = false;
+            this.btn_Maxnimize.Click += new System.EventHandler(this.btn_Maxnimize_Click);
             // 
-            // dateTimePicker1
+            // btn_Close
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(223, 90);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(400, 22);
-            this.dateTimePicker1.TabIndex = 4;
+            this.btn_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Close.Image = ((System.Drawing.Image)(resources.GetObject("btn_Close.Image")));
+            this.btn_Close.Location = new System.Drawing.Point(1323, 2);
+            this.btn_Close.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Close.Name = "btn_Close";
+            this.btn_Close.Size = new System.Drawing.Size(43, 39);
+            this.btn_Close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_Close.TabIndex = 1;
+            this.btn_Close.TabStop = false;
+            this.btn_Close.Click += new System.EventHandler(this.Close_Click);
             // 
-            // dateTimePicker2
+            // pictureBox1
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(223, 159);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(400, 22);
-            this.dateTimePicker2.TabIndex = 5;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(9, 9);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(35, 31);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
-            // txt_Lydo
+            // panel2
             // 
-            this.txt_Lydo.Location = new System.Drawing.Point(223, 243);
-            this.txt_Lydo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txt_Lydo.Multiline = true;
-            this.txt_Lydo.Name = "txt_Lydo";
-            this.txt_Lydo.Size = new System.Drawing.Size(400, 148);
-            this.txt_Lydo.TabIndex = 6;
+            this.panel2.Controls.Add(this.btn_Add);
+            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Controls.Add(this.btn_search);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.txt_Search);
+            this.panel2.Location = new System.Drawing.Point(9, 53);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1340, 672);
+            this.panel2.TabIndex = 5;
             // 
-            // txt_Minhchung
+            // btn_Add
             // 
-            this.txt_Minhchung.Location = new System.Drawing.Point(223, 443);
-            this.txt_Minhchung.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txt_Minhchung.Name = "txt_Minhchung";
-            this.txt_Minhchung.Size = new System.Drawing.Size(400, 22);
-            this.txt_Minhchung.TabIndex = 7;
+            this.btn_Add.Image = ((System.Drawing.Image)(resources.GetObject("btn_Add.Image")));
+            this.btn_Add.Location = new System.Drawing.Point(933, 0);
+            this.btn_Add.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Add.Name = "btn_Add";
+            this.btn_Add.Size = new System.Drawing.Size(54, 42);
+            this.btn_Add.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_Add.TabIndex = 0;
+            this.btn_Add.TabStop = false;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.Location = new System.Drawing.Point(4, 49);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1332, 607);
+            this.panel4.TabIndex = 4;
+            // 
+            // btn_search
+            // 
+            this.btn_search.Image = ((System.Drawing.Image)(resources.GetObject("btn_search.Image")));
+            this.btn_search.Location = new System.Drawing.Point(884, 1);
+            this.btn_search.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_search.Name = "btn_search";
+            this.btn_search.Size = new System.Drawing.Size(41, 36);
+            this.btn_search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_search.TabIndex = 3;
+            this.btn_search.TabStop = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel3.Location = new System.Drawing.Point(4, 36);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(921, 1);
+            this.panel3.TabIndex = 2;
+            // 
+            // txt_Search
+            // 
+            this.txt_Search.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txt_Search.BackColor = System.Drawing.SystemColors.Control;
+            this.txt_Search.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Search.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Search.Location = new System.Drawing.Point(8, 4);
+            this.txt_Search.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_Search.MaxLength = 327670;
+            this.txt_Search.Multiline = true;
+            this.txt_Search.Name = "txt_Search";
+            this.txt_Search.Size = new System.Drawing.Size(921, 32);
+            this.txt_Search.TabIndex = 1;
+            this.txt_Search.Text = "Search";
             // 
             // FXinNghi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1000, 700);
-            this.Controls.Add(this.txt_Minhchung);
-            this.Controls.Add(this.txt_Lydo);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(1365, 738);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FXinNghi";
-            this.Text = "FXinNghi";
+            this.Text = "F_XinNghi";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Minisize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Maxnimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Close)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Add)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_search)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox btn_Minisize;
+        private System.Windows.Forms.PictureBox btn_Maxnimize;
+        private System.Windows.Forms.PictureBox btn_Close;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.TextBox txt_Lydo;
-        private System.Windows.Forms.TextBox txt_Minhchung;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.PictureBox btn_search;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TextBox txt_Search;
+        private System.Windows.Forms.PictureBox btn_Add;
     }
 }
+

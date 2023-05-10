@@ -12,6 +12,7 @@ namespace QuanLyCongTy
         string congViec;
         string hoTenNV;
         string cVMoi;
+        int tienDo;
         DateTime ngayBatDau;
         DateTime deadline;
 
@@ -19,15 +20,18 @@ namespace QuanLyCongTy
         public string MaDA { get { return maDA; } }
         public string CongViec { get { return congViec; } }
         public string CVMoi { get { return cVMoi; } }
+        public int TienDo { get { return tienDo; } }    
         public DateTime NgayBatDau {get {return ngayBatDau;}}
         public DateTime Deadline { get { return deadline; } }
 
-        public PhanCong(string hoTenNV, string maDA, string congViec, string cVMoi, DateTime NgayBatDau, DateTime deadline)
+        public PhanCong(string hoTenNV, string maDA, string congViec, string cVMoi,
+            int tienDo, DateTime NgayBatDau, DateTime deadline)
         {
             this.hoTenNV = hoTenNV;
             this.maDA = maDA;
             this.congViec = congViec;
             this.cVMoi = cVMoi;
+            this.tienDo = tienDo;
             this.ngayBatDau = NgayBatDau;
             this.deadline = deadline;
         }

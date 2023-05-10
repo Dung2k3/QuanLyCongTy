@@ -108,11 +108,11 @@ namespace QuanLyCongTy
         }
         public PhanCong ThongTinPC(string MaCV,string MaDA)
         {
-            string sqlStr = string.Format("SELECT HoTenNV, TenCV, NgayBD, DeadLine FROM PhanCong,NhanVien,CongViec " +
+            string sqlStr = string.Format("SELECT HoTenNV, TenCV, TienDo ,NgayBD, DeadLine FROM PhanCong,NhanVien,CongViec " +
                                          "Where PhanCong.MaCV = '{0}' AND MaDA = '{1}' " +
                                          "AND PhanCong.MaNV = NhanVien.MaNV AND PhanCong.MaCV = CongViec.MaCV", MaCV,MaDA);
             DataRow dr = dbConn.LayDanhSach(sqlStr).Rows[0];
-            return new PhanCong(dr[0].ToString(), MaDA,  dr[1].ToString(), "", DateTime.Parse(dr[2].ToString()), DateTime.Parse(dr[3].ToString()));
+            return new PhanCong(dr[0].ToString(), MaDA,  dr[1].ToString(), "", int.Parse(dr[2].ToString()), DateTime.Parse(dr[3].ToString()), DateTime.Parse(dr[4].ToString()));
             
         }
         

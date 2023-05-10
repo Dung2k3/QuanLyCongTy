@@ -44,6 +44,7 @@ namespace QuanLyCongTy
                                        maDA,
                                        maCV,
                                        "",
+                                       0,
                                        dtpDBLam.Value,
                                        dtpDeadline.Value);
             PCdao.Sua(pc);

@@ -39,6 +39,7 @@ namespace QuanLyCongTy
             lblTenCV.Text = pc.CongViec;
             lblGTBatDauLam.Text = "Ngày bắt đầu: "+pc.NgayBatDau.ToString("dd/MM/yyyy");
             lblTGConLai.Text ="Còn " + (pc.Deadline.Subtract(DateTime.Now)).Days.ToString() + " Ngày";
+            ucTienDo1.Change(pc.TienDo);
             textBox1.Text = PCdao.DSTenNVThamGia(maCV, maDA);
         }
         private void pbThem_MouseEnter(object sender, EventArgs e)

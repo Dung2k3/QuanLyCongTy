@@ -41,7 +41,7 @@ namespace QuanLyCongTy
             if (lda != null)
             {
                 lbldl.Text = "Bắt đầu dự án";
-                this.BackColor = Color.Green;
+                this.BackColor = Color.LightGreen;
             }
         }
 
