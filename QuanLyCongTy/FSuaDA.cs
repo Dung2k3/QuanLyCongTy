@@ -26,32 +26,33 @@ namespace QuanLyCongTy
         {
             SuaDA da = suadaDAO.LayThongTinDA(MaDA);
             MaLPB = suadaDAO.GetMaLPB1(MaDA);
-            cmb_TenPB.DataSource = suadaDAO.LayDanhSachTenPhongBan(MaLPB);
-            MaPB = suadaDAO.GetMaPB(cmb_TenPB.Text);
+            cmbTenPB.DataSource = suadaDAO.LayDanhSachTenPhongBan(MaLPB);
+            MaPB = suadaDAO.GetMaPB(cmbTenPB.Text);
             HienThiDanhSach();
 
-            txt_TenDA.Text = da.TenDA;
-            txt_MoTa.Text = da.MoTa;
-            cmb_TenPB.Text = da.TenPb;
+            txtTenDA.Text = da.TenDA;
+            txtMoTa.Text = da.MoTa;
+            cmbTenPB.Text = da.TenPb;
             txtDiaDiem.Text = da.DiaDiem;
-            dtp_NgayBD.Text = da.NgayBD.ToString();
-            dtp_DeadLine.Text = da.DeadLine.ToString();
-        }
-
-        private void btn_Sua_Click(object sender, EventArgs e)
-        {
-            SuaDA da = new SuaDA(MaDA, txt_TenDA.Text, txt_MoTa.Text, cmb_TenPB.Text, txtDiaDiem.Text, dtp_NgayBD.Value, dtp_DeadLine.Value);
-            suadaDAO.Sua(da, MaPB);
-            Close();
-        }
-        private void btn_Huy_Click(object sender, EventArgs e)
-        {
-            Close();
+            dtpNgayBD.Text = da.NgayBD.ToString();
+            dtpDeadline.Text = da.DeadLine.ToString();
         }
 
         private void HienThiDanhSach()
         {
             this.gvPhongBanRanh.DataSource = suadaDAO.LayDSTinhTrangLPB(MaLPB);
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            SuaDA da = new SuaDA(MaDA, txtTenDA.Text, txtMoTa.Text, cmbTenPB.Text, txtDiaDiem.Text, dtpNgayBD.Value, dtpDeadline.Value);
+            suadaDAO.Sua(da, MaPB);
+            Close();
         }
     }
 }

@@ -24,18 +24,6 @@ namespace QuanLyCongTy
 
         public delegate void FReload();
 
-        private void tangSize(PictureBox ptb)
-        {
-            ptb.Size = new Size(ptb.Size.Width + 2, ptb.Size.Height + 2);
-            ptb.Location = new Point(ptb.Location.X - 1, ptb.Location.Y - 1);
-        }
-
-        private void giamSize(PictureBox ptb)
-        {
-            ptb.Size = new Size(ptb.Size.Width - 2, ptb.Size.Height - 2);
-            ptb.Location = new Point(ptb.Location.X + 1, ptb.Location.Y + 1);
-        }
-
         private void DAChuaHT()
         {
             flp_ListDA.Controls.Clear();
@@ -58,56 +46,36 @@ namespace QuanLyCongTy
                 uc.addReLoat(DADaHT);
             }
         }
+        private void TatMau()
+        {
+            btnDaHT.FillColor = ColorTranslator.FromHtml("#006AF9");
+            btnChuaHT.FillColor = ColorTranslator.FromHtml("#006AF9");
+            btnChuaHT.ForeColor = Color.White;
+            btnDaHT.ForeColor = Color.White;
+        }
+        private void btnDaHT_Click(object sender, EventArgs e)
+        {
+            DADaHT();
+            TatMau();
+            btnDaHT.FillColor = Color.White;
+            btnDaHT.ForeColor = ColorTranslator.FromHtml("#006AF9");
+        }
 
-        private void pbThem_Click(object sender, EventArgs e)
+        private void btnChuaHT_Click(object sender, EventArgs e)
+        {
+            DAChuaHT();
+            TatMau();
+            btnChuaHT.FillColor = Color.White;
+            btnChuaHT.ForeColor = ColorTranslator.FromHtml("#006AF9");
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
         {
             Form form = new FThemDA();
             Enabled = false;
             form.ShowDialog();
             Enabled = true;
             DAChuaHT();
-        }
-
-        private void pbThem_MouseLeave(object sender, EventArgs e)
-        {
-            pbThem.Size = new Size(pbThem.Size.Height - 10, pbThem.Size.Height - 10);
-            pbThem.Location = new Point(pbThem.Location.X + 5, pbThem.Location.Y + 5);
-        }
-
-        private void pbThem_MouseEnter(object sender, EventArgs e)
-        {
-            pbThem.Size = new Size(pbThem.Size.Height + 10, pbThem.Size.Height + 10);
-            pbThem.Location = new Point(pbThem.Location.X - 5, pbThem.Location.Y - 5);
-        }
-
-        private void ptbChuaHT_Click(object sender, EventArgs e)
-        {
-            DAChuaHT();
-        }
-
-        private void ptbChuaHT_MouseEnter(object sender, EventArgs e)
-        {
-            tangSize(ptbChuaHT);
-        }
-
-        private void ptbChuaHT_MouseLeave(object sender, EventArgs e)
-        {
-            giamSize(ptbChuaHT);
-        }
-
-        private void ptbDaHT_Click(object sender, EventArgs e)
-        {
-            DADaHT();
-        }
-
-        private void ptbDaHT_MouseEnter(object sender, EventArgs e)
-        {
-            tangSize(ptbDaHT);
-        }
-
-        private void ptbDaHT_MouseLeave(object sender, EventArgs e)
-        {
-            giamSize(ptbDaHT);
         }
     }
 }

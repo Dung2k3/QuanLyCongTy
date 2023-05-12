@@ -28,31 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.flp_ListDA = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnDaHT = new System.Windows.Forms.Button();
             this.btnChuaHT = new System.Windows.Forms.Button();
+            this.btnDaHT = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.flp_ListDA = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // flp_ListDA
+            // btnChuaHT
             // 
-            this.flp_ListDA.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flp_ListDA.Location = new System.Drawing.Point(0, 63);
-            this.flp_ListDA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.flp_ListDA.Name = "flp_ListDA";
-            this.flp_ListDA.Size = new System.Drawing.Size(1125, 812);
-            this.flp_ListDA.TabIndex = 4;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.btnDaHT);
-            this.panel1.Controls.Add(this.btnChuaHT);
-            this.panel1.Location = new System.Drawing.Point(2, 1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1123, 55);
-            this.panel1.TabIndex = 3;
+            this.btnChuaHT.Location = new System.Drawing.Point(-1, -1);
+            this.btnChuaHT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnChuaHT.Name = "btnChuaHT";
+            this.btnChuaHT.Size = new System.Drawing.Size(264, 55);
+            this.btnChuaHT.TabIndex = 0;
+            this.btnChuaHT.Text = "Chưa hoàn thành";
+            this.btnChuaHT.UseVisualStyleBackColor = true;
+            this.btnChuaHT.Click += new System.EventHandler(this.btnChuaHT_Click);
             // 
             // btnDaHT
             // 
@@ -65,16 +57,24 @@
             this.btnDaHT.UseVisualStyleBackColor = true;
             this.btnDaHT.Click += new System.EventHandler(this.btnDaHT_Click);
             // 
-            // btnChuaHT
+            // panel1
             // 
-            this.btnChuaHT.Location = new System.Drawing.Point(-1, -1);
-            this.btnChuaHT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnChuaHT.Name = "btnChuaHT";
-            this.btnChuaHT.Size = new System.Drawing.Size(264, 55);
-            this.btnChuaHT.TabIndex = 0;
-            this.btnChuaHT.Text = "Chưa hoàn thành";
-            this.btnChuaHT.UseVisualStyleBackColor = true;
-            this.btnChuaHT.Click += new System.EventHandler(this.btnChuaHT_Click);
+            this.panel1.Controls.Add(this.btnDaHT);
+            this.panel1.Controls.Add(this.btnChuaHT);
+            this.panel1.Location = new System.Drawing.Point(2, 1);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1123, 55);
+            this.panel1.TabIndex = 3;
+            // 
+            // flp_ListDA
+            // 
+            this.flp_ListDA.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.flp_ListDA.Location = new System.Drawing.Point(0, 63);
+            this.flp_ListDA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.flp_ListDA.Name = "flp_ListDA";
+            this.flp_ListDA.Size = new System.Drawing.Size(1125, 812);
+            this.flp_ListDA.TabIndex = 4;
             // 
             // FXemDuAn
             // 
@@ -95,9 +95,9 @@
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel flp_ListDA;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnDaHT;
         private System.Windows.Forms.Button btnChuaHT;
+        private System.Windows.Forms.Button btnDaHT;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.FlowLayoutPanel flp_ListDA;
     }
 }
