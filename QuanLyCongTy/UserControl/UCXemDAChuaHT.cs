@@ -28,15 +28,15 @@ namespace QuanLyCongTy
             lbl_tenDA.Text = td.TenDuAn;
             lbl_TenPhong.Text = td.TenPB;
             lbl_NgayCL.Text = "Thời hạn: Còn " + td.NgayKT.Subtract(td.NgayBD).Days.ToString() + " ngày.";
-
-            ucTienDo.Change(ttdaDAO.LayTienDo(MaDA));
+            prgTienDo.Value = ttdaDAO.LayTienDo(MaDA);
+            lblTienDo.Text = ttdaDAO.LayTienDo(MaDA).ToString() + "%";
         }
         public void addReLoat(FDuAn.FReload HamRL)
         {
             this.HamRL = HamRL;
         }
 
-        private void UCXemDAChuaHT_Click(object sender, EventArgs e)
+        private void ptbBG_Click(object sender, EventArgs e)
         {
             Control ctr = Parent.Parent.Parent.Parent;
             if (ctr is UC)

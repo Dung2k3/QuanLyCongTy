@@ -18,7 +18,7 @@ namespace QuanLyCongTy
         {
             InitializeComponent();
             this.maPB = maPB;
-            
+
         }
         private void FXemDuAn_Load(object sender, EventArgs e)
         {
@@ -49,21 +49,33 @@ namespace QuanLyCongTy
             DataTable dt = xemdaDAO.LayDanhSachDuAnDaHT(maPB);
             foreach (DataRow dr in dt.Rows)
             {
-                UCSailorStar uc = new UCSailorStar(dr[0].ToString());
+                UCXemDADaHT uc = new UCXemDADaHT(dr[0].ToString());
                 flp_ListDA.Controls.Add(uc);
                 uc.addReLoat(DADaHT);
             }
         }
-
-        private void btnChuaHT_Click(object sender, EventArgs e)
+        private void TatMau()
         {
-            DAChuaHT();
+            btnDaHT.ForeColor = ColorTranslator.FromHtml("#128C7E");
+            btnChuaHT.ForeColor = ColorTranslator.FromHtml("#0076D4");
+            btnDaHT.FillColor = Color.White;
+            btnChuaHT.FillColor = Color.White;
         }
 
         private void btnDaHT_Click(object sender, EventArgs e)
         {
             DADaHT();
+            TatMau();
+            btnDaHT.ForeColor = Color.White;
+            btnDaHT.FillColor = ColorTranslator.FromHtml("#128C7E");
+        }
+
+        private void btnChuaHT_Click(object sender, EventArgs e)
+        {
+            DAChuaHT();
+            TatMau();
+            btnChuaHT.ForeColor = Color.White;
+            btnChuaHT.FillColor = ColorTranslator.FromHtml("#0076D4");
         }
     }
 }
-

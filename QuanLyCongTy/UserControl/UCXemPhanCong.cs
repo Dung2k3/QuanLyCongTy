@@ -39,30 +39,8 @@ namespace QuanLyCongTy
             lblTenCV.Text = pc.CongViec;
             lblGTBatDauLam.Text = "Ngày bắt đầu: "+pc.NgayBatDau.ToString("dd/MM/yyyy");
             lblTGConLai.Text ="Còn " + (pc.Deadline.Subtract(DateTime.Now)).Days.ToString() + " Ngày";
-            ucTienDo1.Change(pc.TienDo);
+            //ucTienDo.Change(pc.TienDo);
             textBox1.Text = PCdao.DSTenNVThamGia(maCV, maDA);
-        }
-        private void pbThem_MouseEnter(object sender, EventArgs e)
-        {
-            pbThem.Size = new Size(pbThem.Size.Height + 10, pbThem.Size.Height + 10);
-            pbThem.Location = new Point(pbThem.Location.X - 5, pbThem.Location.Y - 5);
-        }
-
-        private void pbThem_MouseLeave(object sender, EventArgs e)
-        {
-            pbThem.Size = new Size(pbThem.Size.Height - 10, pbThem.Size.Height - 10);
-            pbThem.Location = new Point(pbThem.Location.X + 5, pbThem.Location.Y + 5);
-        }
-        private void pbXoa_MouseEnter(object sender, EventArgs e)
-        {
-            pbXoa.Size = new Size(pbXoa.Size.Height + 10, pbXoa.Size.Height + 10);
-            pbXoa.Location = new Point(pbXoa.Location.X - 5, pbXoa.Location.Y - 5);
-        }
-
-        private void pbXoa_MouseLeave(object sender, EventArgs e)
-        {
-            pbXoa.Size = new Size(pbXoa.Size.Height - 10, pbXoa.Size.Height - 10);
-            pbXoa.Location = new Point(pbXoa.Location.X + 5, pbXoa.Location.Y + 5);
         }
 
         private void pbThem_Click(object sender, EventArgs e)
@@ -81,6 +59,20 @@ namespace QuanLyCongTy
             fChinhPhanCong.ShowDialog();
             Show();
        
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            FThemTroGiup fThemTroGiup = new FThemTroGiup();
+            fThemTroGiup.Set(maPB, maDA, maCV);
+            Hide();
+            fThemTroGiup.ShowDialog();
+            Show();
         }
     }
 }

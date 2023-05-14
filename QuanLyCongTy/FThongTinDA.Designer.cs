@@ -77,7 +77,7 @@
             // 
             this.pbThem.BackColor = System.Drawing.SystemColors.Control;
             this.pbThem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbThem.Image = global::QuanLyCongTy.Properties.Resources.Add;
+            this.pbThem.Image = global::QuanLyCongTy.Properties.Resources.add;
             this.pbThem.Location = new System.Drawing.Point(925, 127);
             this.pbThem.Name = "pbThem";
             this.pbThem.Size = new System.Drawing.Size(50, 50);

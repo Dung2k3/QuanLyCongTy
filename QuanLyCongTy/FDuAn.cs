@@ -46,28 +46,6 @@ namespace QuanLyCongTy
                 uc.addReLoat(DADaHT);
             }
         }
-        private void TatMau()
-        {
-            btnDaHT.FillColor = ColorTranslator.FromHtml("#006AF9");
-            btnChuaHT.FillColor = ColorTranslator.FromHtml("#006AF9");
-            btnChuaHT.ForeColor = Color.White;
-            btnDaHT.ForeColor = Color.White;
-        }
-        private void btnDaHT_Click(object sender, EventArgs e)
-        {
-            DADaHT();
-            TatMau();
-            btnDaHT.FillColor = Color.White;
-            btnDaHT.ForeColor = ColorTranslator.FromHtml("#006AF9");
-        }
-
-        private void btnChuaHT_Click(object sender, EventArgs e)
-        {
-            DAChuaHT();
-            TatMau();
-            btnChuaHT.FillColor = Color.White;
-            btnChuaHT.ForeColor = ColorTranslator.FromHtml("#006AF9");
-        }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -76,6 +54,16 @@ namespace QuanLyCongTy
             form.ShowDialog();
             Enabled = true;
             DAChuaHT();
+        }
+
+        private void btnChuaHT_CheckedChanged(object sender, EventArgs e)
+        {
+            DAChuaHT();
+        }
+
+        private void btnDaHT_CheckedChanged(object sender, EventArgs e)
+        {
+            DADaHT();
         }
     }
 }

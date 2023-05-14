@@ -31,6 +31,7 @@ namespace QuanLyCongTy
             lblTenPhong.Text = td.TenPB;
             lblNgayConLai.Text = "Thời hạn: Còn " + td.NgayKT.Subtract(td.NgayBD).Days.ToString() + " ngày.";
             prgTienDo.Value = ttdaDAO.LayTienDo(MaDA);
+            lblTienDo.Text = ttdaDAO.LayTienDo(MaDA).ToString() + "%";
         }
 
         private void ptbSetting_Click(object sender, EventArgs e)

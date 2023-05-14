@@ -36,11 +36,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblTitle2 = new System.Windows.Forms.Label();
             this.lblTitle1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCloseForm = new System.Windows.Forms.Button();
             this.lblTaiKhoan = new System.Windows.Forms.Label();
             this.lblMatKhau = new System.Windows.Forms.Label();
             this.btnDangNhap = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -89,13 +89,6 @@
             this.lblTitle1.ForeColor = System.Drawing.Color.White;
             this.lblTitle1.Name = "lblTitle1";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::QuanLyCongTy.Properties.Resources.DangNhap;
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            // 
             // btnCloseForm
             // 
             this.btnCloseForm.FlatAppearance.BorderSize = 0;
@@ -124,6 +117,13 @@
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.UseVisualStyleBackColor = false;
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::QuanLyCongTy.Properties.Resources.DangNhap;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
             // 
             // FDangNhap
             // 

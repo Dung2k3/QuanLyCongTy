@@ -34,16 +34,16 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gvCheckoutList = new System.Windows.Forms.DataGridView();
-            this.btnCheckout = new System.Windows.Forms.Button();
-            this.gvCheckinList = new System.Windows.Forms.DataGridView();
-            this.btnCheckin = new System.Windows.Forms.Button();
-            this.pnlTable = new System.Windows.Forms.Panel();
             this.NgayCheckout = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GioCheckout = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nhanxet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnCheckout = new System.Windows.Forms.Button();
+            this.gvCheckinList = new System.Windows.Forms.DataGridView();
             this.NgayCheckin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GioCheckin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nhanxet2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnCheckin = new System.Windows.Forms.Button();
+            this.pnlTable = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.gvCheckoutList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvCheckinList)).BeginInit();
             this.pnlTable.SuspendLayout();
@@ -76,14 +76,39 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gvCheckoutList.DefaultCellStyle = dataGridViewCellStyle2;
             this.gvCheckoutList.Dock = System.Windows.Forms.DockStyle.Right;
-            this.gvCheckoutList.Location = new System.Drawing.Point(400, 10);
+            this.gvCheckoutList.Location = new System.Drawing.Point(450, 12);
             this.gvCheckoutList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gvCheckoutList.Name = "gvCheckoutList";
             this.gvCheckoutList.RowHeadersVisible = false;
             this.gvCheckoutList.RowHeadersWidth = 51;
             this.gvCheckoutList.RowTemplate.Height = 24;
-            this.gvCheckoutList.Size = new System.Drawing.Size(400, 690);
+            this.gvCheckoutList.Size = new System.Drawing.Size(450, 863);
             this.gvCheckoutList.TabIndex = 2;
+            // 
+            // NgayCheckout
+            // 
+            this.NgayCheckout.DataPropertyName = "NgayCheckout";
+            this.NgayCheckout.HeaderText = "Ngày checkout";
+            this.NgayCheckout.MinimumWidth = 6;
+            this.NgayCheckout.Name = "NgayCheckout";
+            this.NgayCheckout.Width = 150;
+            // 
+            // GioCheckout
+            // 
+            this.GioCheckout.DataPropertyName = "GioCheckout";
+            this.GioCheckout.HeaderText = "Giờ checkout";
+            this.GioCheckout.MinimumWidth = 8;
+            this.GioCheckout.Name = "GioCheckout";
+            this.GioCheckout.ReadOnly = true;
+            this.GioCheckout.Width = 150;
+            // 
+            // Nhanxet
+            // 
+            this.Nhanxet.DataPropertyName = "Nhanxet";
+            this.Nhanxet.HeaderText = "Nhận xét";
+            this.Nhanxet.MinimumWidth = 6;
+            this.Nhanxet.Name = "Nhanxet";
+            this.Nhanxet.Width = 90;
             // 
             // btnCheckout
             // 
@@ -92,10 +117,10 @@
             this.btnCheckout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCheckout.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheckout.ForeColor = System.Drawing.Color.White;
-            this.btnCheckout.Location = new System.Drawing.Point(11, 72);
+            this.btnCheckout.Location = new System.Drawing.Point(12, 90);
             this.btnCheckout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCheckout.Name = "btnCheckout";
-            this.btnCheckout.Size = new System.Drawing.Size(180, 55);
+            this.btnCheckout.Size = new System.Drawing.Size(202, 69);
             this.btnCheckout.TabIndex = 2;
             this.btnCheckout.Text = "CHECKOUT";
             this.btnCheckout.UseVisualStyleBackColor = false;
@@ -127,7 +152,7 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gvCheckinList.DefaultCellStyle = dataGridViewCellStyle4;
             this.gvCheckinList.Dock = System.Windows.Forms.DockStyle.Left;
-            this.gvCheckinList.Location = new System.Drawing.Point(0, 10);
+            this.gvCheckinList.Location = new System.Drawing.Point(0, 12);
             this.gvCheckinList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gvCheckinList.Name = "gvCheckinList";
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -141,8 +166,32 @@
             this.gvCheckinList.RowHeadersVisible = false;
             this.gvCheckinList.RowHeadersWidth = 51;
             this.gvCheckinList.RowTemplate.Height = 24;
-            this.gvCheckinList.Size = new System.Drawing.Size(400, 690);
+            this.gvCheckinList.Size = new System.Drawing.Size(450, 863);
             this.gvCheckinList.TabIndex = 0;
+            // 
+            // NgayCheckin
+            // 
+            this.NgayCheckin.DataPropertyName = "NgayCheckin";
+            this.NgayCheckin.HeaderText = "Ngày Checkin";
+            this.NgayCheckin.MinimumWidth = 6;
+            this.NgayCheckin.Name = "NgayCheckin";
+            this.NgayCheckin.Width = 150;
+            // 
+            // GioCheckin
+            // 
+            this.GioCheckin.DataPropertyName = "GioCheckin";
+            this.GioCheckin.HeaderText = "Giờ checkin";
+            this.GioCheckin.MinimumWidth = 8;
+            this.GioCheckin.Name = "GioCheckin";
+            this.GioCheckin.Width = 150;
+            // 
+            // Nhanxet2
+            // 
+            this.Nhanxet2.DataPropertyName = "Nhanxet";
+            this.Nhanxet2.HeaderText = "Nhận xét";
+            this.Nhanxet2.MinimumWidth = 6;
+            this.Nhanxet2.Name = "Nhanxet2";
+            this.Nhanxet2.Width = 90;
             // 
             // btnCheckin
             // 
@@ -151,10 +200,10 @@
             this.btnCheckin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCheckin.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheckin.ForeColor = System.Drawing.Color.White;
-            this.btnCheckin.Location = new System.Drawing.Point(12, 10);
-            this.btnCheckin.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnCheckin.Location = new System.Drawing.Point(14, 12);
+            this.btnCheckin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCheckin.Name = "btnCheckin";
-            this.btnCheckin.Size = new System.Drawing.Size(180, 57);
+            this.btnCheckin.Size = new System.Drawing.Size(202, 71);
             this.btnCheckin.TabIndex = 1;
             this.btnCheckin.Text = "CHECKIN";
             this.btnCheckin.UseVisualStyleBackColor = false;
@@ -165,64 +214,19 @@
             this.pnlTable.Controls.Add(this.gvCheckoutList);
             this.pnlTable.Controls.Add(this.gvCheckinList);
             this.pnlTable.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlTable.Location = new System.Drawing.Point(200, 0);
-            this.pnlTable.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.pnlTable.Location = new System.Drawing.Point(225, 0);
+            this.pnlTable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlTable.Name = "pnlTable";
-            this.pnlTable.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.pnlTable.Size = new System.Drawing.Size(800, 700);
+            this.pnlTable.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
+            this.pnlTable.Size = new System.Drawing.Size(900, 875);
             this.pnlTable.TabIndex = 3;
-            // 
-            // NgayCheckout
-            // 
-            this.NgayCheckout.DataPropertyName = "NgayCheckout";
-            this.NgayCheckout.HeaderText = "Ngày checkout";
-            this.NgayCheckout.MinimumWidth = 6;
-            this.NgayCheckout.Name = "NgayCheckout";
-            // 
-            // GioCheckout
-            // 
-            this.GioCheckout.DataPropertyName = "GioCheckout";
-            this.GioCheckout.HeaderText = "Giờ checkout";
-            this.GioCheckout.MinimumWidth = 8;
-            this.GioCheckout.Name = "GioCheckout";
-            this.GioCheckout.ReadOnly = true;
-            // 
-            // Nhanxet
-            // 
-            this.Nhanxet.DataPropertyName = "Nhanxet";
-            this.Nhanxet.HeaderText = "Nhận xét";
-            this.Nhanxet.MinimumWidth = 6;
-            this.Nhanxet.Name = "Nhanxet";
-            this.Nhanxet.Width = 90;
-            // 
-            // NgayCheckin
-            // 
-            this.NgayCheckin.DataPropertyName = "NgayCheckin";
-            this.NgayCheckin.HeaderText = "Ngày Checkin";
-            this.NgayCheckin.MinimumWidth = 6;
-            this.NgayCheckin.Name = "NgayCheckin";
-            // 
-            // GioCheckin
-            // 
-            this.GioCheckin.DataPropertyName = "GioCheckin";
-            this.GioCheckin.HeaderText = "Giờ checkin";
-            this.GioCheckin.MinimumWidth = 8;
-            this.GioCheckin.Name = "GioCheckin";
-            // 
-            // Nhanxet2
-            // 
-            this.Nhanxet2.DataPropertyName = "Nhanxet";
-            this.Nhanxet2.HeaderText = "Nhận xét";
-            this.Nhanxet2.MinimumWidth = 6;
-            this.Nhanxet2.Name = "Nhanxet2";
-            this.Nhanxet2.Width = 90;
             // 
             // FCheckinout
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1000, 700);
+            this.ClientSize = new System.Drawing.Size(1125, 875);
             this.Controls.Add(this.pnlTable);
             this.Controls.Add(this.btnCheckin);
             this.Controls.Add(this.btnCheckout);

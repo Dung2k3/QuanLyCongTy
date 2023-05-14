@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace QuanLyCongTy
 {
-    public partial class FDuAn2 : Form
+    public partial class FSaiTK : Form
     {
-        public FDuAn2()
+        public FSaiTK()
         {
             InitializeComponent();
+        }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

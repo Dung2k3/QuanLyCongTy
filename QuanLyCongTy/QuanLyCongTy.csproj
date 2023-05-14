@@ -59,17 +59,59 @@
   <ItemGroup>
     <Compile Include="DAO\CheckinDao.cs" />
     <Compile Include="DAO\CheckoutDao.cs" />
-    <Compile Include="FDuAn2.cs">
+    <Compile Include="FCapNhatTienDo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FDuAn2.Designer.cs">
-      <DependentUpon>FDuAn2.cs</DependentUpon>
+    <Compile Include="FCapNhatTienDo.Designer.cs">
+      <DependentUpon>FCapNhatTienDo.cs</DependentUpon>
     </Compile>
-    <Compile Include="FXemDuAn2.cs">
+    <Compile Include="FCheckinout2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FXemDuAn2.Designer.cs">
-      <DependentUpon>FXemDuAn2.cs</DependentUpon>
+    <Compile Include="FCheckinout2.Designer.cs">
+      <DependentUpon>FCheckinout2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FDangNhap2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDangNhap2.Designer.cs">
+      <DependentUpon>FDangNhap2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FNhanVien2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FNhanVien2.Designer.cs">
+      <DependentUpon>FNhanVien2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FNhanXetDA_TruongPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FNhanXetDA_TruongPhong.Designer.cs">
+      <DependentUpon>FNhanXetDA_TruongPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FQuanLy2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FQuanLy2.Designer.cs">
+      <DependentUpon>FQuanLy2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSaiTK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSaiTK.Designer.cs">
+      <DependentUpon>FSaiTK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FTruongPhong2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTruongPhong2.Designer.cs">
+      <DependentUpon>FTruongPhong2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FXemDuAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FXemDuAn.Designer.cs">
+      <DependentUpon>FXemDuAn.cs</DependentUpon>
     </Compile>
     <Compile Include="Object\DangNhap.cs" />
     <Compile Include="FChinhPhanCong.cs">
@@ -102,12 +144,6 @@
     <Compile Include="FThongTinDA.Designer.cs">
       <DependentUpon>FThongTinDA.cs</DependentUpon>
     </Compile>
-    <Compile Include="FXemDuAn.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FXemDuAn.Designer.cs">
-      <DependentUpon>FXemDuAn.cs</DependentUpon>
-    </Compile>
     <Compile Include="Object\LichDA.cs" />
     <Compile Include="DAO\LichDAO.cs" />
     <Compile Include="Object\ThongTin.cs" />
@@ -118,6 +154,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UCXemPhanCong_NhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\UCXemPhanCong_NhanVien.Designer.cs">
+      <DependentUpon>UCXemPhanCong_NhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControl\UCBlank.cs">
       <SubType>UserControl</SubType>
@@ -130,12 +172,6 @@
     </Compile>
     <Compile Include="UserControl\UCNgay.Designer.cs">
       <DependentUpon>UCNgay.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControl\UCTienDo.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl\UCTienDo.Designer.cs">
-      <DependentUpon>UCTienDo.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControl\UCXemDAChuaHT.cs">
       <SubType>UserControl</SubType>
@@ -249,12 +285,6 @@
     <Compile Include="DAO\QuanLyDAO.cs" />
     <Compile Include="DAO\TDCaNhanDAO.cs" />
     <Compile Include="DAO\ThongTinDAO.cs" />
-    <Compile Include="FTienDoCaNhan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FTienDoCaNhan.Designer.cs">
-      <DependentUpon>FTienDoCaNhan.cs</DependentUpon>
-    </Compile>
     <Compile Include="Object\TienDoDA.cs" />
     <Compile Include="DAO\TienDoDADAO.cs" />
     <Compile Include="DAO\TruongPhongDAO.cs" />
@@ -294,8 +324,14 @@
     <Compile Include="FXinNghi.Designer.cs">
       <DependentUpon>FXinNghi.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FCapNhatTienDo.resx">
+      <DependentUpon>FCapNhatTienDo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FCheckinout.resx">
       <DependentUpon>FCheckinout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCheckinout2.resx">
+      <DependentUpon>FCheckinout2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FChinhPhanCong.resx">
       <DependentUpon>FChinhPhanCong.cs</DependentUpon>
@@ -303,11 +339,11 @@
     <EmbeddedResource Include="FDangNhap.resx">
       <DependentUpon>FDangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FDangNhap2.resx">
+      <DependentUpon>FDangNhap2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FDuAn.resx">
       <DependentUpon>FDuAn.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FDuAn2.resx">
-      <DependentUpon>FDuAn2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FKPI.resx">
       <DependentUpon>FKPI.cs</DependentUpon>
@@ -318,11 +354,23 @@
     <EmbeddedResource Include="FNhanVien.resx">
       <DependentUpon>FNhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FNhanVien2.resx">
+      <DependentUpon>FNhanVien2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FNhanXetDA.resx">
       <DependentUpon>FNhanXetDA.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FNhanXetDA_TruongPhong.resx">
+      <DependentUpon>FNhanXetDA_TruongPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FQuanLy.resx">
       <DependentUpon>FQuanLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FQuanLy2.resx">
+      <DependentUpon>FQuanLy2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSaiTK.resx">
+      <DependentUpon>FSaiTK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FSuaDA.resx">
       <DependentUpon>FSuaDA.cs</DependentUpon>
@@ -342,11 +390,11 @@
     <EmbeddedResource Include="FTruongPhong.resx">
       <DependentUpon>FTruongPhong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FTruongPhong2.resx">
+      <DependentUpon>FTruongPhong2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FXemDuAn.resx">
       <DependentUpon>FXemDuAn.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FXemDuAn2.resx">
-      <DependentUpon>FXemDuAn2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -360,8 +408,8 @@
     <EmbeddedResource Include="FThemTroGiup.resx">
       <DependentUpon>FThemTroGiup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FTienDoCaNhan.resx">
-      <DependentUpon>FTienDoCaNhan.cs</DependentUpon>
+    <EmbeddedResource Include="UserControl\UCXemPhanCong_NhanVien.resx">
+      <DependentUpon>UCXemPhanCong_NhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\UC.resx">
       <DependentUpon>UC.cs</DependentUpon>
@@ -374,9 +422,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\UCNgay.resx">
       <DependentUpon>UCNgay.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControl\UCTienDo.resx">
-      <DependentUpon>UCTienDo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\UCTienDoDA.resx">
       <DependentUpon>UCTienDoDA.cs</DependentUpon>
@@ -625,6 +670,132 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Vien2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\speech-bubble.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alarm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2023-05-13 170221.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CaiBo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CaiBo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CaiBo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error-message.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error-message %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error-message %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error-message %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\time.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\time %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graphic-progression.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graphic-progression %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exam %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exam %283%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exam %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\project.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\project %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\time1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checked %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipboard %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

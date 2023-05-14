@@ -71,5 +71,10 @@ namespace QuanLyCongTy
             OffColor();
             ChangeTiltle(ColorTranslator.FromHtml("#33334C"), "Thông Tin");
         }
+
+        private void pnlMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

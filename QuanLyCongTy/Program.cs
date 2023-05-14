@@ -18,9 +18,14 @@ namespace QuanLyCongTy
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Form2());
-            Application.Run(new FDangNhap());
+            //Application.Run(new FDangNhap());
+            //Application.Run(new FDangNhap2());
             //Application.Run(new FSuaDA("DA001"));
             //Application.Run(new FThemDA());
+            Application.Run(new FQuanLy2("NV001"));
+            //Application.Run(new FNhanVien2("NV003"));
+            //Application.Run(new FTruongPhong2("NV004"));
+            //Application.Run(new FCapNhatTienDo());
         }
     }
 }

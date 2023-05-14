@@ -69,7 +69,7 @@
             // ucbtnCheckinout
             // 
             this.ucbtnCheckinout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.ucbtnCheckinout.Location = new System.Drawing.Point(0, 125);
+            this.ucbtnCheckinout.Location = new System.Drawing.Point(0, 126);
             this.ucbtnCheckinout.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.ucbtnCheckinout.Name = "ucbtnCheckinout";
             this.ucbtnCheckinout.Size = new System.Drawing.Size(279, 88);

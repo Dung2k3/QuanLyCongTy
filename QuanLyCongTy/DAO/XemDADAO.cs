@@ -17,8 +17,8 @@ namespace QuanLyCongTy
                                            "WHERE MaDA IN (SELECT MaDA " +
                                                            "FROM PhanCong " +
                                                          " Where TienDo < 100) " +
-                                                         " OR MaDA NOT IN (SELECT MaDA FROM PhanCong) ");
-                                                         //" AND MaPB = {0}",MaPB);
+                                                         " OR MaDA NOT IN (SELECT MaDA FROM PhanCong) "+
+                                                         " AND MaPB = '{0}'", MaPB);
             return dbConn.LayDanhSach(sqlStr);
         }
 
@@ -29,8 +29,8 @@ namespace QuanLyCongTy
                                            "WHERE MaDA NOT IN (SELECT MaDA " +
                                                            "FROM PhanCong " +
                                                          " Where TienDo < 100) " +
-                                                         " AND MaDA IN (SELECT MaDA FROM PhanCong) ");
-                                                         //" AND MaPB = {0}", MaPB);
+                                                         " AND MaDA IN (SELECT MaDA FROM PhanCong) "+
+                                                         " AND MaPB = '{0}'", MaPB);
             return dbConn.LayDanhSach(sqlStr);
         }
         public string LayDiemDA(string MaDA)
