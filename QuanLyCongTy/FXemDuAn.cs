@@ -22,12 +22,7 @@ namespace QuanLyCongTy
         }
         private void FXemDuAn_Load(object sender, EventArgs e)
         {
-            DataTable dt = xemdaDAO.LayDanhSachDuAnChuaHT(maPB);
-            foreach (DataRow dr in dt.Rows)
-            {
-                UCXemDAChuaHT uc = new UCXemDAChuaHT(dr[0].ToString());
-                flp_ListDA.Controls.Add(uc);
-            }
+            DAChuaHT();
         }
 
         public delegate void FReload();
@@ -54,28 +49,15 @@ namespace QuanLyCongTy
                 uc.addReLoat(DADaHT);
             }
         }
-        private void TatMau()
-        {
-            btnDaHT.ForeColor = ColorTranslator.FromHtml("#128C7E");
-            btnChuaHT.ForeColor = ColorTranslator.FromHtml("#0076D4");
-            btnDaHT.FillColor = Color.White;
-            btnChuaHT.FillColor = Color.White;
-        }
 
-        private void btnDaHT_Click(object sender, EventArgs e)
+        private void btnDaHT_CheckedChanged(object sender, EventArgs e)
         {
             DADaHT();
-            TatMau();
-            btnDaHT.ForeColor = Color.White;
-            btnDaHT.FillColor = ColorTranslator.FromHtml("#128C7E");
         }
 
-        private void btnChuaHT_Click(object sender, EventArgs e)
+        private void btnChuaHT_CheckedChanged(object sender, EventArgs e)
         {
             DAChuaHT();
-            TatMau();
-            btnChuaHT.ForeColor = Color.White;
-            btnChuaHT.FillColor = ColorTranslator.FromHtml("#0076D4");
         }
     }
 }
