@@ -12,17 +12,19 @@ namespace QuanLyCongTy
 {
     public partial class FNhanXetDA : Form
     {
-        NhanXetDADAO nxdaDAO = new NhanXetDADAO();
-        string MaDA;
+        NhanXetDABUS nhanXetDABUS = new NhanXetDABUS();
         int Diem;
 
-        public FNhanXetDA(string MaDA)
+        public FNhanXetDA()
         {
             InitializeComponent();
-            this.MaDA = MaDA;
+        }
+        public void CapNhat(DuAnModel da)
+        {
+            nhanXetDABUS.da = da;
         }
 
-        private void ThemSao(int Diem)
+        private void ThemSao()
         {
             if(Diem == 0) return;
             if (Diem == 20)
@@ -84,13 +86,8 @@ namespace QuanLyCongTy
         }
         private void FNhanXet_Load(object sender, EventArgs e)
         {
-            nxdaDAO.LayThongTinDA(MaDA);
-            NhanXetDA nx = nxdaDAO.LayThongTinDA(MaDA);
-
-            lbl_TenDA.Text = nx.TenDA;
-            txt_NhanXet.Text = nx.DanhGia;
-            lbl_ChamDiem.Text = nxdaDAO.LayChamDiem(nx.ChamDiem);
-            ThemSao(nx.ChamDiem);
+            nhanXetDABUS.FillControl(lbl_TenDA, txt_NhanXet, lbl_ChamDiem,ref Diem);
+            ThemSao();
         }
 
         private void ptbSao1_Click(object sender, EventArgs e)
@@ -98,7 +95,7 @@ namespace QuanLyCongTy
             lbl_ChamDiem.Text = "Tệ";
             Diem = 20;
             TatSao();
-            ThemSao(Diem);
+            ThemSao();
         }
 
         private void ptbSao2_Click(object sender, EventArgs e)
@@ -106,7 +103,7 @@ namespace QuanLyCongTy
             lbl_ChamDiem.Text = "Chưa tốt";
             Diem = 40;
             TatSao();
-            ThemSao(Diem);
+            ThemSao();
         }
 
         private void ptbSao3_Click(object sender, EventArgs e)
@@ -114,7 +111,7 @@ namespace QuanLyCongTy
             lbl_ChamDiem.Text = "Tốt";
             Diem = 60;
             TatSao();
-            ThemSao(Diem);
+            ThemSao();
         }
 
         private void ptbSao4_Click(object sender, EventArgs e)
@@ -122,7 +119,7 @@ namespace QuanLyCongTy
             lbl_ChamDiem.Text = "Rất tốt";
             Diem = 80;
             TatSao();
-            ThemSao(Diem);
+            ThemSao();
         }
 
         private void ptbSao5_Click(object sender, EventArgs e)
@@ -130,7 +127,7 @@ namespace QuanLyCongTy
             lbl_ChamDiem.Text = "Xuất sắc";
             Diem = 100;
             TatSao();
-            ThemSao(Diem);
+            ThemSao();
         }
 
         private void ptbHuy_Click(object sender, EventArgs e)
@@ -150,8 +147,7 @@ namespace QuanLyCongTy
 
         private void ptbNhanXet_Click(object sender, EventArgs e)
         {
-            NhanXetDA nx = new NhanXetDA(MaDA, lbl_TenDA.Text, txt_NhanXet.Text, Diem);
-            nxdaDAO.Sua(nx);
+            nhanXetDABUS.LuuNhanXet(txt_NhanXet, Diem);
             Close();
         }
 

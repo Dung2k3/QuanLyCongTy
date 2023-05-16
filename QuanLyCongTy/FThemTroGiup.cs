@@ -12,22 +12,19 @@ namespace QuanLyCongTy
 {
     public partial class FThemTroGiup : Form
     {
-        PhanCongDAO PCdao;
-        string maDA;
-        string maCV;
+        ThemHoTroBUS themTroGiupBUS = new ThemHoTroBUS();
         public FThemTroGiup()
         {
             InitializeComponent();
         }
-        public void Set(string maPB, string maDA, string maCV)
+        public void CapNhat(PhanCongModel pc)
         {
-            PCdao = new PhanCongDAO(maPB);
-            this.maDA = maDA;
-            this.maCV = maCV;
+            themTroGiupBUS.pc = pc;
+
         }
         private void HienThiDanhSach()
         {
-            this.gv_CongViec.DataSource = PCdao.LayDSTinhTrangNVTroGiup();
+            themTroGiupBUS.Fillgv(gv_CongViec);
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
@@ -42,20 +39,12 @@ namespace QuanLyCongTy
 
         private void gv_CongViec_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            string tenNV = gv_CongViec.CurrentRow.Cells[0].Value.ToString();
-            foreach (string str in listBox1.Items)
-                if(tenNV.Equals(str))
-                    return;
-            listBox1.Items.Add(gv_CongViec.CurrentRow.Cells[0].Value.ToString());
+            themTroGiupBUS.AddListBox(gv_CongViec, listBox1);
             
         }
         private void btnThemTroGiup_Click(object sender, EventArgs e)
         {
-            foreach (string str in listBox1.Items)
-            {
-                HoTro ht =  new HoTro(maDA,maCV,PCdao.GetMaNV(str));
-                PCdao.ThemTroGiup(ht);
-            }
+            themTroGiupBUS.ThemHoTro(listBox1);
             Close();
         }
     }

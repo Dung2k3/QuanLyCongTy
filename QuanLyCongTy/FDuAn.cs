@@ -12,39 +12,16 @@ namespace QuanLyCongTy
 {
     public partial class FDuAn : Form
     {
-        DuAnDAO daDAO = new DuAnDAO();
+        XemDuAnQLBUS xemDuAnQLBUS = new XemDuAnQLBUS();
+        public delegate void FReload();
         public FDuAn()
         {
             InitializeComponent();
+            xemDuAnQLBUS.AddFlp(flp_ListDA);
         }
         private void FDuAn_Load(object sender, EventArgs e)
         {
-            DAChuaHT();
-        }
-
-        public delegate void FReload();
-
-        private void DAChuaHT()
-        {
-            flp_ListDA.Controls.Clear();
-            DataTable dt = daDAO.LayDanhSachDuAnChuaHT();
-            foreach (DataRow dr in dt.Rows)
-            {
-                UCTienDoDA uc = new UCTienDoDA(dr[0].ToString());
-                flp_ListDA.Controls.Add(uc);
-                uc.addReLoat(DAChuaHT);
-            }
-        }
-        private void DADaHT()
-        {
-            flp_ListDA.Controls.Clear();
-            DataTable dt = daDAO.LayDanhSachDuAnDaHT();
-            foreach (DataRow dr in dt.Rows)
-            {
-                UCSailorStar uc = new UCSailorStar(dr[0].ToString());
-                flp_ListDA.Controls.Add(uc);
-                uc.addReLoat(DADaHT);
-            }
+            xemDuAnQLBUS.FillDuAnChuaHT();
         }
         private void TatMau()
         {
@@ -55,7 +32,7 @@ namespace QuanLyCongTy
         }
         private void btnDaHT_Click(object sender, EventArgs e)
         {
-            DADaHT();
+            xemDuAnQLBUS.FillDuAnDaHT(); ;
             TatMau();
             btnDaHT.FillColor = Color.White;
             btnDaHT.ForeColor = ColorTranslator.FromHtml("#006AF9");
@@ -63,7 +40,7 @@ namespace QuanLyCongTy
 
         private void btnChuaHT_Click(object sender, EventArgs e)
         {
-            DAChuaHT();
+            xemDuAnQLBUS.FillDuAnChuaHT();
             TatMau();
             btnChuaHT.FillColor = Color.White;
             btnChuaHT.ForeColor = ColorTranslator.FromHtml("#006AF9");
@@ -71,11 +48,7 @@ namespace QuanLyCongTy
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            Form form = new FThemDA();
-            Enabled = false;
-            form.ShowDialog();
-            Enabled = true;
-            DAChuaHT();
+            xemDuAnQLBUS.OpenFThemDA(this);
         }
     }
 }

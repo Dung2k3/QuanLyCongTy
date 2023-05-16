@@ -12,36 +12,30 @@ namespace QuanLyCongTy
 {
     public partial class FPhanCong : Form
     {
-        PhanCongDAO PCdao;
-        string maDA;
-        public FPhanCong(string maDA,string maPB)
+        ThemPhanCongBUS themPhanCongBUS = new ThemPhanCongBUS();
+        public FPhanCong()
         { 
             InitializeComponent();
-            PCdao = new PhanCongDAO(maPB);
-            this.maDA = maDA;
+        }
+        public void CapNhat(DuAnModel da)
+        {
+            themPhanCongBUS.da = da;
         }
 
         private void PhanCong_Load(object sender, EventArgs e)
         {
             HienThiDanhSach();
-            cboNhanVien.DataSource = PCdao.LayDSTenNV();
-            cboCongViec.DataSource = PCdao.LayDSCongViec();
+            themPhanCongBUS.FillcboNV(cboNhanVien, dtpDBLam, dtpDeadline);
+            themPhanCongBUS.FillcboCV(cboCongViec);
         }
         private void HienThiDanhSach()
-        {   
-            this.gv_CongViec.DataSource = PCdao.LayDSTinhTrangNV();          
+        {
+            themPhanCongBUS.Fillgv(gv_CongViec, dtpDBLam, dtpDeadline);
         }
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
-            PhanCong pc = new PhanCong(cboNhanVien.Text,
-                                       maDA,
-                                       cboCongViec.Text,
-                                       textBox1.Text,
-                                       0,
-                                       dtpDBLam.Value,
-                                       dtpDeadline.Value);
-            PCdao.Them(pc);
+            themPhanCongBUS.ThemPC(cboNhanVien,cboCongViec,textBox1,checkBox1,dtpDBLam,dtpDeadline);
             Close();
         }
 
@@ -50,9 +44,19 @@ namespace QuanLyCongTy
             Close();
         }
 
-        private void cboCongViec_SelectedIndexChanged(object sender, EventArgs e)
+        private void dtpDBLam_ValueChanged(object sender, EventArgs e)
         {
-            if (cboCongViec.Text == "Kh�c")
+            PhanCong_Load(sender, e);
+        }
+
+        private void dtpDeadline_ValueChanged(object sender, EventArgs e)
+        {
+            PhanCong_Load(sender, e);
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
             {
                 textBox1.Show();
                 panel1.Location = new Point(textBox1.Location.X, textBox1.Location.Y + textBox1.Size.Height + 1);
@@ -62,7 +66,6 @@ namespace QuanLyCongTy
                 textBox1.Hide();
                 panel1.Location = new Point(cboCongViec.Location.X, cboCongViec.Location.Y + cboCongViec.Size.Height + 1);
             }
-            
         }
     }
 }

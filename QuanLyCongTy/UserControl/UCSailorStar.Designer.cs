@@ -30,8 +30,8 @@
         {
             this.lbl_TenPhong = new System.Windows.Forms.Label();
             this.lbl_tenDA = new System.Windows.Forms.Label();
-            this.flpNgoiSao = new System.Windows.Forms.FlowLayoutPanel();
-            this.ucTienDo1 = new QuanLyCongTy.UCTienDo();
+            this.prgTienDo = new Guna.UI2.WinForms.Guna2ProgressBar();
+            this.rstChamDiem = new Guna.UI2.WinForms.Guna2RatingStar();
             this.SuspendLayout();
             // 
             // lbl_TenPhong
@@ -55,30 +55,31 @@
             this.lbl_tenDA.TabIndex = 18;
             this.lbl_tenDA.Text = "Tên dự án";
             // 
-            // flpNgoiSao
+            // prgTienDo
             // 
-            this.flpNgoiSao.Location = new System.Drawing.Point(26, 108);
-            this.flpNgoiSao.Margin = new System.Windows.Forms.Padding(0);
-            this.flpNgoiSao.Name = "flpNgoiSao";
-            this.flpNgoiSao.Size = new System.Drawing.Size(366, 32);
-            this.flpNgoiSao.TabIndex = 21;
+            this.prgTienDo.Location = new System.Drawing.Point(26, 80);
+            this.prgTienDo.Name = "prgTienDo";
+            this.prgTienDo.Size = new System.Drawing.Size(300, 30);
+            this.prgTienDo.TabIndex = 20;
+            this.prgTienDo.Text = "guna2ProgressBar1";
+            this.prgTienDo.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             // 
-            // ucTienDo1
+            // rstChamDiem
             // 
-            this.ucTienDo1.Location = new System.Drawing.Point(26, 53);
-            this.ucTienDo1.Name = "ucTienDo1";
-            this.ucTienDo1.Size = new System.Drawing.Size(410, 55);
-            this.ucTienDo1.TabIndex = 22;
+            this.rstChamDiem.Location = new System.Drawing.Point(26, 116);
+            this.rstChamDiem.Name = "rstChamDiem";
+            this.rstChamDiem.Size = new System.Drawing.Size(120, 28);
+            this.rstChamDiem.TabIndex = 21;
             // 
             // UCSailorStar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.rstChamDiem);
+            this.Controls.Add(this.prgTienDo);
             this.Controls.Add(this.lbl_TenPhong);
             this.Controls.Add(this.lbl_tenDA);
-            this.Controls.Add(this.flpNgoiSao);
-            this.Controls.Add(this.ucTienDo1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UCSailorStar";
             this.Size = new System.Drawing.Size(490, 158);
@@ -92,7 +93,7 @@
         #endregion
         private System.Windows.Forms.Label lbl_TenPhong;
         private System.Windows.Forms.Label lbl_tenDA;
-        private System.Windows.Forms.FlowLayoutPanel flpNgoiSao;
-        private UCTienDo ucTienDo1;
+        private Guna.UI2.WinForms.Guna2ProgressBar prgTienDo;
+        private Guna.UI2.WinForms.Guna2RatingStar rstChamDiem;
     }
 }

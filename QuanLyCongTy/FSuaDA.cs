@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.RightsManagement;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,35 +13,25 @@ namespace QuanLyCongTy
 {
     public partial class FSuaDA : Form
     {
-        SuaDADAO suadaDAO = new SuaDADAO();
-        string MaDA;
-        string MaPB;
-        string MaLPB;
-        public FSuaDA(string maDA)
+        SuaDABUS suaDABUS = new SuaDABUS();
+        public FSuaDA()
         {
             InitializeComponent();
-            this.MaDA = maDA;
+        }
+        public void CapNhat(DuAnModel da)
+        {
+            suaDABUS.da = da;
         }
 
         private void FSuaDA_Load(object sender, EventArgs e)
         {
-            SuaDA da = suadaDAO.LayThongTinDA(MaDA);
-            MaLPB = suadaDAO.GetMaLPB1(MaDA);
-            cmbTenPB.DataSource = suadaDAO.LayDanhSachTenPhongBan(MaLPB);
-            MaPB = suadaDAO.GetMaPB(cmbTenPB.Text);
+            suaDABUS.FillControl(txtTenDA, txtMoTa, cmbTenPB, txtDiaDiem, dtpNgayBD, dtpDeadline);
             HienThiDanhSach();
-
-            txtTenDA.Text = da.TenDA;
-            txtMoTa.Text = da.MoTa;
-            cmbTenPB.Text = da.TenPb;
-            txtDiaDiem.Text = da.DiaDiem;
-            dtpNgayBD.Text = da.NgayBD.ToString();
-            dtpDeadline.Text = da.DeadLine.ToString();
         }
 
         private void HienThiDanhSach()
         {
-            this.gvPhongBanRanh.DataSource = suadaDAO.LayDSTinhTrangLPB(MaLPB);
+            suaDABUS.DSTinhTrangPBTheoLPB(gvPhongBanRanh, cmbTenPB, dtpNgayBD, dtpDeadline);
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
@@ -50,9 +41,18 @@ namespace QuanLyCongTy
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            SuaDA da = new SuaDA(MaDA, txtTenDA.Text, txtMoTa.Text, cmbTenPB.Text, txtDiaDiem.Text, dtpNgayBD.Value, dtpDeadline.Value);
-            suadaDAO.Sua(da, MaPB);
+            suaDABUS.SuaDA(txtTenDA, txtMoTa, cmbTenPB, txtDiaDiem, dtpNgayBD, dtpNgayBD);
             Close();
+        }
+
+        private void dtpNgayBD_ValueChanged(object sender, EventArgs e)
+        {
+            suaDABUS.FillcmbTenPB(cmbTenPB,dtpNgayBD, dtpDeadline);
+        }
+
+        private void dtpDeadline_ValueChanged(object sender, EventArgs e)
+        {
+            suaDABUS.FillcmbTenPB(cmbTenPB, dtpNgayBD, dtpDeadline);
         }
     }
 }

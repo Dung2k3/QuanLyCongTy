@@ -12,65 +12,32 @@ namespace QuanLyCongTy
 {
     public partial class UCTienDoDA : UserControl
     {
-        TienDoDADAO ttdaDAO = new TienDoDADAO();
-        SuaDADAO suaDADAO = new SuaDADAO();
-        string MaDA;
-        FDuAn.FReload HamRL;
-        UCTienDoDA uctd;
-        public UCTienDoDA(string MaDA)
+        XemDAChuaHTQLBUS xemDAChuaHTQLBUS = new XemDAChuaHTQLBUS();
+        public UCTienDoDA()
         {
             InitializeComponent();
-            this.MaDA = MaDA;
         }
-
+        public void CapNhat(DuAnModel da)
+        {
+            xemDAChuaHTQLBUS.da = da;
+        }
         private void UCTienDoDA_Load(object sender, EventArgs e)
         {
-            TienDoDA td = ttdaDAO.LayDanhSachDuAn(MaDA);
-
-            lblTenDA.Text = td.TenDuAn;
-            lblTenPhong.Text = td.TenPB;
-            lblNgayConLai.Text = "Thời hạn: Còn " + td.NgayKT.Subtract(td.NgayBD).Days.ToString() + " ngày.";
-            prgTienDo.Value = ttdaDAO.LayTienDo(MaDA);
-        }
-
-        private void ptbSetting_Click(object sender, EventArgs e)
-        {
-            Form form = new FSuaDA(MaDA);
-            Enabled = false;
-            form.ShowDialog();
-            Enabled = true;
-            HamRL();
-        }
-
-        private void ptbDelete_Click(object sender, EventArgs e)
-        {
-            Form form = new FThongBao(MaDA);
-            Enabled = false;
-            form.ShowDialog();
-            Enabled = true;
-            HamRL();
+            xemDAChuaHTQLBUS.FillControls(lblTenDA, lblTenPhong, lblNgayConLai, prgTienDo);
         }
         public void addReLoat(FDuAn.FReload HamRL)
         {
-            this.HamRL = HamRL;
+            xemDAChuaHTQLBUS.HamRL = HamRL;
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            Form form = new FThongBao(MaDA);
-            Enabled = false;
-            form.ShowDialog();
-            Enabled = true;
-            HamRL();
+            xemDAChuaHTQLBUS.OpenFThongBao(this);
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            Form form = new FSuaDA(MaDA);
-            Enabled = false;
-            form.ShowDialog();
-            Enabled = true;
-            HamRL();
+            xemDAChuaHTQLBUS.OpenFSuaDA(this);
         }
     }
 }

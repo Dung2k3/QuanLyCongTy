@@ -31,9 +31,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gv_CongViec = new System.Windows.Forms.DataGridView();
-            this.HoTenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnThemTroGiup = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
@@ -53,10 +50,6 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gv_CongViec.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gv_CongViec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gv_CongViec.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.HoTenNV,
-            this.TinhTrang,
-            this.DL});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -75,33 +68,6 @@
             this.gv_CongViec.Size = new System.Drawing.Size(536, 444);
             this.gv_CongViec.TabIndex = 41;
             this.gv_CongViec.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gv_CongViec_CellContentClick);
-            // 
-            // HoTenNV
-            // 
-            this.HoTenNV.DataPropertyName = "HoTenNV";
-            this.HoTenNV.HeaderText = "Tên Nhân Viên";
-            this.HoTenNV.MinimumWidth = 6;
-            this.HoTenNV.Name = "HoTenNV";
-            this.HoTenNV.ReadOnly = true;
-            this.HoTenNV.Width = 150;
-            // 
-            // TinhTrang
-            // 
-            this.TinhTrang.DataPropertyName = "TinhTrang";
-            this.TinhTrang.HeaderText = "Tình Trạng";
-            this.TinhTrang.MinimumWidth = 6;
-            this.TinhTrang.Name = "TinhTrang";
-            this.TinhTrang.ReadOnly = true;
-            this.TinhTrang.Width = 125;
-            // 
-            // DL
-            // 
-            this.DL.DataPropertyName = "DL";
-            this.DL.HeaderText = "Hạn gần nhất";
-            this.DL.MinimumWidth = 6;
-            this.DL.Name = "DL";
-            this.DL.ReadOnly = true;
-            this.DL.Width = 125;
             // 
             // btnThemTroGiup
             // 
@@ -162,9 +128,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView gv_CongViec;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HoTenNV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TinhTrang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DL;
         private System.Windows.Forms.Button btnThemTroGiup;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.ListBox listBox1;

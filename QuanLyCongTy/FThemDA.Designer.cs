@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.TinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenPB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cmbLoaiPB = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.Deadline = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaDA = new System.Windows.Forms.Label();
             this.gvPhongBanRanh = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.TenPB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayBD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Deadline = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnHuy = new Guna.UI2.WinForms.Guna2Button();
@@ -47,9 +47,8 @@
             this.dtpNgayBD = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.cmbTenPB = new Guna.UI2.WinForms.Guna2ComboBox();
             this.lbl_TenDA = new System.Windows.Forms.Label();
-            this.txtMoTa = new System.Windows.Forms.TextBox();
             this.lbl_MoTa = new System.Windows.Forms.Label();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtMoTa = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Shapes2 = new Guna.UI2.WinForms.Guna2Shapes();
             this.txtDiaDiem = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Shapes1 = new Guna.UI2.WinForms.Guna2Shapes();
@@ -60,27 +59,10 @@
             this.lbl_TenPB = new System.Windows.Forms.Label();
             this.lblMaDA = new System.Windows.Forms.Label();
             this.guna2Shapes3 = new Guna.UI2.WinForms.Guna2Shapes();
+            this.guna2Shapes4 = new Guna.UI2.WinForms.Guna2Shapes();
             ((System.ComponentModel.ISupportInitialize)(this.gvPhongBanRanh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // TinhTrang
-            // 
-            this.TinhTrang.DataPropertyName = "TinhTrang";
-            this.TinhTrang.FillWeight = 81.81828F;
-            this.TinhTrang.HeaderText = "Tình trạng";
-            this.TinhTrang.MinimumWidth = 8;
-            this.TinhTrang.Name = "TinhTrang";
-            this.TinhTrang.ReadOnly = true;
-            // 
-            // TenPB
-            // 
-            this.TenPB.DataPropertyName = "TenPB";
-            this.TenPB.FillWeight = 136.3637F;
-            this.TenPB.HeaderText = "Tên phòng ban";
-            this.TenPB.MinimumWidth = 8;
-            this.TenPB.Name = "TenPB";
-            this.TenPB.ReadOnly = true;
             // 
             // cmbLoaiPB
             // 
@@ -96,9 +78,10 @@
             this.cmbLoaiPB.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmbLoaiPB.ForeColor = System.Drawing.Color.Black;
             this.cmbLoaiPB.ItemHeight = 30;
-            this.cmbLoaiPB.Location = new System.Drawing.Point(276, 383);
+            this.cmbLoaiPB.Location = new System.Drawing.Point(245, 306);
+            this.cmbLoaiPB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbLoaiPB.Name = "cmbLoaiPB";
-            this.cmbLoaiPB.Size = new System.Drawing.Size(376, 36);
+            this.cmbLoaiPB.Size = new System.Drawing.Size(335, 36);
             this.cmbLoaiPB.TabIndex = 133;
             this.cmbLoaiPB.SelectedIndexChanged += new System.EventHandler(this.cmbLoaiPB_SelectedIndexChanged);
             // 
@@ -106,28 +89,19 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(102, 390);
+            this.label2.Location = new System.Drawing.Point(91, 312);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(171, 29);
+            this.label2.Size = new System.Drawing.Size(144, 24);
             this.label2.TabIndex = 132;
             this.label2.Text = "Loại phòng ban:";
-            // 
-            // Deadline
-            // 
-            this.Deadline.DataPropertyName = "DL";
-            this.Deadline.FillWeight = 81.81828F;
-            this.Deadline.HeaderText = "Thời hạn";
-            this.Deadline.MinimumWidth = 8;
-            this.Deadline.Name = "Deadline";
-            this.Deadline.ReadOnly = true;
             // 
             // MaDA
             // 
             this.MaDA.AutoSize = true;
             this.MaDA.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaDA.Location = new System.Drawing.Point(105, 75);
+            this.MaDA.Location = new System.Drawing.Point(93, 60);
             this.MaDA.Name = "MaDA";
-            this.MaDA.Size = new System.Drawing.Size(114, 29);
+            this.MaDA.Size = new System.Drawing.Size(96, 24);
             this.MaDA.TabIndex = 129;
             this.MaDA.Text = "Mã dự án:";
             // 
@@ -136,51 +110,52 @@
             this.gvPhongBanRanh.AllowUserToAddRows = false;
             this.gvPhongBanRanh.AllowUserToDeleteRows = false;
             this.gvPhongBanRanh.AllowUserToResizeRows = false;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.gvPhongBanRanh.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(70)))), ((int)(((byte)(178)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(70)))), ((int)(((byte)(178)))));
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gvPhongBanRanh.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.gvPhongBanRanh.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(70)))), ((int)(((byte)(178)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(70)))), ((int)(((byte)(178)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gvPhongBanRanh.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.gvPhongBanRanh.ColumnHeadersHeight = 50;
             this.gvPhongBanRanh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.gvPhongBanRanh.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TenPB,
-            this.Deadline,
-            this.TinhTrang});
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gvPhongBanRanh.DefaultCellStyle = dataGridViewCellStyle15;
+            this.NgayBD,
+            this.Deadline});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gvPhongBanRanh.DefaultCellStyle = dataGridViewCellStyle3;
             this.gvPhongBanRanh.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gvPhongBanRanh.Location = new System.Drawing.Point(723, 75);
+            this.gvPhongBanRanh.Location = new System.Drawing.Point(643, 60);
+            this.gvPhongBanRanh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gvPhongBanRanh.Name = "gvPhongBanRanh";
             this.gvPhongBanRanh.ReadOnly = true;
             this.gvPhongBanRanh.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gvPhongBanRanh.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gvPhongBanRanh.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.gvPhongBanRanh.RowHeadersVisible = false;
             this.gvPhongBanRanh.RowHeadersWidth = 62;
             this.gvPhongBanRanh.RowTemplate.Height = 28;
-            this.gvPhongBanRanh.Size = new System.Drawing.Size(578, 558);
+            this.gvPhongBanRanh.Size = new System.Drawing.Size(514, 446);
             this.gvPhongBanRanh.TabIndex = 128;
             this.gvPhongBanRanh.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.gvPhongBanRanh.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -204,25 +179,53 @@
             this.gvPhongBanRanh.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gvPhongBanRanh.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // TenPB
+            // 
+            this.TenPB.DataPropertyName = "TenPB";
+            this.TenPB.FillWeight = 136.3637F;
+            this.TenPB.HeaderText = "Tên phòng ban";
+            this.TenPB.MinimumWidth = 8;
+            this.TenPB.Name = "TenPB";
+            this.TenPB.ReadOnly = true;
+            // 
+            // NgayBD
+            // 
+            this.NgayBD.DataPropertyName = "NgayBD";
+            this.NgayBD.FillWeight = 81.81828F;
+            this.NgayBD.HeaderText = "Bắt Đầu";
+            this.NgayBD.MinimumWidth = 8;
+            this.NgayBD.Name = "NgayBD";
+            this.NgayBD.ReadOnly = true;
+            // 
+            // Deadline
+            // 
+            this.Deadline.DataPropertyName = "DeadLine";
+            this.Deadline.FillWeight = 81.81828F;
+            this.Deadline.HeaderText = "Thời hạn";
+            this.Deadline.MinimumWidth = 8;
+            this.Deadline.Name = "Deadline";
+            this.Deadline.ReadOnly = true;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::QuanLyCongTy.Properties.Resources.add_button__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(176, 21);
+            this.pictureBox1.Location = new System.Drawing.Point(379, 35);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(29, 26);
+            this.pictureBox1.Size = new System.Drawing.Size(36, 37);
             this.pictureBox1.TabIndex = 127;
             this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(161)))));
-            this.label1.Location = new System.Drawing.Point(47, 15);
+            this.label1.Location = new System.Drawing.Point(232, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 70);
+            this.label1.Size = new System.Drawing.Size(141, 37);
             this.label1.TabIndex = 126;
-            this.label1.Text = "Tạo dự án     \r\n\r\n";
+            this.label1.Text = "Tạo dự án";
             // 
             // btnHuy
             // 
@@ -236,9 +239,10 @@
             this.btnHuy.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(177)))), ((int)(((byte)(184)))));
             this.btnHuy.Font = new System.Drawing.Font("Calibri", 12F);
             this.btnHuy.ForeColor = System.Drawing.Color.White;
-            this.btnHuy.Location = new System.Drawing.Point(512, 758);
+            this.btnHuy.Location = new System.Drawing.Point(455, 606);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(140, 54);
+            this.btnHuy.Size = new System.Drawing.Size(124, 43);
             this.btnHuy.TabIndex = 125;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
@@ -255,9 +259,10 @@
             this.btnThem.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(177)))), ((int)(((byte)(184)))));
             this.btnThem.Font = new System.Drawing.Font("Calibri", 12F);
             this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Location = new System.Drawing.Point(366, 758);
+            this.btnThem.Location = new System.Drawing.Point(325, 606);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(140, 54);
+            this.btnThem.Size = new System.Drawing.Size(124, 43);
             this.btnThem.TabIndex = 124;
             this.btnThem.Text = "Thêm";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
@@ -274,11 +279,12 @@
             this.dtpDeadline.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dtpDeadline.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dtpDeadline.IndicateFocus = true;
-            this.dtpDeadline.Location = new System.Drawing.Point(276, 683);
+            this.dtpDeadline.Location = new System.Drawing.Point(245, 546);
+            this.dtpDeadline.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpDeadline.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpDeadline.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpDeadline.Name = "dtpDeadline";
-            this.dtpDeadline.Size = new System.Drawing.Size(376, 52);
+            this.dtpDeadline.Size = new System.Drawing.Size(334, 42);
             this.dtpDeadline.TabIndex = 123;
             this.dtpDeadline.UseTransparentBackground = true;
             this.dtpDeadline.Value = new System.DateTime(2023, 5, 11, 0, 25, 48, 267);
@@ -296,11 +302,12 @@
             this.dtpNgayBD.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNgayBD.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.dtpNgayBD.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpNgayBD.Location = new System.Drawing.Point(276, 606);
+            this.dtpNgayBD.Location = new System.Drawing.Point(245, 485);
+            this.dtpNgayBD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpNgayBD.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpNgayBD.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpNgayBD.Name = "dtpNgayBD";
-            this.dtpNgayBD.Size = new System.Drawing.Size(376, 52);
+            this.dtpNgayBD.Size = new System.Drawing.Size(334, 42);
             this.dtpNgayBD.TabIndex = 122;
             this.dtpNgayBD.Value = new System.DateTime(2023, 5, 11, 0, 25, 48, 267);
             // 
@@ -318,66 +325,57 @@
             this.cmbTenPB.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmbTenPB.ForeColor = System.Drawing.Color.Black;
             this.cmbTenPB.ItemHeight = 30;
-            this.cmbTenPB.Location = new System.Drawing.Point(276, 462);
+            this.cmbTenPB.Location = new System.Drawing.Point(245, 370);
+            this.cmbTenPB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbTenPB.Name = "cmbTenPB";
-            this.cmbTenPB.Size = new System.Drawing.Size(376, 36);
+            this.cmbTenPB.Size = new System.Drawing.Size(335, 36);
             this.cmbTenPB.TabIndex = 121;
             // 
             // lbl_TenDA
             // 
             this.lbl_TenDA.AutoSize = true;
             this.lbl_TenDA.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TenDA.Location = new System.Drawing.Point(105, 137);
+            this.lbl_TenDA.Location = new System.Drawing.Point(93, 110);
             this.lbl_TenDA.Name = "lbl_TenDA";
-            this.lbl_TenDA.Size = new System.Drawing.Size(116, 29);
+            this.lbl_TenDA.Size = new System.Drawing.Size(98, 24);
             this.lbl_TenDA.TabIndex = 109;
             this.lbl_TenDA.Text = "Tên dự án:";
-            // 
-            // txtMoTa
-            // 
-            this.txtMoTa.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMoTa.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMoTa.Location = new System.Drawing.Point(118, 233);
-            this.txtMoTa.Multiline = true;
-            this.txtMoTa.Name = "txtMoTa";
-            this.txtMoTa.Size = new System.Drawing.Size(525, 107);
-            this.txtMoTa.TabIndex = 115;
             // 
             // lbl_MoTa
             // 
             this.lbl_MoTa.AutoSize = true;
             this.lbl_MoTa.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_MoTa.Location = new System.Drawing.Point(134, 201);
+            this.lbl_MoTa.Location = new System.Drawing.Point(119, 161);
             this.lbl_MoTa.Name = "lbl_MoTa";
-            this.lbl_MoTa.Size = new System.Drawing.Size(78, 29);
+            this.lbl_MoTa.Size = new System.Drawing.Size(65, 24);
             this.lbl_MoTa.TabIndex = 110;
             this.lbl_MoTa.Text = "Mô tả:";
             // 
-            // guna2TextBox1
+            // txtMoTa
             // 
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(101)))), ((int)(((byte)(189)))));
-            this.guna2TextBox1.BorderRadius = 15;
-            this.guna2TextBox1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.guna2TextBox1.BorderThickness = 2;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(110, 216);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(542, 137);
-            this.guna2TextBox1.TabIndex = 120;
+            this.txtMoTa.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(101)))), ((int)(((byte)(189)))));
+            this.txtMoTa.BorderRadius = 15;
+            this.txtMoTa.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.txtMoTa.BorderThickness = 2;
+            this.txtMoTa.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMoTa.DefaultText = "";
+            this.txtMoTa.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMoTa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMoTa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMoTa.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMoTa.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMoTa.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtMoTa.ForeColor = System.Drawing.Color.Black;
+            this.txtMoTa.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMoTa.Location = new System.Drawing.Point(98, 173);
+            this.txtMoTa.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtMoTa.Name = "txtMoTa";
+            this.txtMoTa.PasswordChar = '\0';
+            this.txtMoTa.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtMoTa.PlaceholderText = "";
+            this.txtMoTa.SelectedText = "";
+            this.txtMoTa.Size = new System.Drawing.Size(482, 110);
+            this.txtMoTa.TabIndex = 120;
             // 
             // guna2Shapes2
             // 
@@ -388,12 +386,13 @@
             this.guna2Shapes2.LineEndCap = System.Drawing.Drawing2D.LineCap.NoAnchor;
             this.guna2Shapes2.LineStartCap = System.Drawing.Drawing2D.LineCap.Round;
             this.guna2Shapes2.LineThickness = 2;
-            this.guna2Shapes2.Location = new System.Drawing.Point(267, 565);
+            this.guna2Shapes2.Location = new System.Drawing.Point(237, 452);
+            this.guna2Shapes2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Shapes2.Name = "guna2Shapes2";
             this.guna2Shapes2.PolygonSkip = 1;
             this.guna2Shapes2.Rotate = 0F;
             this.guna2Shapes2.Shape = Guna.UI2.WinForms.Enums.ShapeType.Line;
-            this.guna2Shapes2.Size = new System.Drawing.Size(382, 15);
+            this.guna2Shapes2.Size = new System.Drawing.Size(340, 12);
             this.guna2Shapes2.TabIndex = 119;
             this.guna2Shapes2.Text = "guna2Shapes2";
             this.guna2Shapes2.UseTransparentBackground = true;
@@ -415,14 +414,14 @@
             this.txtDiaDiem.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtDiaDiem.ForeColor = System.Drawing.Color.Black;
             this.txtDiaDiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDiaDiem.Location = new System.Drawing.Point(270, 528);
-            this.txtDiaDiem.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtDiaDiem.Location = new System.Drawing.Point(240, 422);
+            this.txtDiaDiem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDiaDiem.Name = "txtDiaDiem";
             this.txtDiaDiem.PasswordChar = '\0';
             this.txtDiaDiem.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.txtDiaDiem.PlaceholderText = "";
             this.txtDiaDiem.SelectedText = "";
-            this.txtDiaDiem.Size = new System.Drawing.Size(382, 50);
+            this.txtDiaDiem.Size = new System.Drawing.Size(340, 40);
             this.txtDiaDiem.TabIndex = 118;
             // 
             // guna2Shapes1
@@ -434,12 +433,13 @@
             this.guna2Shapes1.LineEndCap = System.Drawing.Drawing2D.LineCap.NoAnchor;
             this.guna2Shapes1.LineStartCap = System.Drawing.Drawing2D.LineCap.Round;
             this.guna2Shapes1.LineThickness = 2;
-            this.guna2Shapes1.Location = new System.Drawing.Point(212, 163);
+            this.guna2Shapes1.Location = new System.Drawing.Point(188, 130);
+            this.guna2Shapes1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Shapes1.Name = "guna2Shapes1";
             this.guna2Shapes1.PolygonSkip = 1;
             this.guna2Shapes1.Rotate = 0F;
             this.guna2Shapes1.Shape = Guna.UI2.WinForms.Enums.ShapeType.Line;
-            this.guna2Shapes1.Size = new System.Drawing.Size(437, 14);
+            this.guna2Shapes1.Size = new System.Drawing.Size(388, 11);
             this.guna2Shapes1.TabIndex = 117;
             this.guna2Shapes1.Text = "guna2Shapes1";
             this.guna2Shapes1.UseTransparentBackground = true;
@@ -461,14 +461,14 @@
             this.txtTenDA.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtTenDA.ForeColor = System.Drawing.Color.Black;
             this.txtTenDA.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenDA.Location = new System.Drawing.Point(215, 127);
-            this.txtTenDA.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtTenDA.Location = new System.Drawing.Point(191, 102);
+            this.txtTenDA.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTenDA.Name = "txtTenDA";
             this.txtTenDA.PasswordChar = '\0';
             this.txtTenDA.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.txtTenDA.PlaceholderText = "";
             this.txtTenDA.SelectedText = "";
-            this.txtTenDA.Size = new System.Drawing.Size(437, 50);
+            this.txtTenDA.Size = new System.Drawing.Size(388, 40);
             this.txtTenDA.TabIndex = 116;
             // 
             // lbl_DeadLine
@@ -476,9 +476,9 @@
             this.lbl_DeadLine.AutoSize = true;
             this.lbl_DeadLine.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbl_DeadLine.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_DeadLine.Location = new System.Drawing.Point(105, 693);
+            this.lbl_DeadLine.Location = new System.Drawing.Point(93, 554);
             this.lbl_DeadLine.Name = "lbl_DeadLine";
-            this.lbl_DeadLine.Size = new System.Drawing.Size(107, 29);
+            this.lbl_DeadLine.Size = new System.Drawing.Size(90, 24);
             this.lbl_DeadLine.TabIndex = 114;
             this.lbl_DeadLine.Text = "Thời hạn:";
             // 
@@ -487,9 +487,9 @@
             this.lbl_NgayBD.AutoSize = true;
             this.lbl_NgayBD.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbl_NgayBD.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_NgayBD.Location = new System.Drawing.Point(102, 617);
+            this.lbl_NgayBD.Location = new System.Drawing.Point(91, 494);
             this.lbl_NgayBD.Name = "lbl_NgayBD";
-            this.lbl_NgayBD.Size = new System.Drawing.Size(150, 29);
+            this.lbl_NgayBD.Size = new System.Drawing.Size(126, 24);
             this.lbl_NgayBD.TabIndex = 113;
             this.lbl_NgayBD.Text = "Ngày bắt đầu:";
             // 
@@ -497,9 +497,9 @@
             // 
             this.lbl_DiaDiem.AutoSize = true;
             this.lbl_DiaDiem.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_DiaDiem.Location = new System.Drawing.Point(105, 543);
+            this.lbl_DiaDiem.Location = new System.Drawing.Point(93, 434);
             this.lbl_DiaDiem.Name = "lbl_DiaDiem";
-            this.lbl_DiaDiem.Size = new System.Drawing.Size(107, 29);
+            this.lbl_DiaDiem.Size = new System.Drawing.Size(89, 24);
             this.lbl_DiaDiem.TabIndex = 112;
             this.lbl_DiaDiem.Text = "Địa điểm:";
             // 
@@ -507,9 +507,9 @@
             // 
             this.lbl_TenPB.AutoSize = true;
             this.lbl_TenPB.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TenPB.Location = new System.Drawing.Point(102, 469);
+            this.lbl_TenPB.Location = new System.Drawing.Point(91, 375);
             this.lbl_TenPB.Name = "lbl_TenPB";
-            this.lbl_TenPB.Size = new System.Drawing.Size(170, 29);
+            this.lbl_TenPB.Size = new System.Drawing.Size(144, 24);
             this.lbl_TenPB.TabIndex = 111;
             this.lbl_TenPB.Text = "Tên phòng ban: ";
             // 
@@ -518,9 +518,9 @@
             this.lblMaDA.AutoSize = true;
             this.lblMaDA.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMaDA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblMaDA.Location = new System.Drawing.Point(238, 75);
+            this.lblMaDA.Location = new System.Drawing.Point(212, 60);
             this.lblMaDA.Name = "lblMaDA";
-            this.lblMaDA.Size = new System.Drawing.Size(74, 29);
+            this.lblMaDA.Size = new System.Drawing.Size(61, 24);
             this.lblMaDA.TabIndex = 134;
             this.lblMaDA.Text = "label3";
             // 
@@ -530,22 +530,36 @@
             this.guna2Shapes3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Shapes3.FillColor = System.Drawing.Color.White;
             this.guna2Shapes3.Location = new System.Drawing.Point(0, 0);
+            this.guna2Shapes3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Shapes3.Name = "guna2Shapes3";
             this.guna2Shapes3.PolygonSkip = 1;
             this.guna2Shapes3.Rotate = 0F;
             this.guna2Shapes3.RoundedRadius = 2;
             this.guna2Shapes3.Shape = Guna.UI2.WinForms.Enums.ShapeType.Rectangle;
-            this.guna2Shapes3.Size = new System.Drawing.Size(1373, 862);
+            this.guna2Shapes3.Size = new System.Drawing.Size(1220, 690);
             this.guna2Shapes3.TabIndex = 135;
             this.guna2Shapes3.Text = "guna2Shapes3";
             this.guna2Shapes3.Zoom = 100;
             // 
+            // guna2Shapes4
+            // 
+            this.guna2Shapes4.FillColor = System.Drawing.Color.White;
+            this.guna2Shapes4.Location = new System.Drawing.Point(63, 35);
+            this.guna2Shapes4.Name = "guna2Shapes4";
+            this.guna2Shapes4.PolygonSkip = 1;
+            this.guna2Shapes4.Rotate = 0F;
+            this.guna2Shapes4.Shape = Guna.UI2.WinForms.Enums.ShapeType.Rounded;
+            this.guna2Shapes4.Size = new System.Drawing.Size(549, 598);
+            this.guna2Shapes4.TabIndex = 136;
+            this.guna2Shapes4.Text = "guna2Shapes4";
+            this.guna2Shapes4.Zoom = 100;
+            // 
             // FThemDA
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1373, 862);
+            this.ClientSize = new System.Drawing.Size(1220, 690);
             this.Controls.Add(this.lblMaDA);
             this.Controls.Add(this.cmbLoaiPB);
             this.Controls.Add(this.label2);
@@ -559,9 +573,8 @@
             this.Controls.Add(this.dtpNgayBD);
             this.Controls.Add(this.cmbTenPB);
             this.Controls.Add(this.lbl_TenDA);
-            this.Controls.Add(this.txtMoTa);
             this.Controls.Add(this.lbl_MoTa);
-            this.Controls.Add(this.guna2TextBox1);
+            this.Controls.Add(this.txtMoTa);
             this.Controls.Add(this.guna2Shapes2);
             this.Controls.Add(this.txtDiaDiem);
             this.Controls.Add(this.guna2Shapes1);
@@ -570,8 +583,10 @@
             this.Controls.Add(this.lbl_NgayBD);
             this.Controls.Add(this.lbl_DiaDiem);
             this.Controls.Add(this.lbl_TenPB);
+            this.Controls.Add(this.guna2Shapes4);
             this.Controls.Add(this.guna2Shapes3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FThemDA";
             this.Text = "FThemDA";
             this.Load += new System.EventHandler(this.FThemDA_Load);
@@ -583,12 +598,8 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridViewTextBoxColumn TinhTrang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenPB;
         private Guna.UI2.WinForms.Guna2ComboBox cmbLoaiPB;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Deadline;
         private System.Windows.Forms.Label MaDA;
         private Guna.UI2.WinForms.Guna2DataGridView gvPhongBanRanh;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -599,9 +610,8 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpNgayBD;
         private Guna.UI2.WinForms.Guna2ComboBox cmbTenPB;
         private System.Windows.Forms.Label lbl_TenDA;
-        private System.Windows.Forms.TextBox txtMoTa;
         private System.Windows.Forms.Label lbl_MoTa;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtMoTa;
         private Guna.UI2.WinForms.Guna2Shapes guna2Shapes2;
         private Guna.UI2.WinForms.Guna2TextBox txtDiaDiem;
         private Guna.UI2.WinForms.Guna2Shapes guna2Shapes1;
@@ -612,5 +622,9 @@
         private System.Windows.Forms.Label lbl_TenPB;
         private System.Windows.Forms.Label lblMaDA;
         private Guna.UI2.WinForms.Guna2Shapes guna2Shapes3;
+        private Guna.UI2.WinForms.Guna2Shapes guna2Shapes4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenPB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayBD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Deadline;
     }
 }

@@ -12,35 +12,19 @@ namespace QuanLyCongTy
 {
     public partial class UCXemPhanCong : UserControl
     {
-        string maPB;
-        string maDA;
-        string maCV;
-        PhanCongDAO PCdao;
+        XemPCChuaHTTPBUS xemPCChuaHTTPBUS = new XemPCChuaHTTPBUS();
         public UCXemPhanCong()
         {
             InitializeComponent();
         }
-        public void Set(string maPB, string maDA, string maCV)
+        public void CapNhat(PhanCongModel pc)
         {
-            this.maPB = maPB;
-            this.maDA = maDA;
-            this.maCV = maCV;
-            PCdao = new PhanCongDAO(maPB);
+            xemPCChuaHTTPBUS.pc = pc;
         }
-        private bool Check()
-        {
-            return (maPB != null && maDA != null && maCV != null && PCdao != null);
-        }
+
         private void UCXemPhanCong_Load(object sender, EventArgs e)
         {
-            if (!Check())
-                return;
-            PhanCong pc = PCdao.ThongTinPC(maCV, maDA);
-            lblTenCV.Text = pc.CongViec;
-            lblGTBatDauLam.Text = "Ngày bắt đầu: "+pc.NgayBatDau.ToString("dd/MM/yyyy");
-            lblTGConLai.Text ="Còn " + (pc.Deadline.Subtract(DateTime.Now)).Days.ToString() + " Ngày";
-            ucTienDo1.Change(pc.TienDo);
-            textBox1.Text = PCdao.DSTenNVThamGia(maCV, maDA);
+            xemPCChuaHTTPBUS.FillControl(lblTenCV, lblGTBatDauLam, lblTGConLai, ucTienDo1, textBox1 );
         }
         private void pbThem_MouseEnter(object sender, EventArgs e)
         {
@@ -67,20 +51,12 @@ namespace QuanLyCongTy
 
         private void pbThem_Click(object sender, EventArgs e)
         {
-            FThemTroGiup fThemTroGiup = new FThemTroGiup();
-            fThemTroGiup.Set(maPB, maDA, maCV);
-            Hide();
-            fThemTroGiup.ShowDialog();
-            Show();
+            xemPCChuaHTTPBUS.OpenFThemPC();
         }
 
-        private void UCXemPhanCong_Click(object sender, EventArgs e)
+        private void pbXoa_Click(object sender, EventArgs e)
         {
-            FChinhPhanCong fChinhPhanCong = new FChinhPhanCong(maDA, maPB, maCV);
-            Hide();
-            fChinhPhanCong.ShowDialog();
-            Show();
-       
+            xemPCChuaHTTPBUS.OpenFPCXoa();
         }
     }
 }

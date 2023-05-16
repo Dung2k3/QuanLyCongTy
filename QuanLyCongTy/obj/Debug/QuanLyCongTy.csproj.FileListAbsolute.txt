@@ -162,3 +162,6 @@ D:\K2N2\Winform\PRJ_QuanLyCongTy_2\QuanLyCongTy\obj\Debug\QuanLyCongTy.exe
 D:\K2N2\Winform\PRJ_QuanLyCongTy_2\QuanLyCongTy\obj\Debug\QuanLyCongTy.pdb
 D:\K2N2\Winform\PRJ_QuanLyCongTy_2\QuanLyCongTy\obj\Debug\QuanLyCongTy.FDuAn2.resources
 D:\K2N2\Winform\PRJ_QuanLyCongTy_2\QuanLyCongTy\obj\Debug\QuanLyCongTy.FXemDuAn2.resources
+D:\hc\CTDH\WinForm\Project\Test\QuanLyCongTy\bin\Debug\Guna.UI2.dll
+D:\hc\CTDH\WinForm\Project\Test\QuanLyCongTy\obj\Debug\QuanLyCongTy.csproj.CopyComplete
+D:\hc\CTDH\WinForm\Project\Test\QuanLyCongTy\obj\Debug\QuanLyCongTy.FXoaPC.resources

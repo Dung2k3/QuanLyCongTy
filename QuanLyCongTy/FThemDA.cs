@@ -12,40 +12,33 @@ namespace QuanLyCongTy
 {
     public partial class FThemDA : Form
     {
-
-        SuaDADAO suadaDAO = new SuaDADAO();
-        string MaPB;
-        string MaLPB;
+        ThemDABUS themDABUS = new ThemDABUS();
         public FThemDA()
         {
             InitializeComponent();
-            cmbLoaiPB.DataSource = suadaDAO.LayDanhSachTenLoaiPhongBan();
+            themDABUS.FillcmbLoaiPB(cmbLoaiPB);
         }
 
         private void HienThiDanhSach()
         {
-            this.gvPhongBanRanh.DataSource = suadaDAO.LayDSTinhTrangLPB(MaLPB);
+            themDABUS.DSTinhTrangPBTheoLPB(gvPhongBanRanh, cmbLoaiPB, dtpNgayBD, dtpDeadline);
         }
 
         private void FThemDA_Load(object sender, EventArgs e)
         {
-            MaLPB = suadaDAO.GetMaLPB2(cmbLoaiPB.Text);
             HienThiDanhSach();
-            lblMaDA.Text = suadaDAO.TaoMaDA();
+            themDABUS.TaoMaDA(lblMaDA);
         }
 
         private void cmbLoaiPB_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MaLPB = suadaDAO.GetMaLPB2(cmbLoaiPB.Text);
-            cmbTenPB.DataSource = suadaDAO.LayDanhSachTenPhongBan(MaLPB);
+            themDABUS.FillcmbTenPB(cmbTenPB, cmbLoaiPB, dtpNgayBD, dtpDeadline);
             HienThiDanhSach();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            ThemDA da = new ThemDA(lblMaDA.Text, txtTenDA.Text, txtMoTa.Text, cmbLoaiPB.Text, cmbTenPB.Text, txtDiaDiem.Text, dtpNgayBD.Value, dtpDeadline.Value);
-            MaPB = suadaDAO.GetMaPB(cmbTenPB.Text);
-            suadaDAO.Them(da, MaPB);
+            themDABUS.ThemDA(lblMaDA, txtTenDA, txtMoTa, cmbTenPB, txtDiaDiem, dtpNgayBD, dtpDeadline);
             Close();
         }
 

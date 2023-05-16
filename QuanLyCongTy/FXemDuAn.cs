@@ -49,7 +49,7 @@ namespace QuanLyCongTy
             DataTable dt = xemdaDAO.LayDanhSachDuAnDaHT(maPB);
             foreach (DataRow dr in dt.Rows)
             {
-                UCSailorStar uc = new UCSailorStar(dr[0].ToString());
+                UCSailorStar uc = new UCSailorStar();
                 flp_ListDA.Controls.Add(uc);
                 uc.addReLoat(DADaHT);
             }

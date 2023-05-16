@@ -441,15 +441,15 @@ VALUES('DA003',N'Thiết kết và thi công dây chuyền SX nước trái cây
 INSERT INTO DuAn
 VALUES('DA004',N'Làm video quảng cáo nước trái cây', N'Video đăng trên titok'+ CHAR(13)+CHAR(10)+ N'Thuê tiktoker','PBMK1', N'Công ty', '2000-03-05', '2000-08-02',N'Hoàn Thành Tốt',100,10000000)
 INSERT INTO DuAn
-VALUES('DA005',N'Chỉnh sửa logo công ty', N'Bo góc logo cũ','PBTK2', N'Công Ty','2023-01-15', '2023-05-03','',0,0)
+VALUES('DA005',N'Chỉnh sửa logo công ty', N'Bo góc logo cũ','PBTK2', N'Công Ty','2023-01-15', '2023-05-03','',-1,0)
 INSERT INTO DuAn
-VALUES('DA006',N'Quảng bá logo mới', N'Công khai số tiền thiết kế logo là 7 tỷ','PBMK2', N'Công ty', '2023-02-01', '2023-05-03','',0,0)
+VALUES('DA006',N'Quảng bá logo mới', N'Công khai số tiền thiết kế logo là 7 tỷ','PBMK2', N'Công ty', '2023-02-01', '2023-05-03','',-1,0)
 GO
 
 
 CREATE TABLE dbo.PhanCong(
-	MaDA varchar(10) REFERENCES DuAn(MaDA),
-	MaCV varchar(10) REFERENCES CongViec(MaCV),
+	MaDA varchar(10) REFERENCES DuAn(MaDA) ON DELETE CASCADE,
+	MaCV varchar(10) REFERENCES CongViec(MaCV) ON DELETE CASCADE,
 	MaNV varchar(10) REFERENCES NhanVien(MaNV),
 	NgayBD date,
 	DeadLine date,
@@ -487,7 +487,7 @@ CREATE TABLE dbo.HoTro(
 	MaDA varchar(10) NOT NULL,
 	MaCV varchar(10) NOT NULL,
 	MaNV varchar(10) REFERENCES NhanVien(MaNV),
-	FOREIGN KEY(MaDA,MaCV) REFERENCES PhanCong(MaDa,MaCV),
+	FOREIGN KEY(MaDA,MaCV) REFERENCES PhanCong(MaDa,MaCV) ON DELETE CASCADE,
 	PRIMARY KEY(MaDA,MaCV,MaNV)
 )
 GO

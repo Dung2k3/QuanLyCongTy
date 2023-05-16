@@ -102,6 +102,7 @@
             this.pbXoa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbXoa.TabIndex = 10;
             this.pbXoa.TabStop = false;
+            this.pbXoa.Click += new System.EventHandler(this.pbXoa_Click);
             this.pbXoa.MouseEnter += new System.EventHandler(this.pbXoa_MouseEnter);
             this.pbXoa.MouseLeave += new System.EventHandler(this.pbXoa_MouseLeave);
             // 
@@ -117,7 +118,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.UCXemPhanCong_Click);
             // 
             // textBox1
             // 
