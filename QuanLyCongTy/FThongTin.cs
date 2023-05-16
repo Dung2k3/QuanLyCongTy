@@ -34,7 +34,6 @@ namespace QuanLyCongTy
             label17.Text = tt.Email;
             label18.Text = tt.MaPB;
             label19.Text = tt.TenPB;
-            label20.Text = tt.ChucVu;
         }
     }
 }

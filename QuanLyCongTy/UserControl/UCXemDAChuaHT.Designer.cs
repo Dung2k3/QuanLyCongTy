@@ -74,6 +74,7 @@
             // 
             // ptbBG
             // 
+            this.ptbBG.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ptbBG.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ptbBG.Image = global::QuanLyCongTy.Properties.Resources.Vien2;
             this.ptbBG.Location = new System.Drawing.Point(0, 0);

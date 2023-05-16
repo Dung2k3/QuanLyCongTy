@@ -12,7 +12,7 @@ namespace QuanLyCongTy
 {
     public partial class FCheckinout2 : Form
     {
-        public FCheckinout2()
+        public FCheckinout2(string ma)
         {
             InitializeComponent();
         }

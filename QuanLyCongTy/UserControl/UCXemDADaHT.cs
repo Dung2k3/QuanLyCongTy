@@ -40,7 +40,7 @@ namespace QuanLyCongTy
 
         private void ptbBG_Click(object sender, EventArgs e)
         {
-            Form form = new FNhanXetDA_TruongPhong(MaDA);
+            Form form = new FHoanThanhDuAn(MaDA);
             Enabled = false;
             form.ShowDialog();
             Enabled = true;

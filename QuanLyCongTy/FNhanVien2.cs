@@ -61,21 +61,14 @@ namespace QuanLyCongTy
         private void btnCheckinout_CheckedChanged(object sender, EventArgs e)
         {
             lblTitle.Text = btnCheckinout.Text;
-            OpenChildForm(new FCheckinout(MaNV));
+            OpenChildForm(new FCheckinout2(MaNV));
             moveImageBox(sender);
         }
 
         private void btnPhanCong_CheckedChanged(object sender, EventArgs e)
         {
             lblTitle.Text = btnPhanCong.Text;
-            OpenChildForm(new FKPI());
-            moveImageBox(sender);
-        }
-
-        private void btnTienDo_CheckedChanged(object sender, EventArgs e)
-        {
-            lblTitle.Text = btnTienDo.Text;
-            OpenChildForm(new FKPI());
+            OpenChildForm(new FKPI2());
             moveImageBox(sender);
         }
 

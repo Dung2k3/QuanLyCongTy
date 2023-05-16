@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -58,8 +59,9 @@
             this.lbl_DiaDiem = new System.Windows.Forms.Label();
             this.lbl_TenPB = new System.Windows.Forms.Label();
             this.lblMaDA = new System.Windows.Forms.Label();
-            this.guna2Shapes3 = new Guna.UI2.WinForms.Guna2Shapes();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             ((System.ComponentModel.ISupportInitialize)(this.gvPhongBanRanh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -143,7 +145,7 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.gvPhongBanRanh.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(70)))), ((int)(((byte)(178)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
@@ -525,23 +527,6 @@
             this.lblMaDA.TabIndex = 134;
             this.lblMaDA.Text = "label3";
             // 
-            // guna2Shapes3
-            // 
-            this.guna2Shapes3.BorderThickness = 3;
-            this.guna2Shapes3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Shapes3.FillColor = System.Drawing.Color.White;
-            this.guna2Shapes3.Location = new System.Drawing.Point(0, 0);
-            this.guna2Shapes3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2Shapes3.Name = "guna2Shapes3";
-            this.guna2Shapes3.PolygonSkip = 1;
-            this.guna2Shapes3.Rotate = 0F;
-            this.guna2Shapes3.RoundedRadius = 2;
-            this.guna2Shapes3.Shape = Guna.UI2.WinForms.Enums.ShapeType.Rectangle;
-            this.guna2Shapes3.Size = new System.Drawing.Size(1220, 690);
-            this.guna2Shapes3.TabIndex = 135;
-            this.guna2Shapes3.Text = "guna2Shapes3";
-            this.guna2Shapes3.Zoom = 100;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::QuanLyCongTy.Properties.Resources.add_button__1_;
@@ -552,12 +537,32 @@
             this.pictureBox1.TabIndex = 127;
             this.pictureBox1.TabStop = false;
             // 
+            // guna2BorderlessForm1
+            // 
+            this.guna2BorderlessForm1.ContainerControl = this;
+            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm1.TransparentWhileDrag = true;
+            // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.CustomIconSize = 20F;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(101)))), ((int)(((byte)(189)))));
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1158, -1);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(62, 32);
+            this.guna2ControlBox1.TabIndex = 135;
+            // 
             // FThemDA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1220, 690);
+            this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.lblMaDA);
             this.Controls.Add(this.cmbLoaiPB);
             this.Controls.Add(this.label2);
@@ -582,7 +587,6 @@
             this.Controls.Add(this.lbl_NgayBD);
             this.Controls.Add(this.lbl_DiaDiem);
             this.Controls.Add(this.lbl_TenPB);
-            this.Controls.Add(this.guna2Shapes3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FThemDA";
@@ -624,6 +628,7 @@
         private System.Windows.Forms.Label lbl_DiaDiem;
         private System.Windows.Forms.Label lbl_TenPB;
         private System.Windows.Forms.Label lblMaDA;
-        private Guna.UI2.WinForms.Guna2Shapes guna2Shapes3;
+        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
     }
 }

@@ -38,14 +38,20 @@ namespace QuanLyCongTy
 
         private void ptbBG_Click(object sender, EventArgs e)
         {
-            Control ctr = Parent.Parent.Parent.Parent;
+            /*Control ctr = Parent.Parent.Parent.Parent;
             if (ctr is UC)
             {
                 UC uc = (UC)ctr;
-                FThongTinDA fThongTinDA = new FThongTinDA(MaDA);
-                uc.AddChildForm(fThongTinDA);
-                uc.OpenChildForm(fThongTinDA);
-            }
+                FThongTinDA2 fThongTinDA2 = new FThongTinDA2(MaDA);
+                uc.AddChildForm(fThongTinDA2);
+                uc.OpenChildForm(fThongTinDA2);
+            }*/
+
+            Form form = new FThongTinDA2(MaDA);
+            Enabled = false;
+            form.ShowDialog();
+            Enabled = true;
+            HamRL();
         }
     }
 }

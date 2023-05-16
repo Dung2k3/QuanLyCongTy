@@ -167,3 +167,14 @@ D:\K2N2\Winform\PRJ_QuanLyCongTy_2\QuanLyCongTy\obj\Debug\QuanLyCongTy.FSaiTK.re
 D:\K2N2\Winform\PRJ_QuanLyCongTy_2\QuanLyCongTy\obj\Debug\QuanLyCongTy.FCheckinout2.resources
 D:\K2N2\Winform\PRJ_QuanLyCongTy_2\QuanLyCongTy\obj\Debug\QuanLyCongTy.FCapNhatTienDo.resources
 D:\K2N2\Winform\PRJ_QuanLyCongTy_2\QuanLyCongTy\obj\Debug\QuanLyCongTy.UCXemPhanCong_NhanVien.resources
+D:\K2N2\Winform\PRJ_QuanLyCongTy_2\QuanLyCongTy\obj\Debug\QuanLyCongTy.FLich2.resources
+D:\K2N2\Winform\PRJ_QuanLyCongTy_2\QuanLyCongTy\obj\Debug\QuanLyCongTy.FKPI2.resources
+D:\K2N2\Winform\PRJ_QuanLyCongTy_2\QuanLyCongTy\obj\Debug\QuanLyCongTy.FThongTinDA2.resources
+D:\K2N2\Winform\PRJ_QuanLyCongTy_2\QuanLyCongTy\obj\Debug\QuanLyCongTy.FPhanCong2.resources
+D:\K2N2\Winform\PRJ_QuanLyCongTy_2\QuanLyCongTy\obj\Debug\QuanLyCongTy.FThemTroGiup2.resources
+D:\K2N2\Winform\PRJ_QuanLyCongTy_2\QuanLyCongTy\obj\Debug\QuanLyCongTy.FChiaThuong.resources
+D:\K2N2\Winform\PRJ_QuanLyCongTy_2\QuanLyCongTy\obj\Debug\QuanLyCongTy.UCThuongCaNhan.resources
+D:\K2N2\Winform\PRJ_QuanLyCongTy_2\QuanLyCongTy\obj\Debug\QuanLyCongTy.FHoanThanhDuAn.resources
+D:\K2N2\Winform\PRJ_QuanLyCongTy_2\QuanLyCongTy\obj\Debug\QuanLyCongTy.FNhanSu.resources
+D:\K2N2\Winform\PRJ_QuanLyCongTy_2\QuanLyCongTy\obj\Debug\QuanLyCongTy.FTinhLuong.resources
+D:\K2N2\Winform\PRJ_QuanLyCongTy_2\QuanLyCongTy\obj\Debug\QuanLyCongTy.UCLuong.resources

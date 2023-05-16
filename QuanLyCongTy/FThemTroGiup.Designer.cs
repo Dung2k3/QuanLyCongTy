@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gv_CongViec = new System.Windows.Forms.DataGridView();
@@ -37,6 +38,7 @@
             this.btnThemTroGiup = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gv_CongViec)).BeginInit();
             this.SuspendLayout();
             // 
@@ -168,5 +170,6 @@
         private System.Windows.Forms.Button btnThemTroGiup;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.ListBox listBox1;
+        private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
     }
 }

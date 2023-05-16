@@ -65,7 +65,7 @@ namespace QuanLyCongTy
             HamRL();
         }
 
-        private void btnSua_Click(object sender, EventArgs e)
+        private void ptbBG_Click(object sender, EventArgs e)
         {
             Form form = new FSuaDA(MaDA);
             Enabled = false;

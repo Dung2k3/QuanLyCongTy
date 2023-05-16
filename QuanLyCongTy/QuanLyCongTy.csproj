@@ -71,11 +71,41 @@
     <Compile Include="FCheckinout2.Designer.cs">
       <DependentUpon>FCheckinout2.cs</DependentUpon>
     </Compile>
+    <Compile Include="FChiaThuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FChiaThuong.Designer.cs">
+      <DependentUpon>FChiaThuong.cs</DependentUpon>
+    </Compile>
     <Compile Include="FDangNhap2.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FDangNhap2.Designer.cs">
       <DependentUpon>FDangNhap2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FHoanThanhDuAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FHoanThanhDuAn.Designer.cs">
+      <DependentUpon>FHoanThanhDuAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FKPI2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FKPI2.Designer.cs">
+      <DependentUpon>FKPI2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLich2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLich2.Designer.cs">
+      <DependentUpon>FLich2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FNhanSu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FNhanSu.Designer.cs">
+      <DependentUpon>FNhanSu.cs</DependentUpon>
     </Compile>
     <Compile Include="FNhanVien2.cs">
       <SubType>Form</SubType>
@@ -89,6 +119,12 @@
     <Compile Include="FNhanXetDA_TruongPhong.Designer.cs">
       <DependentUpon>FNhanXetDA_TruongPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="FPhanCong2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPhanCong2.Designer.cs">
+      <DependentUpon>FPhanCong2.cs</DependentUpon>
+    </Compile>
     <Compile Include="FQuanLy2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +136,24 @@
     </Compile>
     <Compile Include="FSaiTK.Designer.cs">
       <DependentUpon>FSaiTK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FThemTroGiup2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FThemTroGiup2.Designer.cs">
+      <DependentUpon>FThemTroGiup2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FThongTinDA2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FThongTinDA2.Designer.cs">
+      <DependentUpon>FThongTinDA2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FTinhLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTinhLuong.Designer.cs">
+      <DependentUpon>FTinhLuong.cs</DependentUpon>
     </Compile>
     <Compile Include="FTruongPhong2.cs">
       <SubType>Form</SubType>
@@ -154,6 +208,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UCLuong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\UCLuong.Designer.cs">
+      <DependentUpon>UCLuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UCThuongCaNhan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\UCThuongCaNhan.Designer.cs">
+      <DependentUpon>UCThuongCaNhan.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControl\UCXemPhanCong_NhanVien.cs">
       <SubType>UserControl</SubType>
@@ -333,6 +399,9 @@
     <EmbeddedResource Include="FCheckinout2.resx">
       <DependentUpon>FCheckinout2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FChiaThuong.resx">
+      <DependentUpon>FChiaThuong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FChinhPhanCong.resx">
       <DependentUpon>FChinhPhanCong.cs</DependentUpon>
     </EmbeddedResource>
@@ -345,11 +414,23 @@
     <EmbeddedResource Include="FDuAn.resx">
       <DependentUpon>FDuAn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FHoanThanhDuAn.resx">
+      <DependentUpon>FHoanThanhDuAn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FKPI.resx">
       <DependentUpon>FKPI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FKPI2.resx">
+      <DependentUpon>FKPI2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FLich.resx">
       <DependentUpon>FLich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLich2.resx">
+      <DependentUpon>FLich2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FNhanSu.resx">
+      <DependentUpon>FNhanSu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FNhanVien.resx">
       <DependentUpon>FNhanVien.cs</DependentUpon>
@@ -362,6 +443,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FNhanXetDA_TruongPhong.resx">
       <DependentUpon>FNhanXetDA_TruongPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPhanCong2.resx">
+      <DependentUpon>FPhanCong2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FQuanLy.resx">
       <DependentUpon>FQuanLy.cs</DependentUpon>
@@ -378,6 +462,9 @@
     <EmbeddedResource Include="FThemDA.resx">
       <DependentUpon>FThemDA.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FThemTroGiup2.resx">
+      <DependentUpon>FThemTroGiup2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FThongBao.resx">
       <DependentUpon>FThongBao.cs</DependentUpon>
     </EmbeddedResource>
@@ -386,6 +473,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FThongTinDA.resx">
       <DependentUpon>FThongTinDA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FThongTinDA2.resx">
+      <DependentUpon>FThongTinDA2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTinhLuong.resx">
+      <DependentUpon>FTinhLuong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FTruongPhong.resx">
       <DependentUpon>FTruongPhong.cs</DependentUpon>
@@ -407,6 +500,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FThemTroGiup.resx">
       <DependentUpon>FThemTroGiup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UCLuong.resx">
+      <DependentUpon>UCLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UCThuongCaNhan.resx">
+      <DependentUpon>UCThuongCaNhan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\UCXemPhanCong_NhanVien.resx">
       <DependentUpon>UCXemPhanCong_NhanVien.cs</DependentUpon>
@@ -796,6 +895,57 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\add1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right-arrow %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus %288%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pie-chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus %289%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recycle-bin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\values.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\values %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallet %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clock %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\social-responsibility %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\social-responsibility.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

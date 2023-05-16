@@ -72,5 +72,15 @@ namespace QuanLyCongTy
                 MessageBox.Show("Bạn đã điểm danh rồi");
             }
         }
+
+        private void gvCheckoutList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void gvCheckinList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

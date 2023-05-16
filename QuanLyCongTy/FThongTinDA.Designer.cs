@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pbThem = new System.Windows.Forms.PictureBox();
@@ -40,6 +41,7 @@
             this.lblNgayBDTitle = new System.Windows.Forms.Label();
             this.lblDiaDiem = new System.Windows.Forms.Label();
             this.lblDiaDiemTitle = new System.Windows.Forms.Label();
+            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbThem)).BeginInit();
             this.SuspendLayout();
@@ -186,6 +188,12 @@
             this.lblDiaDiemTitle.TabIndex = 2;
             this.lblDiaDiemTitle.Text = "Địa điểm";
             // 
+            // guna2BorderlessForm1
+            // 
+            this.guna2BorderlessForm1.ContainerControl = this;
+            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm1.TransparentWhileDrag = true;
+            // 
             // FThongTinDA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -218,5 +226,6 @@
         private System.Windows.Forms.Label lblDiaDiem;
         private System.Windows.Forms.Label lblDiaDiemTitle;
         private System.Windows.Forms.PictureBox pbThem;
+        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
     }
 }

@@ -29,8 +29,10 @@ namespace QuanLyCongTy
 
             if (lda != null)
             {
-                lbldl.Text = "Deadline dự án";
-                this.BackColor = Color.Pink;
+                pnlNotice.FillColor = ColorTranslator.FromHtml("#F44336");
+                lblDay.ForeColor = ColorTranslator.FromHtml("#F44336");
+                lblNotice.Text = "Deadline dự án";
+                lblNotice.ForeColor = ColorTranslator.FromHtml("#F44336");
             }
         }
         public void kiemtraBD(int year, int month, int day)
@@ -40,13 +42,11 @@ namespace QuanLyCongTy
 
             if (lda != null)
             {
-                lbldl.Text = "Bắt đầu dự án";
-                this.BackColor = Color.LightGreen;
+                pnlNotice.FillColor = ColorTranslator.FromHtml("#128C7E");
+                lblDay.ForeColor = ColorTranslator.FromHtml("#128C7E");
+                lblNotice.Text = "Có dự án";
+                lblNotice.ForeColor = ColorTranslator.FromHtml("#128C7E");
             }
-        }
-
-        private void UCNgay_Load(object sender, EventArgs e)
-        {
         }
     }
 }

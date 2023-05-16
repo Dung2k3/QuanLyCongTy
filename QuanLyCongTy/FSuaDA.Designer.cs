@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -55,7 +56,8 @@
             this.Deadline = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.guna2Shapes3 = new Guna.UI2.WinForms.Guna2Shapes();
+            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             ((System.ComponentModel.ISupportInitialize)(this.gvPhongBanRanh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -72,7 +74,7 @@
             this.btnHuy.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(140)))), ((int)(((byte)(126)))));
             this.btnHuy.Font = new System.Drawing.Font("Calibri", 12F);
             this.btnHuy.ForeColor = System.Drawing.Color.White;
-            this.btnHuy.Location = new System.Drawing.Point(409, 524);
+            this.btnHuy.Location = new System.Drawing.Point(409, 613);
             this.btnHuy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(124, 43);
@@ -92,7 +94,7 @@
             this.btnSua.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(140)))), ((int)(((byte)(126)))));
             this.btnSua.Font = new System.Drawing.Font("Calibri", 12F);
             this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.Location = new System.Drawing.Point(279, 524);
+            this.btnSua.Location = new System.Drawing.Point(279, 613);
             this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(124, 43);
@@ -112,7 +114,7 @@
             this.dtpDeadline.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dtpDeadline.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dtpDeadline.IndicateFocus = true;
-            this.dtpDeadline.Location = new System.Drawing.Point(199, 464);
+            this.dtpDeadline.Location = new System.Drawing.Point(195, 523);
             this.dtpDeadline.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpDeadline.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpDeadline.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
@@ -135,7 +137,7 @@
             this.dtpNgayBD.Font = new System.Drawing.Font("Calibri", 12F);
             this.dtpNgayBD.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.dtpNgayBD.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpNgayBD.Location = new System.Drawing.Point(199, 402);
+            this.dtpNgayBD.Location = new System.Drawing.Point(195, 441);
             this.dtpNgayBD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpNgayBD.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpNgayBD.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
@@ -158,7 +160,7 @@
             this.cmbTenPB.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmbTenPB.ForeColor = System.Drawing.Color.Black;
             this.cmbTenPB.ItemHeight = 30;
-            this.cmbTenPB.Location = new System.Drawing.Point(201, 287);
+            this.cmbTenPB.Location = new System.Drawing.Point(192, 311);
             this.cmbTenPB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbTenPB.Name = "cmbTenPB";
             this.cmbTenPB.Size = new System.Drawing.Size(333, 36);
@@ -182,7 +184,7 @@
             this.txtMoTa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMoTa.Multiline = true;
             this.txtMoTa.Name = "txtMoTa";
-            this.txtMoTa.Size = new System.Drawing.Size(467, 86);
+            this.txtMoTa.Size = new System.Drawing.Size(467, 115);
             this.txtMoTa.TabIndex = 70;
             // 
             // lbl_MoTa
@@ -218,7 +220,7 @@
             this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.guna2TextBox1.PlaceholderText = "";
             this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(482, 110);
+            this.guna2TextBox1.Size = new System.Drawing.Size(482, 139);
             this.guna2TextBox1.TabIndex = 75;
             // 
             // guna2Shapes2
@@ -230,7 +232,7 @@
             this.guna2Shapes2.LineEndCap = System.Drawing.Drawing2D.LineCap.NoAnchor;
             this.guna2Shapes2.LineStartCap = System.Drawing.Drawing2D.LineCap.Round;
             this.guna2Shapes2.LineThickness = 2;
-            this.guna2Shapes2.Location = new System.Drawing.Point(199, 370);
+            this.guna2Shapes2.Location = new System.Drawing.Point(192, 400);
             this.guna2Shapes2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Shapes2.Name = "guna2Shapes2";
             this.guna2Shapes2.PolygonSkip = 1;
@@ -259,7 +261,7 @@
             this.txtDiaDiem.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtDiaDiem.ForeColor = System.Drawing.Color.Black;
             this.txtDiaDiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDiaDiem.Location = new System.Drawing.Point(199, 340);
+            this.txtDiaDiem.Location = new System.Drawing.Point(192, 370);
             this.txtDiaDiem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDiaDiem.Name = "txtDiaDiem";
             this.txtDiaDiem.PasswordChar = '\0';
@@ -321,7 +323,7 @@
             this.lbl_DeadLine.AutoSize = true;
             this.lbl_DeadLine.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbl_DeadLine.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_DeadLine.Location = new System.Drawing.Point(47, 472);
+            this.lbl_DeadLine.Location = new System.Drawing.Point(40, 523);
             this.lbl_DeadLine.Name = "lbl_DeadLine";
             this.lbl_DeadLine.Size = new System.Drawing.Size(90, 24);
             this.lbl_DeadLine.TabIndex = 69;
@@ -332,7 +334,7 @@
             this.lbl_NgayBD.AutoSize = true;
             this.lbl_NgayBD.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbl_NgayBD.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_NgayBD.Location = new System.Drawing.Point(44, 411);
+            this.lbl_NgayBD.Location = new System.Drawing.Point(40, 450);
             this.lbl_NgayBD.Name = "lbl_NgayBD";
             this.lbl_NgayBD.Size = new System.Drawing.Size(126, 24);
             this.lbl_NgayBD.TabIndex = 68;
@@ -342,7 +344,7 @@
             // 
             this.lbl_DiaDiem.AutoSize = true;
             this.lbl_DiaDiem.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_DiaDiem.Location = new System.Drawing.Point(47, 352);
+            this.lbl_DiaDiem.Location = new System.Drawing.Point(40, 382);
             this.lbl_DiaDiem.Name = "lbl_DiaDiem";
             this.lbl_DiaDiem.Size = new System.Drawing.Size(89, 24);
             this.lbl_DiaDiem.TabIndex = 67;
@@ -352,7 +354,7 @@
             // 
             this.lbl_TenPB.AutoSize = true;
             this.lbl_TenPB.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TenPB.Location = new System.Drawing.Point(44, 293);
+            this.lbl_TenPB.Location = new System.Drawing.Point(35, 317);
             this.lbl_TenPB.Name = "lbl_TenPB";
             this.lbl_TenPB.Size = new System.Drawing.Size(144, 24);
             this.lbl_TenPB.TabIndex = 66;
@@ -379,7 +381,7 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.gvPhongBanRanh.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(70)))), ((int)(((byte)(178)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
@@ -479,29 +481,32 @@
             this.pictureBox1.TabIndex = 82;
             this.pictureBox1.TabStop = false;
             // 
-            // guna2Shapes3
+            // guna2BorderlessForm1
             // 
-            this.guna2Shapes3.BorderThickness = 3;
-            this.guna2Shapes3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Shapes3.FillColor = System.Drawing.Color.White;
-            this.guna2Shapes3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.guna2Shapes3.Location = new System.Drawing.Point(0, 0);
-            this.guna2Shapes3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2Shapes3.Name = "guna2Shapes3";
-            this.guna2Shapes3.PolygonSkip = 1;
-            this.guna2Shapes3.Rotate = 0F;
-            this.guna2Shapes3.Shape = Guna.UI2.WinForms.Enums.ShapeType.Rectangle;
-            this.guna2Shapes3.Size = new System.Drawing.Size(1156, 595);
-            this.guna2Shapes3.TabIndex = 84;
-            this.guna2Shapes3.Text = "guna2Shapes3";
-            this.guna2Shapes3.Zoom = 100;
+            this.guna2BorderlessForm1.ContainerControl = this;
+            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm1.TransparentWhileDrag = true;
+            // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.CustomIconSize = 20F;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(101)))), ((int)(((byte)(189)))));
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1159, 0);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(62, 32);
+            this.guna2ControlBox1.TabIndex = 84;
             // 
             // FSuaDA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1156, 595);
+            this.ClientSize = new System.Drawing.Size(1220, 690);
+            this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.gvPhongBanRanh);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
@@ -522,7 +527,6 @@
             this.Controls.Add(this.lbl_NgayBD);
             this.Controls.Add(this.lbl_DiaDiem);
             this.Controls.Add(this.lbl_TenPB);
-            this.Controls.Add(this.guna2Shapes3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FSuaDA";
@@ -559,6 +563,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TenPB;
         private System.Windows.Forms.DataGridViewTextBoxColumn Deadline;
         private System.Windows.Forms.DataGridViewTextBoxColumn TinhTrang;
-        private Guna.UI2.WinForms.Guna2Shapes guna2Shapes3;
+        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
     }
 }

@@ -69,7 +69,7 @@ namespace QuanLyCongTy
         private void btnCheckinout_CheckedChanged(object sender, EventArgs e)
         {
             lblTitle.Text = btnCheckinout.Text;
-            OpenChildForm(new FCheckinout(MaNV));
+            OpenChildForm(new FCheckinout2(MaNV));
             moveImageBox(sender);
         }
 
@@ -90,7 +90,7 @@ namespace QuanLyCongTy
         private void btnLich_CheckedChanged(object sender, EventArgs e)
         {
             lblTitle.Text = btnLich.Text;
-            OpenChildForm(new FLich());
+            OpenChildForm(new FLich2());
             moveImageBox(sender);
         }
     }

@@ -92,6 +92,7 @@
             this.RatingStar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RatingStar.Name = "RatingStar";
             this.RatingStar.RatingColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(195)))), ((int)(((byte)(11)))));
+            this.RatingStar.ReadOnly = true;
             this.RatingStar.Size = new System.Drawing.Size(183, 32);
             this.RatingStar.TabIndex = 150;
             // 

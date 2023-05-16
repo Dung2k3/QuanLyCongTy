@@ -18,11 +18,6 @@ namespace QuanLyCongTy
             InitializeComponent();
         }
 
-        private void btnCloseForm_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             DangNhap dn = new DangNhap(txtTaiKhoan.Text, txtMatKhau.Text);
@@ -49,6 +44,19 @@ namespace QuanLyCongTy
                 form.ShowDialog();
                 Enabled = true;
             }
+        }
+
+        private void ckbMatKhau_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckbMatKhau.Checked)
+            {
+                txtMatKhau.PasswordChar = '\0';
+            }
+                
+            if (!ckbMatKhau.Checked)
+            {
+                txtMatKhau.PasswordChar = '●';
+            }    
         }
     }
 }

@@ -61,7 +61,7 @@ namespace QuanLyCongTy
         private void btnCheckin_CheckedChanged(object sender, EventArgs e)
         {
             lblTitle.Text = btnCheckin.Text;
-            OpenChildForm(new FCheckinout(MaNV));
+            OpenChildForm(new FCheckinout2(MaNV));
             moveImageBox(sender);
         }
 

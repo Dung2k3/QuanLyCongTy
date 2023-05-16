@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.guna2HScrollBar1 = new Guna.UI2.WinForms.Guna2HScrollBar();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2Shapes1 = new Guna.UI2.WinForms.Guna2Shapes();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -38,6 +38,7 @@
             this.btnDong = new Guna.UI2.WinForms.Guna2Button();
             this.btnCapNhat = new Guna.UI2.WinForms.Guna2Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.SuspendLayout();
             // 
             // guna2HScrollBar1
@@ -65,21 +66,6 @@
             this.label1.Size = new System.Drawing.Size(125, 35);
             this.label1.TabIndex = 10;
             this.label1.Text = "Công việc";
-            // 
-            // guna2Shapes1
-            // 
-            this.guna2Shapes1.BorderThickness = 4;
-            this.guna2Shapes1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Shapes1.FillColor = System.Drawing.Color.White;
-            this.guna2Shapes1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Shapes1.Name = "guna2Shapes1";
-            this.guna2Shapes1.PolygonSkip = 1;
-            this.guna2Shapes1.Rotate = 0F;
-            this.guna2Shapes1.Shape = Guna.UI2.WinForms.Enums.ShapeType.Rectangle;
-            this.guna2Shapes1.Size = new System.Drawing.Size(778, 618);
-            this.guna2Shapes1.TabIndex = 9;
-            this.guna2Shapes1.Text = "guna2Shapes1";
-            this.guna2Shapes1.Zoom = 100;
             // 
             // label2
             // 
@@ -167,6 +153,12 @@
             this.label5.TabIndex = 18;
             this.label5.Text = "Đã hoàn thành:";
             // 
+            // guna2BorderlessForm1
+            // 
+            this.guna2BorderlessForm1.ContainerControl = this;
+            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm1.TransparentWhileDrag = true;
+            // 
             // FCapNhatTienDo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -182,7 +174,6 @@
             this.Controls.Add(this.guna2HScrollBar1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2Shapes2);
-            this.Controls.Add(this.guna2Shapes1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FCapNhatTienDo";
             this.Text = "FCapNhatTienDo";
@@ -195,7 +186,6 @@
 
         private Guna.UI2.WinForms.Guna2HScrollBar guna2HScrollBar1;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2Shapes guna2Shapes1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -203,5 +193,6 @@
         private Guna.UI2.WinForms.Guna2Button btnDong;
         private Guna.UI2.WinForms.Guna2Button btnCapNhat;
         private System.Windows.Forms.Label label5;
+        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
     }
 }
