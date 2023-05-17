@@ -193,9 +193,9 @@ namespace QuanLyCongTy.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap SaoVang {
+        internal static System.Drawing.Bitmap PictureLoad3 {
             get {
-                object obj = ResourceManager.GetObject("SaoVang", resourceCulture);
+                object obj = ResourceManager.GetObject("PictureLoad3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,9 +203,9 @@ namespace QuanLyCongTy.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap PictureLoad3 {
+        internal static System.Drawing.Bitmap SaoVang {
             get {
-                object obj = ResourceManager.GetObject("PictureLoad3", resourceCulture);
+                object obj = ResourceManager.GetObject("SaoVang", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

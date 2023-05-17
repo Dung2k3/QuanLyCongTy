@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,8 +34,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.4\lib\net48\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -49,6 +56,13 @@
   <ItemGroup>
     <Compile Include="DataAccessObj\CheckinDao.cs" />
     <Compile Include="DataAccessObj\CheckoutDao.cs" />
+    <Compile Include="DataSource.cs" />
+    <Compile Include="F_XinNghi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_XinNghi.Designer.cs">
+      <DependentUpon>F_XinNghi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Object\DangNhap.cs" />
     <Compile Include="FChinhPhanCong.cs">
       <SubType>Form</SubType>
@@ -103,7 +117,6 @@
       <DependentUpon>UCXemPhanCong.cs</DependentUpon>
     </Compile>
     <Compile Include="DataAccessObj\XemDADAO.cs" />
-    <Compile Include="Object\XinNghi.cs" />
     <Compile Include="FCheckinout.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -253,12 +266,15 @@
     <Compile Include="Add.Designer.cs">
       <DependentUpon>Add.cs</DependentUpon>
     </Compile>
-    <Compile Include="F_XinNghi.cs">
-      <SubType>Form</SubType>
+    <Compile Include="UCXinNghi.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="F_XinNghi.Designer.cs">
-      <DependentUpon>F_XinNghi.cs</DependentUpon>
+    <Compile Include="UCXinNghi.Designer.cs">
+      <DependentUpon>UCXinNghi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Xem.cs" />
+    <Compile Include="XinNghiDAO.cs" />
+    <Compile Include="XinNghi.cs" />
     <EmbeddedResource Include="FCheckinout.resx">
       <DependentUpon>FCheckinout.cs</DependentUpon>
     </EmbeddedResource>
@@ -337,6 +353,9 @@
     <EmbeddedResource Include="FTienDoCaNhan.resx">
       <DependentUpon>FTienDoCaNhan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UCXinNghi.resx">
+      <DependentUpon>UCXinNghi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC\UC.resx">
       <DependentUpon>UC.cs</DependentUpon>
     </EmbeddedResource>
@@ -361,6 +380,7 @@
     <EmbeddedResource Include="UC\UCSailorStar.resx">
       <DependentUpon>UCSailorStar.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

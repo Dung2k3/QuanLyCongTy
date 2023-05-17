@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLCTy;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -19,7 +20,8 @@ namespace QuanLyCongTy
 
             //Application.Run(new FThongTinDA("DA006"));
             //Application.Run(new Form1());
-            Application.Run(new FDangNhap());
-        } 
+            Application.Run(new F_XinNghi());
+            Application.Run(new Add());
+        }   
     }
 }
