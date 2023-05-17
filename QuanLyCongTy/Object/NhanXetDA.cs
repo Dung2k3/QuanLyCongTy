@@ -11,13 +11,13 @@ namespace QuanLyCongTy
         string maDA;
         string tenDA;
         string danhGia;
-        int chamDiem;
+        float chamDiem;
 
         public string MaDA { get { return maDA; } }
         public string TenDA { get { return tenDA; } }
         public string DanhGia { get { return danhGia ; } }
-        public int ChamDiem { get { return chamDiem; } }
-        public NhanXetDA(string maDA, string tenDA, string danhGia, int chamDiem)
+        public float ChamDiem { get { return chamDiem; } }
+        public NhanXetDA(string maDA, string tenDA, string danhGia, float chamDiem)
         {
             this.maDA = maDA;
             this.tenDA = tenDA;

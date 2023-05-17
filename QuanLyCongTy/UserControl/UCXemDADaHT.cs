@@ -21,45 +21,26 @@ namespace QuanLyCongTy
             InitializeComponent();
             this.MaDA = MaDA;
         }
-
-        private void UCSailorStar_Load(object sender, EventArgs e)
-        {
-            TienDoDA da = ttdaDAO.LayDanhSachDuAn(MaDA);
-            lbl_tenDA.Text = da.TenDuAn;
-            lbl_TenPhong.Text = da.TenPB;
-
-            int t = int.Parse(daDAO.LayDiemDA(MaDA));
-            int s = 100 - t;
-            flpNgoiSao.Padding = new Padding(10, 0, 0, 0);
-
-            while (t > 0)
-            {
-                PictureBox pb = new PictureBox();
-                pb.Image = Properties.Resources.SaoVang;
-                pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-                pb.Size = new Size(20, 20);
-                flpNgoiSao.Controls.Add(pb);
-                t = t - 20;
-            }
-
-            while (s > 0)
-            {
-                PictureBox pb = new PictureBox();
-                pb.Image = Properties.Resources.VienSaoVang;
-                pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-                pb.Size = new Size(20, 20);
-                flpNgoiSao.Controls.Add(pb);
-                s = s - 20;
-            }
-        }
         public void addReLoat(FDuAn.FReload HamRL)
         {
             this.HamRL = HamRL;
         }
 
-        private void UCSailorStar_Click(object sender, EventArgs e)
+        private void UCXemDADaHT_Load(object sender, EventArgs e)
         {
-            Form form = new FNhanXetDA();
+            TienDoDA da = ttdaDAO.LayDanhSachDuAn(MaDA);
+            lblTenDA.Text = da.TenDuAn;
+            lblTenPhong.Text = da.TenPB;
+            prgTienDo.Value = ttdaDAO.LayTienDo(MaDA);
+            lblTienDo.Text = ttdaDAO.LayTienDo(MaDA).ToString() + "%";
+
+            float t = float.Parse(daDAO.LayDiemDA(MaDA));
+            RatingStar.Value = t / 20;
+        }
+
+        private void ptbBG_Click(object sender, EventArgs e)
+        {
+            Form form = new FHoanThanhDuAn(MaDA);
             Enabled = false;
             form.ShowDialog();
             Enabled = true;

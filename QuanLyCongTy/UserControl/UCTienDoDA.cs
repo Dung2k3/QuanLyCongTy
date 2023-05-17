@@ -35,7 +35,7 @@ namespace QuanLyCongTy
             xemDAChuaHTQLBUS.OpenFThongBao(this);
         }
 
-        private void btnSua_Click(object sender, EventArgs e)
+        private void ptbBG_Click(object sender, EventArgs e)
         {
             xemDAChuaHTQLBUS.OpenFSuaDA(this);
         }

@@ -1,4 +1,5 @@
-﻿using QuanLyCongTy.DataAccessObj;
+﻿using Guna.UI2.WinForms;
+using QuanLyCongTy.DataAccessObj;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,11 +16,11 @@ namespace QuanLyCongTy
         CongViecDAO congViecDAO = new CongViecDAO();
         PhongBanDAO phongBanDAO = new PhongBanDAO();
         PhanCongDAO phanCongDAO = new PhanCongDAO();
-        public void Fillgv(DataGridView gv,DateTimePicker NgayBD, DateTimePicker DeadLine)
+        public void Fillgv(DataGridView gv, Guna2DateTimePicker NgayBD, Guna2DateTimePicker DeadLine)
         {
             gv.DataSource = nhanVienDAO.DSNhanVienBanTheoPB(da);
         }
-        public void FillcboNV(ComboBox cboNV, DateTimePicker NgayBD, DateTimePicker DeadLine)
+        public void FillcboNV(ComboBox cboNV, Guna2DateTimePicker NgayBD, Guna2DateTimePicker DeadLine)
         {
             cboNV.DataSource = nhanVienDAO.ListNhanVienRanhTheoPB(da);
             cboNV.DisplayMember = "HoTenNV";
@@ -32,7 +33,7 @@ namespace QuanLyCongTy
             cboCV.DisplayMember = "TenCV";
             cboCV.ValueMember = "MaCV";
         }
-        public void ThemPC(ComboBox cboNhanVien, ComboBox cboCongViec, TextBox textBox, CheckBox checkbox, DateTimePicker dtpDBLam, DateTimePicker dtpDeadline)
+        public void ThemPC(ComboBox cboNhanVien, ComboBox cboCongViec, Guna2TextBox textBox, Guna2CustomCheckBox checkbox, Guna2DateTimePicker dtpDBLam, Guna2DateTimePicker dtpDeadline)
         {
             if (checkbox.Checked)
             {
@@ -42,8 +43,8 @@ namespace QuanLyCongTy
                 if (congViecDAO.Them(new CongViecModel(MaCVMoi, textBox.Text, pb.MaLPB)))
                     if (phanCongDAO.Them(new PhanCongModel(da.MaDA, MaCVMoi, cboNhanVien.SelectedValue.ToString(), dtpDBLam.Value, dtpDeadline.Value, 0, "", -1)))
                         MessageBox.Show("Thêm thành công");
-                else
-                    MessageBox.Show("Thêm không thành công");
+                    else
+                        MessageBox.Show("Thêm không thành công");
                 return;
             }
             if (phanCongDAO.Them(new PhanCongModel(da.MaDA, cboCongViec.SelectedValue.ToString(), cboNhanVien.SelectedValue.ToString(), dtpDBLam.Value, dtpDeadline.Value, 0, "", -1)))

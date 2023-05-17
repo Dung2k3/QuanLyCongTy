@@ -1,3 +1,4 @@
+﻿using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +15,7 @@ namespace QuanLyCongTy
     {
         ThemPhanCongBUS themPhanCongBUS = new ThemPhanCongBUS();
         public FPhanCong()
-        { 
+        {
             InitializeComponent();
         }
         public void CapNhat(DuAnModel da)
@@ -25,17 +26,17 @@ namespace QuanLyCongTy
         private void PhanCong_Load(object sender, EventArgs e)
         {
             HienThiDanhSach();
-            themPhanCongBUS.FillcboNV(cboNhanVien, dtpDBLam, dtpDeadline);
-            themPhanCongBUS.FillcboCV(cboCongViec);
+            themPhanCongBUS.FillcboNV(cmbNhanVien, dtpDBLam, dtpDeadline);
+            themPhanCongBUS.FillcboCV(cmbCongViec);
         }
         private void HienThiDanhSach()
         {
-            themPhanCongBUS.Fillgv(gv_CongViec, dtpDBLam, dtpDeadline);
+            themPhanCongBUS.Fillgv(gvPhongBanRanh, dtpDBLam, dtpDeadline);
         }
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
-            themPhanCongBUS.ThemPC(cboNhanVien,cboCongViec,textBox1,checkBox1,dtpDBLam,dtpDeadline);
+            themPhanCongBUS.ThemPC(cmbNhanVien, cmbCongViec, txtPhanCong, ckbKhac, dtpDBLam, dtpDeadline);
             Close();
         }
 
@@ -56,15 +57,13 @@ namespace QuanLyCongTy
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked)
+            if (ckbKhac.Checked)
             {
-                textBox1.Show();
-                panel1.Location = new Point(textBox1.Location.X, textBox1.Location.Y + textBox1.Size.Height + 1);
+                txtPhanCong.Enabled = true;
             }
             else
             {
-                textBox1.Hide();
-                panel1.Location = new Point(cboCongViec.Location.X, cboCongViec.Location.Y + cboCongViec.Size.Height + 1);
+                txtPhanCong.Enabled = false;
             }
         }
     }

@@ -28,153 +28,98 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gv_DuAn = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cbo_TienDo = new System.Windows.Forms.ComboBox();
-            this.cbo_DuAn = new System.Windows.Forms.ComboBox();
-            this.gv_PhanCong = new System.Windows.Forms.DataGridView();
-            this.btn_Xoa = new System.Windows.Forms.Button();
-            this.btn_Sua = new System.Windows.Forms.Button();
-            this.btn_XacNhan = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.gv_DuAn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gv_PhanCong)).BeginInit();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnDaHT = new Guna.UI2.WinForms.Guna2Button();
+            this.flpListPC = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnChuaHT = new Guna.UI2.WinForms.Guna2Button();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // gv_DuAn
+            // panel1
             // 
-            this.gv_DuAn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gv_DuAn.Location = new System.Drawing.Point(0, -2);
-            this.gv_DuAn.Name = "gv_DuAn";
-            this.gv_DuAn.Size = new System.Drawing.Size(368, 211);
-            this.gv_DuAn.TabIndex = 0;
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btnChuaHT);
+            this.panel1.Controls.Add(this.btnDaHT);
+            this.panel1.Location = new System.Drawing.Point(2, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(998, 63);
+            this.panel1.TabIndex = 7;
             // 
-            // label1
+            // btnDaHT
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(440, 150);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Các Dư Án Tham Gia:";
+            this.btnDaHT.AutoRoundedCorners = true;
+            this.btnDaHT.BackColor = System.Drawing.Color.Transparent;
+            this.btnDaHT.BorderRadius = 27;
+            this.btnDaHT.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnDaHT.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(140)))), ((int)(((byte)(126)))));
+            this.btnDaHT.CheckedState.ForeColor = System.Drawing.Color.White;
+            this.btnDaHT.CheckedState.Image = global::QuanLyCongTy.Properties.Resources.checked__1_;
+            this.btnDaHT.FillColor = System.Drawing.Color.White;
+            this.btnDaHT.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDaHT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(140)))), ((int)(((byte)(126)))));
+            this.btnDaHT.Image = global::QuanLyCongTy.Properties.Resources._checked;
+            this.btnDaHT.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDaHT.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnDaHT.Location = new System.Drawing.Point(71, 3);
+            this.btnDaHT.Name = "btnDaHT";
+            this.btnDaHT.Size = new System.Drawing.Size(62, 56);
+            this.btnDaHT.TabIndex = 40;
+            this.btnDaHT.UseTransparentBackground = true;
             // 
-            // label2
+            // flpListPC
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(440, 204);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Tiến Độ: ";
+            this.flpListPC.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.flpListPC.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.flpListPC.Location = new System.Drawing.Point(0, 98);
+            this.flpListPC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.flpListPC.Name = "flpListPC";
+            this.flpListPC.Size = new System.Drawing.Size(1000, 602);
+            this.flpListPC.TabIndex = 8;
             // 
-            // cbo_TienDo
+            // btnChuaHT
             // 
-            this.cbo_TienDo.FormattingEnabled = true;
-            this.cbo_TienDo.Items.AddRange(new object[] {
-            "5%",
-            "10%",
-            "15%",
-            "20%",
-            "25%",
-            "30%",
-            "35%",
-            "40%",
-            "45%",
-            "50%",
-            "55%",
-            "60%",
-            "65%",
-            "70%",
-            "75%",
-            "80%",
-            "85%",
-            "90%",
-            "95%",
-            "100%"});
-            this.cbo_TienDo.Location = new System.Drawing.Point(580, 196);
-            this.cbo_TienDo.Name = "cbo_TienDo";
-            this.cbo_TienDo.Size = new System.Drawing.Size(121, 21);
-            this.cbo_TienDo.TabIndex = 12;
+            this.btnChuaHT.AutoRoundedCorners = true;
+            this.btnChuaHT.BackColor = System.Drawing.Color.Transparent;
+            this.btnChuaHT.BorderRadius = 27;
+            this.btnChuaHT.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnChuaHT.Checked = true;
+            this.btnChuaHT.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
+            this.btnChuaHT.CheckedState.ForeColor = System.Drawing.Color.White;
+            this.btnChuaHT.CheckedState.Image = global::QuanLyCongTy.Properties.Resources.delete__2_;
+            this.btnChuaHT.FillColor = System.Drawing.Color.White;
+            this.btnChuaHT.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChuaHT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.btnChuaHT.Image = global::QuanLyCongTy.Properties.Resources.delete__1_;
+            this.btnChuaHT.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnChuaHT.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnChuaHT.Location = new System.Drawing.Point(3, 3);
+            this.btnChuaHT.Name = "btnChuaHT";
+            this.btnChuaHT.Size = new System.Drawing.Size(62, 56);
+            this.btnChuaHT.TabIndex = 41;
+            this.btnChuaHT.UseTransparentBackground = true;
             // 
-            // cbo_DuAn
+            // FKPI2
             // 
-            this.cbo_DuAn.FormattingEnabled = true;
-            this.cbo_DuAn.Location = new System.Drawing.Point(580, 142);
-            this.cbo_DuAn.Name = "cbo_DuAn";
-            this.cbo_DuAn.Size = new System.Drawing.Size(121, 21);
-            this.cbo_DuAn.TabIndex = 17;
-            // 
-            // gv_PhanCong
-            // 
-            this.gv_PhanCong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gv_PhanCong.Location = new System.Drawing.Point(0, 240);
-            this.gv_PhanCong.Name = "gv_PhanCong";
-            this.gv_PhanCong.Size = new System.Drawing.Size(368, 211);
-            this.gv_PhanCong.TabIndex = 22;
-            // 
-            // btn_Xoa
-            // 
-            this.btn_Xoa.Location = new System.Drawing.Point(443, 286);
-            this.btn_Xoa.Name = "btn_Xoa";
-            this.btn_Xoa.Size = new System.Drawing.Size(75, 23);
-            this.btn_Xoa.TabIndex = 23;
-            this.btn_Xoa.Text = "Xóa";
-            this.btn_Xoa.UseVisualStyleBackColor = true;
-            // 
-            // btn_Sua
-            // 
-            this.btn_Sua.Location = new System.Drawing.Point(548, 286);
-            this.btn_Sua.Name = "btn_Sua";
-            this.btn_Sua.Size = new System.Drawing.Size(75, 23);
-            this.btn_Sua.TabIndex = 24;
-            this.btn_Sua.Text = "Sửa";
-            this.btn_Sua.UseVisualStyleBackColor = true;
-            // 
-            // btn_XacNhan
-            // 
-            this.btn_XacNhan.Location = new System.Drawing.Point(654, 286);
-            this.btn_XacNhan.Name = "btn_XacNhan";
-            this.btn_XacNhan.Size = new System.Drawing.Size(75, 23);
-            this.btn_XacNhan.TabIndex = 25;
-            this.btn_XacNhan.Text = "Xác Nhận";
-            this.btn_XacNhan.UseVisualStyleBackColor = true;
-            // 
-            // FKPI
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btn_XacNhan);
-            this.Controls.Add(this.btn_Sua);
-            this.Controls.Add(this.btn_Xoa);
-            this.Controls.Add(this.gv_PhanCong);
-            this.Controls.Add(this.cbo_DuAn);
-            this.Controls.Add(this.cbo_TienDo);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.gv_DuAn);
+            this.ClientSize = new System.Drawing.Size(1000, 700);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.flpListPC);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FKPI";
-            this.Text = "FKPI";
-            this.Load += new System.EventHandler(this.FKPI_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.gv_DuAn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gv_PhanCong)).EndInit();
+            this.Name = "FKPI2";
+            this.Text = "FKPI2";
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView gv_DuAn;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cbo_TienDo;
-        private System.Windows.Forms.ComboBox cbo_DuAn;
-        private System.Windows.Forms.DataGridView gv_PhanCong;
-        private System.Windows.Forms.Button btn_Xoa;
-        private System.Windows.Forms.Button btn_Sua;
-        private System.Windows.Forms.Button btn_XacNhan;
+        private System.Windows.Forms.Panel panel1;
+        private Guna.UI2.WinForms.Guna2Button btnDaHT;
+        private System.Windows.Forms.FlowLayoutPanel flpListPC;
+        private Guna.UI2.WinForms.Guna2Button btnChuaHT;
     }
 }

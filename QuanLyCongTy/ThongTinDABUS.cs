@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,18 +14,15 @@ namespace QuanLyCongTy
         DuAnDAO duAnDAO = new DuAnDAO();
         PhanCongDAO phanCongDAO = new PhanCongDAO();
 
-        public void FillControl(TextBox txtTenDa, Label lblDiaDiem, Label lblNgayBD, Label lblThoiHan, TextBox txtMoTa, FlowLayoutPanel flp)
+        public void FillControl(Label lblTen, Label lblDiaDiem, Label lblNgayBD, Label lblThoiHan, Label lblMoTa, FlowLayoutPanel flp)
         {
             DuAnModel da = duAnDAO.getDuAnTheoMa(maDA);
 
-            txtTenDa.Text = da.TenDuAn;
+            lblTen.Text = da.TenDuAn;
             lblDiaDiem.Text = da.DiaDiem;
             lblNgayBD.Text = da.NgayBD.ToShortDateString();
             lblThoiHan.Text = da.DeadLine.ToShortDateString();
-            txtMoTa.Text = da.MoTa;
-            txtTenDa.Enabled = false;
-            txtMoTa.Enabled = false;
-            txtMoTa.ForeColor = System.Drawing.Color.Black;
+            lblMoTa.Text = da.MoTa;
 
             List<PhanCongModel> listPCChuaHTTheoDA = phanCongDAO.ListPCChuaHTTheoDA(maDA);
             foreach (PhanCongModel pc in listPCChuaHTTheoDA)

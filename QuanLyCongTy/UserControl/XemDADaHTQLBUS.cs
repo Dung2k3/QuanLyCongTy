@@ -14,12 +14,13 @@ namespace QuanLyCongTy
         public FDuAn.FReload HamRL;
         DuAnDAO duAnDAO = new DuAnDAO();
         PhongBanDAO PhongBanDAO = new PhongBanDAO();
-        public void FillControls(Label lbl_tenDA, Label lbl_TenPhong, Guna2ProgressBar prgTienDo, Guna2RatingStar ratingStar)
+        public void FillControls(Label lbl_tenDA, Label lbl_TenPhong, Guna2ProgressBar prgTienDo, Label lblTienDo, Guna2RatingStar ratingStar)
         {
             PhongBanModel pb = PhongBanDAO.GetPhongBanTheoMaPB(da.MaPB);
             lbl_tenDA.Text = da.TenDuAn;
             lbl_TenPhong.Text = pb.TenPB;
             prgTienDo.Value = 100;
+            lblTienDo.Text = "100%";
             ratingStar.Value = (int)(da.ChamDiem / 20);
         }
         void OpenForm(Form fnew, UCSailorStar uc)

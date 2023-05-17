@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,30 +12,25 @@ namespace QuanLyCongTy
     {
         DuAnDAO duAnDAO = new DuAnDAO();
         public DuAnModel da;
+        string[] ListXepLoai = { "", "Tệ", "Tệ", "Chưa tốt", "Chưa tốt", 
+            "Tốt", "Tốt", "Rất tốt","Rất tốt", "Xuất sắc", "Xuất sắc" };
 
-        public string LayChamDiem(int Diem)
-        {
-            if (Diem == 0) return "";
-            if (Diem == 20) return "Tệ";
-            if (Diem == 40) return "Chưa tốt";
-            if (Diem == 60) return "Tốt";
-            if (Diem == 80) return "Rất tốt";
-            if (Diem == 100) return "Xuất sắc";
-            else return "";
-        }
-
-        public void FillControl(Label lbl_TenDA,TextBox txt_NhanXet,Label lbl_ChamDiem,ref int Diem)
+        public void FillControl(Label lbl_TenDA, Guna2TextBox txt_NhanXet, Label lblXepLoai, Guna2RatingStar ratingStar)
         {
             lbl_TenDA.Text = da.TenDuAn;
             txt_NhanXet.Text = da.DanhGia;
-            Diem = da.ChamDiem;
-            lbl_ChamDiem.Text = LayChamDiem(Diem);
+            ratingStar.Value = da.ChamDiem / 20;
+            XepLoai(lblXepLoai,ratingStar);
         }
-        public void LuuNhanXet(TextBox txt_NhanXet, int Diem)
+        public void LuuNhanXet(Guna2TextBox txt_NhanXet, Guna2RatingStar ratingStar)
         {
             da.DanhGia = txt_NhanXet.Text;
-            da.ChamDiem = Diem;
+            da.ChamDiem = (int)ratingStar.Value * 20;
             duAnDAO.Sua(da);
+        }
+        public void XepLoai(Label lblXepLoai, Guna2RatingStar ratingStar)
+        {
+            lblXepLoai.Text = ListXepLoai[(int)ratingStar.Value * 2];
         }
     }
 }

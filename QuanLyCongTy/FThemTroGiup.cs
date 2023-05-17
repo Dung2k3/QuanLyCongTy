@@ -2,16 +2,17 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlTypes;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 namespace QuanLyCongTy
 {
     public partial class FThemTroGiup : Form
     {
+
         ThemHoTroBUS themTroGiupBUS = new ThemHoTroBUS();
         public FThemTroGiup()
         {
@@ -24,7 +25,7 @@ namespace QuanLyCongTy
         }
         private void HienThiDanhSach()
         {
-            themTroGiupBUS.Fillgv(gv_CongViec);
+            themTroGiupBUS.Fillgv(gvPhongBanRanh);
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
@@ -39,8 +40,8 @@ namespace QuanLyCongTy
 
         private void gv_CongViec_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            themTroGiupBUS.AddListBox(gv_CongViec, listBox1);
-            
+            themTroGiupBUS.AddListBox(gvPhongBanRanh, listBox1);
+
         }
         private void btnThemTroGiup_Click(object sender, EventArgs e)
         {

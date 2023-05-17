@@ -28,24 +28,30 @@ namespace QuanLyCongTy
             lbl_tenDA.Text = td.TenDuAn;
             lbl_TenPhong.Text = td.TenPB;
             lbl_NgayCL.Text = "Thời hạn: Còn " + td.NgayKT.Subtract(td.NgayBD).Days.ToString() + " ngày.";
-
-            ucTienDo.Change(ttdaDAO.LayTienDo(MaDA));
+            prgTienDo.Value = ttdaDAO.LayTienDo(MaDA);
+            lblTienDo.Text = ttdaDAO.LayTienDo(MaDA).ToString() + "%";
         }
         public void addReLoat(FDuAn.FReload HamRL)
         {
             this.HamRL = HamRL;
         }
 
-        private void UCXemDAChuaHT_Click(object sender, EventArgs e)
+        private void ptbBG_Click(object sender, EventArgs e)
         {
-            Control ctr = Parent.Parent.Parent.Parent;
+            /*Control ctr = Parent.Parent.Parent.Parent;
             if (ctr is UC)
             {
                 UC uc = (UC)ctr;
-                FThongTinDA fThongTinDA = new FThongTinDA(MaDA);
-                uc.AddChildForm(fThongTinDA);
-                uc.OpenChildForm(fThongTinDA);
-            }
+                FThongTinDA2 fThongTinDA2 = new FThongTinDA2(MaDA);
+                uc.AddChildForm(fThongTinDA2);
+                uc.OpenChildForm(fThongTinDA2);
+            }*/
+
+            Form form = new FThongTinDA(MaDA);
+            Enabled = false;
+            form.ShowDialog();
+            Enabled = true;
+            HamRL();
         }
     }
 }
