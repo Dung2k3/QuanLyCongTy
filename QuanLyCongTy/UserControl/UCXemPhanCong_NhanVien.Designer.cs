@@ -44,20 +44,20 @@
             this.lblTienDo.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.lblTienDo.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTienDo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.lblTienDo.Location = new System.Drawing.Point(436, 85);
+            this.lblTienDo.Location = new System.Drawing.Point(388, 68);
             this.lblTienDo.Name = "lblTienDo";
-            this.lblTienDo.Size = new System.Drawing.Size(74, 29);
+            this.lblTienDo.Size = new System.Drawing.Size(61, 24);
             this.lblTienDo.TabIndex = 49;
             this.lblTienDo.Text = "label1";
             // 
             // prgTienDo
             // 
-            this.prgTienDo.Location = new System.Drawing.Point(39, 130);
+            this.prgTienDo.Location = new System.Drawing.Point(35, 104);
             this.prgTienDo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.prgTienDo.Name = "prgTienDo";
             this.prgTienDo.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.prgTienDo.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.prgTienDo.Size = new System.Drawing.Size(488, 10);
+            this.prgTienDo.Size = new System.Drawing.Size(434, 8);
             this.prgTienDo.TabIndex = 48;
             this.prgTienDo.Text = "guna2ProgressBar1";
             this.prgTienDo.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
@@ -68,9 +68,9 @@
             this.lblNgayCl.BackColor = System.Drawing.Color.White;
             this.lblNgayCl.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNgayCl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblNgayCl.Location = new System.Drawing.Point(35, 158);
+            this.lblNgayCl.Location = new System.Drawing.Point(31, 126);
             this.lblNgayCl.Name = "lblNgayCl";
-            this.lblNgayCl.Size = new System.Drawing.Size(111, 24);
+            this.lblNgayCl.Size = new System.Drawing.Size(94, 21);
             this.lblNgayCl.TabIndex = 47;
             this.lblNgayCl.Text = "Ngày còn lại";
             // 
@@ -79,9 +79,9 @@
             this.lblNgayBD.AutoSize = true;
             this.lblNgayBD.BackColor = System.Drawing.Color.White;
             this.lblNgayBD.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNgayBD.Location = new System.Drawing.Point(34, 72);
+            this.lblNgayBD.Location = new System.Drawing.Point(30, 58);
             this.lblNgayBD.Name = "lblNgayBD";
-            this.lblNgayBD.Size = new System.Drawing.Size(144, 29);
+            this.lblNgayBD.Size = new System.Drawing.Size(121, 24);
             this.lblNgayBD.TabIndex = 46;
             this.lblNgayBD.Text = "Ngày bắt đầu";
             // 
@@ -91,9 +91,9 @@
             this.lblTenCV.BackColor = System.Drawing.Color.White;
             this.lblTenCV.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenCV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.lblTenCV.Location = new System.Drawing.Point(34, 27);
+            this.lblTenCV.Location = new System.Drawing.Point(30, 22);
             this.lblTenCV.Name = "lblTenCV";
-            this.lblTenCV.Size = new System.Drawing.Size(144, 29);
+            this.lblTenCV.Size = new System.Drawing.Size(120, 24);
             this.lblTenCV.TabIndex = 45;
             this.lblTenCV.Text = "Tên công việc";
             // 
@@ -103,15 +103,17 @@
             this.guna2PictureBox1.Image = global::QuanLyCongTy.Properties.Resources.Vien2;
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(557, 206);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(495, 165);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 44;
             this.guna2PictureBox1.TabStop = false;
+            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
             // 
             // UCXemPhanCong_NhanVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.lblTienDo);
             this.Controls.Add(this.prgTienDo);
@@ -119,8 +121,10 @@
             this.Controls.Add(this.lblNgayBD);
             this.Controls.Add(this.lblTenCV);
             this.Controls.Add(this.guna2PictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UCXemPhanCong_NhanVien";
-            this.Size = new System.Drawing.Size(557, 206);
+            this.Size = new System.Drawing.Size(495, 165);
+            this.Load += new System.EventHandler(this.UCXemPhanCong_NhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

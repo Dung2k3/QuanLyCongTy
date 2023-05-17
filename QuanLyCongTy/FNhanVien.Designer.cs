@@ -124,7 +124,7 @@
             this.btnXinNghi.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnXinNghi.ImageOffset = new System.Drawing.Point(10, 0);
             this.btnXinNghi.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnXinNghi.Location = new System.Drawing.Point(74, 443);
+            this.btnXinNghi.Location = new System.Drawing.Point(76, 443);
             this.btnXinNghi.Name = "btnXinNghi";
             this.btnXinNghi.Size = new System.Drawing.Size(247, 54);
             this.btnXinNghi.TabIndex = 43;
@@ -148,7 +148,7 @@
             this.btnPhanCong.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnPhanCong.ImageOffset = new System.Drawing.Point(10, 0);
             this.btnPhanCong.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnPhanCong.Location = new System.Drawing.Point(73, 347);
+            this.btnPhanCong.Location = new System.Drawing.Point(76, 347);
             this.btnPhanCong.Name = "btnPhanCong";
             this.btnPhanCong.Size = new System.Drawing.Size(247, 54);
             this.btnPhanCong.TabIndex = 41;
@@ -172,7 +172,7 @@
             this.btnCheckinout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCheckinout.ImageOffset = new System.Drawing.Point(10, 0);
             this.btnCheckinout.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnCheckinout.Location = new System.Drawing.Point(74, 247);
+            this.btnCheckinout.Location = new System.Drawing.Point(76, 247);
             this.btnCheckinout.Name = "btnCheckinout";
             this.btnCheckinout.Size = new System.Drawing.Size(247, 54);
             this.btnCheckinout.TabIndex = 40;
@@ -324,7 +324,7 @@
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
-            // FNhanVien2
+            // FNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -336,7 +336,7 @@
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.guna2Panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FNhanVien2";
+            this.Name = "FNhanVien";
             this.Text = "FNhanVien2";
             this.Load += new System.EventHandler(this.FNhanVien2_Load);
             this.pnlMenu.ResumeLayout(false);

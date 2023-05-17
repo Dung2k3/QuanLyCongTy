@@ -55,6 +55,7 @@
             this.guna2HScrollBar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(140)))), ((int)(((byte)(126)))));
             this.guna2HScrollBar1.ThumbSize = 5F;
             this.guna2HScrollBar1.ThumbStyle = Guna.UI2.WinForms.Enums.ThumbStyle.Inset;
+            this.guna2HScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.guna2HScrollBar1_Scroll);
             // 
             // label1
             // 
@@ -126,6 +127,7 @@
             this.btnDong.Size = new System.Drawing.Size(131, 45);
             this.btnDong.TabIndex = 16;
             this.btnDong.Text = "Đóng";
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // btnCapNhat
             // 
@@ -142,6 +144,7 @@
             this.btnCapNhat.Size = new System.Drawing.Size(131, 45);
             this.btnCapNhat.TabIndex = 17;
             this.btnCapNhat.Text = "Cập nhật";
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
             // label5
             // 
@@ -177,6 +180,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FCapNhatTienDo";
             this.Text = "FCapNhatTienDo";
+            this.Load += new System.EventHandler(this.FCapNhatTienDo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

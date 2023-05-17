@@ -188,7 +188,6 @@ D:\hc\CTDH\WinForm\Project\ProjectQLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.cspro
 D:\hc\CTDH\WinForm\Project\ProjectQLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.FCapNhatTienDo.resources
 D:\hc\CTDH\WinForm\Project\ProjectQLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.FCheckinout.resources
 D:\hc\CTDH\WinForm\Project\ProjectQLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.FChiaThuong.resources
-D:\hc\CTDH\WinForm\Project\ProjectQLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.FChinhPhanCong.resources
 D:\hc\CTDH\WinForm\Project\ProjectQLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.FDangNhap.resources
 D:\hc\CTDH\WinForm\Project\ProjectQLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.FDuAn.resources
 D:\hc\CTDH\WinForm\Project\ProjectQLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.FHoanThanhDuAn.resources

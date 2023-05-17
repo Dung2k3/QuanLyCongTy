@@ -57,6 +57,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CapNhatTienDoBUS.cs" />
     <Compile Include="FXoaPC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +172,7 @@
     <Compile Include="FXemDuAn.Designer.cs">
       <DependentUpon>FXemDuAn.cs</DependentUpon>
     </Compile>
+    <Compile Include="KPIBUS.cs" />
     <Compile Include="Model\CongViecModel.cs" />
     <Compile Include="DataAccessObj\CheckinDao.cs" />
     <Compile Include="DataAccessObj\CheckoutDao.cs" />
@@ -195,12 +197,6 @@
     <Compile Include="DataAccessObj\PhongBanDAO.cs" />
     <Compile Include="DataProvider.cs" />
     <Compile Include="Object\DangNhap.cs" />
-    <Compile Include="FChinhPhanCong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FChinhPhanCong.Designer.cs">
-      <DependentUpon>FChinhPhanCong.cs</DependentUpon>
-    </Compile>
     <Compile Include="FThongBao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -348,6 +344,7 @@
     <Compile Include="UserControl\XemDAChuaHTQLBUS.cs" />
     <Compile Include="UserControl\XemDADaHTQLBUS.cs" />
     <Compile Include="UserControl\XemPCChuaHTTPBUS.cs" />
+    <Compile Include="UserControl\XemPCNVBUS.cs" />
     <Compile Include="XemDuAnQLBUS.cs" />
     <EmbeddedResource Include="FCapNhatTienDo.resx">
       <DependentUpon>FCapNhatTienDo.cs</DependentUpon>
@@ -357,9 +354,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FChiaThuong.resx">
       <DependentUpon>FChiaThuong.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FChinhPhanCong.resx">
-      <DependentUpon>FChinhPhanCong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FDangNhap.resx">
       <DependentUpon>FDangNhap.cs</DependentUpon>

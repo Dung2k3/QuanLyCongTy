@@ -12,9 +12,29 @@ namespace QuanLyCongTy
 {
     public partial class FKPI : Form
     {
+        KPIBUS kPIBUS = new KPIBUS();
         public FKPI()
         {
             InitializeComponent();
+
+        }
+        public void CapNhat(NhanVienModel nv)
+        {
+            kPIBUS.nv = nv;
+            kPIBUS.AddFlp(flpListPC);
+        }
+        private void btnDaHT_CheckedChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void btnChuaHT_CheckedChanged(object sender, EventArgs e)
+        {
+            kPIBUS.Fillflp();
+        }
+
+        private void FKPI_Load(object sender, EventArgs e)
+        {
+            kPIBUS.Fillflp();
         }
     }
 }

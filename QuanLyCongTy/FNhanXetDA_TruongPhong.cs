@@ -14,7 +14,6 @@ namespace QuanLyCongTy
     {
         NhanXetDADAO nxdaDAO = new NhanXetDADAO();
         string MaDA;
-        float Diem;
         public FNhanXetDA_TruongPhong(string MaDA)
         {
             InitializeComponent();

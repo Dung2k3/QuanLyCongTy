@@ -13,8 +13,6 @@ namespace QuanLyCongTy
 {
     public partial class FXinNghi : Form
     {
-
-        public delegate void Load();
         public FXinNghi()
         {
             InitializeComponent();
