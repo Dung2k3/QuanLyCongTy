@@ -14,7 +14,7 @@ namespace QuanLyCongTy
     {
         TienDoDADAO ttdaDAO = new TienDoDADAO();
         string MaDA;
-        FDuAn.FReload HamRL;
+        Reload.Flp HamRL;
         public UCXemDAChuaHT(string MaDA)
         {
             InitializeComponent();
@@ -31,22 +31,13 @@ namespace QuanLyCongTy
             prgTienDo.Value = ttdaDAO.LayTienDo(MaDA);
             lblTienDo.Text = ttdaDAO.LayTienDo(MaDA).ToString() + "%";
         }
-        public void addReLoat(FDuAn.FReload HamRL)
+        public void addReLoat(Reload.Flp HamRL)
         {
             this.HamRL = HamRL;
         }
 
         private void ptbBG_Click(object sender, EventArgs e)
         {
-            /*Control ctr = Parent.Parent.Parent.Parent;
-            if (ctr is UC)
-            {
-                UC uc = (UC)ctr;
-                FThongTinDA2 fThongTinDA2 = new FThongTinDA2(MaDA);
-                uc.AddChildForm(fThongTinDA2);
-                uc.OpenChildForm(fThongTinDA2);
-            }*/
-
             Form form = new FThongTinDA(MaDA);
             Enabled = false;
             form.ShowDialog();

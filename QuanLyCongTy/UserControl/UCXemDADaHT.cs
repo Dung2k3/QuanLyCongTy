@@ -14,14 +14,14 @@ namespace QuanLyCongTy
     {
         TienDoDADAO ttdaDAO = new TienDoDADAO();
         DuAnDAO daDAO = new DuAnDAO();
-        FDuAn.FReload HamRL;
+        Reload.Flp HamRL;
         string MaDA;
         public UCXemDADaHT(String MaDA)
         {
             InitializeComponent();
             this.MaDA = MaDA;
         }
-        public void addReLoat(FDuAn.FReload HamRL)
+        public void addReLoat(Reload.Flp HamRL)
         {
             this.HamRL = HamRL;
         }

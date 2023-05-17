@@ -11,6 +11,7 @@ namespace QuanLyCongTy
     internal class ThemHoTroBUS
     {
         public PhanCongModel pc;
+        public Reload.Flp reLoadF;
         NhanVienDAO nhanVienDAO = new NhanVienDAO();
         PhongBanDAO phongBanDAO = new PhongBanDAO();
         DuAnDAO duAnDAO = new DuAnDAO();
@@ -45,7 +46,7 @@ namespace QuanLyCongTy
                     }
                 }
             MessageBox.Show("Them Thanh Cong");
-
+            reLoadF();
         }
     }
 }

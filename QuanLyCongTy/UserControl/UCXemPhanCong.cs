@@ -10,16 +10,17 @@ using System.Windows.Forms;
 
 namespace QuanLyCongTy
 {
-    public partial class UCXemPhanCong : UserControl
+    partial class UCXemPhanCong : UserControl
     {
         XemPCChuaHTTPBUS xemPCChuaHTTPBUS = new XemPCChuaHTTPBUS();
         public UCXemPhanCong()
         {
             InitializeComponent();
         }
-        public void CapNhat(PhanCongModel pc)
+        public void CapNhat(PhanCongModel pc, Reload.Flp reLoadF)
         {
             xemPCChuaHTTPBUS.pc = pc;
+            xemPCChuaHTTPBUS.reLoadF = reLoadF;
         }
 
         private void UCXemPhanCong_Load(object sender, EventArgs e)

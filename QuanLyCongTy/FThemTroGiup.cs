@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static QuanLyCongTy.FXemDuAn;
 
 namespace QuanLyCongTy
 {
@@ -18,9 +19,10 @@ namespace QuanLyCongTy
         {
             InitializeComponent();
         }
-        public void CapNhat(PhanCongModel pc)
+        public void CapNhat(PhanCongModel pc,Reload.Flp reLoadF)
         {
             themTroGiupBUS.pc = pc;
+            themTroGiupBUS.reLoadF = reLoadF;
 
         }
         private void HienThiDanhSach()

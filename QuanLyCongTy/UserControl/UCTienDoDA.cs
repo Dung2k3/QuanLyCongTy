@@ -17,17 +17,14 @@ namespace QuanLyCongTy
         {
             InitializeComponent();
         }
-        public void CapNhat(DuAnModel da)
+        public void CapNhat(DuAnModel da, Reload.Flp HamRL)
         {
             xemDAChuaHTQLBUS.da = da;
+            xemDAChuaHTQLBUS.HamRL = HamRL;
         }
         private void UCTienDoDA_Load(object sender, EventArgs e)
         {
             xemDAChuaHTQLBUS.FillControls(lblTenDA, lblTenPhong, lblNgayConLai, prgTienDo);
-        }
-        public void addReLoat(FDuAn.FReload HamRL)
-        {
-            xemDAChuaHTQLBUS.HamRL = HamRL;
         }
 
         private void btnXoa_Click(object sender, EventArgs e)

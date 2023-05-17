@@ -13,14 +13,13 @@ namespace QuanLyCongTy
     public partial class FDuAn : Form
     {
         XemDuAnQLBUS xemDuAnQLBUS = new XemDuAnQLBUS();
-        public delegate void FReload();
         public FDuAn()
         {
             InitializeComponent();
-            xemDuAnQLBUS.AddFlp(flp_ListDA);
         }
         private void FDuAn_Load(object sender, EventArgs e)
         {
+            xemDuAnQLBUS.AddFlp(flp_ListDA);
             xemDuAnQLBUS.FillDuAnChuaHT();
         }
 

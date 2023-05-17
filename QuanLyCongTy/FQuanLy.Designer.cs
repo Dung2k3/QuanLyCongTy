@@ -183,7 +183,7 @@
             this.btnCaNhan.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             this.btnCaNhan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCaNhan.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btnCaNhan.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCaNhan.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.btnCaNhan.ForeColor = System.Drawing.Color.White;
             this.btnCaNhan.Image = ((System.Drawing.Image)(resources.GetObject("btnCaNhan.Image")));
             this.btnCaNhan.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -202,7 +202,7 @@
             this.imgSlide.Image = ((System.Drawing.Image)(resources.GetObject("imgSlide.Image")));
             this.imgSlide.Location = new System.Drawing.Point(297, 105);
             this.imgSlide.Name = "imgSlide";
-            this.imgSlide.Size = new System.Drawing.Size(42, 101);
+            this.imgSlide.Size = new System.Drawing.Size(39, 101);
             this.imgSlide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.imgSlide.TabIndex = 34;
             this.imgSlide.TabStop = false;
@@ -323,7 +323,7 @@
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
-            // FQuanLy2
+            // FQuanLy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -335,7 +335,7 @@
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.guna2Panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FQuanLy2";
+            this.Name = "FQuanLy";
             this.Text = "FQuanLy2";
             this.Load += new System.EventHandler(this.FQuanLy2_Load);
             this.pnlMenu.ResumeLayout(false);

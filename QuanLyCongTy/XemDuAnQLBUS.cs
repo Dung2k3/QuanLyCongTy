@@ -23,9 +23,8 @@ namespace QuanLyCongTy
             foreach(DuAnModel da in listDA)
             {
                 UCTienDoDA uc = new UCTienDoDA();
-                uc.CapNhat(da);
+                uc.CapNhat(da, FillDuAnChuaHT);
                 flpListDA.Controls.Add(uc);
-                uc.addReLoat(FillDuAnChuaHT);
             }
         }
         public void FillDuAnDaHT()
@@ -35,9 +34,8 @@ namespace QuanLyCongTy
             foreach (DuAnModel da in listDA)
             {
                 UCSailorStar uc = new UCSailorStar();
-                uc.CapNhat(da);
+                uc.CapNhat(da, FillDuAnChuaHT);
                 flpListDA.Controls.Add(uc);
-                uc.addReLoat(FillDuAnDaHT);
             }
         }
         public void OpenFThemDA(Form fthis)

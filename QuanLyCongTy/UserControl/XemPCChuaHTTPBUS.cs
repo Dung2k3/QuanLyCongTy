@@ -12,6 +12,7 @@ namespace QuanLyCongTy
     internal class XemPCChuaHTTPBUS
     {
         public PhanCongModel pc;
+        public Reload.Flp reLoadF;
         CongViecDAO congViecDAO = new CongViecDAO();
         PhanCongDAO phanCongDAO = new PhanCongDAO();
         NhanVienDAO nhanVienDAO = new NhanVienDAO();
@@ -29,14 +30,14 @@ namespace QuanLyCongTy
         public void OpenFPCXoa()
         {
             FXoaPC fXoaPC = new FXoaPC();
-            fXoaPC.CapNhat(pc);
+            fXoaPC.CapNhat(pc, reLoadF);
             fXoaPC.ShowDialog();
         }
 
         public void OpenFThemPC()
         {
             FThemTroGiup fThemTroGiup = new FThemTroGiup();
-            fThemTroGiup.CapNhat(pc);
+            fThemTroGiup.CapNhat(pc, reLoadF);
             fThemTroGiup.ShowDialog();
         }
     }

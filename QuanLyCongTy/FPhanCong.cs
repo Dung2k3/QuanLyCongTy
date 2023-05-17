@@ -18,9 +18,10 @@ namespace QuanLyCongTy
         {
             InitializeComponent();
         }
-        public void CapNhat(DuAnModel da)
+        public void CapNhat(DuAnModel da,Reload.Flp reLoadF)
         {
             themPhanCongBUS.da = da;
+            themPhanCongBUS.reLoadF = reLoadF;
         }
 
         private void PhanCong_Load(object sender, EventArgs e)
@@ -36,7 +37,7 @@ namespace QuanLyCongTy
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
-            themPhanCongBUS.ThemPC(cmbNhanVien, cmbCongViec, txtPhanCong, ckbKhac, dtpDBLam, dtpDeadline);
+            themPhanCongBUS.ThemPC(cmbNhanVien, cmbCongViec, txtPhanCong,txtMoTa, ckbKhac, dtpDBLam, dtpDeadline);
             Close();
         }
 

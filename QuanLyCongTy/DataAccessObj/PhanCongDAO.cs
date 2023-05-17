@@ -169,13 +169,13 @@ namespace QuanLyCongTy
             object[] para = new object[] { MaCV, MaDA };
             DataTable dt = dataProvider.ExecuteQuery(query, para);
             DataRow dr = dt.Rows[0];
-            return new PhanCongModel(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(),DateTime.Parse(dr[3].ToString()), DateTime.Parse(dr[4].ToString()),
-                    int.Parse(dr[5].ToString()), dr[6].ToString(), int.Parse(dr[7].ToString()));
+            return new PhanCongModel(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), DateTime.Parse(dr[4].ToString()), DateTime.Parse(dr[5].ToString()),
+                    int.Parse(dr[6].ToString()), dr[7].ToString(), int.Parse(dr[8].ToString()), int.Parse(dr[9].ToString()));
         }
         public bool Them(PhanCongModel pc)
         {
-            string query = "INSERT INTO PhanCong VALUES ( @MaDA , @MaCV , @MaNV , @NgayBD , @DealLine , @TienDo , @DanhGia , @ChamDiem )";
-            object[] para = new object[] { pc.MaDA, pc.MaCV, pc.MaNV, pc.NgayBD, pc.DeadLine, pc.TienDo, pc.Danhgia, pc.ChamDiem};
+            string query = "INSERT INTO PhanCong VALUES ( @MaDA , @MaCV , @MaNV , @MoTa , @NgayBD , @DealLine , @TienDo , @DanhGia , @ChamDiem , @TienThuong )";
+            object[] para = new object[] { pc.MaDA, pc.MaCV, pc.MaNV, pc.MoTa, pc.NgayBD, pc.DeadLine, pc.TienDo, pc.Danhgia, pc.ChamDiem, pc.Thuong};
             return dataProvider.ExecuteNonQuery(query, para) > 0;
         }
 
@@ -194,8 +194,8 @@ namespace QuanLyCongTy
             DataTable dt = dataProvider.ExecuteQuery(query, para);
             foreach(DataRow dr in dt.Rows)
             {
-                list.Add(new PhanCongModel(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), DateTime.Parse(dr[3].ToString()), DateTime.Parse(dr[4].ToString()),
-                    int.Parse(dr[5].ToString()), dr[6].ToString(), int.Parse(dr[7].ToString())));
+                list.Add(new PhanCongModel(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), DateTime.Parse(dr[4].ToString()), DateTime.Parse(dr[5].ToString()),
+                    int.Parse(dr[6].ToString()), dr[7].ToString(), int.Parse(dr[8].ToString()), int.Parse(dr[9].ToString())));
             }
             return list;
         }

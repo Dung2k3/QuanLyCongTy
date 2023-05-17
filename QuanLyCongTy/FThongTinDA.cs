@@ -13,7 +13,7 @@ namespace QuanLyCongTy
     public partial class FThongTinDA : Form
     {
         ThongTinDABUS thongTinDABUS = new ThongTinDABUS();
-
+     
         public FThongTinDA(string maDA)
         {
             InitializeComponent();

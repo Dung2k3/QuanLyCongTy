@@ -11,7 +11,7 @@ namespace QuanLyCongTy
     internal class XemDADaHTQLBUS
     {
         public DuAnModel da;
-        public FDuAn.FReload HamRL;
+        public Reload.Flp HamRL;
         DuAnDAO duAnDAO = new DuAnDAO();
         PhongBanDAO PhongBanDAO = new PhongBanDAO();
         public void FillControls(Label lbl_tenDA, Label lbl_TenPhong, Guna2ProgressBar prgTienDo, Label lblTienDo, Guna2RatingStar ratingStar)

@@ -184,6 +184,7 @@
     <Compile Include="NhanXetDABUS.cs" />
     <Compile Include="Model\PhanCongModel.cs" />
     <Compile Include="Model\HoTroModel.cs" />
+    <Compile Include="Reload.cs" />
     <Compile Include="SuaDABUS.cs" />
     <Compile Include="SuaPhanCongBUS.cs" />
     <Compile Include="ThemDABUS.cs" />
