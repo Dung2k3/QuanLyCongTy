@@ -1,5 +1,6 @@
 ﻿using System;
 using System.CodeDom.Compiler;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -134,15 +135,7 @@ namespace QuanLyCongTy
             return MaCV;
 
         }
-        public void Sua(PhanCong pc)
-        {
-            //string MaCV = GetMaCV(pc.CongViec);
-            string sqlStr = string.Format("UPDATE PhanCong SET  MaNV = '{2}', NgayBD = '{3}', DeadLine = '{4}' " +
-                                          "WHERE MaDA = '{0}' AND MaCV = '{1}'",
-                                            pc.MaDA, pc.CongViec, GetMaNV(pc.HoTenNV), pc.NgayBatDau.ToShortDateString(), pc.Deadline.ToShortDateString());
-            
-            dbConn.ThucThi(sqlStr);
-        }
+
         public void ThemTroGiup(HoTro ht)
         {
             string sqlStr = string.Format("INSERT INTO HoTro VALUES('{0}', '{1}', '{2}')",ht.MaDA,ht.MaCV,ht.MaNV);
@@ -161,6 +154,8 @@ namespace QuanLyCongTy
             
         }
 
+
+
         DataProvider dataProvider = new DataProvider();
         public PhanCongDAO(){}
         public PhanCongModel GetPhanCongTheoMa(string MaCV, string MaDA)
@@ -169,16 +164,22 @@ namespace QuanLyCongTy
             object[] para = new object[] { MaCV, MaDA };
             DataTable dt = dataProvider.ExecuteQuery(query, para);
             DataRow dr = dt.Rows[0];
-            return new PhanCongModel(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(),DateTime.Parse(dr[3].ToString()), DateTime.Parse(dr[4].ToString()),
-                    int.Parse(dr[5].ToString()), dr[6].ToString(), int.Parse(dr[7].ToString()));
+            return new PhanCongModel(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), DateTime.Parse(dr[4].ToString()), DateTime.Parse(dr[5].ToString()),
+                    int.Parse(dr[6].ToString()), dr[7].ToString(), int.Parse(dr[8].ToString()), int.Parse(dr[9].ToString()));
         }
         public bool Them(PhanCongModel pc)
         {
-            string query = "INSERT INTO PhanCong VALUES ( @MaDA , @MaCV , @MaNV , @NgayBD , @DealLine , @TienDo , @DanhGia , @ChamDiem )";
-            object[] para = new object[] { pc.MaDA, pc.MaCV, pc.MaNV, pc.NgayBD, pc.DeadLine, pc.TienDo, pc.Danhgia, pc.ChamDiem};
+            string query = "INSERT INTO PhanCong VALUES ( @MaDA , @MaCV , @MaNV , @MoTa , @NgayBD , @DealLine , @TienDo , @DanhGia , @ChamDiem , @TienThuong )";
+            object[] para = new object[] { pc.MaDA, pc.MaCV, pc.MaNV, pc.MoTa, pc.NgayBD, pc.DeadLine, pc.TienDo, pc.Danhgia, pc.ChamDiem, pc.Thuong};
             return dataProvider.ExecuteNonQuery(query, para) > 0;
         }
-
+        public bool Sua(PhanCongModel pc)
+        {
+            string query = "UPDATE PhanCong SET TienThuong = @Thuong " +
+                                          "WHERE MaDA = @MaDA AND MaCV = @MaCV ";
+            object[] para = new object[] { pc.Thuong, pc.MaDA, pc.MaCV };
+            return dataProvider.ExecuteNonQuery(query, para) > 0;
+        }
         public bool Xoa(PhanCongModel pc)
         {
             string query = "DELETE FROM PhanCong WHERE MaCV = @MaCV AND MaDA = @MaDA ";
@@ -194,10 +195,37 @@ namespace QuanLyCongTy
             DataTable dt = dataProvider.ExecuteQuery(query, para);
             foreach(DataRow dr in dt.Rows)
             {
-                list.Add(new PhanCongModel(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), DateTime.Parse(dr[3].ToString()), DateTime.Parse(dr[4].ToString()),
-                    int.Parse(dr[5].ToString()), dr[6].ToString(), int.Parse(dr[7].ToString())));
+                list.Add(new PhanCongModel(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), DateTime.Parse(dr[4].ToString()), DateTime.Parse(dr[5].ToString()),
+                    int.Parse(dr[6].ToString()), dr[7].ToString(), int.Parse(dr[8].ToString()), int.Parse(dr[9].ToString())));
             }
             return list;
+        }
+
+        public List<PhanCongModel> ListPCDaHTTheoDA(string maDA)
+        {
+            List<PhanCongModel> list = new List<PhanCongModel>();
+            string query = "SELECT *FROM PhanCong WHERE MaDA = @MaDA AND TienDo = 100 ";
+            object[] para = new object[] { maDA };
+            DataTable dt = dataProvider.ExecuteQuery(query, para);
+            foreach (DataRow dr in dt.Rows)
+            {
+                list.Add(new PhanCongModel(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), DateTime.Parse(dr[4].ToString()), DateTime.Parse(dr[5].ToString()),
+                    int.Parse(dr[6].ToString()), dr[7].ToString(), int.Parse(dr[8].ToString()), int.Parse(dr[9].ToString())));
+            }
+            return list;
+        }
+
+        public int KiemTraTienDo (DuAnModel da)
+        {
+            string query = "SELECT (CASE "+
+	                            "WHEN NOT EXISTS (select *FROM PhanCong where PhanCong.MaDA = da.MaDA and TienDo < 100) "+
+		                            "AND da.MaDA in(Select MaDA FROM PhanCong) THEN '1' " +
+	                            "ELSE '0' " +
+	                            "END) as KiemTra " +
+                            "FROM DuAn as da " +
+                            "WHERE MaDA = @MaDA ";
+            object[] para = new object[]{ da.MaDA };
+            return int.Parse(dataProvider.ExecuteScalar(query, para).ToString());
         }
     }
 }

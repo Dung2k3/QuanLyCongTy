@@ -12,52 +12,32 @@ namespace QuanLyCongTy
 {
     public partial class FXemDuAn : Form
     {
-        XemDADAO xemdaDAO = new XemDADAO();
-        string maPB;
-        public FXemDuAn(string maPB)
+        XemDuAnBUS xemDuAnBUS = new XemDuAnBUS();
+        public delegate void FReload();
+
+        public FXemDuAn()
         {
             InitializeComponent();
-            this.maPB = maPB;
+        }
 
+        public void CapNhat(PhongBanModel pb)
+        {
+            xemDuAnBUS.pb = pb;
+            xemDuAnBUS.AddFlp(flp_ListDA);
         }
         private void FXemDuAn_Load(object sender, EventArgs e)
         {
-            DAChuaHT();
-        }
-
-        public delegate void FReload();
-
-        private void DAChuaHT()
-        {
-            flp_ListDA.Controls.Clear();
-            DataTable dt = xemdaDAO.LayDanhSachDuAnChuaHT(maPB);
-            foreach (DataRow dr in dt.Rows)
-            {
-                UCXemDAChuaHT uc = new UCXemDAChuaHT(dr[0].ToString());
-                flp_ListDA.Controls.Add(uc);
-                uc.addReLoat(DAChuaHT);
-            }
-        }
-        private void DADaHT()
-        {
-            flp_ListDA.Controls.Clear();
-            DataTable dt = xemdaDAO.LayDanhSachDuAnDaHT(maPB);
-            foreach (DataRow dr in dt.Rows)
-            {
-                UCXemDADaHT uc = new UCXemDADaHT(dr[0].ToString());
-                flp_ListDA.Controls.Add(uc);
-                uc.addReLoat(DADaHT);
-            }
+            xemDuAnBUS.FillDuAnChuaHT();
         }
 
         private void btnDaHT_CheckedChanged(object sender, EventArgs e)
         {
-            DADaHT();
+            xemDuAnBUS.FillDuAnDaHT();
         }
 
         private void btnChuaHT_CheckedChanged(object sender, EventArgs e)
         {
-            DAChuaHT();
+            xemDuAnBUS.FillDuAnChuaHT(); 
         }
     }
 }

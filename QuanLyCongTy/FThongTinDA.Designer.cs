@@ -43,7 +43,7 @@
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnHoanThanh = new Guna.UI2.WinForms.Guna2Button();
             this.btnThem = new Guna.UI2.WinForms.Guna2Button();
             this.lblMoTa = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -214,24 +214,25 @@
             this.guna2Button2.Size = new System.Drawing.Size(50, 47);
             this.guna2Button2.TabIndex = 45;
             // 
-            // guna2Button1
+            // btnHoanThanh
             // 
-            this.guna2Button1.AnimatedGIF = true;
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BackgroundImage = global::QuanLyCongTy.Properties.Resources.plus__8_;
-            this.guna2Button1.BorderRadius = 22;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(140)))), ((int)(((byte)(126)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Image = global::QuanLyCongTy.Properties.Resources.check;
-            this.guna2Button1.Location = new System.Drawing.Point(913, 65);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(50, 47);
-            this.guna2Button1.TabIndex = 44;
+            this.btnHoanThanh.AnimatedGIF = true;
+            this.btnHoanThanh.AutoRoundedCorners = true;
+            this.btnHoanThanh.BackgroundImage = global::QuanLyCongTy.Properties.Resources.plus__8_;
+            this.btnHoanThanh.BorderRadius = 22;
+            this.btnHoanThanh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnHoanThanh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnHoanThanh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnHoanThanh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnHoanThanh.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(140)))), ((int)(((byte)(126)))));
+            this.btnHoanThanh.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnHoanThanh.ForeColor = System.Drawing.Color.White;
+            this.btnHoanThanh.Image = global::QuanLyCongTy.Properties.Resources.check;
+            this.btnHoanThanh.Location = new System.Drawing.Point(913, 65);
+            this.btnHoanThanh.Name = "btnHoanThanh";
+            this.btnHoanThanh.Size = new System.Drawing.Size(50, 47);
+            this.btnHoanThanh.TabIndex = 44;
+            this.btnHoanThanh.Click += new System.EventHandler(this.btnHoanThanh_Click);
             // 
             // btnThem
             // 
@@ -269,7 +270,7 @@
             this.ClientSize = new System.Drawing.Size(1000, 900);
             this.Controls.Add(this.lblMoTa);
             this.Controls.Add(this.guna2Button2);
-            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.btnHoanThanh);
             this.Controls.Add(this.guna2ControlBox3);
             this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.lblTen);
@@ -308,7 +309,7 @@
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnHoanThanh;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private System.Windows.Forms.Label lblMoTa;
     }

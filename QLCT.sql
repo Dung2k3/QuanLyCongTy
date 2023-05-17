@@ -457,31 +457,32 @@ CREATE TABLE dbo.PhanCong(
 	TienDo int,
 	Danhgia nvarchar(50) NULL,
 	ChamDiem int NULL,
+	TienThuong int NULL,
 	PRIMARY KEY(MaDA,MaCV)
 )
 GO
 
-INSERT INTO PhanCong VALUES('DA001','CVTK003','NV016','Làm giao diện', '2000-01-20','2000-01-25',100, N'Hoàn Thành Tốt', 100)
-INSERT INTO PhanCong VALUES('DA001','CVTK001','NV017','Tìm kiếm hình ảnh','2000-01-25','2000-02-05',100, N'Hoàn Thành Tốt', 100)
-INSERT INTO PhanCong VALUES('DA001','CVTK004','NV018','Tìm kiếm hình ảnh','2000-02-05','2000-02-07',100, N'Hoàn Thành Tốt', 100)
+INSERT INTO PhanCong VALUES('DA001','CVTK003','NV016','Làm giao diện', '2000-01-20','2000-01-25',100, N'Hoàn Thành Tốt', 100, 500000)
+INSERT INTO PhanCong VALUES('DA001','CVTK001','NV017','Tìm kiếm hình ảnh','2000-01-25','2000-02-05',100, N'Hoàn Thành Tốt', 100, 1000000)
+INSERT INTO PhanCong VALUES('DA001','CVTK004','NV018','Tìm kiếm hình ảnh','2000-02-05','2000-02-07',100, N'Hoàn Thành Tốt', 100,2000000)
 
-INSERT INTO PhanCong VALUES('DA002','CVHC002','NV013','Chuẩn bị giấy tờ','2000-01-20','2000-02-20',100, N'Trễ Hạn 2 Ngày', 40)
-INSERT INTO PhanCong VALUES('DA002','CVHC003','NV014','Đưa đến trung tâm đăng kiểm','2000-02-10','2000-02-20',100, N'Trễ Hạn 1 Ngày', 80)
+INSERT INTO PhanCong VALUES('DA002','CVHC002','NV013','Chuẩn bị giấy tờ','2000-01-20','2000-02-20',100, N'Trễ Hạn 2 Ngày', 40, 0)
+INSERT INTO PhanCong VALUES('DA002','CVHC003','NV014','Đưa đến trung tâm đăng kiểm','2000-02-10','2000-02-20',100, N'Trễ Hạn 1 Ngày', 80,0)
 
-INSERT INTO PhanCong VALUES('DA003','CVSX001','NV005','Chuẩn bị nguyên liệu','2000-02-20','2000-02-25',100, N'Hoàn Thành Tốt', 100)
-INSERT INTO PhanCong VALUES('DA003','CVSX002','NV006','Kiểm tra máy móc','2000-02-25','2000-03-05',100, N'Hoàn Thành Tốt', 100)
-INSERT INTO PhanCong VALUES('DA003','CVSX003','NV007','Điều hành nhân viên','2000-03-05','2000-03-07',100, N'Hoàn Thành Tốt', 100)
-INSERT INTO PhanCong VALUES('DA003','CVSX004','NV008','Vận hành máy','2000-03-05','2000-03-07',100, N'Trễ Hạn 2 Ngày', 40)
+INSERT INTO PhanCong VALUES('DA003','CVSX001','NV005','Chuẩn bị nguyên liệu','2000-02-20','2000-02-25',100, N'Hoàn Thành Tốt', 100, 0)
+INSERT INTO PhanCong VALUES('DA003','CVSX002','NV006','Kiểm tra máy móc','2000-02-25','2000-03-05',100, N'Hoàn Thành Tốt', 100,0)
+INSERT INTO PhanCong VALUES('DA003','CVSX003','NV007','Điều hành nhân viên','2000-03-05','2000-03-07',100, N'Hoàn Thành Tốt', 100, 0)
+INSERT INTO PhanCong VALUES('DA003','CVSX004','NV008','Vận hành máy','2000-03-05','2000-03-07',100, N'Trễ Hạn 2 Ngày', 40,0)
 
-INSERT INTO PhanCong VALUES('DA004','CVMK005','NV010','Liên hệ đài truyền hình','2000-03-07','2000-03-20',100, N'Hoàn Thành Tốt', 100)
-INSERT INTO PhanCong VALUES('DA004','CVMK004','NV011','Liên hệ KOL','2000-03-20','2000-04-25',100, N'Hoàn Thành Tốt', 100)
-INSERT INTO PhanCong VALUES('DA004','CVMK003','NV019','Làm video quảng cáo','2000-03-20','2000-04-25',100, N'Hoàn Thành Tốt', 100)
+INSERT INTO PhanCong VALUES('DA004','CVMK005','NV010','Liên hệ đài truyền hình','2000-03-07','2000-03-20',100, N'Hoàn Thành Tốt', 100, 100000)
+INSERT INTO PhanCong VALUES('DA004','CVMK004','NV011','Liên hệ KOL','2000-03-20','2000-04-25',100, N'Hoàn Thành Tốt', 100,100000)
+INSERT INTO PhanCong VALUES('DA004','CVMK003','NV019','Làm video quảng cáo','2000-03-20','2000-04-25',100, N'Hoàn Thành Tốt', 100,200000)
 
-INSERT INTO PhanCong VALUES('DA005','CVTK002','NV033','Edit video','2023-01-20','2023-02-01',50, '', 0)
-INSERT INTO PhanCong VALUES('DA005','CVTK004','NV034','Demo bản vẽ','2023-02-01','2023-02-02',70, '', 0)
+INSERT INTO PhanCong VALUES('DA005','CVTK002','NV033','Edit video','2023-01-20','2023-02-01',50, '', 0,0)
+INSERT INTO PhanCong VALUES('DA005','CVTK004','NV034','Demo bản vẽ','2023-02-01','2023-02-02',70, '', 0,0)
 
-INSERT INTO PhanCong VALUES('DA006','CVMK002','NV027','Chạy quảng cáo trên Facebook','2023-02-02','2023-02-05',50, '', 0)
-INSERT INTO PhanCong VALUES('DA006','CVMK004','NV028','Chạy quảng cáo trên Tiktok','2023-02-05','2023-02-20',60, '', 0)
+INSERT INTO PhanCong VALUES('DA006','CVMK002','NV027','Chạy quảng cáo trên Facebook','2023-02-02','2023-02-05',50, '', 0,0)
+INSERT INTO PhanCong VALUES('DA006','CVMK004','NV028','Chạy quảng cáo trên Tiktok','2023-02-05','2023-02-20',60, '', 0,0)
 GO
 
 CREATE TABLE dbo.HoTro(
@@ -501,4 +502,3 @@ INSERT INTO HoTro VALUES('DA003','CVSX003','NV025')
 INSERT INTO HoTro VALUES('DA005','CVTK002','NV017')
 GO
 
-SELECT *FROM DuAn

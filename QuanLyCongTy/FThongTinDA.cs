@@ -14,11 +14,14 @@ namespace QuanLyCongTy
     {
         ThongTinDABUS thongTinDABUS = new ThongTinDABUS();
 
-        public FThongTinDA(string maDA)
+        public FThongTinDA()
         {
             InitializeComponent();
+        }
 
-            thongTinDABUS.maDA = maDA;
+        public void CapNhat(DuAnModel da)
+        {
+            thongTinDABUS.da = da;
         }
 
         private void FThongTinDA_Load(object sender, EventArgs e)
@@ -34,6 +37,11 @@ namespace QuanLyCongTy
         private void pbThem_Click(object sender, EventArgs e)
         {
             thongTinDABUS.OpenFThem();
+        }
+
+        private void btnHoanThanh_Click(object sender, EventArgs e)
+        {
+            thongTinDABUS.Finished();
         }
     }
 }

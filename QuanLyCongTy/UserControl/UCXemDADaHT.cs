@@ -14,37 +14,25 @@ namespace QuanLyCongTy
     {
         TienDoDADAO ttdaDAO = new TienDoDADAO();
         DuAnDAO daDAO = new DuAnDAO();
-        FDuAn.FReload HamRL;
-        string MaDA;
-        public UCXemDADaHT(String MaDA)
+        XemDADaHTTPBUS xemDADaHTTPBUS = new XemDADaHTTPBUS();
+        public UCXemDADaHT()
         {
             InitializeComponent();
-            this.MaDA = MaDA;
         }
-        public void addReLoat(FDuAn.FReload HamRL)
+
+        public void CapNhat(DuAnModel da)
         {
-            this.HamRL = HamRL;
+            xemDADaHTTPBUS.da = da;
         }
 
         private void UCXemDADaHT_Load(object sender, EventArgs e)
         {
-            TienDoDA da = ttdaDAO.LayDanhSachDuAn(MaDA);
-            lblTenDA.Text = da.TenDuAn;
-            lblTenPhong.Text = da.TenPB;
-            prgTienDo.Value = ttdaDAO.LayTienDo(MaDA);
-            lblTienDo.Text = ttdaDAO.LayTienDo(MaDA).ToString() + "%";
-
-            float t = float.Parse(daDAO.LayDiemDA(MaDA));
-            RatingStar.Value = t / 20;
+            xemDADaHTTPBUS.FillControl(lblTenDA, lblTenPhong, prgTienDo, ratingStar, lblTienDo);
         }
 
         private void ptbBG_Click(object sender, EventArgs e)
         {
-            Form form = new FHoanThanhDuAn(MaDA);
-            Enabled = false;
-            form.ShowDialog();
-            Enabled = true;
-            HamRL();
+            xemDADaHTTPBUS.OpenFNhanXet();
         }
     }
 }

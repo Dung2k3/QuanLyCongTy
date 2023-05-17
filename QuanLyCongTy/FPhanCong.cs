@@ -36,7 +36,7 @@ namespace QuanLyCongTy
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
-            themPhanCongBUS.ThemPC(cmbNhanVien, cmbCongViec, txtPhanCong, ckbKhac, dtpDBLam, dtpDeadline);
+            themPhanCongBUS.ThemPC(cmbNhanVien, cmbCongViec, txtPhanCong, ckbKhac, txtMoTa, dtpDBLam, dtpDeadline);
             Close();
         }
 

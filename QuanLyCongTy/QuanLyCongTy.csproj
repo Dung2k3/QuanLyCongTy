@@ -33,9 +33,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\TV_GUNA\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.4\lib\net48\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -57,6 +61,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CheckInModel.cs" />
+    <Compile Include="CheckIOBUS.cs" />
+    <Compile Include="CheckIODAO.cs" />
+    <Compile Include="CheckOutModel.cs" />
+    <Compile Include="ChiaThuongBUS.cs" />
     <Compile Include="FXoaPC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +180,7 @@
     <Compile Include="FXemDuAn.Designer.cs">
       <DependentUpon>FXemDuAn.cs</DependentUpon>
     </Compile>
+    <Compile Include="HoanThanhDuAnBUS.cs" />
     <Compile Include="Model\CongViecModel.cs" />
     <Compile Include="DataAccessObj\CheckinDao.cs" />
     <Compile Include="DataAccessObj\CheckoutDao.cs" />
@@ -184,6 +194,7 @@
     <Compile Include="NhanXetDABUS.cs" />
     <Compile Include="Model\PhanCongModel.cs" />
     <Compile Include="Model\HoTroModel.cs" />
+    <Compile Include="NhanXetDATPBUS.cs" />
     <Compile Include="SuaDABUS.cs" />
     <Compile Include="SuaPhanCongBUS.cs" />
     <Compile Include="ThemDABUS.cs" />
@@ -194,12 +205,6 @@
     <Compile Include="DataAccessObj\PhongBanDAO.cs" />
     <Compile Include="DataProvider.cs" />
     <Compile Include="Object\DangNhap.cs" />
-    <Compile Include="FChinhPhanCong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FChinhPhanCong.Designer.cs">
-      <DependentUpon>FChinhPhanCong.cs</DependentUpon>
-    </Compile>
     <Compile Include="FThongBao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,6 +222,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="TruongPhongBUS.cs" />
+    <Compile Include="UserControl\ThuongCaNhanBUS.cs" />
     <Compile Include="UserControl\UCLuong.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -345,8 +352,11 @@
       <DependentUpon>FXinNghi.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControl\XemDAChuaHTQLBUS.cs" />
+    <Compile Include="UserControl\XemDADaHTTPBUS.cs" />
     <Compile Include="UserControl\XemDADaHTQLBUS.cs" />
     <Compile Include="UserControl\XemPCChuaHTTPBUS.cs" />
+    <Compile Include="XemDAChuaHTTPBUS.cs" />
+    <Compile Include="XemDuAnBUS.cs" />
     <Compile Include="XemDuAnQLBUS.cs" />
     <EmbeddedResource Include="FCapNhatTienDo.resx">
       <DependentUpon>FCapNhatTienDo.cs</DependentUpon>
@@ -356,9 +366,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FChiaThuong.resx">
       <DependentUpon>FChiaThuong.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FChinhPhanCong.resx">
-      <DependentUpon>FChinhPhanCong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FDangNhap.resx">
       <DependentUpon>FDangNhap.cs</DependentUpon>

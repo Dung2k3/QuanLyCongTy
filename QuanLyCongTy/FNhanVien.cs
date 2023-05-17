@@ -61,7 +61,10 @@ namespace QuanLyCongTy
         private void btnCheckinout_CheckedChanged(object sender, EventArgs e)
         {
             lblTitle.Text = btnCheckinout.Text;
-            OpenChildForm(new FCheckinout(MaNV));
+            NhanVienModel nv = nvDao.GetNhanVienTheoMaNV(MaNV);
+            FCheckinout form = new FCheckinout();
+            form.CapNhat(nv);
+            OpenChildForm(new FCheckinout());
             moveImageBox(sender);
         }
 

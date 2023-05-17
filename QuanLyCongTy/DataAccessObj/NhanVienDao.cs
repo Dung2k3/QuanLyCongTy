@@ -77,5 +77,21 @@ namespace QuanLyCongTy
                     dr[5].ToString(), dr[6].ToString(), dr[7].ToString(), dr[8].ToString(), dr[9].ToString());
         }
 
+        public List<NhanVienModel> ListNhanVienThucHienDA(PhanCongModel pc)
+        {
+            List<NhanVienModel> list = new List<NhanVienModel>();
+            string query = "SELECT NhanVien.MaNV, NhanVien.HoTenNV, NhanVien.DiaChi, NhanVien.Sdt, NhanVien.NgaySinh, NhanVien.Phai, NhanVien.Cccd, NhanVien.Email, NhanVien.MaPB, NhanVien.MaLuong " +
+                "FROM NhanVien, PhanCong " +
+                "WHERE NhanVien.MaNV = PhanCong.MaNV  AND PhanCong.MaDA = @MaDA ";
+            object[] para = new object[] { pc.MaDA };
+            DataTable dt = dataProvider.ExecuteQuery(query, para);
+            foreach (DataRow dr in dt.Rows)
+            {
+                list.Add(new NhanVienModel(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), DateTime.Parse(dr[4].ToString()),
+                    dr[5].ToString(), dr[6].ToString(), dr[7].ToString(), dr[8].ToString(), dr[9].ToString()));
+            }
+            return list;
+        }
+
     }
 }

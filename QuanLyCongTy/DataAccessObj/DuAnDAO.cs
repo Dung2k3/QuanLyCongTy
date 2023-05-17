@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls.WebParts;
 
 namespace QuanLyCongTy
 {
@@ -30,7 +31,21 @@ namespace QuanLyCongTy
             foreach(DataRow dr in dt.Rows)
             {
                 list.Add(new DuAnModel(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), dr[4].ToString(),
-                    DateTime.Parse(dr[5].ToString()), DateTime.Parse(dr[6].ToString()), dr[7].ToString(), int.Parse(dr[8].ToString()), double.Parse(dr[8].ToString())));
+                    DateTime.Parse(dr[5].ToString()), DateTime.Parse(dr[6].ToString()), dr[7].ToString(), int.Parse(dr[8].ToString()), double.Parse(dr[9].ToString())));
+            }
+            return list;
+        }
+
+        public List<DuAnModel> ListDuAnChuaHTTheoPB(PhongBanModel pb)
+        {
+            List<DuAnModel> list = new List<DuAnModel>();
+            string query = "SELECT * FROM DuAn WHERE ChamDiem = -1 AND MaPB = @MaPB ";
+            object[] para = new object[] { pb.MaPB };
+            DataTable dt = dataProvider.ExecuteQuery(query, para);
+            foreach (DataRow dr in dt.Rows)
+            {
+                list.Add(new DuAnModel(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), dr[4].ToString(),
+                    DateTime.Parse(dr[5].ToString()), DateTime.Parse(dr[6].ToString()), dr[7].ToString(), int.Parse(dr[8].ToString()), double.Parse(dr[9].ToString())));
             }
             return list;
         }
@@ -42,7 +57,21 @@ namespace QuanLyCongTy
             foreach (DataRow dr in dt.Rows)
             {
                 list.Add(new DuAnModel(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), dr[4].ToString(),
-                    DateTime.Parse(dr[5].ToString()), DateTime.Parse(dr[6].ToString()), dr[7].ToString(), int.Parse(dr[8].ToString()), double.Parse(dr[8].ToString())));
+                    DateTime.Parse(dr[5].ToString()), DateTime.Parse(dr[6].ToString()), dr[7].ToString(), int.Parse(dr[8].ToString()), double.Parse(dr[9].ToString())));
+            }
+            return list;
+        }
+
+        public List<DuAnModel> ListDuAnDaHTTheoPB(PhongBanModel pb)
+        {
+            List<DuAnModel> list = new List<DuAnModel>();
+            string query = "SELECT * FROM DuAn WHERE ChamDiem > 0 AND MaPB = @MaPB  ";
+            object[] para = new object[] { pb.MaPB };
+            DataTable dt = dataProvider.ExecuteQuery(query, para);
+            foreach (DataRow dr in dt.Rows)
+            {
+                list.Add(new DuAnModel(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), dr[4].ToString(),
+                    DateTime.Parse(dr[5].ToString()), DateTime.Parse(dr[6].ToString()), dr[7].ToString(), int.Parse(dr[8].ToString()), double.Parse(dr[9].ToString())));
             }
             return list;
         }
@@ -94,7 +123,7 @@ namespace QuanLyCongTy
             DataTable dt = dataProvider.ExecuteQuery(query, para);
             DataRow dr = dt.Rows[0];
             return new DuAnModel(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), dr[4].ToString(),
-                DateTime.Parse(dr[5].ToString()), DateTime.Parse(dr[6].ToString()), dr[7].ToString(), int.Parse(dr[8].ToString()), double.Parse(dr[8].ToString()));
+                DateTime.Parse(dr[5].ToString()), DateTime.Parse(dr[6].ToString()), dr[7].ToString(), int.Parse(dr[8].ToString()), double.Parse(dr[9].ToString()));
         }
         public int GetTienDo(DuAnModel da)
         {
@@ -104,6 +133,20 @@ namespace QuanLyCongTy
             if (!(dt.Rows[0][0] is DBNull))
                 return (int)dt.Rows[0][0];
             else return 0;
+        }
+
+        public bool HoanThanh(DuAnModel da)
+        {
+            string query = "UPDATE ChamDiem = 0 FROM PhanCong WHERE MaDA = @MaDA ";
+            object[] para =  new object[] { da.MaDA };
+            return dataProvider.ExecuteNonQuery(query, para) > 0;
+        }
+
+        public int GetTienThuong(DuAnModel da)
+        {
+            string query = "SELECT Thuong FROM DuAn WHERE MaDA = @MaDA ";
+            object[] para = new object[] { da.MaDA };
+            return int.Parse(dataProvider.ExecuteQuery(query, para).ToString());
         }
     }
 }

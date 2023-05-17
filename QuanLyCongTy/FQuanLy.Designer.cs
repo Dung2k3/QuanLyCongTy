@@ -202,7 +202,7 @@
             this.imgSlide.Image = ((System.Drawing.Image)(resources.GetObject("imgSlide.Image")));
             this.imgSlide.Location = new System.Drawing.Point(297, 105);
             this.imgSlide.Name = "imgSlide";
-            this.imgSlide.Size = new System.Drawing.Size(42, 101);
+            this.imgSlide.Size = new System.Drawing.Size(39, 101);
             this.imgSlide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.imgSlide.TabIndex = 34;
             this.imgSlide.TabStop = false;
@@ -323,7 +323,7 @@
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
-            // FQuanLy2
+            // FQuanLy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -335,7 +335,7 @@
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.guna2Panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FQuanLy2";
+            this.Name = "FQuanLy";
             this.Text = "FQuanLy2";
             this.Load += new System.EventHandler(this.FQuanLy2_Load);
             this.pnlMenu.ResumeLayout(false);

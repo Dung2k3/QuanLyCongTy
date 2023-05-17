@@ -12,13 +12,15 @@ namespace QuanLyCongTy
 {
     public partial class FNhanXetDA_TruongPhong : Form
     {
-        NhanXetDADAO nxdaDAO = new NhanXetDADAO();
-        string MaDA;
-        float Diem;
-        public FNhanXetDA_TruongPhong(string MaDA)
+        NhanXetDATPBUS nhanXetDATPBUS = new NhanXetDATPBUS();
+        public FNhanXetDA_TruongPhong()
         {
             InitializeComponent();
-            this.MaDA = MaDA;
+        }
+
+        public void CapNhat(DuAnModel da)
+        {
+            nhanXetDATPBUS.da = da;
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
@@ -28,16 +30,7 @@ namespace QuanLyCongTy
 
         private void FNhanXetDA_TruongPhong_Load(object sender, EventArgs e)
         {
-            nxdaDAO.LayThongTinDA(MaDA);
-            NhanXetDA nx = nxdaDAO.LayThongTinDA(MaDA);
-            LayXepLoai(nx.ChamDiem);
-            lblTenDA.Text = nx.TenDA;
-            txtNhanXet.Text = nx.DanhGia;
-            RatingStar.Value = nx.ChamDiem / 20;
-        }
-        private void LayXepLoai(float diem)
-        {
-            lblXepLoai.Text = nxdaDAO.LayChamDiem(diem);
+            nhanXetDATPBUS.FillControls(lblTenDA, txtNhanXet, RatingStar, lblXepLoai, lblTienThuong);
         }
     }
 }
