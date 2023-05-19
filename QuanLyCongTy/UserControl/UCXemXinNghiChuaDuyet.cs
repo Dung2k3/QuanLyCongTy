@@ -25,11 +25,6 @@ namespace QuanLyCongTy
             xemXinNghiChuaDuyetQLBUS.HamRL = HamRL;
         }
 
-        private void btn_Duyet_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_Xoa_Click(object sender, EventArgs e)
         {
             xemXinNghiChuaDuyetQLBUS.OpenFThongBao(this);

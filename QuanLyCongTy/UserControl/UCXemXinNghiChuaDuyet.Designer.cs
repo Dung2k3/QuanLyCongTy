@@ -110,7 +110,6 @@
             this.btn_Duyet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_Duyet.TabIndex = 33;
             this.btn_Duyet.TabStop = false;
-            this.btn_Duyet.Click += new System.EventHandler(this.btn_Duyet_Click);
             // 
             // ptB_ChuaDuyet
             // 
