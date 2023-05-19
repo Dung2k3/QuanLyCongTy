@@ -11,7 +11,7 @@ namespace QuanLyCongTy
     {
         XinNghiDAO xinNghiDAO = new XinNghiDAO();
         FlowLayoutPanel flpListXN;
-
+        XinNghiModel xn;
         public void AddFlpXN(FlowLayoutPanel flpListXN)
         {
             this.flpListXN = flpListXN;
@@ -20,10 +20,10 @@ namespace QuanLyCongTy
         public void FillXinNghiChuaDuyet()
         {
             flpListXN.Controls.Clear();
-            List<XinNghiModel> listXN = xinNghiDAO.ListXinNghiChuaDuyet();
+            List<XinNghiModel> listXN = xinNghiDAO.ListXinNghiChuaDuyet(xn);
             foreach (XinNghiModel xn in listXN)
             {
-                UCXemXinNghiChuaDuyet uc = new UCXemXinNghiChuaDuyet(xn.MaNV);
+                UCXemXinNghiChuaDuyet uc = new UCXemXinNghiChuaDuyet();
                 uc.CapNhat(xn, FillXinNghiChuaDuyet);
                 flpListXN.Controls.Add(uc);
             }
@@ -32,10 +32,10 @@ namespace QuanLyCongTy
         public void FillXinNghiDaDuyet()
         {
             flpListXN.Controls.Clear();
-            List<XinNghiModel> listXN = xinNghiDAO.ListXinNghiDaDuyet();
+            List<XinNghiModel> listXN = xinNghiDAO.ListXinNghiDaDuyet(xn);
             foreach (XinNghiModel xn in listXN)
             {
-                UCXemXinNghiDaDuyet uc = new UCXemXinNghiDaDuyet(xn.MaNV);
+                UCXemXinNghiDaDuyet uc = new UCXemXinNghiDaDuyet();
                 uc.CapNhat(xn, FillXinNghiDaDuyet);
                 flpListXN.Controls.Add(uc);
             }

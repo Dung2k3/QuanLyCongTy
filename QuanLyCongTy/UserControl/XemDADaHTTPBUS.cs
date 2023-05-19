@@ -15,7 +15,6 @@ namespace QuanLyCongTy
         public void FillControl(Label lblTenDA, Label lblTenPhong, Guna2ProgressBar prgTienDo, Guna2RatingStar ratingStar, Label lblTienDo)
         {
             PhongBanModel pb = PhongBanDAO.GetPhongBanTheoMaPB(da.MaPB);
-
             lblTenDA.Text = da.TenDuAn;
             lblTenPhong.Text = pb.TenPB;
             prgTienDo.Value = 100;

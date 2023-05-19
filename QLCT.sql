@@ -384,12 +384,19 @@ INSERT INTO Checkout VALUES('NV034','2023-03-03', '17:10:00')
 GO
 
 CREATE TABLE dbo.XinNghi(
-	MaNV varchar(10) REFERENCES NhanVien(MaNV),
+	MaNV varchar(10),
 	NgayNghi date,
 	SoNgayNghi int,
 	LyDo nvarchar(100),
+	HeSoDuyet int NOT NULL,
 	PRIMARY KEY(MaNV,NgayNghi)
 )
+GO
+
+INSERT INTO XinNghi VALUES('NV02','2023-04-05', '1', N'Lý do sức khỏe', '-1')
+INSERT INTO XinNghi VALUES('NV05','2023-04-10', '1', N'Chuyển nhà, chuyển trọ', '1')
+INSERT INTO XinNghi VALUES('NV01','2023-04-06', '1', N'Lý do sức khỏe', '1')
+INSERT INTO XinNghi VALUES('NV010','2023-05-06', '1', N'Chuyển nhà, chuyển trọ', '1')
 GO
 
 CREATE TABLE dbo.CongViec(

@@ -209,6 +209,7 @@
     <Compile Include="ThemDABUS.cs" />
     <Compile Include="ThemPhanCongBUS.cs" />
     <Compile Include="ThemHoTroBUS.cs" />
+    <Compile Include="ThemXNBUS.cs" />
     <Compile Include="ThongTinDABUS.cs" />
     <Compile Include="Model\PhongBanModel.cs" />
     <Compile Include="DataAccessObj\PhongBanDAO.cs" />
@@ -387,8 +388,11 @@
     <Compile Include="XemDuAnBUS.cs" />
     <Compile Include="XemDuAnQLBUS.cs" />
     <Compile Include="XemXinNghiChuaDuyetQLBUS.cs" />
+    <Compile Include="XemXinNghiChuaDuyetTPBUS.cs" />
     <Compile Include="XemXinNghiDaDuyetQLBUS.cs" />
+    <Compile Include="XemXinNghiDaDuyetTPBUS.cs" />
     <Compile Include="XemXinNghiQLBUS.cs" />
+    <Compile Include="XemXinNghiBUS.cs" />
     <Compile Include="XinNghiDAO.cs" />
     <Compile Include="XinNghiModel.cs" />
     <EmbeddedResource Include="FCapNhatTienDo.resx">
@@ -512,6 +516,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FXinNghi.resx">
       <DependentUpon>FXinNghi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UCXemXinNghiChuaDuyet.resx">
+      <DependentUpon>UCXemXinNghiChuaDuyet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UCXemXinNghiDaDuyet.resx">
+      <DependentUpon>UCXemXinNghiDaDuyet.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -916,6 +926,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\social-responsibility.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_badge_48px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_monday_48px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_schedule_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_bad_decision_48px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

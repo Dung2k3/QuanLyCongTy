@@ -12,8 +12,6 @@ namespace QuanLyCongTy
 {
     public partial class UCXemDADaHT : UserControl
     {
-        TienDoDADAO ttdaDAO = new TienDoDADAO();
-        DuAnDAO daDAO = new DuAnDAO();
         XemDADaHTTPBUS xemDADaHTTPBUS = new XemDADaHTTPBUS();
         public UCXemDADaHT()
         {

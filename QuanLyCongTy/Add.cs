@@ -12,6 +12,7 @@ namespace QuanLyCongTy
 {
     public partial class Add : Form
     {
+        ThemXNBUS themXNBUS = new ThemXNBUS();
         public Add()
         {
             InitializeComponent();
@@ -25,24 +26,20 @@ namespace QuanLyCongTy
 
         private void cb_Lydo_SelectedValueChanged_1(object sender, EventArgs e)
         {
-            if (cb_Lydo.SelectedItem == "Khác")
+            if (cb_LyDo.SelectedItem == "Khác")
             {
                 txt_Khac.Enabled = true;
             }
         }
 
-        private void picBox_Image_Click(object sender, EventArgs e)
+        private void btn_Huy_Click(object sender, EventArgs e)
         {
-            OpenFileDialog odf = new OpenFileDialog();
-            if (odf.ShowDialog() == DialogResult.OK)
-            {
-                picBox_Image.Image = Image.FromFile(odf.FileName);
-                this.Text = odf.FileName;
-            }
+            Close();
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void btn_XacNhan_Click(object sender, EventArgs e)
         {
+            themXNBUS.ThemXN(txt_MaNV, guna2DateTimePicker1, txt_SoNgayNghi, cb_LyDo, -1);
             Close();
         }
     }

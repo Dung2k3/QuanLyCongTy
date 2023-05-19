@@ -12,8 +12,10 @@ namespace QuanLyCongTy
 {
     public partial class FThongBao : Form
     {
+        XinNghiModel xn;
         DuAnModel da;
         DuAnDAO duAnDAO = new DuAnDAO();
+        XinNghiDAO xinNghiDAO = new XinNghiDAO();
         public FThongBao()
         {
             InitializeComponent();
@@ -24,9 +26,17 @@ namespace QuanLyCongTy
             this.da = da;
         }
 
+        public void CapNhat(XinNghiModel xn)
+        {
+            this.xn = xn;
+        }
+
         private void btnCo_Click(object sender, EventArgs e)
         {
-            duAnDAO.Xoa(da);
+            if (sender == da)
+                duAnDAO.Xoa(da);
+            if (sender == xn)
+                xinNghiDAO.Xoa(xn);
             Close();
         }
 

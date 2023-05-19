@@ -109,6 +109,8 @@ namespace QuanLyCongTy
             object[] para = new object[] {da.MaDA };
             return dataProvider.ExecuteNonQuery(query, para) > 0;
         }
+
+        
         public bool Sua(DuAnModel da)
         {
             string query = "UPDATE DuAn SET TenDuAn = @TenDuAn , MoTa = @MoTa ,MaPB = @MaPB , DiaDiem = @DiaDiem ,NgayBD = @NgayBD , DeadLine = @DeadLine , " +

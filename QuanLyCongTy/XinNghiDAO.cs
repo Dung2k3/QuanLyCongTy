@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace QuanLyCongTy
 {
-    internal class XinNghiDAO
+    public class XinNghiDAO
     {
         DBConnection dbConn = new DBConnection();
         DataProvider dataProvider = new DataProvider();
@@ -19,14 +19,6 @@ namespace QuanLyCongTy
             return dt.Rows[0][0].ToString();
         }
 
-        public XinNghi LayDanhSachXinNghi(string MaNV)
-        {
-            string sqlStr = string.Format("SELECT XinNghi.MaNV, NhanVien.HoTenNV, XinNghi.NgayNghi, XinNghi.SoNgayNghi, XinNghi.LyDo, XinNghi.HeSoDuyet" +
-                                            "FROM XinNghi, NhanVien WHERE XinNghi.MaNV = NhanVien.MaNV " +
-                                            "AND XinNghi.MaNV = '{0}'", MaNV);
-            DataRow dr = dbConn.LayDanhSach(sqlStr).Rows[0];
-            return new XinNghi(dr[0].ToString(), dr[1].ToString(), DateTime.Parse(dr[2].ToString()), int.Parse(dr[3].ToString()), dr[4].ToString(), int.Parse(dr[5].ToString()));
-        }
 
         public DataTable LayDanhSachChuaDuyetXinNghi()
         {
@@ -36,24 +28,24 @@ namespace QuanLyCongTy
             return dbConn.LayDanhSach(sqlStr);
         }
 
-        public List<XinNghiModel> ListXinNghiChuaDuyet()
+        public List<XinNghiModel> ListXinNghiChuaDuyet(XinNghiModel xn)
         {
             List<XinNghiModel> list = new List<XinNghiModel>();
             string query = "SELECT * FROM XinNghi WHERE HeSoDuyet = -1";
             DataTable dt = dataProvider.ExecuteQuery(query);
             foreach (DataRow dr in dt.Rows)
-                list.Add(new XinNghiModel(dr[0].ToString(), dr[1].ToString(), DateTime.Parse(dr[2].ToString()), int.Parse(dr[3].ToString()), dr[4].ToString(), int.Parse(dr[5].ToString())));
+                list.Add(new XinNghiModel(dr[0].ToString(), DateTime.Parse(dr[1].ToString()), int.Parse(dr[2].ToString()), dr[3].ToString(), int.Parse(dr[4].ToString())));
             return list;
         }
 
-        public List<XinNghiModel> ListXinNghiDaDuyet()
+        public List<XinNghiModel> ListXinNghiDaDuyet(XinNghiModel xn)
         {
             List<XinNghiModel> list = new List<XinNghiModel>();
-            string query = "SELECT * FROM XinNghi WHERE HeSoDuyet = 1 ";
+            string query = "SELECT * FROM XinNghi WHERE HeSoDuyet = 1";
             DataTable dt = dataProvider.ExecuteQuery(query);
             foreach (DataRow dr in dt.Rows)
             {
-                list.Add(new XinNghiModel(dr[0].ToString(), dr[1].ToString(), DateTime.Parse(dr[2].ToString()), int.Parse(dr[3].ToString()), dr[4].ToString(), int.Parse(dr[5].ToString())));
+                list.Add(new XinNghiModel(dr[0].ToString(), DateTime.Parse(dr[1].ToString()), int.Parse(dr[2].ToString()), dr[3].ToString(), int.Parse(dr[4].ToString())));
             }
             return list;
         }
@@ -66,20 +58,28 @@ namespace QuanLyCongTy
             return dbConn.LayDanhSach(sqlStr);
         }
 
-        public XinNghiModel getDuAnTheoMa(string MaDA)
+        public XinNghiModel getXinNghiTheoMa(string MaNV)
         {
             string query = "SELECT * FROM XinNghi WHERE MaNV = @MaNV ";
-            object[] para = new object[] { MaDA };
+            object[] para = new object[] { MaNV };
             DataTable dt = dataProvider.ExecuteQuery(query, para);
             DataRow dr = dt.Rows[0];
-            return new XinNghiModel(dr[0].ToString(), dr[1].ToString(), DateTime.Parse(dr[2].ToString()), int.Parse(dr[3].ToString()), dr[4].ToString(), int.Parse(dr[5].ToString()));
+            return new XinNghiModel(dr[0].ToString(), DateTime.Parse(dr[1].ToString()), int.Parse(dr[2].ToString()), dr[3].ToString(), int.Parse(dr[4].ToString()));
         }
         public bool Them(XinNghiModel xn)
         {
             string query = "INSERT INTO XinNghi " +
                 "VALUES ( @MaNV , @HoVaTen , @NgayNghi , @SoNgayNghi, @LyDo, @HeSoDuyet  )";
-            object[] para = new object[] { xn.MaNV, xn.HoVaTen, xn.NgayBD, xn.SoNgayNghi, xn.LyDo, xn.HeSoDuyet };
+            object[] para = new object[] { xn.MaNV, xn.NgayBD, xn.SoNgayNghi, xn.LyDo, xn.HeSoDuyet };
             return dataProvider.ExecuteNonQuery(query, para) > 0;
         }
+
+        public bool Xoa(XinNghiModel xn)
+        {
+            string query = "DELETE FROM XinNghi WHERE MaNV = @MaNV ";
+            object[] para = new object[] { xn.MaNV };
+            return dataProvider.ExecuteNonQuery(query, para) > 0;
+        }
+
     }
 }
