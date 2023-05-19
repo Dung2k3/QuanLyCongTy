@@ -96,7 +96,7 @@
             this.btnXinNghi.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnXinNghi.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnXinNghi.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btnXinNghi.CheckedState.Image = global::QuanLyCongTy.Properties.Resources.project;
+            this.btnXinNghi.CheckedState.Image = global::QuanLyCongTy.Properties.Resources.exam__2_;
             this.btnXinNghi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnXinNghi.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.btnXinNghi.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -336,6 +336,7 @@
             this.Controls.Add(this.guna2Panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FQuanLy";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FQuanLy2";
             this.Load += new System.EventHandler(this.FQuanLy2_Load);
             this.pnlMenu.ResumeLayout(false);

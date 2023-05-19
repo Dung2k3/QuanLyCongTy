@@ -103,13 +103,12 @@
             // 
             // lblTenCV
             // 
-            this.lblTenCV.AutoSize = true;
             this.lblTenCV.BackColor = System.Drawing.Color.White;
             this.lblTenCV.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenCV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.lblTenCV.Location = new System.Drawing.Point(35, 12);
             this.lblTenCV.Name = "lblTenCV";
-            this.lblTenCV.Size = new System.Drawing.Size(120, 24);
+            this.lblTenCV.Size = new System.Drawing.Size(324, 24);
             this.lblTenCV.TabIndex = 37;
             this.lblTenCV.Text = "Tên công việc";
             // 

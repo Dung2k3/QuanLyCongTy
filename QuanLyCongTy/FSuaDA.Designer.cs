@@ -50,15 +50,16 @@
             this.lbl_DiaDiem = new System.Windows.Forms.Label();
             this.lbl_TenPB = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.gvPhongBanRanh = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.TenPB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Deadline = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            ((System.ComponentModel.ISupportInitialize)(this.gvPhongBanRanh)).BeginInit();
+            this.gvPhongBanRanh = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.TenPB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenDA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayBD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvPhongBanRanh)).BeginInit();
             this.SuspendLayout();
             // 
             // btnHuy
@@ -358,6 +359,35 @@
             this.label1.TabIndex = 81;
             this.label1.Text = "Chỉnh sửa dự án     \r\n\r\n";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::QuanLyCongTy.Properties.Resources.pencil;
+            this.pictureBox1.Location = new System.Drawing.Point(200, 33);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(26, 21);
+            this.pictureBox1.TabIndex = 82;
+            this.pictureBox1.TabStop = false;
+            // 
+            // guna2BorderlessForm1
+            // 
+            this.guna2BorderlessForm1.ContainerControl = this;
+            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm1.TransparentWhileDrag = true;
+            // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.CustomIconSize = 20F;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(101)))), ((int)(((byte)(189)))));
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1268, 0);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(62, 32);
+            this.guna2ControlBox1.TabIndex = 84;
+            // 
             // gvPhongBanRanh
             // 
             this.gvPhongBanRanh.AllowUserToAddRows = false;
@@ -381,8 +411,9 @@
             this.gvPhongBanRanh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.gvPhongBanRanh.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TenPB,
-            this.Deadline,
-            this.TinhTrang});
+            this.TenDA,
+            this.NgayBD,
+            this.DL});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -392,7 +423,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gvPhongBanRanh.DefaultCellStyle = dataGridViewCellStyle3;
             this.gvPhongBanRanh.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gvPhongBanRanh.Location = new System.Drawing.Point(598, 59);
+            this.gvPhongBanRanh.Location = new System.Drawing.Point(565, 74);
             this.gvPhongBanRanh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gvPhongBanRanh.Name = "gvPhongBanRanh";
             this.gvPhongBanRanh.ReadOnly = true;
@@ -408,8 +439,8 @@
             this.gvPhongBanRanh.RowHeadersVisible = false;
             this.gvPhongBanRanh.RowHeadersWidth = 62;
             this.gvPhongBanRanh.RowTemplate.Height = 28;
-            this.gvPhongBanRanh.Size = new System.Drawing.Size(514, 446);
-            this.gvPhongBanRanh.TabIndex = 83;
+            this.gvPhongBanRanh.Size = new System.Drawing.Size(742, 413);
+            this.gvPhongBanRanh.TabIndex = 129;
             this.gvPhongBanRanh.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.gvPhongBanRanh.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gvPhongBanRanh.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -436,66 +467,44 @@
             // 
             this.TenPB.DataPropertyName = "TenPB";
             this.TenPB.FillWeight = 136.3637F;
-            this.TenPB.HeaderText = "Tên phòng ban";
+            this.TenPB.HeaderText = "Phòng ban";
             this.TenPB.MinimumWidth = 8;
             this.TenPB.Name = "TenPB";
             this.TenPB.ReadOnly = true;
             // 
-            // Deadline
+            // TenDA
             // 
-            this.Deadline.DataPropertyName = "DL";
-            this.Deadline.FillWeight = 81.8182F;
-            this.Deadline.HeaderText = "Thời hạn";
-            this.Deadline.MinimumWidth = 8;
-            this.Deadline.Name = "Deadline";
-            this.Deadline.ReadOnly = true;
+            this.TenDA.DataPropertyName = "TenDuAn";
+            this.TenDA.HeaderText = "Dự Án";
+            this.TenDA.MinimumWidth = 6;
+            this.TenDA.Name = "TenDA";
+            this.TenDA.ReadOnly = true;
             // 
-            // TinhTrang
+            // NgayBD
             // 
-            this.TinhTrang.DataPropertyName = "TinhTrang";
-            this.TinhTrang.FillWeight = 81.8182F;
-            this.TinhTrang.HeaderText = "Tình trạng";
-            this.TinhTrang.MinimumWidth = 8;
-            this.TinhTrang.Name = "TinhTrang";
-            this.TinhTrang.ReadOnly = true;
+            this.NgayBD.DataPropertyName = "NgayBD";
+            this.NgayBD.HeaderText = "Bắt đầu";
+            this.NgayBD.MinimumWidth = 6;
+            this.NgayBD.Name = "NgayBD";
+            this.NgayBD.ReadOnly = true;
             // 
-            // pictureBox1
+            // DL
             // 
-            this.pictureBox1.Image = global::QuanLyCongTy.Properties.Resources.pencil;
-            this.pictureBox1.Location = new System.Drawing.Point(200, 33);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(26, 21);
-            this.pictureBox1.TabIndex = 82;
-            this.pictureBox1.TabStop = false;
-            // 
-            // guna2BorderlessForm1
-            // 
-            this.guna2BorderlessForm1.ContainerControl = this;
-            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2BorderlessForm1.TransparentWhileDrag = true;
-            // 
-            // guna2ControlBox1
-            // 
-            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox1.CustomIconSize = 20F;
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(101)))), ((int)(((byte)(189)))));
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1159, 0);
-            this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(62, 32);
-            this.guna2ControlBox1.TabIndex = 84;
+            this.DL.DataPropertyName = "DeadLine";
+            this.DL.FillWeight = 81.81828F;
+            this.DL.HeaderText = "Thời hạn";
+            this.DL.MinimumWidth = 8;
+            this.DL.Name = "DL";
+            this.DL.ReadOnly = true;
             // 
             // FSuaDA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1220, 690);
-            this.Controls.Add(this.guna2ControlBox1);
+            this.ClientSize = new System.Drawing.Size(1329, 720);
             this.Controls.Add(this.gvPhongBanRanh);
+            this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnHuy);
@@ -519,8 +528,8 @@
             this.Name = "FSuaDA";
             this.Text = "FSuaDA";
             this.Load += new System.EventHandler(this.FSuaDA_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.gvPhongBanRanh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvPhongBanRanh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -545,11 +554,12 @@
         private System.Windows.Forms.Label lbl_TenPB;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Guna.UI2.WinForms.Guna2DataGridView gvPhongBanRanh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenPB;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Deadline;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TinhTrang;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        private Guna.UI2.WinForms.Guna2DataGridView gvPhongBanRanh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenPB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenDA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayBD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DL;
     }
 }

@@ -25,12 +25,12 @@ namespace QuanLyCongTy
         
         private void FNhanXet_Load(object sender, EventArgs e)
         {
-            nhanXetDABUS.FillControl(lblTenDA, txtNhanXet, lblXepLoai,ratingStar );
+            nhanXetDABUS.FillControl(lblTenDA, txtNhanXet, lblXepLoai, ratingStar, txtThuong );
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            nhanXetDABUS.LuuNhanXet(txtNhanXet, ratingStar);
+            nhanXetDABUS.LuuNhanXet(txtNhanXet, ratingStar,txtThuong);
             Close();
         }
 

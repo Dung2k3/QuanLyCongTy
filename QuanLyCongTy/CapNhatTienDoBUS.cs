@@ -30,6 +30,7 @@ namespace QuanLyCongTy
         public void CapNhatPC()
         {
             phanCongDAO.Sua(pc);
+            reLoadF();
         }
     }
 }

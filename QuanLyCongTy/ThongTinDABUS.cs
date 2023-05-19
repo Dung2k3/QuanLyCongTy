@@ -11,14 +11,14 @@ namespace QuanLyCongTy
 {
     internal class ThongTinDABUS
     {
-        public string maDA;
+        public DuAnModel da;
+        public Reload.Flp rl;
         FlowLayoutPanel flp;
         DuAnDAO duAnDAO = new DuAnDAO();
         PhanCongDAO phanCongDAO = new PhanCongDAO();
 
         public void FillControl(Label lblTen, Label lblDiaDiem, Label lblNgayBD, Label lblThoiHan, Label lblMoTa, FlowLayoutPanel flp)
         {
-            DuAnModel da = duAnDAO.getDuAnTheoMa(maDA);
             lblTen.Text = da.TenDuAn;
             lblDiaDiem.Text = da.DiaDiem;
             lblNgayBD.Text = da.NgayBD.ToShortDateString();
@@ -31,7 +31,7 @@ namespace QuanLyCongTy
         public void Fillflp()
         {
             flp.Controls.Clear();
-            List<PhanCongModel> listPCChuaHTTheoDA = phanCongDAO.ListPCChuaHTTheoDA(maDA);
+            List<PhanCongModel> listPCChuaHTTheoDA = phanCongDAO.ListPCTheoDA(da.MaDA);
             foreach (PhanCongModel pc in listPCChuaHTTheoDA)
             {
                 UCXemPhanCong uc = new UCXemPhanCong();
@@ -42,10 +42,34 @@ namespace QuanLyCongTy
         }
         public void OpenFThem()
         {
-            DuAnModel da = duAnDAO.getDuAnTheoMa(maDA);
             FPhanCong fPhanCong = new FPhanCong();
             fPhanCong.CapNhat(da, Fillflp);
             fPhanCong.ShowDialog();
+        }
+        public void OpenFChartDA()
+        {
+            FChartDA fChartDA = new FChartDA();
+            fChartDA.CapNhat(da);
+            fChartDA.ShowDialog();
+        }
+
+        public void Finished()
+        {
+            if(phanCongDAO.KiemTraTienDo(da))
+            {
+                if(!duAnDAO.HoanThanh(da))
+                {
+                    MessageBox.Show("Thất bại");
+                }
+                else
+                {
+                    rl();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Có task chưa hoàn thành!!!");
+            }    
         }
     }
 }

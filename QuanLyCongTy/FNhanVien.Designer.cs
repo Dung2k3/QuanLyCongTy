@@ -337,6 +337,7 @@
             this.Controls.Add(this.guna2Panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FNhanVien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FNhanVien2";
             this.Load += new System.EventHandler(this.FNhanVien2_Load);
             this.pnlMenu.ResumeLayout(false);

@@ -14,13 +14,14 @@ namespace QuanLyCongTy
         public Reload.Flp HamRL;
         DuAnDAO duAnDAO = new DuAnDAO();
         PhongBanDAO PhongBanDAO = new PhongBanDAO();
-        public void FillControls(Label lbl_tenDA,Label lbl_TenPhong, Label lbl_NgayCL,Guna2ProgressBar prgTienDo)
+        public void FillControls(Label lbl_tenDA,Label lbl_TenPhong, Label lbl_NgayCL,Guna2ProgressBar prgTienDo, Label lblTienDo)
         {
             PhongBanModel pb = PhongBanDAO.GetPhongBanTheoMaPB(da.MaPB);
             lbl_tenDA.Text = da.TenDuAn;
             lbl_TenPhong.Text = pb.TenPB;
             lbl_NgayCL.Text = "Thời hạn: Còn " + da.DeadLine.Subtract(da.NgayBD).Days.ToString() + " ngày.";
             prgTienDo.Value = duAnDAO.GetTienDo(da);
+            lblTienDo.Text = prgTienDo.Value.ToString() + "%";
         }
         void OpenForm(Form fnew,UCTienDoDA uc)
         {

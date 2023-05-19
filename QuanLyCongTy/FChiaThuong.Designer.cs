@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flpChiaThuong = new System.Windows.Forms.FlowLayoutPanel();
             this.lblTienThuong = new System.Windows.Forms.Label();
             this.btnXacNhan = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
@@ -44,12 +44,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Tiền thưởng:";
             // 
-            // flowLayoutPanel1
+            // flpChiaThuong
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(46, 76);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(900, 500);
-            this.flowLayoutPanel1.TabIndex = 1;
+            this.flpChiaThuong.Location = new System.Drawing.Point(46, 76);
+            this.flpChiaThuong.Name = "flpChiaThuong";
+            this.flpChiaThuong.Size = new System.Drawing.Size(900, 500);
+            this.flpChiaThuong.TabIndex = 1;
             // 
             // lblTienThuong
             // 
@@ -77,6 +77,7 @@
             this.btnXacNhan.Size = new System.Drawing.Size(180, 45);
             this.btnXacNhan.TabIndex = 3;
             this.btnXacNhan.Text = "Xác nhận";
+            this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
             // 
             // FChiaThuong
             // 
@@ -86,11 +87,12 @@
             this.ClientSize = new System.Drawing.Size(1000, 700);
             this.Controls.Add(this.btnXacNhan);
             this.Controls.Add(this.lblTienThuong);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.flpChiaThuong);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FChiaThuong";
             this.Text = "FChiaThuong";
+            this.Load += new System.EventHandler(this.FChiaThuong_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -99,7 +101,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flpChiaThuong;
         private System.Windows.Forms.Label lblTienThuong;
         private Guna.UI2.WinForms.Guna2Button btnXacNhan;
     }

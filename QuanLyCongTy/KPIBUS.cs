@@ -17,14 +17,26 @@ namespace QuanLyCongTy
         {
             this.flp = flp;
         }
-        public void Fillflp()
+        public void FillflpChuaHT()
         {
             flp.Controls.Clear();
             List<PhanCongModel> list = phanCongDAO.ListPCChuaHTTheoNV(nv);
             foreach (PhanCongModel pc in list)
             {
                 UCXemPhanCong_NhanVien uc = new UCXemPhanCong_NhanVien();
-                uc.CapNhat(pc, Fillflp);
+                uc.CapNhat(pc, FillflpChuaHT);
+                flp.Controls.Add(uc);
+            }
+        }
+
+        public void FillFlpDaHT()
+        {
+            flp.Controls.Clear();
+            List<PhanCongModel> list = phanCongDAO.ListPCDaHTTheoNV(nv);
+            foreach (PhanCongModel pc in list)
+            {
+                UCPhanCongDaHT uc = new UCPhanCongDaHT();
+                uc.CapNhat(pc);
                 flp.Controls.Add(uc);
             }
         }

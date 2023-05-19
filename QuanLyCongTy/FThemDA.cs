@@ -46,5 +46,17 @@ namespace QuanLyCongTy
         {
             Close();
         }
+
+        private void dtpNgayBD_ValueChanged(object sender, EventArgs e)
+        {
+            themDABUS.FillcmbTenPB(cmbTenPB, cmbLoaiPB, dtpNgayBD, dtpDeadline);
+            HienThiDanhSach();
+        }
+
+        private void dtpDeadline_ValueChanged(object sender, EventArgs e)
+        {
+            themDABUS.FillcmbTenPB(cmbTenPB, cmbLoaiPB, dtpNgayBD, dtpDeadline);
+            HienThiDanhSach();
+        }
     }
 }

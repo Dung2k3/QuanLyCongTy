@@ -42,13 +42,13 @@ namespace QuanLyCongTy
                 string MaxMaCV = congViecDAO.GetMaxMaCVTheoLPB(pb.MaLPB);
                 string MaCVMoi = MaxMaCV.Substring(0, 4) + (int.Parse(MaxMaCV.Substring(4, 3)) + 1).ToString("D3");
                 if (congViecDAO.Them(new CongViecModel(MaCVMoi, textBox.Text, pb.MaLPB)))
-                    if (phanCongDAO.Them(new PhanCongModel(da.MaDA, MaCVMoi, cboNhanVien.SelectedValue.ToString(), txtMoTa.Text, dtpDBLam.Value, dtpDeadline.Value, 0, "", -1,0)))
+                    if (phanCongDAO.Them(new PhanCongModel(da.MaDA, MaCVMoi, cboNhanVien.SelectedValue.ToString(), txtMoTa.Text, dtpDBLam.Value, dtpDeadline.Value, 0, "", -1, 0)))
                         MessageBox.Show("Thêm thành công");
                     else
                         MessageBox.Show("Thêm không thành công");
                 return;
             }
-            if (phanCongDAO.Them(new PhanCongModel(da.MaDA, cboCongViec.SelectedValue.ToString(), cboNhanVien.SelectedValue.ToString(),txtMoTa.Text, dtpDBLam.Value, dtpDeadline.Value, 0, "", -1,0)))
+            if (phanCongDAO.Them(new PhanCongModel(da.MaDA, cboCongViec.SelectedValue.ToString(), cboNhanVien.SelectedValue.ToString(), txtMoTa.Text, dtpDBLam.Value, dtpDeadline.Value, 0, "", -1,0)))
                 MessageBox.Show("Thêm thành công");
             else
                 MessageBox.Show("Thêm không thành công");

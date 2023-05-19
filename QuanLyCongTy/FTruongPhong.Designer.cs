@@ -31,6 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FTruongPhong));
             this.pnlMenu = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnLich = new Guna.UI2.WinForms.Guna2Button();
+            this.btnXinNghi = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDuAn = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCheckinout = new Guna.UI2.WinForms.Guna2Button();
             this.btnCaNhan = new Guna.UI2.WinForms.Guna2Button();
             this.lblThoat = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -45,10 +49,6 @@
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.btnLich = new Guna.UI2.WinForms.Guna2Button();
-            this.btnXinNghi = new Guna.UI2.WinForms.Guna2Button();
-            this.btnDuAn = new Guna.UI2.WinForms.Guna2Button();
-            this.btnCheckinout = new Guna.UI2.WinForms.Guna2Button();
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.pnlName.SuspendLayout();
@@ -77,6 +77,101 @@
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(350, 740);
             this.pnlMenu.TabIndex = 0;
+            // 
+            // btnLich
+            // 
+            this.btnLich.BackColor = System.Drawing.Color.Transparent;
+            this.btnLich.BorderRadius = 22;
+            this.btnLich.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnLich.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnLich.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.btnLich.CheckedState.Image = global::QuanLyCongTy.Properties.Resources.calendar__1_;
+            this.btnLich.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLich.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.btnLich.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLich.ForeColor = System.Drawing.Color.White;
+            this.btnLich.Image = global::QuanLyCongTy.Properties.Resources.calendar;
+            this.btnLich.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLich.ImageOffset = new System.Drawing.Point(10, 0);
+            this.btnLich.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnLich.Location = new System.Drawing.Point(76, 499);
+            this.btnLich.Name = "btnLich";
+            this.btnLich.Size = new System.Drawing.Size(247, 54);
+            this.btnLich.TabIndex = 40;
+            this.btnLich.Text = "Lịch";
+            this.btnLich.UseTransparentBackground = true;
+            this.btnLich.CheckedChanged += new System.EventHandler(this.btnLich_CheckedChanged);
+            // 
+            // btnXinNghi
+            // 
+            this.btnXinNghi.BackColor = System.Drawing.Color.Transparent;
+            this.btnXinNghi.BorderRadius = 22;
+            this.btnXinNghi.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnXinNghi.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnXinNghi.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.btnXinNghi.CheckedState.Image = global::QuanLyCongTy.Properties.Resources.exam__2_;
+            this.btnXinNghi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXinNghi.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.btnXinNghi.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXinNghi.ForeColor = System.Drawing.Color.White;
+            this.btnXinNghi.Image = global::QuanLyCongTy.Properties.Resources.exam__3_;
+            this.btnXinNghi.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnXinNghi.ImageOffset = new System.Drawing.Point(10, 0);
+            this.btnXinNghi.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnXinNghi.Location = new System.Drawing.Point(76, 409);
+            this.btnXinNghi.Name = "btnXinNghi";
+            this.btnXinNghi.Size = new System.Drawing.Size(247, 54);
+            this.btnXinNghi.TabIndex = 39;
+            this.btnXinNghi.Text = "Xin nghỉ";
+            this.btnXinNghi.UseTransparentBackground = true;
+            this.btnXinNghi.CheckedChanged += new System.EventHandler(this.btnXinNghi_CheckedChanged);
+            // 
+            // btnDuAn
+            // 
+            this.btnDuAn.BackColor = System.Drawing.Color.Transparent;
+            this.btnDuAn.BorderRadius = 22;
+            this.btnDuAn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnDuAn.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnDuAn.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.btnDuAn.CheckedState.Image = global::QuanLyCongTy.Properties.Resources.project;
+            this.btnDuAn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDuAn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.btnDuAn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDuAn.ForeColor = System.Drawing.Color.White;
+            this.btnDuAn.Image = global::QuanLyCongTy.Properties.Resources.project__1_;
+            this.btnDuAn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDuAn.ImageOffset = new System.Drawing.Point(10, 0);
+            this.btnDuAn.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnDuAn.Location = new System.Drawing.Point(76, 316);
+            this.btnDuAn.Name = "btnDuAn";
+            this.btnDuAn.Size = new System.Drawing.Size(247, 54);
+            this.btnDuAn.TabIndex = 38;
+            this.btnDuAn.Text = "Dự án";
+            this.btnDuAn.UseTransparentBackground = true;
+            this.btnDuAn.CheckedChanged += new System.EventHandler(this.btnDuAn_CheckedChanged);
+            // 
+            // btnCheckinout
+            // 
+            this.btnCheckinout.BackColor = System.Drawing.Color.Transparent;
+            this.btnCheckinout.BorderRadius = 22;
+            this.btnCheckinout.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnCheckinout.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnCheckinout.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.btnCheckinout.CheckedState.Image = global::QuanLyCongTy.Properties.Resources.clock__1_;
+            this.btnCheckinout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCheckinout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.btnCheckinout.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckinout.ForeColor = System.Drawing.Color.White;
+            this.btnCheckinout.Image = global::QuanLyCongTy.Properties.Resources.clock;
+            this.btnCheckinout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnCheckinout.ImageOffset = new System.Drawing.Point(10, 0);
+            this.btnCheckinout.Location = new System.Drawing.Point(76, 224);
+            this.btnCheckinout.Name = "btnCheckinout";
+            this.btnCheckinout.Size = new System.Drawing.Size(247, 54);
+            this.btnCheckinout.TabIndex = 37;
+            this.btnCheckinout.Text = "Check in/out";
+            this.btnCheckinout.UseTransparentBackground = true;
+            this.btnCheckinout.CheckedChanged += new System.EventHandler(this.btnCheckinout_CheckedChanged);
             // 
             // btnCaNhan
             // 
@@ -108,7 +203,7 @@
             this.lblThoat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblThoat.Font = new System.Drawing.Font("Calibri", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblThoat.ForeColor = System.Drawing.Color.White;
-            this.lblThoat.Location = new System.Drawing.Point(194, 686);
+            this.lblThoat.Location = new System.Drawing.Point(157, 673);
             this.lblThoat.Name = "lblThoat";
             this.lblThoat.Size = new System.Drawing.Size(59, 24);
             this.lblThoat.TabIndex = 36;
@@ -119,7 +214,7 @@
             // 
             this.guna2PictureBox1.Image = global::QuanLyCongTy.Properties.Resources.logout__1_;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(142, 686);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(105, 673);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(35, 28);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -257,102 +352,7 @@
             this.guna2ControlBox3.Size = new System.Drawing.Size(62, 32);
             this.guna2ControlBox3.TabIndex = 6;
             // 
-            // btnLich
-            // 
-            this.btnLich.BackColor = System.Drawing.Color.Transparent;
-            this.btnLich.BorderRadius = 22;
-            this.btnLich.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnLich.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnLich.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btnLich.CheckedState.Image = global::QuanLyCongTy.Properties.Resources.calendar__1_;
-            this.btnLich.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLich.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btnLich.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLich.ForeColor = System.Drawing.Color.White;
-            this.btnLich.Image = global::QuanLyCongTy.Properties.Resources.calendar;
-            this.btnLich.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnLich.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnLich.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnLich.Location = new System.Drawing.Point(76, 499);
-            this.btnLich.Name = "btnLich";
-            this.btnLich.Size = new System.Drawing.Size(247, 54);
-            this.btnLich.TabIndex = 40;
-            this.btnLich.Text = "Lịch";
-            this.btnLich.UseTransparentBackground = true;
-            this.btnLich.CheckedChanged += new System.EventHandler(this.btnLich_CheckedChanged);
-            // 
-            // btnXinNghi
-            // 
-            this.btnXinNghi.BackColor = System.Drawing.Color.Transparent;
-            this.btnXinNghi.BorderRadius = 22;
-            this.btnXinNghi.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnXinNghi.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnXinNghi.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btnXinNghi.CheckedState.Image = global::QuanLyCongTy.Properties.Resources.exam__2_;
-            this.btnXinNghi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnXinNghi.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btnXinNghi.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXinNghi.ForeColor = System.Drawing.Color.White;
-            this.btnXinNghi.Image = global::QuanLyCongTy.Properties.Resources.exam__3_;
-            this.btnXinNghi.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnXinNghi.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnXinNghi.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnXinNghi.Location = new System.Drawing.Point(76, 409);
-            this.btnXinNghi.Name = "btnXinNghi";
-            this.btnXinNghi.Size = new System.Drawing.Size(247, 54);
-            this.btnXinNghi.TabIndex = 39;
-            this.btnXinNghi.Text = "Xin nghỉ";
-            this.btnXinNghi.UseTransparentBackground = true;
-            this.btnXinNghi.CheckedChanged += new System.EventHandler(this.btnXinNghi_CheckedChanged);
-            // 
-            // btnDuAn
-            // 
-            this.btnDuAn.BackColor = System.Drawing.Color.Transparent;
-            this.btnDuAn.BorderRadius = 22;
-            this.btnDuAn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnDuAn.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnDuAn.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btnDuAn.CheckedState.Image = global::QuanLyCongTy.Properties.Resources.project;
-            this.btnDuAn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDuAn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btnDuAn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDuAn.ForeColor = System.Drawing.Color.White;
-            this.btnDuAn.Image = global::QuanLyCongTy.Properties.Resources.project__1_;
-            this.btnDuAn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnDuAn.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnDuAn.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnDuAn.Location = new System.Drawing.Point(76, 316);
-            this.btnDuAn.Name = "btnDuAn";
-            this.btnDuAn.Size = new System.Drawing.Size(247, 54);
-            this.btnDuAn.TabIndex = 38;
-            this.btnDuAn.Text = "Dự án";
-            this.btnDuAn.UseTransparentBackground = true;
-            this.btnDuAn.CheckedChanged += new System.EventHandler(this.btnDuAn_CheckedChanged);
-            // 
-            // btnCheckinout
-            // 
-            this.btnCheckinout.BackColor = System.Drawing.Color.Transparent;
-            this.btnCheckinout.BorderRadius = 22;
-            this.btnCheckinout.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnCheckinout.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnCheckinout.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btnCheckinout.CheckedState.Image = global::QuanLyCongTy.Properties.Resources.clock__1_;
-            this.btnCheckinout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCheckinout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btnCheckinout.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCheckinout.ForeColor = System.Drawing.Color.White;
-            this.btnCheckinout.Image = global::QuanLyCongTy.Properties.Resources.clock;
-            this.btnCheckinout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnCheckinout.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnCheckinout.Location = new System.Drawing.Point(76, 224);
-            this.btnCheckinout.Name = "btnCheckinout";
-            this.btnCheckinout.Size = new System.Drawing.Size(247, 54);
-            this.btnCheckinout.TabIndex = 37;
-            this.btnCheckinout.Text = "Check in/out";
-            this.btnCheckinout.UseTransparentBackground = true;
-            this.btnCheckinout.CheckedChanged += new System.EventHandler(this.btnCheckinout_CheckedChanged);
-            // 
-            // FTruongPhong2
+            // FTruongPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -365,7 +365,8 @@
             this.Controls.Add(this.pnlMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "FTruongPhong2";
+            this.Name = "FTruongPhong";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FTruongPhong2";
             this.Load += new System.EventHandler(this.FTruongPhong2_Load);
             this.pnlMenu.ResumeLayout(false);

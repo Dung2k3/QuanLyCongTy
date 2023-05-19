@@ -12,11 +12,27 @@ namespace QuanLyCongTy
 {
     public partial class FChiaThuong : Form
     {
-        string MaDA;
-        public FChiaThuong(string maDA)
+        ChiaThuongBUS chiaThuongBUS = new ChiaThuongBUS();
+        public FChiaThuong()
         {
             InitializeComponent();
-            MaDA = maDA;
+        }
+
+        public void CapNhat(DuAnModel da)
+        {
+            chiaThuongBUS.da = da;
+        }
+
+        private void FChiaThuong_Load(object sender, EventArgs e)
+        {
+            chiaThuongBUS.FillCaNhan(flpChiaThuong, lblTienThuong);
+        }
+
+        private void btnXacNhan_Click(object sender, EventArgs e)
+        {
+            chiaThuongBUS.XacNhan(flpChiaThuong);
+            Form f = (Form)Parent.Parent;
+            f.Close();
         }
     }
 }

@@ -33,9 +33,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\TV_GUNA\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.4\lib\net48\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -58,6 +62,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CapNhatTienDoBUS.cs" />
+    <Compile Include="ChartDABUS.cs" />
+    <Compile Include="CheckInModel.cs" />
+    <Compile Include="CheckIOBUS.cs" />
+    <Compile Include="CheckIODAO.cs" />
+    <Compile Include="CheckOutModel.cs" />
+    <Compile Include="ChiaThuongBUS.cs" />
+    <Compile Include="FChartDA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FChartDA.Designer.cs">
+      <DependentUpon>FChartDA.cs</DependentUpon>
+    </Compile>
     <Compile Include="FXoaPC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +189,7 @@
       <DependentUpon>FXemDuAn.cs</DependentUpon>
     </Compile>
     <Compile Include="KPIBUS.cs" />
+    <Compile Include="HoanThanhDuAnBUS.cs" />
     <Compile Include="Model\CongViecModel.cs" />
     <Compile Include="DataAccessObj\CheckinDao.cs" />
     <Compile Include="DataAccessObj\CheckoutDao.cs" />
@@ -187,8 +204,8 @@
     <Compile Include="Model\PhanCongModel.cs" />
     <Compile Include="Model\HoTroModel.cs" />
     <Compile Include="Reload.cs" />
+    <Compile Include="NhanXetDATPBUS.cs" />
     <Compile Include="SuaDABUS.cs" />
-    <Compile Include="SuaPhanCongBUS.cs" />
     <Compile Include="ThemDABUS.cs" />
     <Compile Include="ThemPhanCongBUS.cs" />
     <Compile Include="ThemHoTroBUS.cs" />
@@ -214,6 +231,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="TruongPhongBUS.cs" />
+    <Compile Include="UserControl\UCPhanCongDaHT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\UCPhanCongDaHT.Designer.cs">
+      <DependentUpon>UCPhanCongDaHT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UCXemXinNghiChuaDuyet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\UCXemXinNghiChuaDuyet.Designer.cs">
+      <DependentUpon>UCXemXinNghiChuaDuyet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UCXemXinNghiDaDuyet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\UCXemXinNghiDaDuyet.Designer.cs">
+      <DependentUpon>UCXemXinNghiDaDuyet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ThuongCaNhanBUS.cs" />
     <Compile Include="UserControl\UCLuong.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -342,12 +379,23 @@
       <DependentUpon>FXinNghi.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControl\XemDAChuaHTQLBUS.cs" />
+    <Compile Include="UserControl\XemDADaHTTPBUS.cs" />
     <Compile Include="UserControl\XemDADaHTQLBUS.cs" />
     <Compile Include="UserControl\XemPCChuaHTTPBUS.cs" />
     <Compile Include="UserControl\XemPCNVBUS.cs" />
+    <Compile Include="XemDAChuaHTTPBUS.cs" />
+    <Compile Include="XemDuAnBUS.cs" />
     <Compile Include="XemDuAnQLBUS.cs" />
+    <Compile Include="XemXinNghiChuaDuyetQLBUS.cs" />
+    <Compile Include="XemXinNghiDaDuyetQLBUS.cs" />
+    <Compile Include="XemXinNghiQLBUS.cs" />
+    <Compile Include="XinNghiDAO.cs" />
+    <Compile Include="XinNghiModel.cs" />
     <EmbeddedResource Include="FCapNhatTienDo.resx">
       <DependentUpon>FCapNhatTienDo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FChartDA.resx">
+      <DependentUpon>FChartDA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FCheckinout.resx">
       <DependentUpon>FCheckinout.cs</DependentUpon>
@@ -425,6 +473,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UCPhanCongDaHT.resx">
+      <DependentUpon>UCPhanCongDaHT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\UCLuong.resx">
       <DependentUpon>UCLuong.cs</DependentUpon>

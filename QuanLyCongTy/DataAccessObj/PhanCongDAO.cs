@@ -175,9 +175,9 @@ namespace QuanLyCongTy
         }
         public bool Sua(PhanCongModel pc)
         {
-            string query = "UPDATE PhanCong SET TienThuong = @Thuong , TienDo = @TienDo " +
+            string query = "UPDATE PhanCong SET TienThuong = @Thuong , TienDo = @TienDo , ChamDiem = @ChamDiem " +
                                           "WHERE MaDA = @MaDA AND MaCV = @MaCV ";
-            object[] para = new object[] { pc.Thuong, pc.TienDo, pc.MaDA, pc.MaCV };
+            object[] para = new object[] { pc.Thuong, pc.TienDo, pc.ChamDiem, pc.MaDA, pc.MaCV };
             return dataProvider.ExecuteNonQuery(query, para) > 0;
         }
         public bool Xoa(PhanCongModel pc)
@@ -187,10 +187,10 @@ namespace QuanLyCongTy
             return dataProvider.ExecuteNonQuery(query, para) > 0;
         }
 
-        public List<PhanCongModel> ListPCChuaHTTheoDA(string maDA)
+        public List<PhanCongModel> ListPCTheoDA(string maDA)
         {
             List<PhanCongModel> list = new List<PhanCongModel>();
-            string query = "SELECT *FROM PhanCong WHERE MaDA = @MaDA AND TienDo < 100 ";
+            string query = "SELECT *FROM PhanCong WHERE MaDA = @MaDA order by TienDo  ";
             object[] para = new object[] { maDA };
             DataTable dt = dataProvider.ExecuteQuery(query, para);
             foreach (DataRow dr in dt.Rows)
@@ -230,7 +230,22 @@ namespace QuanLyCongTy
             return list;
         }
 
-        public int KiemTraTienDo(DuAnModel da)
+        public List<PhanCongModel> ListPCDaHTTheoNV(NhanVienModel nv)
+        {
+            List<PhanCongModel> list = new List<PhanCongModel>();
+            string query = "SELECT *FROM PhanCong as Q WHERE TienDo = 100 " +
+                "AND (MaNV = @MaNV OR MaDA IN ( SELECT MaDA FROM HoTro WHERE MaNV = @MaNV1 ))";
+            object[] para = new object[] { nv.MaNV, nv.MaNV };
+            DataTable dt = dataProvider.ExecuteQuery(query, para);
+            foreach (DataRow dr in dt.Rows)
+            {
+                list.Add(new PhanCongModel(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), DateTime.Parse(dr[4].ToString()), DateTime.Parse(dr[5].ToString()),
+                    int.Parse(dr[6].ToString()), dr[7].ToString(), int.Parse(dr[8].ToString()), int.Parse(dr[9].ToString())));
+            }
+            return list;
+        }
+
+        public bool KiemTraTienDo(DuAnModel da)
         {
             string query = "SELECT (CASE " +
                                 "WHEN NOT EXISTS (select *FROM PhanCong where PhanCong.MaDA = da.MaDA and TienDo < 100) " +
@@ -240,7 +255,7 @@ namespace QuanLyCongTy
                             "FROM DuAn as da " +
                             "WHERE MaDA = @MaDA ";
             object[] para = new object[] { da.MaDA };
-            return int.Parse(dataProvider.ExecuteScalar(query, para).ToString());
+            return dataProvider.ExecuteScalar(query, para).ToString() == "1";
         }
     }
 }

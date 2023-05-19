@@ -30,8 +30,7 @@
         {
             this.lbl_TenPhong = new System.Windows.Forms.Label();
             this.lbl_tenDA = new System.Windows.Forms.Label();
-            this.flpNgoiSao = new System.Windows.Forms.FlowLayoutPanel();
-            this.RatingStar = new Guna.UI2.WinForms.Guna2RatingStar();
+            this.ratingStar = new Guna.UI2.WinForms.Guna2RatingStar();
             this.lblTienDo = new System.Windows.Forms.Label();
             this.prgTienDo = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.lblTenPhong = new System.Windows.Forms.Label();
@@ -61,26 +60,18 @@
             this.lbl_tenDA.TabIndex = 23;
             this.lbl_tenDA.Text = "Tên dự án";
             // 
-            // flpNgoiSao
+            // ratingStar
             // 
-            this.flpNgoiSao.Location = new System.Drawing.Point(42, 106);
-            this.flpNgoiSao.Margin = new System.Windows.Forms.Padding(0);
-            this.flpNgoiSao.Name = "flpNgoiSao";
-            this.flpNgoiSao.Size = new System.Drawing.Size(366, 32);
-            this.flpNgoiSao.TabIndex = 25;
-            // 
-            // RatingStar
-            // 
-            this.RatingStar.BackColor = System.Drawing.Color.White;
-            this.RatingStar.BorderColor = System.Drawing.Color.Transparent;
-            this.RatingStar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RatingStar.Location = new System.Drawing.Point(43, 106);
-            this.RatingStar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.RatingStar.Name = "RatingStar";
-            this.RatingStar.RatingColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(195)))), ((int)(((byte)(11)))));
-            this.RatingStar.ReadOnly = true;
-            this.RatingStar.Size = new System.Drawing.Size(183, 32);
-            this.RatingStar.TabIndex = 156;
+            this.ratingStar.BackColor = System.Drawing.Color.White;
+            this.ratingStar.BorderColor = System.Drawing.Color.Transparent;
+            this.ratingStar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ratingStar.Location = new System.Drawing.Point(42, 117);
+            this.ratingStar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ratingStar.Name = "ratingStar";
+            this.ratingStar.RatingColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(195)))), ((int)(((byte)(11)))));
+            this.ratingStar.ReadOnly = true;
+            this.ratingStar.Size = new System.Drawing.Size(183, 32);
+            this.ratingStar.TabIndex = 156;
             // 
             // lblTienDo
             // 
@@ -147,7 +138,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.RatingStar);
+            this.Controls.Add(this.ratingStar);
             this.Controls.Add(this.lblTienDo);
             this.Controls.Add(this.prgTienDo);
             this.Controls.Add(this.lblTenPhong);
@@ -155,7 +146,6 @@
             this.Controls.Add(this.ptbBG);
             this.Controls.Add(this.lbl_TenPhong);
             this.Controls.Add(this.lbl_tenDA);
-            this.Controls.Add(this.flpNgoiSao);
             this.Name = "UCXemDADaHT";
             this.Size = new System.Drawing.Size(495, 165);
             this.Load += new System.EventHandler(this.UCXemDADaHT_Load);
@@ -169,8 +159,7 @@
 
         private System.Windows.Forms.Label lbl_TenPhong;
         private System.Windows.Forms.Label lbl_tenDA;
-        private System.Windows.Forms.FlowLayoutPanel flpNgoiSao;
-        private Guna.UI2.WinForms.Guna2RatingStar RatingStar;
+        private Guna.UI2.WinForms.Guna2RatingStar ratingStar;
         private System.Windows.Forms.Label lblTienDo;
         private Guna.UI2.WinForms.Guna2ProgressBar prgTienDo;
         private System.Windows.Forms.Label lblTenPhong;

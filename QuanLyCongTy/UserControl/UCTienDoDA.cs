@@ -24,7 +24,7 @@ namespace QuanLyCongTy
         }
         private void UCTienDoDA_Load(object sender, EventArgs e)
         {
-            xemDAChuaHTQLBUS.FillControls(lblTenDA, lblTenPhong, lblNgayConLai, prgTienDo);
+            xemDAChuaHTQLBUS.FillControls(lblTenDA, lblTenPhong, lblNgayConLai, prgTienDo, lblTienDo);
         }
 
         private void btnXoa_Click(object sender, EventArgs e)

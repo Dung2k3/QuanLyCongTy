@@ -28,10 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.guna2Shapes2 = new Guna.UI2.WinForms.Guna2Shapes();
-            this.txtThuong = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblThuong = new System.Windows.Forms.Label();
             this.lblXepLoai = new System.Windows.Forms.Label();
             this.RatingStar = new Guna.UI2.WinForms.Guna2RatingStar();
@@ -42,61 +38,9 @@
             this.txtNhanXet = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblTienThuong = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // guna2BorderlessForm1
-            // 
-            this.guna2BorderlessForm1.ContainerControl = this;
-            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2BorderlessForm1.TransparentWhileDrag = true;
-            // 
-            // guna2Shapes2
-            // 
-            this.guna2Shapes2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Shapes2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.guna2Shapes2.BorderThickness = 0;
-            this.guna2Shapes2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(101)))), ((int)(((byte)(189)))));
-            this.guna2Shapes2.LineEndCap = System.Drawing.Drawing2D.LineCap.NoAnchor;
-            this.guna2Shapes2.LineStartCap = System.Drawing.Drawing2D.LineCap.Round;
-            this.guna2Shapes2.LineThickness = 2;
-            this.guna2Shapes2.Location = new System.Drawing.Point(319, 491);
-            this.guna2Shapes2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2Shapes2.Name = "guna2Shapes2";
-            this.guna2Shapes2.PolygonSkip = 1;
-            this.guna2Shapes2.Rotate = 0F;
-            this.guna2Shapes2.Shape = Guna.UI2.WinForms.Enums.ShapeType.Line;
-            this.guna2Shapes2.Size = new System.Drawing.Size(340, 12);
-            this.guna2Shapes2.TabIndex = 195;
-            this.guna2Shapes2.Text = "guna2Shapes2";
-            this.guna2Shapes2.UseTransparentBackground = true;
-            this.guna2Shapes2.Zoom = 90;
-            // 
-            // txtThuong
-            // 
-            this.txtThuong.Animated = true;
-            this.txtThuong.BorderColor = System.Drawing.Color.White;
-            this.txtThuong.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.txtThuong.BorderThickness = 0;
-            this.txtThuong.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtThuong.DefaultText = "";
-            this.txtThuong.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtThuong.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtThuong.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtThuong.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtThuong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtThuong.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtThuong.ForeColor = System.Drawing.Color.Black;
-            this.txtThuong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtThuong.Location = new System.Drawing.Point(325, 463);
-            this.txtThuong.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtThuong.Name = "txtThuong";
-            this.txtThuong.PasswordChar = '\0';
-            this.txtThuong.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtThuong.PlaceholderText = "";
-            this.txtThuong.SelectedText = "";
-            this.txtThuong.Size = new System.Drawing.Size(340, 40);
-            this.txtThuong.TabIndex = 194;
             // 
             // lblThuong
             // 
@@ -196,7 +140,7 @@
             this.txtNhanXet.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtNhanXet.ForeColor = System.Drawing.Color.Black;
             this.txtNhanXet.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNhanXet.Location = new System.Drawing.Point(149, 165);
+            this.txtNhanXet.Location = new System.Drawing.Point(147, 163);
             this.txtNhanXet.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNhanXet.Name = "txtNhanXet";
             this.txtNhanXet.PasswordChar = '\0';
@@ -230,14 +174,26 @@
             this.label1.TabIndex = 183;
             this.label1.Text = "Nhận xét dự án";
             // 
+            // lblTienThuong
+            // 
+            this.lblTienThuong.AutoSize = true;
+            this.lblTienThuong.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblTienThuong.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTienThuong.ForeColor = System.Drawing.Color.Black;
+            this.lblTienThuong.Location = new System.Drawing.Point(321, 479);
+            this.lblTienThuong.Name = "lblTienThuong";
+            this.lblTienThuong.Size = new System.Drawing.Size(61, 24);
+            this.lblTienThuong.TabIndex = 196;
+            this.lblTienThuong.Text = "label1";
+            this.lblTienThuong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // FNhanXetDA_TruongPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1000, 700);
-            this.Controls.Add(this.guna2Shapes2);
-            this.Controls.Add(this.txtThuong);
+            this.Controls.Add(this.lblTienThuong);
             this.Controls.Add(this.lblThuong);
             this.Controls.Add(this.lblXepLoai);
             this.Controls.Add(this.RatingStar);
@@ -260,9 +216,6 @@
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
-        private Guna.UI2.WinForms.Guna2Shapes guna2Shapes2;
-        private Guna.UI2.WinForms.Guna2TextBox txtThuong;
         private System.Windows.Forms.Label lblThuong;
         private System.Windows.Forms.Label lblXepLoai;
         private Guna.UI2.WinForms.Guna2RatingStar RatingStar;
@@ -273,5 +226,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtNhanXet;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTienThuong;
     }
 }

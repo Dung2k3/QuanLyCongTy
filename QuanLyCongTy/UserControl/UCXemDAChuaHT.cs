@@ -12,37 +12,26 @@ namespace QuanLyCongTy
 {
     public partial class UCXemDAChuaHT : UserControl
     {
-        TienDoDADAO ttdaDAO = new TienDoDADAO();
-        string MaDA;
-        Reload.Flp HamRL;
-        public UCXemDAChuaHT(string MaDA)
+        XemDAChuaHTTPBUS xemDAChuaHTTPBUS = new XemDAChuaHTTPBUS();
+        public UCXemDAChuaHT()
         {
             InitializeComponent();
-            this.MaDA = MaDA;
+        }
+
+        public void CapNhat(DuAnModel da, Reload.Flp rl)
+        {
+            xemDAChuaHTTPBUS.da = da;
+            xemDAChuaHTTPBUS.rl = rl;
         }
 
         private void UCTienDoDA_Load(object sender, EventArgs e)
         {
-            TienDoDA td = ttdaDAO.LayDanhSachDuAn(MaDA);
-
-            lbl_tenDA.Text = td.TenDuAn;
-            lbl_TenPhong.Text = td.TenPB;
-            lbl_NgayCL.Text = "Thời hạn: Còn " + td.NgayKT.Subtract(td.NgayBD).Days.ToString() + " ngày.";
-            prgTienDo.Value = ttdaDAO.LayTienDo(MaDA);
-            lblTienDo.Text = ttdaDAO.LayTienDo(MaDA).ToString() + "%";
-        }
-        public void addReLoat(Reload.Flp HamRL)
-        {
-            this.HamRL = HamRL;
+            xemDAChuaHTTPBUS.FillControl(lbl_tenDA, lbl_TenPhong, prgTienDo, lbl_NgayCL, lblTienDo);
         }
 
         private void ptbBG_Click(object sender, EventArgs e)
         {
-            Form form = new FThongTinDA(MaDA);
-            Enabled = false;
-            form.ShowDialog();
-            Enabled = true;
-            HamRL();
+            xemDAChuaHTTPBUS.OpenFThongTin();
         }
     }
 }

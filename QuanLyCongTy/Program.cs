@@ -19,13 +19,13 @@ namespace QuanLyCongTy
             Application.SetCompatibleTextRenderingDefault(false);
 
             //Application.Run(new FDangNhap());
-            //Application.Run(new FDangNhap());
+            Application.Run(new FDangNhap());
 
             //Application.Run(new FSuaDA("DA001"));
             //Application.Run(new FThemDA());
 
-            //Application.Run(new FQuanLy2("NV001"));
-            Application.Run(new FNhanVien("NV033"));
+            //Application.Run(new FQuanLy("NV001"));
+            //Application.Run(new FNhanVien2("NV003"));
             //Application.Run(new FTruongPhong("NV004"));
 
             //Application.Run(new FCapNhatTienDo());

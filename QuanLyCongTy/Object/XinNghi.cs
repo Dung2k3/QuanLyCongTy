@@ -8,24 +8,32 @@ namespace QuanLyCongTy
 {
     public class XinNghi
     {
-        DateTime daystart;
-        DateTime dayend;
-        string lydo;
-        string minhchung;
-       
+        string maNV;
+        string hoVaTen;
+        DateTime ngayBD;
+        int soNgayNghi;
+        string lyDo;
+        int heSoDuyet;
+        //Image minhChung;
 
-        public DateTime DayStart { get { return daystart; } }
-        public DateTime DayEnd { get { return dayend; } }
-        public string LyDo { get { return lydo; } }
-        public string MinhChung { get { return minhchung; } }
+        public string MaNV { get { return maNV; } }
+        public string HoVaTen { get { return hoVaTen; } }
+        public DateTime NgayBD { get { return ngayBD; } }
+        public int SoNgayNghi { get { return soNgayNghi; } }
+        public string LyDo { get { return lyDo; } }
+        public int HeSoDuyet { get { return heSoDuyet; } }
+        //public string MinhChung { get { return minhChung; } }
 
 
-        public XinNghi(DateTime daystart, DateTime dayend, string lydo, string minhchung)
+        public XinNghi(string maNV, string hoVaTen, DateTime ngayBD, int soNgayNghi, string lyDo, int heSoDuyet)
         {
-            this.daystart = daystart;
-            this.dayend = dayend;
-            this.lydo = lydo;
-            this.minhchung = minhchung;
+            this.maNV = maNV;
+            this.hoVaTen = hoVaTen;
+            this.ngayBD = ngayBD;
+            this.soNgayNghi = soNgayNghi;
+            this.lyDo = lyDo;
+            this.heSoDuyet = heSoDuyet;
+            //this.minhChung = minhChung;
         }
     }
 }

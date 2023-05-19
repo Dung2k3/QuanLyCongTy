@@ -25,16 +25,17 @@ namespace QuanLyCongTy
         }
         private void btnDaHT_CheckedChanged(object sender, EventArgs e)
         {
+            kPIBUS.FillFlpDaHT();
         }
 
         private void btnChuaHT_CheckedChanged(object sender, EventArgs e)
         {
-            kPIBUS.Fillflp();
+            kPIBUS.FillflpChuaHT();
         }
 
         private void FKPI_Load(object sender, EventArgs e)
         {
-            kPIBUS.Fillflp();
+            kPIBUS.FillflpChuaHT();
         }
     }
 }

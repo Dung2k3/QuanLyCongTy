@@ -34,7 +34,7 @@ namespace QuanLyCongTy
             foreach (DuAnModel da in listDA)
             {
                 UCSailorStar uc = new UCSailorStar();
-                uc.CapNhat(da, FillDuAnChuaHT);
+                uc.CapNhat(da, FillDuAnDaHT);
                 flpListDA.Controls.Add(uc);
             }
         }

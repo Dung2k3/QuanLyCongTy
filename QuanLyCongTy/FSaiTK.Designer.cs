@@ -108,6 +108,7 @@
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FSaiTK";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FSaiTK";
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();

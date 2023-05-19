@@ -48,11 +48,13 @@ namespace QuanLyCongTy
         private void dtpNgayBD_ValueChanged(object sender, EventArgs e)
         {
             suaDABUS.FillcmbTenPB(cmbTenPB,dtpNgayBD, dtpDeadline);
+            HienThiDanhSach();
         }
 
         private void dtpDeadline_ValueChanged(object sender, EventArgs e)
         {
             suaDABUS.FillcmbTenPB(cmbTenPB, dtpNgayBD, dtpDeadline);
+            HienThiDanhSach();
         }
     }
 }

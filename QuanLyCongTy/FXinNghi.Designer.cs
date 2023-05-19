@@ -31,18 +31,18 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FXinNghi));
             this.label2 = new System.Windows.Forms.Label();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.pnl_XinNghi = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.flp_ListXN = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.btn_Add = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btn_DaDuyet = new Guna.UI2.WinForms.Guna2Button();
             this.btn_ChuaDuyet = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_Add = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2ShadowPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2ShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Add)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -50,7 +50,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label2.Location = new System.Drawing.Point(411, 9);
+            this.label2.Location = new System.Drawing.Point(334, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(109, 33);
             this.label2.TabIndex = 1;
@@ -59,17 +59,17 @@
             // guna2GradientPanel1
             // 
             this.guna2GradientPanel1.BackColor = System.Drawing.Color.Black;
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(11, 39);
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(11, 37);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(430, 2);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(299, 2);
             this.guna2GradientPanel1.TabIndex = 0;
             // 
-            // pnl_XinNghi
+            // flp_ListXN
             // 
-            this.pnl_XinNghi.Location = new System.Drawing.Point(12, 109);
-            this.pnl_XinNghi.Name = "pnl_XinNghi";
-            this.pnl_XinNghi.Size = new System.Drawing.Size(914, 583);
-            this.pnl_XinNghi.TabIndex = 3;
+            this.flp_ListXN.Location = new System.Drawing.Point(12, 109);
+            this.flp_ListXN.Name = "flp_ListXN";
+            this.flp_ListXN.Size = new System.Drawing.Size(783, 448);
+            this.flp_ListXN.TabIndex = 3;
             // 
             // guna2ShadowPanel2
             // 
@@ -82,19 +82,8 @@
             this.guna2ShadowPanel2.Name = "guna2ShadowPanel2";
             this.guna2ShadowPanel2.ShadowColor = System.Drawing.Color.Black;
             this.guna2ShadowPanel2.ShadowDepth = 200;
-            this.guna2ShadowPanel2.Size = new System.Drawing.Size(452, 49);
+            this.guna2ShadowPanel2.Size = new System.Drawing.Size(321, 49);
             this.guna2ShadowPanel2.TabIndex = 3;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(408, 6);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(34, 33);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 5;
-            this.guna2PictureBox1.TabStop = false;
             // 
             // guna2TextBox1
             // 
@@ -118,7 +107,7 @@
             this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.guna2TextBox1.PlaceholderText = "Search";
             this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(392, 29);
+            this.guna2TextBox1.Size = new System.Drawing.Size(279, 29);
             this.guna2TextBox1.TabIndex = 5;
             // 
             // guna2ShadowPanel1
@@ -134,18 +123,6 @@
             this.guna2ShadowPanel1.ShadowDepth = 250;
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(452, 49);
             this.guna2ShadowPanel1.TabIndex = 4;
-            // 
-            // btn_Add
-            // 
-            this.btn_Add.Image = ((System.Drawing.Image)(resources.GetObject("btn_Add.Image")));
-            this.btn_Add.ImageRotate = 0F;
-            this.btn_Add.Location = new System.Drawing.Point(401, 7);
-            this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Size = new System.Drawing.Size(39, 36);
-            this.btn_Add.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btn_Add.TabIndex = 7;
-            this.btn_Add.TabStop = false;
-            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // btn_DaDuyet
             // 
@@ -191,25 +168,48 @@
             this.btn_ChuaDuyet.UseTransparentBackground = true;
             this.btn_ChuaDuyet.Click += new System.EventHandler(this.btn_ChuaDuyet_Click);
             // 
-            // F_XinNghi
+            // btn_Add
+            // 
+            this.btn_Add.Image = ((System.Drawing.Image)(resources.GetObject("btn_Add.Image")));
+            this.btn_Add.ImageRotate = 0F;
+            this.btn_Add.Location = new System.Drawing.Point(401, 7);
+            this.btn_Add.Name = "btn_Add";
+            this.btn_Add.Size = new System.Drawing.Size(39, 36);
+            this.btn_Add.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_Add.TabIndex = 7;
+            this.btn_Add.TabStop = false;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(408, 6);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(34, 33);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 5;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // FXinNghi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(938, 704);
+            this.ClientSize = new System.Drawing.Size(807, 569);
             this.Controls.Add(this.guna2ShadowPanel1);
             this.Controls.Add(this.guna2ShadowPanel2);
-            this.Controls.Add(this.pnl_XinNghi);
+            this.Controls.Add(this.flp_ListXN);
             this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "F_XinNghi";
+            this.Name = "FXinNghi";
             this.Text = "F_XinNghi";
+            this.Load += new System.EventHandler(this.FXinNghi_Load);
             this.guna2ShadowPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2ShadowPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btn_Add)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,7 +219,7 @@
 
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
-        private Guna.UI2.WinForms.Guna2GradientPanel pnl_XinNghi;
+        private Guna.UI2.WinForms.Guna2GradientPanel flp_ListXN;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel2;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;

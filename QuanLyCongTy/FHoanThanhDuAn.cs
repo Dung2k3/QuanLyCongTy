@@ -12,42 +12,33 @@ namespace QuanLyCongTy
 {
     public partial class FHoanThanhDuAn : Form
     {
-        string MaDA;
-        Form currentFormChild;
-        public FHoanThanhDuAn(string maDA)
+        HoanThanhDuAnBUS hoanThanhDuAnBUS = new HoanThanhDuAnBUS();
+
+        public delegate void FReload();
+        public FHoanThanhDuAn()
         {
             InitializeComponent();
-            MaDA = maDA;
+            hoanThanhDuAnBUS.AddPnl(pnlNoiDung);
         }
 
-        public void OpenChildForm(Form childForm)
+        public void CapNhat(DuAnModel da)
         {
-            if (currentFormChild != null)
-            {
-                currentFormChild.Close();
-            }
-            currentFormChild = childForm;
-            childForm.TopLevel = false;
-            childForm.Dock = DockStyle.Fill;
-            pnlNoiDung.Controls.Add(childForm);
-            pnlNoiDung.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
+            hoanThanhDuAnBUS.da = da;
         }
 
         private void btnNhanXet_CheckedChanged(object sender, EventArgs e)
         {
-            OpenChildForm(new FNhanXetDA_TruongPhong(MaDA));
+            hoanThanhDuAnBUS.FillNhanXet();
         }
 
         private void btnThuong_CheckedChanged(object sender, EventArgs e)
         {
-            OpenChildForm(new FChiaThuong(MaDA));
+            hoanThanhDuAnBUS.FillChiaThuong();
         }
 
         private void FHoanThanhDuAn_Load(object sender, EventArgs e)
         {
-            OpenChildForm(new FNhanXetDA_TruongPhong(MaDA));
+            hoanThanhDuAnBUS.FillNhanXet();
         }
     }
 }

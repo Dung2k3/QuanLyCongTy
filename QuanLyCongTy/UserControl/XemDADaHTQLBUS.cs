@@ -21,7 +21,7 @@ namespace QuanLyCongTy
             lbl_TenPhong.Text = pb.TenPB;
             prgTienDo.Value = 100;
             lblTienDo.Text = "100%";
-            ratingStar.Value = (int)(da.ChamDiem / 20);
+            ratingStar.Value = (float)da.ChamDiem / 20;
         }
         void OpenForm(Form fnew, UCSailorStar uc)
         {
