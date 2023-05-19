@@ -37,7 +37,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtNhanXet = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblTienThuong = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -46,10 +45,10 @@
             // 
             this.lblThuong.AutoSize = true;
             this.lblThuong.BackColor = System.Drawing.Color.White;
-            this.lblThuong.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblThuong.Location = new System.Drawing.Point(184, 479);
+            this.lblThuong.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThuong.Location = new System.Drawing.Point(219, 456);
             this.lblThuong.Name = "lblThuong";
-            this.lblThuong.Size = new System.Drawing.Size(80, 24);
+            this.lblThuong.Size = new System.Drawing.Size(91, 28);
             this.lblThuong.TabIndex = 193;
             this.lblThuong.Text = "Thưởng:";
             // 
@@ -57,11 +56,11 @@
             // 
             this.lblXepLoai.AutoSize = true;
             this.lblXepLoai.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblXepLoai.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblXepLoai.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblXepLoai.ForeColor = System.Drawing.Color.Black;
-            this.lblXepLoai.Location = new System.Drawing.Point(321, 412);
+            this.lblXepLoai.Location = new System.Drawing.Point(356, 389);
             this.lblXepLoai.Name = "lblXepLoai";
-            this.lblXepLoai.Size = new System.Drawing.Size(61, 24);
+            this.lblXepLoai.Size = new System.Drawing.Size(68, 28);
             this.lblXepLoai.TabIndex = 191;
             this.lblXepLoai.Text = "label1";
             // 
@@ -70,7 +69,7 @@
             this.RatingStar.BackColor = System.Drawing.Color.White;
             this.RatingStar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(161)))));
             this.RatingStar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RatingStar.Location = new System.Drawing.Point(325, 345);
+            this.RatingStar.Location = new System.Drawing.Point(360, 322);
             this.RatingStar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RatingStar.Name = "RatingStar";
             this.RatingStar.RatingColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(193)))), ((int)(((byte)(11)))));
@@ -82,10 +81,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(184, 412);
+            this.label4.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(219, 389);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 24);
+            this.label4.Size = new System.Drawing.Size(91, 28);
             this.label4.TabIndex = 189;
             this.label4.Text = "Xếp loại:";
             // 
@@ -93,33 +92,33 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(184, 356);
+            this.label3.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(219, 333);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 24);
+            this.label3.Size = new System.Drawing.Size(99, 28);
             this.label3.TabIndex = 188;
             this.label3.Text = "Đánh giá:";
             // 
             // lblTenDA
             // 
-            this.lblTenDA.AutoSize = true;
             this.lblTenDA.BackColor = System.Drawing.Color.White;
-            this.lblTenDA.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenDA.Font = new System.Drawing.Font("Segoe UI Black", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenDA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(161)))));
-            this.lblTenDA.Location = new System.Drawing.Point(128, 113);
+            this.lblTenDA.Location = new System.Drawing.Point(12, 24);
             this.lblTenDA.Name = "lblTenDA";
-            this.lblTenDA.Size = new System.Drawing.Size(112, 29);
+            this.lblTenDA.Size = new System.Drawing.Size(976, 45);
             this.lblTenDA.TabIndex = 187;
             this.lblTenDA.Text = "Tên dự án";
+            this.lblTenDA.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(178, 153);
+            this.label2.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(209, 105);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 24);
+            this.label2.Size = new System.Drawing.Size(95, 28);
             this.label2.TabIndex = 185;
             this.label2.Text = "Nhận xét";
             // 
@@ -140,7 +139,7 @@
             this.txtNhanXet.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtNhanXet.ForeColor = System.Drawing.Color.Black;
             this.txtNhanXet.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNhanXet.Location = new System.Drawing.Point(147, 163);
+            this.txtNhanXet.Location = new System.Drawing.Point(130, 116);
             this.txtNhanXet.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNhanXet.Name = "txtNhanXet";
             this.txtNhanXet.PasswordChar = '\0';
@@ -148,41 +147,30 @@
             this.txtNhanXet.PlaceholderText = "";
             this.txtNhanXet.ReadOnly = true;
             this.txtNhanXet.SelectedText = "";
-            this.txtNhanXet.Size = new System.Drawing.Size(732, 130);
+            this.txtNhanXet.Size = new System.Drawing.Size(763, 178);
             this.txtNhanXet.TabIndex = 186;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = global::QuanLyCongTy.Properties.Resources.speech_bubble;
-            this.pictureBox1.Location = new System.Drawing.Point(302, 56);
+            this.pictureBox1.Location = new System.Drawing.Point(172, 105);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(34, 28);
+            this.pictureBox1.Size = new System.Drawing.Size(38, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 184;
             this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(161)))));
-            this.label1.Location = new System.Drawing.Point(128, 56);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(166, 29);
-            this.label1.TabIndex = 183;
-            this.label1.Text = "Nhận xét dự án";
             // 
             // lblTienThuong
             // 
             this.lblTienThuong.AutoSize = true;
             this.lblTienThuong.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblTienThuong.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTienThuong.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTienThuong.ForeColor = System.Drawing.Color.Black;
-            this.lblTienThuong.Location = new System.Drawing.Point(321, 479);
+            this.lblTienThuong.Location = new System.Drawing.Point(356, 456);
             this.lblTienThuong.Name = "lblTienThuong";
-            this.lblTienThuong.Size = new System.Drawing.Size(61, 24);
+            this.lblTienThuong.Size = new System.Drawing.Size(68, 28);
             this.lblTienThuong.TabIndex = 196;
             this.lblTienThuong.Text = "label1";
             this.lblTienThuong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -192,7 +180,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1000, 700);
+            this.ClientSize = new System.Drawing.Size(1000, 647);
             this.Controls.Add(this.lblTienThuong);
             this.Controls.Add(this.lblThuong);
             this.Controls.Add(this.lblXepLoai);
@@ -201,9 +189,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblTenDA);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtNhanXet);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtNhanXet);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FNhanXetDA_TruongPhong";
@@ -225,7 +212,6 @@
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2TextBox txtNhanXet;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblTienThuong;
     }
 }

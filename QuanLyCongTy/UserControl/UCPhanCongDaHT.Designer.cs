@@ -88,7 +88,7 @@
             // 
             // ptbBG
             // 
-            this.ptbBG.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ptbBG.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.ptbBG.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ptbBG.Image = global::QuanLyCongTy.Properties.Resources.Vien2;
             this.ptbBG.Location = new System.Drawing.Point(0, 0);
@@ -115,9 +115,9 @@
             // 
             this.lblThuong.BackColor = System.Drawing.Color.White;
             this.lblThuong.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblThuong.Location = new System.Drawing.Point(138, 123);
+            this.lblThuong.Location = new System.Drawing.Point(138, 118);
             this.lblThuong.Name = "lblThuong";
-            this.lblThuong.Size = new System.Drawing.Size(136, 24);
+            this.lblThuong.Size = new System.Drawing.Size(115, 24);
             this.lblThuong.TabIndex = 161;
             this.lblThuong.Text = "Thưởng";
             // 
@@ -125,7 +125,7 @@
             // 
             this.lblTienTuong.BackColor = System.Drawing.Color.White;
             this.lblTienTuong.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTienTuong.Location = new System.Drawing.Point(39, 123);
+            this.lblTienTuong.Location = new System.Drawing.Point(39, 118);
             this.lblTienTuong.Name = "lblTienTuong";
             this.lblTienTuong.Size = new System.Drawing.Size(93, 24);
             this.lblTienTuong.TabIndex = 165;
@@ -146,12 +146,12 @@
             // 
             this.RatingStar.BorderColor = System.Drawing.Color.Transparent;
             this.RatingStar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RatingStar.Location = new System.Drawing.Point(280, 115);
+            this.RatingStar.Location = new System.Drawing.Point(259, 114);
             this.RatingStar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RatingStar.Name = "RatingStar";
             this.RatingStar.RatingColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(195)))), ((int)(((byte)(11)))));
             this.RatingStar.ReadOnly = true;
-            this.RatingStar.Size = new System.Drawing.Size(183, 32);
+            this.RatingStar.Size = new System.Drawing.Size(204, 32);
             this.RatingStar.TabIndex = 167;
             // 
             // UCPhanCongDaHT

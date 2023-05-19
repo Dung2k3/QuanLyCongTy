@@ -35,6 +35,7 @@
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.btnNhanXet = new Guna.UI2.WinForms.Guna2Button();
             this.btnThuong = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Shapes1 = new Guna.UI2.WinForms.Guna2Shapes();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -46,9 +47,9 @@
             // pnlNoiDung
             // 
             this.pnlNoiDung.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlNoiDung.Location = new System.Drawing.Point(0, 80);
+            this.pnlNoiDung.Location = new System.Drawing.Point(0, 148);
             this.pnlNoiDung.Name = "pnlNoiDung";
-            this.pnlNoiDung.Size = new System.Drawing.Size(1000, 700);
+            this.pnlNoiDung.Size = new System.Drawing.Size(1000, 649);
             this.pnlNoiDung.TabIndex = 0;
             // 
             // guna2ControlBox3
@@ -92,7 +93,7 @@
             this.btnNhanXet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(101)))), ((int)(((byte)(189)))));
             this.btnNhanXet.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnNhanXet.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnNhanXet.Location = new System.Drawing.Point(12, 31);
+            this.btnNhanXet.Location = new System.Drawing.Point(321, 66);
             this.btnNhanXet.Name = "btnNhanXet";
             this.btnNhanXet.Size = new System.Drawing.Size(166, 44);
             this.btnNhanXet.TabIndex = 38;
@@ -114,7 +115,7 @@
             this.btnThuong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.btnThuong.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnThuong.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnThuong.Location = new System.Drawing.Point(184, 31);
+            this.btnThuong.Location = new System.Drawing.Point(496, 66);
             this.btnThuong.Name = "btnThuong";
             this.btnThuong.Size = new System.Drawing.Size(166, 44);
             this.btnThuong.TabIndex = 39;
@@ -122,12 +123,28 @@
             this.btnThuong.UseTransparentBackground = true;
             this.btnThuong.CheckedChanged += new System.EventHandler(this.btnThuong_CheckedChanged);
             // 
+            // guna2Shapes1
+            // 
+            this.guna2Shapes1.BorderThickness = 1;
+            this.guna2Shapes1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(101)))), ((int)(((byte)(189)))));
+            this.guna2Shapes1.LineThickness = 2;
+            this.guna2Shapes1.Location = new System.Drawing.Point(321, 116);
+            this.guna2Shapes1.Name = "guna2Shapes1";
+            this.guna2Shapes1.PolygonSkip = 1;
+            this.guna2Shapes1.Rotate = 0F;
+            this.guna2Shapes1.Shape = Guna.UI2.WinForms.Enums.ShapeType.Line;
+            this.guna2Shapes1.Size = new System.Drawing.Size(341, 10);
+            this.guna2Shapes1.TabIndex = 40;
+            this.guna2Shapes1.Text = "guna2Shapes1";
+            this.guna2Shapes1.Zoom = 100;
+            // 
             // FHoanThanhDuAn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1000, 780);
+            this.ClientSize = new System.Drawing.Size(1000, 797);
+            this.Controls.Add(this.guna2Shapes1);
             this.Controls.Add(this.btnThuong);
             this.Controls.Add(this.btnNhanXet);
             this.Controls.Add(this.guna2ControlBox3);
@@ -149,5 +166,6 @@
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2Button btnThuong;
         private Guna.UI2.WinForms.Guna2Button btnNhanXet;
+        private Guna.UI2.WinForms.Guna2Shapes guna2Shapes1;
     }
 }

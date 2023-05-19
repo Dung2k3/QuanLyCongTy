@@ -14,7 +14,6 @@ namespace QuanLyCongTy
         public PhanCongModel pc;
         public Reload.Flp reLoadF;
         CongViecDAO congViecDAO = new CongViecDAO();
-        PhanCongDAO phanCongDAO = new PhanCongDAO();
         NhanVienDAO nhanVienDAO = new NhanVienDAO();
         public void FillControl(Label lblTenCV, Label lblGTBatDauLam, Label lblTGConLai, Guna2ProgressBar ucTienDo1, TextBox textBox1, Label lblTienDo)
         {

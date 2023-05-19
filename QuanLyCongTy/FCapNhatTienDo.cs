@@ -26,12 +26,7 @@ namespace QuanLyCongTy
 
         private void FCapNhatTienDo_Load(object sender, EventArgs e)
         {
-            capNhatTienDoBUS.FillControl(label1, label4, guna2HScrollBar1, label2);
-        }
-
-        private void btnDong_Click(object sender, EventArgs e)
-        {
-            Close();
+            capNhatTienDoBUS.FillControl(label1, label4, trackBar, label2, lblNgayCL);
         }
 
         private void btnCapNhat_Click(object sender, EventArgs e)
@@ -42,7 +37,12 @@ namespace QuanLyCongTy
 
         private void guna2HScrollBar1_Scroll(object sender, ScrollEventArgs e)
         {
-            capNhatTienDoBUS.UpdateLbl(guna2HScrollBar1, label2);
+            capNhatTienDoBUS.UpdateLbl(trackBar, label2);
+        }
+
+        private void trackBar_ValueChanged(object sender, EventArgs e)
+        {
+            capNhatTienDoBUS.UpdateLbl(trackBar, label2);
         }
     }
 }

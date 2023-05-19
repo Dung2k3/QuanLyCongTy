@@ -24,7 +24,8 @@ namespace QuanLyCongTy
 
         private void FChartDA_Load(object sender, EventArgs e)
         {
-            chartDABUS.FillChart(chart1);
+            chartDABUS.FillProTienDo(guna2CircleProgressBar1, label4);
+            chartDABUS.FillFlpTienDo(flpTienDo);
         }
     }
 }

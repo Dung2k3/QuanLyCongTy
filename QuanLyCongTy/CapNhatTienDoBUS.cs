@@ -1,6 +1,7 @@
 ﻿using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,17 +16,23 @@ namespace QuanLyCongTy
         CongViecDAO congViecDAO = new CongViecDAO();
         PhanCongDAO phanCongDAO = new PhanCongDAO();
 
-        public void FillControl(Label lblCV, Label lblMoTa, Guna2HScrollBar prgTienDo, Label lblTienDo)
+        public void FillControl(Label lblCV, Label lblMoTa, Guna2TrackBar trackBar, Label lblTienDo, Label lblNgayCL)
         {
             lblCV.Text = congViecDAO.GetCongViecTheoMaCV(pc.MaCV).TenCV;
             lblMoTa.Text = pc.MoTa;
-            prgTienDo.Value = pc.TienDo;
+            trackBar.Value = pc.TienDo;
             lblTienDo.Text = pc.TienDo.ToString() + "%";
+            int NgayCL = pc.DeadLine.Subtract(pc.NgayBD).Days;
+            if(NgayCL <= 10)
+            {
+                lblNgayCL.ForeColor = ColorTranslator.FromHtml("#F44336");
+            }
+            lblNgayCL.Text = NgayCL.ToString() + " ngày.";
         }
-        public void UpdateLbl(Guna2HScrollBar prgTienDo, Label lblTienDo)
+        public void UpdateLbl(Guna2TrackBar trackBar, Label lblTienDo)
         {
-            lblTienDo.Text = prgTienDo.Value + "%";
-            pc.TienDo = prgTienDo.Value;
+            lblTienDo.Text = trackBar.Value + "%";
+            pc.TienDo = trackBar.Value;
         }
         public void CapNhatPC()
         {

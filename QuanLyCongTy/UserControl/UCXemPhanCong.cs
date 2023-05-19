@@ -25,7 +25,7 @@ namespace QuanLyCongTy
 
         private void UCXemPhanCong_Load(object sender, EventArgs e)
         {
-            xemPCChuaHTTPBUS.FillControl(lblTenCV, lblGTBatDauLam, lblTGConLai, prgTienDo, textBox1, lblTienDo );
+            xemPCChuaHTTPBUS.FillControl(lblTenCV, lblGTBatDauLam, lblTGConLai, prgTienDo, textBox1, lblTienDo);
         }
 
         private void btnXoa_Click(object sender, EventArgs e)

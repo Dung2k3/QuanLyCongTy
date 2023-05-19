@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.RatingStar = new Guna.UI2.WinForms.Guna2RatingStar();
             this.lblPhanCong = new System.Windows.Forms.Label();
             this.guna2Shapes1 = new Guna.UI2.WinForms.Guna2Shapes();
             this.txtThuong = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblThuong = new System.Windows.Forms.Label();
             this.lblTenNV = new System.Windows.Forms.Label();
-            this.RatingStar = new Guna.UI2.WinForms.Guna2RatingStar();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,8 +49,19 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(900, 70);
+            this.guna2Panel1.Size = new System.Drawing.Size(900, 75);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // RatingStar
+            // 
+            this.RatingStar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.RatingStar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RatingStar.Location = new System.Drawing.Point(371, 11);
+            this.RatingStar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.RatingStar.Name = "RatingStar";
+            this.RatingStar.RatingColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(195)))), ((int)(((byte)(11)))));
+            this.RatingStar.Size = new System.Drawing.Size(213, 43);
+            this.RatingStar.TabIndex = 161;
             // 
             // lblPhanCong
             // 
@@ -124,17 +135,6 @@
             this.lblTenNV.TabIndex = 0;
             this.lblTenNV.Text = "Họ và tên";
             // 
-            // RatingStar
-            // 
-            this.RatingStar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.RatingStar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RatingStar.Location = new System.Drawing.Point(371, 11);
-            this.RatingStar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.RatingStar.Name = "RatingStar";
-            this.RatingStar.RatingColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(195)))), ((int)(((byte)(11)))));
-            this.RatingStar.Size = new System.Drawing.Size(213, 43);
-            this.RatingStar.TabIndex = 161;
-            // 
             // UCThuongCaNhan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -142,7 +142,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.guna2Panel1);
             this.Name = "UCThuongCaNhan";
-            this.Size = new System.Drawing.Size(900, 70);
+            this.Size = new System.Drawing.Size(900, 75);
             this.Load += new System.EventHandler(this.UCThuongCaNhan_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();

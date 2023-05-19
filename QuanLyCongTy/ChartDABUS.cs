@@ -1,8 +1,11 @@
-﻿using System;
+﻿using Guna.Charts.WinForms;
+using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
 namespace QuanLyCongTy
@@ -10,15 +13,31 @@ namespace QuanLyCongTy
     internal class ChartDABUS
     {
         public DuAnModel da;
-        NhanVienDAO nhanVienDAO = new NhanVienDAO();
+        public PhanCongModel pc;
+        public Reload.Flp rl;
         PhanCongDAO phanCongDAO = new PhanCongDAO();
-        public void FillChart(Chart chart)
+
+        public void FillProTienDo(Guna2CircleProgressBar pr, Label lbl)
         {
-            chart.ChartAreas[0].AxisY.Maximum = 100;
             List<PhanCongModel> list = phanCongDAO.ListPCTheoDA(da.MaDA);
-            foreach (PhanCongModel pc in list) 
+            int value = 0;
+            foreach (PhanCongModel pc in list)
             {
-                chart.Series["TienDo"].Points.AddXY(nhanVienDAO.GetNhanVienTheoMaNV(pc.MaNV).HoTenNV, pc.TienDo);
+                value = value + pc.TienDo;
+            }
+            pr.Value = value / (list.Count);
+            lbl.Text = pr.Value.ToString() + "%";
+        }
+
+        public void FillFlpTienDo(FlowLayoutPanel flp)
+        {
+            flp.Controls.Clear();
+            List<PhanCongModel> listPCChuaHTTheoDA = phanCongDAO.ListPCTheoDA(da.MaDA);
+            foreach (PhanCongModel pc in listPCChuaHTTheoDA)
+            {
+                UCTienDoCaNhan uc = new UCTienDoCaNhan();
+                uc.CapNhat(pc);
+                flp.Controls.Add(uc);
             }
         }
     }

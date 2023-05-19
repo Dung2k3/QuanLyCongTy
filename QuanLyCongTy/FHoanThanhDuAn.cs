@@ -28,17 +28,17 @@ namespace QuanLyCongTy
 
         private void btnNhanXet_CheckedChanged(object sender, EventArgs e)
         {
-            hoanThanhDuAnBUS.FillNhanXet();
+            hoanThanhDuAnBUS.FillNhanXet(guna2Shapes1);
         }
 
         private void btnThuong_CheckedChanged(object sender, EventArgs e)
         {
-            hoanThanhDuAnBUS.FillChiaThuong();
+            hoanThanhDuAnBUS.FillChiaThuong(guna2Shapes1);
         }
 
         private void FHoanThanhDuAn_Load(object sender, EventArgs e)
         {
-            hoanThanhDuAnBUS.FillNhanXet();
+            hoanThanhDuAnBUS.FillNhanXet(guna2Shapes1);
         }
     }
 }
