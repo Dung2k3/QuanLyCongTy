@@ -78,7 +78,10 @@ namespace QuanLyCongTy
         private void btnXinNghi_CheckedChanged(object sender, EventArgs e)
         {
             lblTitle.Text = btnXinNghi.Text;
-            OpenChildForm(new FXinNghi(MaNV));
+            XinNghiModel xn = nvDao.GetXinNghi();
+            FXinNghi form = new FXinNghi();
+            form.CapNhat(xn);
+            OpenChildForm(new FXinNghi());
             moveImageBox(sender);
         }
 

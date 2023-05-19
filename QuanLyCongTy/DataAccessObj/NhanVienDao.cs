@@ -77,6 +77,23 @@ namespace QuanLyCongTy
                     dr[5].ToString(), dr[6].ToString(), dr[7].ToString(), dr[8].ToString(), dr[9].ToString());
         }
 
+        public XinNghiModel GetXinNghi()
+        {
+            string query = " SELECT * FROM XinNghi";
+            DataTable dt = dataProvider.ExecuteQuery(query);
+            DataRow dr = dt.Rows[0];
+            return new XinNghiModel(dr[0].ToString(), DateTime.Parse(dr[1].ToString()), int.Parse(dr[2].ToString()), dr[3].ToString(), int.Parse(dr[4].ToString()));
+        }
+
+        public XinNghiModel GetXinNghiTheoMaNV(string MaNV)
+        {
+            string query = " SELECT * FROM XinNghi WHERE MaNV = @MaNV ";
+            object[] para = new object[] { MaNV };
+            DataTable dt = dataProvider.ExecuteQuery(query, para);
+            DataRow dr = dt.Rows[0];
+            return new XinNghiModel(dr[0].ToString(), DateTime.Parse(dr[1].ToString()), int.Parse(dr[2].ToString()), dr[3].ToString(), int.Parse(dr[4].ToString()));
+        }
+
         public List<NhanVienModel> ListNhanVienThucHienDA(PhanCongModel pc)
         {
             List<NhanVienModel> list = new List<NhanVienModel>();

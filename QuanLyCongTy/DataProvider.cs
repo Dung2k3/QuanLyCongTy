@@ -55,7 +55,7 @@ namespace QuanLyCongTy
                         if (word.Length > 0 && word[0] == '@')
                             listpara.Add(word);
                     }
-                    for (int i = 0; i < listpara.Count; i++)
+                    for (int i = 0; i < listpara.Count-1; i++)
                         cmd.Parameters.AddWithValue(listpara[i], parameter[i]);
                 }
                 accpectedRows = cmd.ExecuteNonQuery();

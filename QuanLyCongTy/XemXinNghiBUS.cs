@@ -11,7 +11,6 @@ namespace QuanLyCongTy
     internal class XemXinNghiBUS
     {
         public XinNghiModel xn;
-        public string MaNV;
 
         XinNghiDAO xinNghiDAO = new XinNghiDAO();
         FlowLayoutPanel flpListXN;
@@ -23,10 +22,6 @@ namespace QuanLyCongTy
 
         public void FillXinNghiChuaDuyet()
         {
-            if (flpListXN == null)
-            {
-                return;
-            }
             flpListXN.Controls.Clear();
             List<XinNghiModel> listXN = xinNghiDAO.ListXinNghiChuaDuyet(xn);
             foreach (XinNghiModel xn in listXN)
