@@ -12,21 +12,10 @@ namespace QuanLyCongTy
         XinNghiDAO xinNghiDAO = new XinNghiDAO();
         FlowLayoutPanel flpListXN;
 
+
         public void AddFlpXN(FlowLayoutPanel flpListXN)
         {
             this.flpListXN = flpListXN;
-        }
-
-        public void FillXinNghiChuaDuyet()
-        {
-            flpListXN.Controls.Clear();
-            List<XinNghiModel> listXN = xinNghiDAO.ListXinNghiChuaDuyet();
-            foreach (XinNghiModel xn in listXN)
-            {
-                UCXemXinNghiChuaDuyet uc = new UCXemXinNghiChuaDuyet(xn.MaNV);
-                uc.CapNhat(xn, FillXinNghiChuaDuyet);
-                flpListXN.Controls.Add(uc);
-            }
         }
 
         public void FillXinNghiDaDuyet()

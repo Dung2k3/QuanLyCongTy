@@ -38,7 +38,6 @@ namespace QuanLyCongTy
         {
             XinNghi xn = xnDAO.LayDanhSachXinNghi(MaNV);
 
-            lb_MaNV.Text = MaNV;
             lb_HovaTen.Text = xn.HoVaTen;
             lb_NgayNghi.Text = "Nghỉ từ: " + xn.NgayBD.ToString();
             lb_SoNgayNghi.Text = xn.SoNgayNghi.ToString();

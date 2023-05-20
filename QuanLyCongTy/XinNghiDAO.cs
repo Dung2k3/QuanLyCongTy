@@ -21,7 +21,7 @@ namespace QuanLyCongTy
 
         public XinNghi LayDanhSachXinNghi(string MaNV)
         {
-            string sqlStr = string.Format("SELECT XinNghi.MaNV, NhanVien.HoTenNV, XinNghi.NgayNghi, XinNghi.SoNgayNghi, XinNghi.LyDo, XinNghi.HeSoDuyet" +
+            string sqlStr = string.Format("SELECT XinNghi.MaNV, NhanVien.HoTenNV, XinNghi.NgayNghi, XinNghi.SoNgayNghi, XinNghi.LyDo, XinNghi.HeSoDuyet " +
                                             "FROM XinNghi, NhanVien WHERE XinNghi.MaNV = NhanVien.MaNV " +
                                             "AND XinNghi.MaNV = '{0}'", MaNV);
             DataRow dr = dbConn.LayDanhSach(sqlStr).Rows[0];

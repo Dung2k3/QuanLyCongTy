@@ -513,6 +513,12 @@
     <EmbeddedResource Include="FXinNghi.resx">
       <DependentUpon>FXinNghi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UCXemXinNghiChuaDuyet.resx">
+      <DependentUpon>UCXemXinNghiChuaDuyet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UCXemXinNghiDaDuyet.resx">
+      <DependentUpon>UCXemXinNghiDaDuyet.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

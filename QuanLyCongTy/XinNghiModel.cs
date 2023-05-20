@@ -23,8 +23,6 @@ namespace QuanLyCongTy
         public string LyDo { get => lyDo; set => lyDo = value; }
         public int HeSoDuyet { get => heSoDuyet; set => heSoDuyet = value; }
         //public Image MinhChung { get => minhChung; set => minhChung = value; }
-
-
         public XinNghiModel(string maNV, string hoVaTen, DateTime ngayBD, int soNgayNghi, string lyDo, int heSoDuyet)
         {
             this.maNV = maNV;

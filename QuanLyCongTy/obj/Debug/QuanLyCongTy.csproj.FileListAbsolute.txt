@@ -284,3 +284,5 @@ D:\K2N2\Winform\PRJ_QuanLyCongTy_3\QuanLyCongTy\obj\Debug\QuanLyCongTy.pdb
 D:\K2N2\Winform\PRJ_QuanLyCongTy_3\QuanLyCongTy\bin\Debug\Guna.UI.dll
 D:\hc\CTDH\WinForm\Project\ProjectQLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.UCPhanCongDaHT.resources
 D:\hc\CTDH\WinForm\Project\ProjectQLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.FChartDA.resources
+D:\hc\CTDH\WinForm\Project\ProjectQLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.UCXemXinNghiChuaDuyet.resources
+D:\hc\CTDH\WinForm\Project\ProjectQLCT\QuanLyCongTy\obj\Debug\QuanLyCongTy.UCXemXinNghiDaDuyet.resources
