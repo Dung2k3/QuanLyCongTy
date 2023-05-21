@@ -16,7 +16,6 @@ namespace QuanLyCongTy
         public FCheckinout()
         {
             InitializeComponent();
-            
         }
 
         public void CapNhat(NhanVienModel nv)

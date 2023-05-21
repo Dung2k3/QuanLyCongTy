@@ -30,11 +30,6 @@ namespace QuanLyCongTy
             thongTinDABUS.FillControl(lblTen, lblDiaDiem, lblNgayBD, lblThoiHan, lblMoTa, flpPhanCong);
         }
 
-        private void txtMoTa_MouseMove(object sender, MouseEventArgs e)
-        {
-            txtMoTa.SelectionLength = 0;
-        }
-
         private void pbThem_Click(object sender, EventArgs e)
         {
             thongTinDABUS.OpenFThem();
@@ -46,7 +41,12 @@ namespace QuanLyCongTy
             this.Close();
         }
 
-        private void guna2Button2_Click(object sender, EventArgs e)
+        private void btnPhanCong_Click(object sender, EventArgs e)
+        {
+            thongTinDABUS.FillControl(lblTen, lblDiaDiem, lblNgayBD, lblThoiHan, lblMoTa, flpPhanCong);
+        }
+
+        private void btnChart_Click(object sender, EventArgs e)
         {
             thongTinDABUS.OpenFChartDA();
         }

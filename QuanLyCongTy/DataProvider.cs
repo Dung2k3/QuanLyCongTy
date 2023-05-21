@@ -32,8 +32,12 @@ namespace QuanLyCongTy
                     for (int i = 0; i < listpara.Count; i++)
                         cmd.Parameters.AddWithValue(listpara[i], parameter[i]);
                 }
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                adapter.Fill(dt);
+                try
+                {
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    adapter.Fill(dt);
+                }
+                catch (Exception){}
                 conn.Close();
             }
             return dt;
@@ -58,14 +62,18 @@ namespace QuanLyCongTy
                     for (int i = 0; i < listpara.Count; i++)
                         cmd.Parameters.AddWithValue(listpara[i], parameter[i]);
                 }
-                accpectedRows = cmd.ExecuteNonQuery();
+                try
+                {
+                    accpectedRows = cmd.ExecuteNonQuery();
+                }
+                catch (Exception){}
                 conn.Close();
             }
             return accpectedRows;
         }
         public object ExecuteScalar(string query, object[] parameter = null)
         {
-            object first = 0;
+            object first = null;
             using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr))
             {
                 conn.Open();
@@ -83,7 +91,11 @@ namespace QuanLyCongTy
                     for (int i = 0; i < listpara.Count; i++)
                         cmd.Parameters.AddWithValue(listpara[i], parameter[i]);
                 }
-                first = cmd.ExecuteScalar();
+                try
+                {
+                    first = cmd.ExecuteScalar();
+                }
+                catch (Exception){}
                 conn.Close();
             }
             return first;

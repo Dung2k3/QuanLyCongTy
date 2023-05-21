@@ -9,35 +9,29 @@ namespace QuanLyCongTy
 {
     internal class XemXinNghiChuaDuyetQLBUS
     {
-        string MaNV;
         public XinNghiModel xn;
         public Reload.Flp HamRL;
         XinNghiDAO xinNghiDAO = new XinNghiDAO();
+        NhanVienDAO nhanVienDAO = new NhanVienDAO();
 
-        private void FillControls(Label lb_MaNV, Label lb_HovaTen, Label lb_NgayNghi, Label lb_SoNgayNghi, Label lb_LyDo)
+        public void FillControls( Label lb_HovaTen, Label lb_NgayNghi, Label lb_SoNgayNghi, Label lb_LyDo)
         {
-            XinNghi xn = xinNghiDAO.LayDanhSachXinNghi(MaNV);
-
-            lb_MaNV.Text = xn.MaNV;
-            lb_HovaTen.Text = xn.HoVaTen;
-            lb_NgayNghi.Text = "Nghỉ từ: " + xn.NgayBD.ToString();
+            NhanVienModel nv = nhanVienDAO.GetNhanVienTheoMaNV(xn.MaNV);
+            lb_HovaTen.Text = nv.HoTenNV;
+            lb_NgayNghi.Text = xn.NgayBD.ToShortDateString();
             lb_SoNgayNghi.Text = xn.SoNgayNghi.ToString();
             lb_LyDo.Text = xn.LyDo.ToString();
         }
-
-        void OpenForm(Form fnew, UCXemXinNghiChuaDuyet uc)
+        public void DuyetXN()
         {
-            uc.Enabled = false;
-            fnew.ShowDialog();
-            uc.Enabled = true;
+            xinNghiDAO.Duyet(xn.MaNV);
             HamRL();
         }
 
-        public void OpenFThongBao(UCXemXinNghiChuaDuyet uc)
+        public void KhongDuyetXN()
         {
-            //FThongBao form = new FThongBao();
-            //form.CapNhat(xn);
-            //OpenForm(form, uc);
+            xinNghiDAO.KhongDuyet(xn.MaNV);
+            HamRL();
         }
     }
 }

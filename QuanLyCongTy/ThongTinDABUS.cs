@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 using static QuanLyCongTy.FXemDuAn;
 
 namespace QuanLyCongTy
@@ -48,28 +49,21 @@ namespace QuanLyCongTy
         }
         public void OpenFChartDA()
         {
+            flp.Controls.Clear();
             FChartDA fChartDA = new FChartDA();
             fChartDA.CapNhat(da);
-            fChartDA.ShowDialog();
+            fChartDA.TopLevel = false;
+            flp.Controls.Add(fChartDA);
+            flp.Tag = fChartDA;
+            fChartDA.BringToFront();
+            fChartDA.Show();
         }
-
         public void Finished()
         {
             if(phanCongDAO.KiemTraTienDo(da))
-            {
-                if(!duAnDAO.HoanThanh(da))
-                {
-                    MessageBox.Show("Thất bại");
-                }
-                else
-                {
-                    rl();
-                }
-            }
-            else
-            {
-                MessageBox.Show("Có task chưa hoàn thành!!!");
-            }    
+                if(!duAnDAO.HoanThanh(da))  MessageBox.Show("Thất bại");
+                else rl();
+            else MessageBox.Show("Có task chưa hoàn thành!!!");
         }
     }
 }

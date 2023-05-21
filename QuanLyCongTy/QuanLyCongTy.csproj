@@ -77,6 +77,24 @@
     <Compile Include="FChartDA.Designer.cs">
       <DependentUpon>FChartDA.cs</DependentUpon>
     </Compile>
+    <Compile Include="FDuyetXinNghi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDuyetXinNghi.Designer.cs">
+      <DependentUpon>FDuyetXinNghi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FTaoXinNghi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTaoXinNghi.Designer.cs">
+      <DependentUpon>FTaoXinNghi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FXinNghiNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FXinNghiNV.Designer.cs">
+      <DependentUpon>FXinNghiNV.cs</DependentUpon>
+    </Compile>
     <Compile Include="FXoaPC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,6 +227,7 @@
     <Compile Include="Reload.cs" />
     <Compile Include="NhanXetDATPBUS.cs" />
     <Compile Include="SuaDABUS.cs" />
+    <Compile Include="TaoXinNghiBUS.cs" />
     <Compile Include="ThemDABUS.cs" />
     <Compile Include="ThemPhanCongBUS.cs" />
     <Compile Include="ThemHoTroBUS.cs" />
@@ -241,6 +260,7 @@
     <Compile Include="UCTienDoCaNhan.Designer.cs">
       <DependentUpon>UCTienDoCaNhan.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControl\DuyetXinNghiBUS.cs" />
     <Compile Include="UserControl\UCPhanCongDaHT.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -392,15 +412,16 @@
     <Compile Include="UserControl\XemDADaHTQLBUS.cs" />
     <Compile Include="UserControl\XemPCChuaHTTPBUS.cs" />
     <Compile Include="UserControl\XemPCNVBUS.cs" />
+    <Compile Include="UserControl\XinNghiDaDuyetBUS.cs" />
     <Compile Include="XemDAChuaHTTPBUS.cs" />
     <Compile Include="XemDuAnBUS.cs" />
     <Compile Include="XemDuAnQLBUS.cs" />
     <Compile Include="XemTienDoPCBUS.cs" />
     <Compile Include="XemXinNghiChuaDuyetQLBUS.cs" />
-    <Compile Include="XemXinNghiDaDuyetQLBUS.cs" />
     <Compile Include="XemXinNghiQLBUS.cs" />
     <Compile Include="XinNghiDAO.cs" />
     <Compile Include="XinNghiModel.cs" />
+    <Compile Include="XinNghiNVBUS.cs" />
     <EmbeddedResource Include="FCapNhatTienDo.resx">
       <DependentUpon>FCapNhatTienDo.cs</DependentUpon>
     </EmbeddedResource>
@@ -418,6 +439,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FDuAn.resx">
       <DependentUpon>FDuAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDuyetXinNghi.resx">
+      <DependentUpon>FDuyetXinNghi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FHoanThanhDuAn.resx">
       <DependentUpon>FHoanThanhDuAn.cs</DependentUpon>
@@ -452,6 +476,9 @@
     <EmbeddedResource Include="FSuaDA.resx">
       <DependentUpon>FSuaDA.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FTaoXinNghi.resx">
+      <DependentUpon>FTaoXinNghi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FThemDA.resx">
       <DependentUpon>FThemDA.cs</DependentUpon>
     </EmbeddedResource>
@@ -475,6 +502,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FXemDuAn.resx">
       <DependentUpon>FXemDuAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FXinNghiNV.resx">
+      <DependentUpon>FXinNghiNV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FXoaPC.resx">
       <DependentUpon>FXoaPC.cs</DependentUpon>
@@ -525,6 +555,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FXinNghi.resx">
       <DependentUpon>FXinNghi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UCXemXinNghiChuaDuyet.resx">
+      <DependentUpon>UCXemXinNghiChuaDuyet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UCXemXinNghiDaDuyet.resx">
+      <DependentUpon>UCXemXinNghiDaDuyet.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

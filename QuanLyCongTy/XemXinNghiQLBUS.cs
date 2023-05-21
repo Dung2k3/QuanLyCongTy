@@ -17,17 +17,17 @@ namespace QuanLyCongTy
             this.flpListXN = flpListXN;
         }
 
-        public void FillXinNghiChuaDuyet()
+        /*public void FillXinNghiChuaDuyet()
         {
             flpListXN.Controls.Clear();
             List<XinNghiModel> listXN = xinNghiDAO.ListXinNghiChuaDuyet();
             foreach (XinNghiModel xn in listXN)
             {
-                UCXemXinNghiChuaDuyet uc = new UCXemXinNghiChuaDuyet(xn.MaNV);
-                uc.CapNhat(xn, FillXinNghiChuaDuyet);
-                flpListXN.Controls.Add(uc);
-            }
-        }
+                //UCXemXinNghiChuaDuyet uc = new UCXemXinNghiChuaDuyet(xn.MaNV);
+                //uc.CapNhat(xn, FillXinNghiChuaDuyet);
+                //flpListXN.Controls.Add(uc);
+            }*/
+        //}
 
         public void FillXinNghiDaDuyet()
         {
@@ -35,8 +35,8 @@ namespace QuanLyCongTy
             List<XinNghiModel> listXN = xinNghiDAO.ListXinNghiDaDuyet();
             foreach (XinNghiModel xn in listXN)
             {
-                UCXemXinNghiDaDuyet uc = new UCXemXinNghiDaDuyet(xn.MaNV);
-                uc.CapNhat(xn, FillXinNghiDaDuyet);
+                UCXemXinNghiDaDuyet uc = new UCXemXinNghiDaDuyet();
+                uc.CapNhat(xn);
                 flpListXN.Controls.Add(uc);
             }
         }

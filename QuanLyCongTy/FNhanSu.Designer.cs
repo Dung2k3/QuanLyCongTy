@@ -44,7 +44,7 @@
             this.pnlMenu = new Guna.UI2.WinForms.Guna2Panel();
             this.btnDuyetXinNghi = new Guna.UI2.WinForms.Guna2Button();
             this.btnTinhLuong = new Guna.UI2.WinForms.Guna2Button();
-            this.btnCheckinout = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCheckin = new Guna.UI2.WinForms.Guna2Button();
             this.btnCaNhan = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.imgSlide = new System.Windows.Forms.PictureBox();
@@ -157,11 +157,12 @@
             this.lblThoat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblThoat.Font = new System.Drawing.Font("Calibri", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblThoat.ForeColor = System.Drawing.Color.White;
-            this.lblThoat.Location = new System.Drawing.Point(194, 686);
+            this.lblThoat.Location = new System.Drawing.Point(186, 687);
             this.lblThoat.Name = "lblThoat";
             this.lblThoat.Size = new System.Drawing.Size(59, 24);
             this.lblThoat.TabIndex = 36;
             this.lblThoat.Text = "Thoát";
+            this.lblThoat.Click += new System.EventHandler(this.lblThoat_Click);
             // 
             // pnlName
             // 
@@ -195,7 +196,7 @@
             this.pnlMenu.BorderRadius = 20;
             this.pnlMenu.Controls.Add(this.btnDuyetXinNghi);
             this.pnlMenu.Controls.Add(this.btnTinhLuong);
-            this.pnlMenu.Controls.Add(this.btnCheckinout);
+            this.pnlMenu.Controls.Add(this.btnCheckin);
             this.pnlMenu.Controls.Add(this.btnCaNhan);
             this.pnlMenu.Controls.Add(this.lblThoat);
             this.pnlMenu.Controls.Add(this.guna2PictureBox1);
@@ -206,7 +207,7 @@
             this.pnlMenu.Location = new System.Drawing.Point(-35, 75);
             this.pnlMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(350, 740);
+            this.pnlMenu.Size = new System.Drawing.Size(350, 765);
             this.pnlMenu.TabIndex = 7;
             // 
             // btnDuyetXinNghi
@@ -224,13 +225,14 @@
             this.btnDuyetXinNghi.Image = global::QuanLyCongTy.Properties.Resources.social_responsibility;
             this.btnDuyetXinNghi.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnDuyetXinNghi.ImageOffset = new System.Drawing.Point(5, 0);
-            this.btnDuyetXinNghi.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnDuyetXinNghi.ImageSize = new System.Drawing.Size(25, 25);
             this.btnDuyetXinNghi.Location = new System.Drawing.Point(76, 411);
             this.btnDuyetXinNghi.Name = "btnDuyetXinNghi";
             this.btnDuyetXinNghi.Size = new System.Drawing.Size(247, 54);
             this.btnDuyetXinNghi.TabIndex = 39;
             this.btnDuyetXinNghi.Text = "Duyệt xin nghỉ";
             this.btnDuyetXinNghi.UseTransparentBackground = true;
+            this.btnDuyetXinNghi.CheckedChanged += new System.EventHandler(this.btnDuyetXinNghi_CheckedChanged);
             // 
             // btnTinhLuong
             // 
@@ -247,36 +249,36 @@
             this.btnTinhLuong.Image = global::QuanLyCongTy.Properties.Resources.wallet;
             this.btnTinhLuong.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnTinhLuong.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnTinhLuong.ImageSize = new System.Drawing.Size(25, 25);
             this.btnTinhLuong.Location = new System.Drawing.Point(76, 318);
             this.btnTinhLuong.Name = "btnTinhLuong";
             this.btnTinhLuong.Size = new System.Drawing.Size(247, 54);
             this.btnTinhLuong.TabIndex = 38;
             this.btnTinhLuong.Text = "Tính lương";
             this.btnTinhLuong.UseTransparentBackground = true;
+            this.btnTinhLuong.CheckedChanged += new System.EventHandler(this.btnTinhLuong_CheckedChanged);
             // 
-            // btnCheckinout
+            // btnCheckin
             // 
-            this.btnCheckinout.BackColor = System.Drawing.Color.Transparent;
-            this.btnCheckinout.BorderRadius = 22;
-            this.btnCheckinout.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnCheckinout.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnCheckinout.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btnCheckinout.CheckedState.Image = global::QuanLyCongTy.Properties.Resources.clock__1_;
-            this.btnCheckinout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCheckinout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btnCheckinout.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCheckinout.ForeColor = System.Drawing.Color.White;
-            this.btnCheckinout.Image = global::QuanLyCongTy.Properties.Resources.clock;
-            this.btnCheckinout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnCheckinout.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnCheckinout.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnCheckinout.Location = new System.Drawing.Point(76, 226);
-            this.btnCheckinout.Name = "btnCheckinout";
-            this.btnCheckinout.Size = new System.Drawing.Size(247, 54);
-            this.btnCheckinout.TabIndex = 37;
-            this.btnCheckinout.Text = "Check in/out";
-            this.btnCheckinout.UseTransparentBackground = true;
+            this.btnCheckin.BackColor = System.Drawing.Color.Transparent;
+            this.btnCheckin.BorderRadius = 22;
+            this.btnCheckin.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnCheckin.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnCheckin.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.btnCheckin.CheckedState.Image = global::QuanLyCongTy.Properties.Resources.clock__1_;
+            this.btnCheckin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCheckin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.btnCheckin.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckin.ForeColor = System.Drawing.Color.White;
+            this.btnCheckin.Image = global::QuanLyCongTy.Properties.Resources.clock;
+            this.btnCheckin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnCheckin.ImageOffset = new System.Drawing.Point(10, 0);
+            this.btnCheckin.Location = new System.Drawing.Point(76, 226);
+            this.btnCheckin.Name = "btnCheckin";
+            this.btnCheckin.Size = new System.Drawing.Size(247, 54);
+            this.btnCheckin.TabIndex = 37;
+            this.btnCheckin.Text = "Check in/out";
+            this.btnCheckin.UseTransparentBackground = true;
+            this.btnCheckin.CheckedChanged += new System.EventHandler(this.btnCheckinout_CheckedChanged);
             // 
             // btnCaNhan
             // 
@@ -289,24 +291,24 @@
             this.btnCaNhan.CheckedState.Image = global::QuanLyCongTy.Properties.Resources.user__4_;
             this.btnCaNhan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCaNhan.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btnCaNhan.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCaNhan.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.btnCaNhan.ForeColor = System.Drawing.Color.White;
             this.btnCaNhan.Image = global::QuanLyCongTy.Properties.Resources.user__3_;
             this.btnCaNhan.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCaNhan.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnCaNhan.ImageSize = new System.Drawing.Size(25, 25);
             this.btnCaNhan.Location = new System.Drawing.Point(76, 142);
             this.btnCaNhan.Name = "btnCaNhan";
             this.btnCaNhan.Size = new System.Drawing.Size(247, 54);
             this.btnCaNhan.TabIndex = 3;
             this.btnCaNhan.Text = "Cá nhân";
             this.btnCaNhan.UseTransparentBackground = true;
+            this.btnCaNhan.CheckedChanged += new System.EventHandler(this.btnCaNhan_CheckedChanged);
             // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.Image = global::QuanLyCongTy.Properties.Resources.logout__1_;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(142, 686);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(134, 687);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(35, 28);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -360,7 +362,7 @@
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2Panel pnlMenu;
         private Guna.UI2.WinForms.Guna2Button btnDuyetXinNghi;
-        private Guna.UI2.WinForms.Guna2Button btnCheckinout;
+        private Guna.UI2.WinForms.Guna2Button btnCheckin;
         private Guna.UI2.WinForms.Guna2Button btnCaNhan;
         private System.Windows.Forms.Label lblThoat;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;

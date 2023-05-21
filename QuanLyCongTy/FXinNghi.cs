@@ -14,6 +14,8 @@ namespace QuanLyCongTy
     public partial class FXinNghi : Form
     {
         XinNghiDAO xinNghiDAO = new XinNghiDAO();
+        DangNhapDAO dnDao = new DangNhapDAO();
+        NhanVienModel nv;
 
         public FXinNghi()
         {
@@ -41,11 +43,11 @@ namespace QuanLyCongTy
         {
             flp_ListXN.Controls.Clear();
             DataTable dt = xinNghiDAO.LayDanhSachChuaDuyetXinNghi();
+            bool check = dnDao.KTTruongPhong(nv.MaNV) || dnDao.KTQuanLy(nv.MaNV);
             foreach (DataRow dr in dt.Rows)
             {
-                UCXemXinNghiChuaDuyet uc = new UCXemXinNghiChuaDuyet(dr[0].ToString());
+                UCXemXinNghiChuaDuyet uc = new UCXemXinNghiChuaDuyet();
                 flp_ListXN.Controls.Add(uc);
-                uc.addReLoat(XNChuaDuyet);
             }
         }
         private void XNDaDuyet()
@@ -54,9 +56,8 @@ namespace QuanLyCongTy
             DataTable dt = xinNghiDAO.LayDanhSachXinNghiDaDuyet();
             foreach (DataRow dr in dt.Rows)
             {
-                UCXemXinNghiDaDuyet uc = new UCXemXinNghiDaDuyet(dr[0].ToString());
+                UCXemXinNghiDaDuyet uc = new UCXemXinNghiDaDuyet();
                 flp_ListXN.Controls.Add(uc);
-                uc.addReLoat(XNDaDuyet);
             }
         }
 

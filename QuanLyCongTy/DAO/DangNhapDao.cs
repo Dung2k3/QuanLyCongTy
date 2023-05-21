@@ -38,5 +38,12 @@ namespace QuanLyCongTy
             DataTable dt = dbConn.LayDanhSach(sqlStr);
             return dt.Rows[0][0].ToString() == MaNV;
         }
+
+        public bool KTNhanSu(string MaNV)
+        {
+            string sqlStr = string.Format("SELECT MaPB FROM NhanVien Where MaNV = '{0}'", MaNV);
+            DataTable dt = dbConn.LayDanhSach(sqlStr);
+            return dt.Rows[0][0].ToString() == "PBHR1";
+        }
     }
 }

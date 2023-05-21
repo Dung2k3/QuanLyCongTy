@@ -337,3 +337,8 @@ D:\K2N2\Winform\PRJ_QuanLyCongTy_4\QuanLyCongTy\obj\Debug\QuanLyCongTy.exe
 D:\K2N2\Winform\PRJ_QuanLyCongTy_4\QuanLyCongTy\obj\Debug\QuanLyCongTy.pdb
 D:\K2N2\Winform\PRJ_QuanLyCongTy_4\QuanLyCongTy\bin\Debug\Guna.Charts.WinForms.dll
 D:\K2N2\Winform\PRJ_QuanLyCongTy_4\QuanLyCongTy\obj\Debug\QuanLyCongTy.UCTienDoCaNhan.resources
+D:\K2N2\Winform\PRJ_QuanLyCongTy_4\QuanLyCongTy\obj\Debug\QuanLyCongTy.FTaoXinNghi.resources
+D:\K2N2\Winform\PRJ_QuanLyCongTy_4\QuanLyCongTy\obj\Debug\QuanLyCongTy.FDuyetXinNghi.resources
+D:\K2N2\Winform\PRJ_QuanLyCongTy_4\QuanLyCongTy\obj\Debug\QuanLyCongTy.UCXemXinNghiDaDuyet.resources
+D:\K2N2\Winform\PRJ_QuanLyCongTy_4\QuanLyCongTy\obj\Debug\QuanLyCongTy.UCXemXinNghiChuaDuyet.resources
+D:\K2N2\Winform\PRJ_QuanLyCongTy_4\QuanLyCongTy\obj\Debug\QuanLyCongTy.FXinNghiNV.resources

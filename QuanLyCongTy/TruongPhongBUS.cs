@@ -65,8 +65,9 @@ namespace QuanLyCongTy
         }
         public void OpenFXinNghi(PictureBox imgSlide, Guna2Button b)
         {
-
-            OpenChildForm(new FXinNghi());
+            FXinNghiNV f = new FXinNghiNV();
+            f.CapNhat(nv);
+            OpenChildForm(f);
             moveImageBox(imgSlide,b);
         }
         public void OpenFLich(PictureBox imgSlide, Guna2Button b)

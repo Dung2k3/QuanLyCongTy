@@ -285,7 +285,7 @@
             // 
             this.lblTitle.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.lblTitle.Location = new System.Drawing.Point(11, 7);
+            this.lblTitle.Location = new System.Drawing.Point(719, 15);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(308, 43);
             this.lblTitle.TabIndex = 1;

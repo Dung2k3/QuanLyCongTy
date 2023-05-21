@@ -14,6 +14,7 @@ namespace QuanLyCongTy
     public partial class FQuanLy : Form
     {
         Form currentFormChild;
+        TaoXinNghiBUS taoXinNghiBUS = new TaoXinNghiBUS();
         readonly NhanVienDAO nvDao = new NhanVienDAO();
         string MaNV;
         public FQuanLy(string ma)
@@ -78,7 +79,10 @@ namespace QuanLyCongTy
         private void btnXinNghi_CheckedChanged(object sender, EventArgs e)
         {
             lblTitle.Text = btnXinNghi.Text;
-            OpenChildForm(new FXinNghi());
+            FXinNghiNV f = new FXinNghiNV();
+            NhanVienModel nv = nvDao.GetNhanVienTheoMaNV(MaNV);
+            f.CapNhat(nv);
+            OpenChildForm(f);
             moveImageBox(sender);
         }
 

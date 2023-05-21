@@ -165,7 +165,7 @@
             this.btnCheckinout.Image = global::QuanLyCongTy.Properties.Resources.clock;
             this.btnCheckinout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCheckinout.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnCheckinout.Location = new System.Drawing.Point(76, 224);
+            this.btnCheckinout.Location = new System.Drawing.Point(78, 229);
             this.btnCheckinout.Name = "btnCheckinout";
             this.btnCheckinout.Size = new System.Drawing.Size(247, 54);
             this.btnCheckinout.TabIndex = 37;
@@ -313,7 +313,7 @@
             // 
             this.lblTitle.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.lblTitle.Location = new System.Drawing.Point(3, 9);
+            this.lblTitle.Location = new System.Drawing.Point(729, 20);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(305, 43);
             this.lblTitle.TabIndex = 1;

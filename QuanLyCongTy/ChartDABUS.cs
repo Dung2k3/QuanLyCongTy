@@ -13,32 +13,23 @@ namespace QuanLyCongTy
     internal class ChartDABUS
     {
         public DuAnModel da;
-        public PhanCongModel pc;
-        public Reload.Flp rl;
         PhanCongDAO phanCongDAO = new PhanCongDAO();
 
-        public void FillProTienDo(Guna2CircleProgressBar pr, Label lbl)
-        {
-            List<PhanCongModel> list = phanCongDAO.ListPCTheoDA(da.MaDA);
-            int value = 0;
-            foreach (PhanCongModel pc in list)
-            {
-                value = value + pc.TienDo;
-            }
-            pr.Value = value / (list.Count);
-            lbl.Text = pr.Value.ToString() + "%";
-        }
-
-        public void FillFlpTienDo(FlowLayoutPanel flp)
+        public void FillFlpTienDo(FlowLayoutPanel flp, Guna2CircleProgressBar pr, Label lbl)
         {
             flp.Controls.Clear();
-            List<PhanCongModel> listPCChuaHTTheoDA = phanCongDAO.ListPCTheoDA(da.MaDA);
-            foreach (PhanCongModel pc in listPCChuaHTTheoDA)
+            List<PhanCongModel> list = phanCongDAO.ListPCTheoDA(da.MaDA);
+            int value = 0;
+            pr.Value = value;
+            foreach (PhanCongModel pc in list)
             {
                 UCTienDoCaNhan uc = new UCTienDoCaNhan();
                 uc.CapNhat(pc);
                 flp.Controls.Add(uc);
+                value = value + pc.TienDo;
             }
+            if (list.Count != 0)    pr.Value = value / (list.Count);
+            lbl.Text = pr.Value.ToString() + "%";
         }
     }
 }

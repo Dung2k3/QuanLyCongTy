@@ -47,14 +47,14 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label1.Location = new System.Drawing.Point(362, 29);
+            this.label1.Location = new System.Drawing.Point(-1, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 35);
+            this.label1.Size = new System.Drawing.Size(861, 35);
             this.label1.TabIndex = 10;
             this.label1.Text = "Công việc";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 

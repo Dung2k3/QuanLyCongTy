@@ -259,22 +259,22 @@
             // lblTenDA
             // 
             this.lblTenDA.AutoSize = true;
-            this.lblTenDA.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenDA.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenDA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.lblTenDA.Location = new System.Drawing.Point(156, 28);
+            this.lblTenDA.Location = new System.Drawing.Point(143, 27);
             this.lblTenDA.Name = "lblTenDA";
-            this.lblTenDA.Size = new System.Drawing.Size(161, 24);
+            this.lblTenDA.Size = new System.Drawing.Size(178, 28);
             this.lblTenDA.TabIndex = 28;
             this.lblTenDA.Text = "Thông tin cá nhân";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label10.Location = new System.Drawing.Point(156, 376);
+            this.label10.Location = new System.Drawing.Point(143, 373);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(185, 24);
+            this.label10.Size = new System.Drawing.Size(204, 28);
             this.label10.TabIndex = 29;
             this.label10.Text = "Thông tin phòng ban";
             // 
@@ -304,7 +304,7 @@
             this.guna2ShadowPanel1.Controls.Add(this.label1);
             this.guna2ShadowPanel1.Controls.Add(this.label15);
             this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
-            this.guna2ShadowPanel1.Location = new System.Drawing.Point(39, 5);
+            this.guna2ShadowPanel1.Location = new System.Drawing.Point(39, 35);
             this.guna2ShadowPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             this.guna2ShadowPanel1.Radius = 10;
@@ -315,11 +315,11 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::QuanLyCongTy.Properties.Resources._6308;
-            this.pictureBox1.Location = new System.Drawing.Point(491, 316);
+            this.pictureBox1.Location = new System.Drawing.Point(511, 278);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(499, 374);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.Size = new System.Drawing.Size(479, 412);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
