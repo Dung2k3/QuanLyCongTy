@@ -12,12 +12,6 @@ namespace QuanLyCongTy
         DBConnection dbConn = new DBConnection();
         DataProvider dataProvider = new DataProvider();
 
-        public string LayHeSo(string MaNV)
-        {
-            string sqlStr = string.Format("SELECT HeSoDuyet FROM XinNghi WHERE MaNV = '{0}'", MaNV);
-            DataTable dt = dbConn.LayDanhSach(sqlStr);
-            return dt.Rows[0][0].ToString();
-        }
 
         public XinNghi LayDanhSachXinNghi(string MaNV)
         {

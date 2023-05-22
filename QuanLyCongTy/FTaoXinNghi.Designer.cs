@@ -78,6 +78,7 @@
             this.dtpNgayNghi.BorderColor = System.Drawing.Color.White;
             this.dtpNgayNghi.BorderRadius = 10;
             this.dtpNgayNghi.Checked = true;
+            this.dtpNgayNghi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtpNgayNghi.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.dtpNgayNghi.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNgayNghi.ForeColor = System.Drawing.Color.White;
@@ -88,6 +89,7 @@
             this.dtpNgayNghi.Name = "dtpNgayNghi";
             this.dtpNgayNghi.Size = new System.Drawing.Size(398, 50);
             this.dtpNgayNghi.TabIndex = 3;
+            this.dtpNgayNghi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.dtpNgayNghi.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
             this.dtpNgayNghi.UseTransparentBackground = true;
             this.dtpNgayNghi.Value = new System.DateTime(2023, 5, 20, 16, 10, 46, 266);
@@ -107,7 +109,7 @@
             this.guna2Shapes1.PolygonSkip = 1;
             this.guna2Shapes1.Rotate = 0F;
             this.guna2Shapes1.Shape = Guna.UI2.WinForms.Enums.ShapeType.Line;
-            this.guna2Shapes1.Size = new System.Drawing.Size(353, 12);
+            this.guna2Shapes1.Size = new System.Drawing.Size(191, 12);
             this.guna2Shapes1.TabIndex = 119;
             this.guna2Shapes1.Text = "guna2Shapes1";
             this.guna2Shapes1.UseTransparentBackground = true;
@@ -136,14 +138,14 @@
             this.txtSoNN.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.txtSoNN.PlaceholderText = "";
             this.txtSoNN.SelectedText = "";
-            this.txtSoNN.Size = new System.Drawing.Size(331, 40);
+            this.txtSoNN.Size = new System.Drawing.Size(169, 40);
             this.txtSoNN.TabIndex = 118;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(748, 106);
+            this.label4.Location = new System.Drawing.Point(595, 118);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 24);
             this.label4.TabIndex = 120;
@@ -205,12 +207,13 @@
             // 
             this.cboLyDo.BackColor = System.Drawing.Color.Transparent;
             this.cboLyDo.BorderRadius = 10;
+            this.cboLyDo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cboLyDo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cboLyDo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboLyDo.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cboLyDo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cboLyDo.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboLyDo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cboLyDo.ForeColor = System.Drawing.Color.Black;
             this.cboLyDo.ItemHeight = 30;
             this.cboLyDo.Items.AddRange(new object[] {
             "Gặp vấn đề về sức khỏe",
@@ -227,6 +230,7 @@
             // btnTaoXN
             // 
             this.btnTaoXN.BorderRadius = 10;
+            this.btnTaoXN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTaoXN.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnTaoXN.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnTaoXN.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -259,9 +263,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FTaoXinNghi";
             this.Text = "FTaoXinNghi";
+            this.Load += new System.EventHandler(this.FTaoXinNghi_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -48,6 +48,7 @@
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.btnXemLuong = new Guna.UI2.WinForms.Guna2Button();
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgSlide)).BeginInit();
@@ -60,6 +61,7 @@
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.Transparent;
             this.pnlMenu.BorderRadius = 20;
+            this.pnlMenu.Controls.Add(this.btnXemLuong);
             this.pnlMenu.Controls.Add(this.lblThoat);
             this.pnlMenu.Controls.Add(this.btnXinNghi);
             this.pnlMenu.Controls.Add(this.guna2PictureBox1);
@@ -323,6 +325,30 @@
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
+            // btnXemLuong
+            // 
+            this.btnXemLuong.BackColor = System.Drawing.Color.Transparent;
+            this.btnXemLuong.BorderRadius = 22;
+            this.btnXemLuong.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnXemLuong.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnXemLuong.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.btnXemLuong.CheckedState.Image = global::QuanLyCongTy.Properties.Resources.wallet__1_;
+            this.btnXemLuong.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXemLuong.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.btnXemLuong.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXemLuong.ForeColor = System.Drawing.Color.White;
+            this.btnXemLuong.Image = global::QuanLyCongTy.Properties.Resources.wallet;
+            this.btnXemLuong.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnXemLuong.ImageOffset = new System.Drawing.Point(10, 0);
+            this.btnXemLuong.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnXemLuong.Location = new System.Drawing.Point(76, 510);
+            this.btnXemLuong.Name = "btnXemLuong";
+            this.btnXemLuong.Size = new System.Drawing.Size(247, 54);
+            this.btnXemLuong.TabIndex = 42;
+            this.btnXemLuong.Text = "Lương";
+            this.btnXemLuong.UseTransparentBackground = true;
+            this.btnXemLuong.CheckedChanged += new System.EventHandler(this.btnXemLuong_CheckedChanged);
+            // 
             // FQuanLy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -371,5 +397,6 @@
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private Guna.UI2.WinForms.Guna2Button btnXemLuong;
     }
 }

@@ -28,16 +28,23 @@ namespace QuanLyCongTy
             if (ckbKhac.Checked)
             {
                 txtLyDo.Enabled = true;
+                cboLyDo.Enabled = false;
             }
             else
             {
                 txtLyDo.Enabled = false;
+                cboLyDo.Enabled = true;
             }
         }
 
         private void btnTaoXN_Click(object sender, EventArgs e)
         {
             taoXinNghiBUS.TaoXinNghi(dtpNgayNghi, txtSoNN, cboLyDo, ckbKhac, txtLyDo);
+        }
+
+        private void FTaoXinNghi_Load(object sender, EventArgs e)
+        {
+            dtpNgayNghi.Value = DateTime.Now;
         }
     }
 }

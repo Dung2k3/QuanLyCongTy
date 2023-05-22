@@ -69,5 +69,11 @@ namespace QuanLyCongTy
             lblTitle.Text = btnLich.Text;
             truongPhongBUS.OpenFLich(imgSlide, btnLich);
         }
+
+        private void btnXemLuong_CheckedChanged(object sender, EventArgs e)
+        {
+            lblTitle.Text = btnXemLuong.Text;
+            truongPhongBUS.OpenFLuong(imgSlide, btnXemLuong);
+        }
     }
 }

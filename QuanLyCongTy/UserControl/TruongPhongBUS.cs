@@ -13,6 +13,7 @@ namespace QuanLyCongTy
     {
         public NhanVienModel nv;
         Form currentFormChild;
+        DateTime datecal = DateTime.Today;
         PhongBanDAO pbDAO = new PhongBanDAO();
         Panel pnl;
 
@@ -72,7 +73,6 @@ namespace QuanLyCongTy
         }
         public void OpenFLich(PictureBox imgSlide, Guna2Button b)
         {
-
             OpenChildForm(new FLich());
             moveImageBox(imgSlide, b);
         }
@@ -81,5 +81,14 @@ namespace QuanLyCongTy
             lblTen.Text = nv.HoTenNV;
             OpenChildForm(new FThongTin(nv.MaNV));
         }
+
+        public void OpenFLuong(PictureBox imgSlide, Guna2Button b)
+        {
+            FXemLuong f = new FXemLuong();
+            f.CapNhat(nv, datecal);
+            OpenChildForm(f);
+            moveImageBox(imgSlide, b);
+        }
+
     }
 }

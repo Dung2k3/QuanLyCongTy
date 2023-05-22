@@ -15,6 +15,7 @@ namespace QuanLyCongTy
     {
         Form currentFormChild;
         NhanVienDAO nvDao = new NhanVienDAO();
+        DateTime datecal = DateTime.Today;
         string MaNV;
         public FNhanVien(string ma)
         {
@@ -91,6 +92,16 @@ namespace QuanLyCongTy
         private void lblThoat_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnXemLuong_CheckedChanged(object sender, EventArgs e)
+        {
+            lblTitle.Text = btnXemLuong.Text;
+            FXemLuong f = new FXemLuong();
+            NhanVienModel nv = nvDao.GetNhanVienTheoMaNV(MaNV);
+            f.CapNhat(nv, datecal);
+            OpenChildForm(f);
+            moveImageBox(sender);
         }
     }
 }

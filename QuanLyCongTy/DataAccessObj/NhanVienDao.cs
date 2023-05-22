@@ -97,8 +97,24 @@ namespace QuanLyCongTy
             string query = "SELECT * " +
                             "FROM NhanVien " +
                             "WHERE MaNV NOT IN(SELECT MANV FROM Luong WHERE Month(ThangNam) = @Thang AND YEAR(ThangNam) = @Nam ) " +
-                            "AND MaLuong Like '%NV%' AND MaPB = @MaPB ";
+                            " AND MaPB = @MaPB ";
             object[] para = new object[] {TG.Month,TG.Year , pb.MaPB};
+            DataTable dt = dataProvider.ExecuteQuery(query, para);
+            foreach (DataRow dr in dt.Rows)
+            {
+                list.Add(new NhanVienModel(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), DateTime.Parse(dr[4].ToString()),
+                    dr[5].ToString(), dr[6].ToString(), dr[7].ToString(), dr[8].ToString(), dr[9].ToString()));
+            }
+            return list;
+        }
+
+        public List<NhanVienModel> ListTatCaNVChuaPhatLuongTheoPhong(DateTime TG, PhongBanModel pb)
+        {
+            List<NhanVienModel> list = new List<NhanVienModel>();
+            string query = "SELECT * " +
+                            "FROM NhanVien " +
+                            "WHERE MaNV NOT IN(SELECT MANV FROM Luong WHERE Month(ThangNam) = @Thang AND YEAR(ThangNam) = @Nam ) ";
+            object[] para = new object[] { TG.Month, TG.Year };
             DataTable dt = dataProvider.ExecuteQuery(query, para);
             foreach (DataRow dr in dt.Rows)
             {

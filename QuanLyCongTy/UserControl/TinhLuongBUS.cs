@@ -21,14 +21,20 @@ namespace QuanLyCongTy
         public void FillControl(Label lblThang, FlowLayoutPanel flp, Guna2ComboBox cbo)
         {
             lblThang.Text = "Tháng " + datecal.Month.ToString() + " Năm " + datecal.Year.ToString();
-            cbo.DataSource = phongBanDAO.ListPhongBan();
+            cbo.DataSource = phongBanDAO.ListPhongBanTinhLuong();
             cbo.DisplayMember = "TenPB";
             Loadfpl(flp, cbo);
         }
         public void Loadfpl(FlowLayoutPanel flp, Guna2ComboBox cbo)
         {
             flp.Controls.Clear();
-            List<NhanVienModel> list = nhanVienDAO.ListNVChuaPhatLuongTheoPhong(datecal,(PhongBanModel)cbo.SelectedValue);
+            List<NhanVienModel> list;
+            if (cbo.Text != "Tất cả")
+            {
+                list = nhanVienDAO.ListNVChuaPhatLuongTheoPhong(datecal, (PhongBanModel)cbo.SelectedValue);
+            }
+            else list = nhanVienDAO.ListTatCaNVChuaPhatLuongTheoPhong(datecal, (PhongBanModel)cbo.SelectedValue);
+
             foreach (NhanVienModel nv in list)
             {
                 UCLuongCN uc = new UCLuongCN();
@@ -38,16 +44,18 @@ namespace QuanLyCongTy
                 flp.Controls.Add(uc);
             }
         }
-        public void PreMonth(Label lblThang, FlowLayoutPanel flp, Guna2ComboBox cbo)
+        public void PreMonth(Label lblThang, FlowLayoutPanel flp, Guna2ComboBox cbo, Guna2CustomCheckBox chk)
         {
             datecal = datecal.AddMonths(-1);
             lblThang.Text = "Tháng " + datecal.Month.ToString() + " Năm " + datecal.Year.ToString();
+            chk.Checked = false;
             Loadfpl(flp, cbo);
         }
-        public void NextMonth(Label lblThang, FlowLayoutPanel flp, Guna2ComboBox cbo)
+        public void NextMonth(Label lblThang, FlowLayoutPanel flp, Guna2ComboBox cbo, Guna2CustomCheckBox chk)
         {
             datecal = datecal.AddMonths(1);
             lblThang.Text = "Tháng " + datecal.Month.ToString() + " Năm " + datecal.Year.ToString();
+            chk.Checked = false;
             Loadfpl(flp, cbo);
         }
         public void CheckChange(Guna2CustomCheckBox chk, FlowLayoutPanel flp)
@@ -71,7 +79,7 @@ namespace QuanLyCongTy
                     if(uc.Checked && luongDAO.Them(uc.GetLuong())) { }
                     else
                     {
-                        MessageBox.Show("Không thêm được lương");
+                        MessageBox.Show("Chọn đối tượng phát lương!");
                         return;
                     }
 

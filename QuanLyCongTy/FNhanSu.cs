@@ -77,7 +77,7 @@ namespace QuanLyCongTy
 
         private void btnDuyetXinNghi_CheckedChanged(object sender, EventArgs e)
         {
-            lblTitle.Text = btnCheckin.Text;
+            lblTitle.Text = btnDuyetXinNghi.Text;
             NhanVienModel nv = nvDao.GetNhanVienTheoMaNV(MaNV);
             FDuyetXinNghi form = new FDuyetXinNghi();
             form.CapNhat(nv);

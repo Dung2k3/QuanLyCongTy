@@ -21,5 +21,7 @@ namespace QuanLyCongTy
 
             if (xinNghiDAO.Them(xn)) MessageBox.Show("Thêm thành công!");
         }
+
+
     }
 }

@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FTruongPhong));
             this.pnlMenu = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnXemLuong = new Guna.UI2.WinForms.Guna2Button();
             this.btnLich = new Guna.UI2.WinForms.Guna2Button();
             this.btnXinNghi = new Guna.UI2.WinForms.Guna2Button();
             this.btnDuAn = new Guna.UI2.WinForms.Guna2Button();
@@ -61,6 +62,7 @@
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.Transparent;
             this.pnlMenu.BorderRadius = 20;
+            this.pnlMenu.Controls.Add(this.btnXemLuong);
             this.pnlMenu.Controls.Add(this.btnLich);
             this.pnlMenu.Controls.Add(this.btnXinNghi);
             this.pnlMenu.Controls.Add(this.btnDuAn);
@@ -78,6 +80,30 @@
             this.pnlMenu.Size = new System.Drawing.Size(350, 740);
             this.pnlMenu.TabIndex = 0;
             // 
+            // btnXemLuong
+            // 
+            this.btnXemLuong.BackColor = System.Drawing.Color.Transparent;
+            this.btnXemLuong.BorderRadius = 22;
+            this.btnXemLuong.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnXemLuong.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnXemLuong.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.btnXemLuong.CheckedState.Image = global::QuanLyCongTy.Properties.Resources.wallet__1_;
+            this.btnXemLuong.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXemLuong.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.btnXemLuong.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXemLuong.ForeColor = System.Drawing.Color.White;
+            this.btnXemLuong.Image = global::QuanLyCongTy.Properties.Resources.wallet;
+            this.btnXemLuong.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnXemLuong.ImageOffset = new System.Drawing.Point(10, 0);
+            this.btnXemLuong.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnXemLuong.Location = new System.Drawing.Point(76, 569);
+            this.btnXemLuong.Name = "btnXemLuong";
+            this.btnXemLuong.Size = new System.Drawing.Size(247, 54);
+            this.btnXemLuong.TabIndex = 41;
+            this.btnXemLuong.Text = "Lương";
+            this.btnXemLuong.UseTransparentBackground = true;
+            this.btnXemLuong.CheckedChanged += new System.EventHandler(this.btnXemLuong_CheckedChanged);
+            // 
             // btnLich
             // 
             this.btnLich.BackColor = System.Drawing.Color.Transparent;
@@ -94,7 +120,7 @@
             this.btnLich.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLich.ImageOffset = new System.Drawing.Point(10, 0);
             this.btnLich.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnLich.Location = new System.Drawing.Point(76, 499);
+            this.btnLich.Location = new System.Drawing.Point(76, 480);
             this.btnLich.Name = "btnLich";
             this.btnLich.Size = new System.Drawing.Size(247, 54);
             this.btnLich.TabIndex = 40;
@@ -118,7 +144,7 @@
             this.btnXinNghi.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnXinNghi.ImageOffset = new System.Drawing.Point(10, 0);
             this.btnXinNghi.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnXinNghi.Location = new System.Drawing.Point(76, 409);
+            this.btnXinNghi.Location = new System.Drawing.Point(76, 395);
             this.btnXinNghi.Name = "btnXinNghi";
             this.btnXinNghi.Size = new System.Drawing.Size(247, 54);
             this.btnXinNghi.TabIndex = 39;
@@ -203,7 +229,7 @@
             this.lblThoat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblThoat.Font = new System.Drawing.Font("Calibri", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblThoat.ForeColor = System.Drawing.Color.White;
-            this.lblThoat.Location = new System.Drawing.Point(157, 673);
+            this.lblThoat.Location = new System.Drawing.Point(160, 692);
             this.lblThoat.Name = "lblThoat";
             this.lblThoat.Size = new System.Drawing.Size(59, 24);
             this.lblThoat.TabIndex = 36;
@@ -214,7 +240,7 @@
             // 
             this.guna2PictureBox1.Image = global::QuanLyCongTy.Properties.Resources.logout__1_;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(105, 673);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(108, 692);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(35, 28);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -402,5 +428,6 @@
         private Guna.UI2.WinForms.Guna2Button btnXinNghi;
         private Guna.UI2.WinForms.Guna2Button btnDuAn;
         private Guna.UI2.WinForms.Guna2Button btnCheckinout;
+        private Guna.UI2.WinForms.Guna2Button btnXemLuong;
     }
 }

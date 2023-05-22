@@ -23,11 +23,11 @@ namespace QuanLyCongTy
         }
         private void btnNext_Click(object sender, EventArgs e)
         {
-            tinhLuongBUS.NextMonth(lblThang, flpLuong, cbo);
+            tinhLuongBUS.NextMonth(lblThang, flpLuong, cbo, chk);
         }
         private void btnPast_Click(object sender, EventArgs e)
         {
-            tinhLuongBUS.PreMonth(lblThang, flpLuong, cbo);
+            tinhLuongBUS.PreMonth(lblThang, flpLuong, cbo, chk);
         }
 
         private void guna2CustomCheckBox1_Click(object sender, EventArgs e)

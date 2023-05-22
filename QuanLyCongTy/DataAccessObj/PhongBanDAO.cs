@@ -86,6 +86,21 @@ namespace QuanLyCongTy
             }
             return list;
         }
+        public List<PhongBanModel> ListPhongBanTinhLuong()
+        {
+            List<PhongBanModel> list = new List<PhongBanModel>();
+            string query = "SELECT * " +
+                            "FROM PhongBan " +
+                            "WHERE NOT MaLPB = 'LPBHR' ";
+            DataTable dt = dataProvider.ExecuteQuery(query);
+            foreach (DataRow dr in dt.Rows)
+            {
+                list.Add(new PhongBanModel(dr[0].ToString(), dr[1].ToString(),
+                        dr[2].ToString(), dr[3].ToString(), dr[4].ToString()));
+            }
+            list.Add(new PhongBanModel("PBHR1", "Tất cả", "LPBHR", "NV000", "NV000"));
+            return list;
+        }
 
     }
 }

@@ -29,7 +29,7 @@ namespace QuanLyCongTy
             lblThuong.Text = Thuong.ToString();
             lblNgayDiLam.Text = NgayDiLam.ToString();
             lblTreSom.Text = NgayViPham.ToString();
-            lblTongLuong.Text = ((int)(MucLuong*(NgayDiLam - NgayViPham/2) + Thuong)).ToString();
+            lblTongLuong.Text = ((int)((MucLuong / 30) * (NgayDiLam - NgayViPham / 2) + Thuong)).ToString();
         }
         public LuongModel getLuong()
         {
@@ -38,7 +38,7 @@ namespace QuanLyCongTy
             int Thuong = phanCongDAO.TongThuongNVTheoThang(nv, date);
             int NgayDiLam = checkIODAO.SoNgayDiLamNVTheoThang(nv, date);
             int NgayViPham = checkIODAO.SoNgayViPhamNVTheoThang(nv, date);
-            int TongLuong = (int)(MucLuong * (NgayDiLam - NgayViPham / 2) + Thuong);
+            int TongLuong = (int)((MucLuong / 30) * (NgayDiLam - NgayViPham / 2) + Thuong);
             return new LuongModel(nv.MaNV, date, TongLuong);
         }
     }
