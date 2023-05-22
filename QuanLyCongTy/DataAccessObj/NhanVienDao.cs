@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Shapes;
 
 namespace QuanLyCongTy
 {
@@ -66,7 +67,6 @@ namespace QuanLyCongTy
             object[] para = new object[] { pc.NgayBD, pc.DeadLine, pb.MaLPB};
             return dataProvider.ExecuteQuery(query, para);
         }
-
         public NhanVienModel GetNhanVienTheoMaNV(string MaNV)
         {
             string query = " SELECT * FROM NhanVien WHERE MaNV = @MaNV ";
@@ -76,7 +76,6 @@ namespace QuanLyCongTy
             return new NhanVienModel(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), DateTime.Parse(dr[4].ToString()),
                     dr[5].ToString(), dr[6].ToString(), dr[7].ToString(), dr[8].ToString(), dr[9].ToString());
         }
-
         public List<NhanVienModel> ListNhanVienThucHienDA(PhanCongModel pc)
         {
             List<NhanVienModel> list = new List<NhanVienModel>();
@@ -92,6 +91,21 @@ namespace QuanLyCongTy
             }
             return list;
         }
-
+        public List<NhanVienModel> ListNVChuaPhatLuongTheoPhong(DateTime TG,PhongBanModel pb)
+        {
+            List<NhanVienModel> list = new List<NhanVienModel>();
+            string query = "SELECT * " +
+                            "FROM NhanVien " +
+                            "WHERE MaNV NOT IN(SELECT MANV FROM Luong WHERE Month(ThangNam) = @Thang AND YEAR(ThangNam) = @Nam ) " +
+                            "AND MaLuong Like '%NV%' AND MaPB = @MaPB ";
+            object[] para = new object[] {TG.Month,TG.Year , pb.MaPB};
+            DataTable dt = dataProvider.ExecuteQuery(query, para);
+            foreach (DataRow dr in dt.Rows)
+            {
+                list.Add(new NhanVienModel(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), DateTime.Parse(dr[4].ToString()),
+                    dr[5].ToString(), dr[6].ToString(), dr[7].ToString(), dr[8].ToString(), dr[9].ToString()));
+            }
+            return list;
+        }
     }
 }

@@ -211,6 +211,9 @@
     </Compile>
     <Compile Include="KPIBUS.cs" />
     <Compile Include="HoanThanhDuAnBUS.cs" />
+    <Compile Include="LuongCNBUS.cs" />
+    <Compile Include="LuongDAO.cs" />
+    <Compile Include="LuongModel.cs" />
     <Compile Include="Model\CongViecModel.cs" />
     <Compile Include="DataAccessObj\CheckinDao.cs" />
     <Compile Include="DataAccessObj\CheckoutDao.cs" />
@@ -221,6 +224,8 @@
     <Compile Include="Model\DuAnModel.cs" />
     <Compile Include="Model\LoaiPhongBanModel.cs" />
     <Compile Include="Model\NhanVienModel.cs" />
+    <Compile Include="MucLuongDAO.cs" />
+    <Compile Include="MucLuongModel.cs" />
     <Compile Include="NhanXetDABUS.cs" />
     <Compile Include="Model\PhanCongModel.cs" />
     <Compile Include="Model\HoTroModel.cs" />
@@ -253,7 +258,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="TinhLuongBUS.cs" />
     <Compile Include="TruongPhongBUS.cs" />
+    <Compile Include="UCLuongCN.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCLuongCN.Designer.cs">
+      <DependentUpon>UCLuongCN.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCTienDoCaNhan.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -513,6 +525,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCLuongCN.resx">
+      <DependentUpon>UCLuongCN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCTienDoCaNhan.resx">
       <DependentUpon>UCTienDoCaNhan.cs</DependentUpon>

@@ -69,7 +69,10 @@ namespace QuanLyCongTy
 
         private void btnTinhLuong_CheckedChanged(object sender, EventArgs e)
         {
-
+            lblTitle.Text = btnTinhLuong.Text;
+            FTinhLuong form = new FTinhLuong();
+            OpenChildForm(form);
+            moveImageBox(sender);
         }
 
         private void btnDuyetXinNghi_CheckedChanged(object sender, EventArgs e)

@@ -56,5 +56,22 @@ namespace QuanLyCongTy
             object[] para = new object[] { nv.MaNV, current.Date };
             return dataProvider.ExecuteScalar(query, para) is null;
         }
+        public int SoNgayDiLamNVTheoThang(NhanVienModel nv, DateTime TG)
+        {
+            string query = "SELECT Count(*) " +
+                            "FROM Checkout " +
+                            "WHERE MaNV = @MaNV AND Month(NgayCheckout) = @Thang AND Year(NgayCheckout) = @Nam ";
+            object[] para = new object[] { nv.MaNV, TG.Month, TG.Year };
+            return int.Parse(dataProvider.ExecuteScalar(query, para).ToString());
+        }
+        public int SoNgayViPhamNVTheoThang(NhanVienModel nv, DateTime TG)
+        {
+            string query = "SELECT Count(*) " +
+                            "FROM Checkout JOIN Checkin ON Checkin.MaNV = Checkout.MaNV AND Checkin.NgayCheckin = Checkout.NgayCheckout " +
+                            "WHERE(GioCheckin < '08:00:00' OR GioCheckout > '17:00:00') AND " +
+                            "Checkout.MaNV = @MaNV AND Month(NgayCheckout) = @Thang AND Year(NgayCheckout) = @Nam ";
+            object[] para = new object[] { nv.MaNV, TG.Month, TG.Year };
+            return int.Parse(dataProvider.ExecuteScalar(query, para).ToString());
+        }
     }
 }

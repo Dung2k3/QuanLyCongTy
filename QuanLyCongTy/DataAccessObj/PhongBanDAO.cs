@@ -25,7 +25,7 @@ namespace QuanLyCongTy
             List<PhongBanModel> list = new List<PhongBanModel>();
             string query = "SELECT * "+
                             "FROM PhongBan " +
-                            "WHERE NOT MaLPB = 'LPBQL' AND MaLPB = @MaLPB " +
+                            "WHERE NOT MaLPB = 'LPBQL' AND NOT MaLPB = 'LPBHR' AND MaLPB = @MaLPB " +
                                 "AND MaPB NOT IN(SELECT MaPB FROM DuAn " +
                                 "WHERE DeadLine >= @NgayBD AND NgayBD <= @DeadLine )";
             object[] para = new object[] { MaLPB, NgayBD, DeadLine};
@@ -51,7 +51,7 @@ namespace QuanLyCongTy
             List<PhongBanModel> list = new List<PhongBanModel>();
             string query = "SELECT * " +
                             "FROM PhongBan " +
-                            "WHERE NOT MaLPB = 'LPBQL' AND MaLPB = @MaLPB " +
+                            "WHERE NOT MaLPB = 'LPBQL' AND NOT MaLPB = 'LPBHR' AND MaLPB = @MaLPB " +
                                 "AND MaPB NOT IN(SELECT MaPB FROM DuAn " +
                                 "WHERE DeadLine >= @NgayBD AND NgayBD <= @DeadLine AND NOT MaDA = @MaDA )";
             object[] para = new object[] { MaLPB, NgayBD, DeadLine, MaDA };
@@ -72,5 +72,20 @@ namespace QuanLyCongTy
             object[] para = new object[] { NgayBD, DeadLine, MaLPB, MaDA };
             return dataProvider.ExecuteQuery(query, para);
         }
+        public List<PhongBanModel> ListPhongBan()
+        {
+            List<PhongBanModel> list = new List<PhongBanModel>();
+            string query = "SELECT * " +
+                            "FROM PhongBan " +
+                            "WHERE NOT MaLPB = 'LPBQL' AND  NOT MaLPB = 'LPBHR' ";
+            DataTable dt = dataProvider.ExecuteQuery(query);
+            foreach (DataRow dr in dt.Rows)
+            {
+                list.Add(new PhongBanModel(dr[0].ToString(), dr[1].ToString(),
+                        dr[2].ToString(), dr[3].ToString(), dr[4].ToString()));
+            }
+            return list;
+        }
+
     }
 }

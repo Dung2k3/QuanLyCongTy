@@ -229,7 +229,15 @@ namespace QuanLyCongTy
             }
             return list;
         }
-
+        public int TongThuongNVTheoThang(NhanVienModel nv, DateTime TG)
+        {
+            string query = "SELECT CASE When Sum(PhanCong.TienThuong) IS NULL THEN 0 ELSE Sum(PhanCong.TienThuong) END " +
+                            "FROM PhanCong JOIN Duan ON PhanCong.MaDA = DuAn.MaDA " +
+                            "WHERE Month(DuAn.DeadLine) = @Thang AND Year(DuAn.DeadLine) = @Nam AND MaNV = @MaNV ";
+            object[] para = new object[] {TG.Month,TG.Year,nv.MaNV };
+            object obj = dataProvider.ExecuteScalar(query, para);
+            return int.Parse(obj.ToString());
+        }
         public List<PhanCongModel> ListPCDaHTTheoNV(NhanVienModel nv)
         {
             List<PhanCongModel> list = new List<PhanCongModel>();
@@ -244,7 +252,6 @@ namespace QuanLyCongTy
             }
             return list;
         }
-
         public bool KiemTraTienDo(DuAnModel da)
         {
             string query = "SELECT (CASE " +

@@ -6,15 +6,16 @@ GO
 
 CREATE TABLE dbo.MucLuong(
 	MaLuong varchar(10) PRIMARY KEY,
+	ChucVu nvarchar(50),
 	MucLuong int NOT NULL 
 )
 GO
 
-INSERT INTO MucLuong VALUES('MLNV01',10000000)--NhanVienMoi
-INSERT INTO MucLuong VALUES('MLNV02',15000000)--NhanVienVua
-INSERT INTO MucLuong VALUES('MLNV03',20000000)--NhanVienLauNam
-INSERT INTO MucLuong VALUES('MLTP01',50000000)--TruongPhong
-INSERT INTO MucLuong VALUES('MLQL01',40000000)--QuanLy
+INSERT INTO MucLuong VALUES('MLNV01',N'Nhân viên Mới',10000000)--NhanVienMoi
+INSERT INTO MucLuong VALUES('MLNV02',N'Nhân viên 5 năm',15000000)--NhanVienVua
+INSERT INTO MucLuong VALUES('MLNV03',N'Nhân viên 10 năm',20000000)--NhanVienLauNam
+INSERT INTO MucLuong VALUES('MLTP01',N'Trưởng phòng',50000000)--TruongPhong
+INSERT INTO MucLuong VALUES('MLQL01',N'Quản lý',40000000)--QuanLy
 GO
 
 CREATE TABLE dbo.NhanVien(
@@ -31,7 +32,9 @@ CREATE TABLE dbo.NhanVien(
 )
 GO
 
-INSERT INTO NhanVien VALUES('NV001', N'Trần Minh Dương', 'HCM', '0967675782', '1988-01-01', 'Nam', '092203232432', 'TMD@gmail.com', 'PBQL1', 'MLQL01')
+INSERT INTO NhanVien VALUES('NV000', N'Nguyễn Thành Đạt', 'HCM', '0337433171', '1988-05-01', 'Nam', '066586432890', 'NTD@gmail.com', 'PBHR1', 'MLTP01')
+
+INSERT INTO NhanVien VALUES('NV001', N'Trần Minh Dương', 'HCM', '0967675782', '1988-01-01', 'Nam', '092203232432', 'TMD@gmail.com', 'PBQL1', 'MLTP01')
 INSERT INTO NhanVien VALUES('NV002', N'Nguyễn Thanh Tùng', 'HCM', '0966696084', '1989-02-02', 'Nam', '095121551722', 'NTT@gmail.com', 'PBQL1', 'MLQL01')
 INSERT INTO NhanVien VALUES('NV003', N'Lê Minh Hùng', 'HCM', '0986810782', '1988-03-03', 'Nam', '093501761895', 'LMH@gmail.com', 'PBQL1', 'MLQL01')
 
@@ -85,6 +88,7 @@ INSERT INTO LoaiPhongBan VALUES('LPBSX', N'Sản Xuất')
 INSERT INTO LoaiPhongBan VALUES('LPBMK', N'Marketing')
 INSERT INTO LoaiPhongBan VALUES('LPBHC', N'Hành Chính')
 INSERT INTO LoaiPhongBan VALUES('LPBTK', N'Thiết Kế')
+INSERT INTO LoaiPhongBan VALUES('LPBHR', N'Nhân Sự')
 
 CREATE TABLE dbo.PhongBan(
 	MaPB varchar(10) PRIMARY KEY,
@@ -104,6 +108,7 @@ INSERT INTO PhongBan VALUES('PBHC1', N'Phòng Hành Chính 1','LPBHC','NV012','A
 INSERT INTO PhongBan VALUES('PBHC2', N'Phòng Hành Chính 2','LPBHC','NV029','A5302')
 INSERT INTO PhongBan VALUES('PBTK1', N'Phòng Thiết Kế 1','LPBTK','NV015','A5402')
 INSERT INTO PhongBan VALUES('PBTK2', N'Phòng Thiết Kế 2','LPBTK','NV032','A5402')
+INSERT INTO PhongBan VALUES('PBHR1', N'Phòng Nhân Sự','LPBHR','NV000','A5000')
 GO
 
 ALTER TABLE NhanVien WITH CHECK ADD FOREIGN KEY(MaPB) REFERENCES PhongBan(MaPB)
@@ -115,7 +120,7 @@ CREATE TABLE dbo.TaiKhoan(
 	PRIMARY KEY(MaNV)
 )
 GO
-
+INSERT INTO TaiKhoan VALUES('NV000','hr','hr123')
 INSERT INTO TaiKhoan VALUES('NV001','tmd','tmd123')
 INSERT INTO TaiKhoan VALUES('NV002','ntt','ntt123')
 INSERT INTO TaiKhoan VALUES('NV003','lmh','ntt123')
@@ -380,16 +385,24 @@ INSERT INTO Checkout VALUES('NV031','2023-03-03', '17:10:00')
 INSERT INTO Checkout VALUES('NV032','2023-03-03', '17:10:00')
 INSERT INTO Checkout VALUES('NV033','2023-03-03', '17:10:00')
 INSERT INTO Checkout VALUES('NV034','2023-03-03', '17:10:00')
-
 GO
 
 CREATE TABLE dbo.XinNghi(
 	MaNV varchar(10) REFERENCES NhanVien(MaNV),
-	NgayNghi date,
+	NgayNghi datetime,
 	SoNgayNghi int,
 	LyDo nvarchar(100),
+	HeSoDuyet int NOT NULL,
 	PRIMARY KEY(MaNV,NgayNghi)
 )
+GO
+
+select *from XinNghi
+INSERT INTO XinNghi VALUES('NV004', '2023-04-05', '1', N'Lý do sức khỏe', '-1')
+INSERT INTO XinNghi VALUES('NV009', '2023-04-10', '1', N'Chuyển nhà, chuyển trọ', '1')
+
+INSERT INTO XinNghi VALUES('NV010', '2023-04-10', '1', N'Chuyển nhà, chuyển trọ', '0')
+INSERT INTO XinNghi VALUES('NV004', '2023-04-10', '1', N'Chuyển nhà, chuyển trọ', '1')
 GO
 
 CREATE TABLE dbo.CongViec(
@@ -462,27 +475,27 @@ CREATE TABLE dbo.PhanCong(
 )
 GO
 
-INSERT INTO PhanCong VALUES('DA001','CVTK003','NV016','Làm giao diện', '2000-01-20','2000-01-25',100, N'Hoàn Thành Tốt', 100, 500000)
-INSERT INTO PhanCong VALUES('DA001','CVTK001','NV017','Tìm kiếm hình ảnh','2000-01-25','2000-02-05',100, N'Hoàn Thành Tốt', 100, 1000000)
-INSERT INTO PhanCong VALUES('DA001','CVTK004','NV018','Tìm kiếm hình ảnh','2000-02-05','2000-02-07',100, N'Hoàn Thành Tốt', 100,2000000)
+INSERT INTO PhanCong VALUES('DA001','CVTK003','NV016',N'Làm giao diện', '2000-01-20','2000-01-25',100, N'Hoàn Thành Tốt', 100, 500000)
+INSERT INTO PhanCong VALUES('DA001','CVTK001','NV017',N'Tìm kiếm hình ảnh','2000-01-25','2000-02-05',100, N'Hoàn Thành Tốt', 100, 1000000)
+INSERT INTO PhanCong VALUES('DA001','CVTK004','NV018',N'Tìm kiếm hình ảnh','2000-02-05','2000-02-07',100, N'Hoàn Thành Tốt', 100,2000000)
 
-INSERT INTO PhanCong VALUES('DA002','CVHC002','NV013','Chuẩn bị giấy tờ','2000-01-20','2000-02-20',100, N'Trễ Hạn 2 Ngày', 40, 0)
-INSERT INTO PhanCong VALUES('DA002','CVHC003','NV014','Đưa đến trung tâm đăng kiểm','2000-02-10','2000-02-20',100, N'Trễ Hạn 1 Ngày', 80,0)
+INSERT INTO PhanCong VALUES('DA002','CVHC002','NV013',N'Chuẩn bị giấy tờ','2000-01-20','2000-02-20',100, N'Trễ Hạn 2 Ngày', 40, 0)
+INSERT INTO PhanCong VALUES('DA002','CVHC003','NV014',N'Đưa đến trung tâm đăng kiểm','2000-02-10','2000-02-20',100, N'Trễ Hạn 1 Ngày', 80,0)
 
-INSERT INTO PhanCong VALUES('DA003','CVSX001','NV005','Chuẩn bị nguyên liệu','2000-02-20','2000-02-25',100, N'Hoàn Thành Tốt', 100, 0)
-INSERT INTO PhanCong VALUES('DA003','CVSX002','NV006','Kiểm tra máy móc','2000-02-25','2000-03-05',100, N'Hoàn Thành Tốt', 100,0)
-INSERT INTO PhanCong VALUES('DA003','CVSX003','NV007','Điều hành nhân viên','2000-03-05','2000-03-07',100, N'Hoàn Thành Tốt', 100, 0)
-INSERT INTO PhanCong VALUES('DA003','CVSX004','NV008','Vận hành máy','2000-03-05','2000-03-07',100, N'Trễ Hạn 2 Ngày', 40,0)
+INSERT INTO PhanCong VALUES('DA003','CVSX001','NV005',N'Chuẩn bị nguyên liệu','2000-02-20','2000-02-25',100, N'Hoàn Thành Tốt', 100, 0)
+INSERT INTO PhanCong VALUES('DA003','CVSX002','NV006',N'Kiểm tra máy móc','2000-02-25','2000-03-05',100, N'Hoàn Thành Tốt', 100,0)
+INSERT INTO PhanCong VALUES('DA003','CVSX003','NV007',N'Điều hành nhân viên','2000-03-05','2000-03-07',100, N'Hoàn Thành Tốt', 100, 0)
+INSERT INTO PhanCong VALUES('DA003','CVSX004','NV008',N'Vận hành máy','2000-03-05','2000-03-07',100, N'Trễ Hạn 2 Ngày', 40,0)
 
-INSERT INTO PhanCong VALUES('DA004','CVMK005','NV010','Liên hệ đài truyền hình','2000-03-07','2000-03-20',100, N'Hoàn Thành Tốt', 100, 100000)
-INSERT INTO PhanCong VALUES('DA004','CVMK004','NV011','Liên hệ KOL','2000-03-20','2000-04-25',100, N'Hoàn Thành Tốt', 100,100000)
-INSERT INTO PhanCong VALUES('DA004','CVMK003','NV019','Làm video quảng cáo','2000-03-20','2000-04-25',100, N'Hoàn Thành Tốt', 100,200000)
+INSERT INTO PhanCong VALUES('DA004','CVMK005','NV010',N'Liên hệ đài truyền hình','2000-03-07','2000-03-20',100, N'Hoàn Thành Tốt', 100, 100000)
+INSERT INTO PhanCong VALUES('DA004','CVMK004','NV011',N'Liên hệ KOL','2000-03-20','2000-04-25',100, N'Hoàn Thành Tốt', 100,100000)
+INSERT INTO PhanCong VALUES('DA004','CVMK003','NV019',N'Làm video quảng cáo','2000-03-20','2000-04-25',100, N'Hoàn Thành Tốt', 100,200000)
 
-INSERT INTO PhanCong VALUES('DA005','CVTK002','NV033','Edit video','2023-01-20','2023-02-01',50, '', 0,0)
-INSERT INTO PhanCong VALUES('DA005','CVTK004','NV034','Demo bản vẽ','2023-02-01','2023-02-02',70, '', 0,0)
+INSERT INTO PhanCong VALUES('DA005','CVTK002','NV033',N'Edit video','2023-01-20','2023-02-01',50, '', 0,0)
+INSERT INTO PhanCong VALUES('DA005','CVTK004','NV034',N'Demo bản vẽ','2023-02-01','2023-02-02',70, '', 0,0)
 
-INSERT INTO PhanCong VALUES('DA006','CVMK002','NV027','Chạy quảng cáo trên Facebook','2023-02-02','2023-02-05',50, '', 0,0)
-INSERT INTO PhanCong VALUES('DA006','CVMK004','NV028','Chạy quảng cáo trên Tiktok','2023-02-05','2023-02-20',60, '', 0,0)
+INSERT INTO PhanCong VALUES('DA006','CVMK002','NV027',N'Chạy quảng cáo trên Facebook','2023-02-02','2023-02-05',50, '', 0,0)
+INSERT INTO PhanCong VALUES('DA006','CVMK004','NV028',N'Chạy quảng cáo trên Tiktok','2023-02-05','2023-02-20',60, '', 0,0)
 GO
 
 CREATE TABLE dbo.HoTro(
@@ -502,3 +515,10 @@ INSERT INTO HoTro VALUES('DA003','CVSX003','NV025')
 INSERT INTO HoTro VALUES('DA005','CVTK002','NV017')
 GO
 
+CREATE TABLE dbo.Luong(
+	MaNV varchar(10) REFERENCES NhanVien(MaNV),
+	ThangNam date,
+	Luong int,
+	PRIMARY KEY(MaNV,ThangNam)
+)
+GO

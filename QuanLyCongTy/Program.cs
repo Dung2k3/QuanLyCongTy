@@ -18,7 +18,7 @@ namespace QuanLyCongTy
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new FDangNhap());
+            //Application.Run(new FDangNhap());
 
             //Application.Run(new FSuaDA("DA001"));
             //Application.Run(new FThemDA());
@@ -30,7 +30,7 @@ namespace QuanLyCongTy
             //Application.Run(new FCapNhatTienDo());
             //Application.Run(new FLich2());
             //Application.Run(new FThongTinDA2());
-            //Application.Run(new FPhanCong2());
+            Application.Run(new FNhanSu("NV000"));
         }
     }
 }
