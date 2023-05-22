@@ -67,7 +67,7 @@
             this.btnPhatLuong.ForeColor = System.Drawing.Color.White;
             this.btnPhatLuong.Location = new System.Drawing.Point(822, 21);
             this.btnPhatLuong.Name = "btnPhatLuong";
-            this.btnPhatLuong.Size = new System.Drawing.Size(166, 43);
+            this.btnPhatLuong.Size = new System.Drawing.Size(166, 45);
             this.btnPhatLuong.TabIndex = 127;
             this.btnPhatLuong.Text = "Phát lương";
             this.btnPhatLuong.Click += new System.EventHandler(this.btnPhatLuong_Click);
@@ -114,7 +114,7 @@
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.guna2Panel1.Location = new System.Drawing.Point(25, 84);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(984, 50);
+            this.guna2Panel1.Size = new System.Drawing.Size(984, 52);
             this.guna2Panel1.TabIndex = 132;
             // 
             // chk
@@ -269,7 +269,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1000, 700);
+            this.ClientSize = new System.Drawing.Size(1050, 700);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.cbo);
             this.Controls.Add(this.btnNext);
