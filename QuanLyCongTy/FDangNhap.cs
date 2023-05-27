@@ -31,7 +31,7 @@ namespace QuanLyCongTy
                 if (dnDao.KTQuanLy(MaNV))
                     newForm = new FQuanLy(MaNV);
                 else if (dnDao.KTNhanSu(MaNV))
-                    newForm = new FNhanSu("NV000");
+                    newForm = new FNhanSu(MaNV);
                 else if (dnDao.KTTruongPhong(MaNV))
                     newForm = new FTruongPhong(MaNV);
                 else

@@ -15,7 +15,7 @@ namespace QuanLyCongTy
         {
             this.MaDA = MaDA;
         }
-        public DuAn ThongTinDA()
+        /*public DuAn ThongTinDA()
         {
             string sqlStr = string.Format("SELECT TenDuAn, MaPB, DiaDiem, NgayBD, DeadLine, MoTa FROM DuAn " +
                 "WHERE MaDA = '{0}'",MaDA);
@@ -23,7 +23,7 @@ namespace QuanLyCongTy
             DuAn da = new DuAn(MaDA, dr[0].ToString(), dr[1].ToString(), dr[2].ToString(),
                                DateTime.Parse(dr[3].ToString()), DateTime.Parse(dr[4].ToString()), dr[5].ToString());
             return da;
-        }
+        }*/
         public List<string> DSMaCVChuaHoanThanh()
         {
             List<string> dsMaCV = new List<string>();

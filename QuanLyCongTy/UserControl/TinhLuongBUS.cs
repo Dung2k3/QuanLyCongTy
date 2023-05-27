@@ -38,7 +38,7 @@ namespace QuanLyCongTy
             foreach (NhanVienModel nv in list)
             {
                 UCLuongCN uc = new UCLuongCN();
-                uc.CapNhat(nv,datecal);
+                uc.CapNhat(nv, datecal);
                 uc.Checked = false;
                 uc.Margin = new Padding(10, 10, 0, 0);
                 flp.Controls.Add(uc);
@@ -60,9 +60,9 @@ namespace QuanLyCongTy
         }
         public void CheckChange(Guna2CustomCheckBox chk, FlowLayoutPanel flp)
         {
-            foreach(Control ctr in flp.Controls)
+            foreach (Control ctr in flp.Controls)
             {
-                if(ctr is UCLuongCN)
+                if (ctr is UCLuongCN)
                 {
                     UCLuongCN uc = (UCLuongCN)ctr;
                     uc.Checked = chk.Checked;
@@ -71,21 +71,35 @@ namespace QuanLyCongTy
         }
         public void PhatLuong(FlowLayoutPanel flp, Guna2ComboBox cbo)
         {
+            bool flat = false;
             foreach (Control ctr in flp.Controls)
             {
                 if (ctr is UCLuongCN)
                 {
                     UCLuongCN uc = (UCLuongCN)ctr;
-                    if(uc.Checked && luongDAO.Them(uc.GetLuong())) { }
-                    else
-                    {
-                        MessageBox.Show("Chọn đối tượng phát lương!");
-                        return;
-                    }
+                    if (uc.Checked)
+                        if (!luongDAO.Them(uc.GetLuong()))
+                        {
+                            MessageBox.Show("Không phát được lương");
+                            return;
+                        }
+                        else
+                        {
+                            flat = true;
+                        }
 
                 }
             }
-            Loadfpl(flp, cbo);
+            if (flat)
+            {
+                MessageBox.Show("Đã phát được lương");
+                Loadfpl(flp, cbo);
+            }
+            else
+            {
+                MessageBox.Show("Không có đối tượng phát lương");
+            }
+
         }
     }
 }

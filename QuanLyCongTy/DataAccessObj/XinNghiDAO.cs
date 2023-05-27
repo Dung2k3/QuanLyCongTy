@@ -13,14 +13,14 @@ namespace QuanLyCongTy
         DataProvider dataProvider = new DataProvider();
 
 
-        public XinNghi LayDanhSachXinNghi(string MaNV)
+        /*public XinNghi LayDanhSachXinNghi(string MaNV)
         {
             string sqlStr = string.Format("SELECT XinNghi.MaNV, NhanVien.HoTenNV, XinNghi.NgayNghi, XinNghi.SoNgayNghi, XinNghi.LyDo, XinNghi.HeSoDuyet " +
                                             "FROM XinNghi, NhanVien WHERE XinNghi.MaNV = NhanVien.MaNV " +
                                             "AND XinNghi.MaNV = '{0}'", MaNV);
             DataRow dr = dbConn.LayDanhSach(sqlStr).Rows[0];
             return new XinNghi(dr[0].ToString(), dr[1].ToString(), DateTime.Parse(dr[2].ToString()), int.Parse(dr[3].ToString()), dr[4].ToString(), int.Parse(dr[5].ToString()));
-        }
+        }*/
 
         public DataTable LayDanhSachChuaDuyetXinNghi()
         {

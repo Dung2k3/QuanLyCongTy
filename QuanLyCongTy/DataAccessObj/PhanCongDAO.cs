@@ -108,7 +108,7 @@ namespace QuanLyCongTy
             }
             return dt;
         }
-        public PhanCong ThongTinPC(string MaCV, string MaDA)
+        /*public PhanCong ThongTinPC(string MaCV, string MaDA)
         {
             string sqlStr = string.Format("SELECT HoTenNV, TenCV, TienDo ,NgayBD, DeadLine FROM PhanCong,NhanVien,CongViec " +
                                          "Where PhanCong.MaCV = '{0}' AND MaDA = '{1}' " +
@@ -116,7 +116,7 @@ namespace QuanLyCongTy
             DataRow dr = dbConn.LayDanhSach(sqlStr).Rows[0];
             return new PhanCong(dr[0].ToString(), MaDA, dr[1].ToString(), "", int.Parse(dr[2].ToString()), DateTime.Parse(dr[3].ToString()), DateTime.Parse(dr[4].ToString()));
 
-        }
+        }*/
         public string TaoMaCV()
         {
             string temp = maPB.Substring(2, 2);
@@ -141,7 +141,7 @@ namespace QuanLyCongTy
             string sqlStr = string.Format("INSERT INTO HoTro VALUES('{0}', '{1}', '{2}')", ht.MaDA, ht.MaCV, ht.MaNV);
             dbConn.ThucThi(sqlStr);
         }
-        public string DSTenNVThamGia(string MaCV, string MaDA)
+/*        public string DSTenNVThamGia(string MaCV, string MaDA)
         {
             string DSTenNVThamGia = ThongTinPC(MaCV, MaDA).HoTenNV;
             string sqlStr = string.Format("SELECT HoTenNV FROM HoTro,NhanVien " +
@@ -152,7 +152,7 @@ namespace QuanLyCongTy
                 .ForEach(hoten => DSTenNVThamGia += ", " + hoten);
             return DSTenNVThamGia;
 
-        }
+        }*/
 
 
 
