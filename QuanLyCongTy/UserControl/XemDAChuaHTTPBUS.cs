@@ -10,10 +10,11 @@ namespace QuanLyCongTy
 {
     internal class XemDAChuaHTTPBUS
     {
-        public DuAnModel da;
+        public DuAn da;
         public Reload.Flp rl;
         PhongBanDAO phongBanDAO = new PhongBanDAO();
         DuAnDAO duAnDAO = new DuAnDAO();
+        QLCTContext db = new QLCTContext();
         public void FillControl(Label lblTenDA, Label lblTenPhong, Guna2ProgressBar prgTienDo, Label lblNgayCL, Label lblTienDo)
         {
             PhongBanModel pb = phongBanDAO.GetPhongBanTheoMaPB(da.MaPB);
@@ -21,9 +22,10 @@ namespace QuanLyCongTy
 
             lblTenDA.Text = da.TenDuAn;
             lblTenPhong.Text = pb.TenPB;
-            prgTienDo.Value = duAnDAO.GetTienDo(da);
-            lblNgayCL.Text = "Thời hạn: Còn " + da.DeadLine.Subtract(da.NgayBD).Days.ToString() + " ngày.";
-            lblTienDo.Text = duAnDAO.GetTienDo(da).ToString() + "%";
+
+            prgTienDo.Value = (int) da.PhanCongs.Average(pc => pc.TienDo);
+            lblNgayCL.Text = "Thời hạn: Còn " + da.DeadLine.Value.Subtract(da.NgayBD.Value).Days.ToString() + " ngày.";
+            lblTienDo.Text = prgTienDo.Value.ToString() + "%";
         }
 
         public void OpenFThongTin()
