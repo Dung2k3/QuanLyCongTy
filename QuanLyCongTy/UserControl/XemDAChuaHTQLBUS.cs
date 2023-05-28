@@ -10,17 +10,21 @@ namespace QuanLyCongTy
 {
     internal class XemDAChuaHTQLBUS
     {
-        public DuAnModel da;
+        public DuAn da;
         public Reload.Flp HamRL;
-        DuAnDAO duAnDAO = new DuAnDAO();
-        PhongBanDAO PhongBanDAO = new PhongBanDAO();
+        QLCTContext db = new QLCTContext();
         public void FillControls(Label lbl_tenDA,Label lbl_TenPhong, Label lbl_NgayCL,Guna2ProgressBar prgTienDo, Label lblTienDo)
         {
-            PhongBanModel pb = PhongBanDAO.GetPhongBanTheoMaPB(da.MaPB);
+            PhongBan gpb = db.PhongBans
+                           .Where(pb => pb.MaPB == da.MaPB)
+                           .First();
+
             lbl_tenDA.Text = da.TenDuAn;
-            lbl_TenPhong.Text = pb.TenPB;
-            lbl_NgayCL.Text = "Thời hạn: Còn " + da.DeadLine.Subtract(da.NgayBD).Days.ToString() + " ngày.";
-            prgTienDo.Value = duAnDAO.GetTienDo(da);
+            lbl_TenPhong.Text = gpb.TenPB;
+            lbl_NgayCL.Text = "Thời hạn: Còn " + da.DeadLine.Value.Subtract(da.NgayBD.Value).Days.ToString() + " ngày.";
+            var pcda = db.PhanCongs.Where(pc => pc.MaDA == da.MaDA).Select(pc => pc.TienDo);
+            if (pcda.Count() == 0) prgTienDo.Value = 0;
+            else prgTienDo.Value = (int)pcda.Average(td => td);
             lblTienDo.Text = prgTienDo.Value.ToString() + "%";
         }
         void OpenForm(Form fnew,UCTienDoDA uc)
@@ -42,6 +46,5 @@ namespace QuanLyCongTy
             form.CapNhat(da);
             OpenForm(form, uc);
         }
-
     }
 }

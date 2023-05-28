@@ -29,17 +29,14 @@ namespace QuanLyCongTy
         {
             tinhLuongBUS.PreMonth(lblThang, flpLuong, cbo, chk);
         }
-
         private void guna2CustomCheckBox1_Click(object sender, EventArgs e)
         {
             tinhLuongBUS.CheckChange(chk, flpLuong);
         }
-
         private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             tinhLuongBUS.Loadfpl(flpLuong, cbo);
         }
-
         private void btnPhatLuong_Click(object sender, EventArgs e)
         {
             tinhLuongBUS.PhatLuong(flpLuong, cbo);

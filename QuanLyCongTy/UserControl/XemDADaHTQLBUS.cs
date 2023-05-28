@@ -10,15 +10,17 @@ namespace QuanLyCongTy
 {
     internal class XemDADaHTQLBUS
     {
-        public DuAnModel da;
+        public DuAn da;
         public Reload.Flp HamRL;
-        DuAnDAO duAnDAO = new DuAnDAO();
-        PhongBanDAO PhongBanDAO = new PhongBanDAO();
+        QLCTContext db = new QLCTContext();
         public void FillControls(Label lbl_tenDA, Label lbl_TenPhong, Guna2ProgressBar prgTienDo, Label lblTienDo, Guna2RatingStar ratingStar)
         {
-            PhongBanModel pb = PhongBanDAO.GetPhongBanTheoMaPB(da.MaPB);
+            PhongBan gpb = db.PhongBans
+                           .Where(pb => pb.MaPB == da.MaPB)
+                           .First();
+
             lbl_tenDA.Text = da.TenDuAn;
-            lbl_TenPhong.Text = pb.TenPB;
+            lbl_TenPhong.Text = gpb.TenPB;
             prgTienDo.Value = 100;
             lblTienDo.Text = "100%";
             ratingStar.Value = (float)da.ChamDiem / 20;

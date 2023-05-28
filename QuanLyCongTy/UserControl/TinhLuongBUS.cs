@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -13,29 +14,27 @@ namespace QuanLyCongTy
 {
     internal class TinhLuongBUS
     {
-        public LuongModel luong;
         DateTime datecal = DateTime.Today;
-        NhanVienDAO nhanVienDAO = new NhanVienDAO();
-        PhongBanDAO phongBanDAO = new PhongBanDAO();
-        LuongDAO luongDAO = new LuongDAO();
+        QLCTContext db = new QLCTContext();
         public void FillControl(Label lblThang, FlowLayoutPanel flp, Guna2ComboBox cbo)
         {
             lblThang.Text = "Tháng " + datecal.Month.ToString() + " Năm " + datecal.Year.ToString();
-            cbo.DataSource = phongBanDAO.ListPhongBanTinhLuong();
+            cbo.DataSource = db.PhongBans
+                             .Where(pb => pb.MaLPB != "LPBHR")
+                             .ToList();
             cbo.DisplayMember = "TenPB";
             Loadfpl(flp, cbo);
         }
         public void Loadfpl(FlowLayoutPanel flp, Guna2ComboBox cbo)
         {
             flp.Controls.Clear();
-            List<NhanVienModel> list;
-            if (cbo.Text != "Tất cả")
-            {
-                list = nhanVienDAO.ListNVChuaPhatLuongTheoPhong(datecal, (PhongBanModel)cbo.SelectedValue);
-            }
-            else list = nhanVienDAO.ListTatCaNVChuaPhatLuongTheoPhong(datecal, (PhongBanModel)cbo.SelectedValue);
-
-            foreach (NhanVienModel nv in list)
+            List<NhanVien> list;
+            PhongBan pb = (PhongBan)cbo.SelectedItem;
+            list = pb.NhanViens
+                     .Where(nv => !nv.Luongs
+                     .Any(lg => lg.ThangNam.Month == datecal.Month && lg.ThangNam.Year == datecal.Year))
+                     .ToList();
+            foreach (NhanVien nv in list)
             {
                 UCLuongCN uc = new UCLuongCN();
                 uc.CapNhat(nv, datecal);
@@ -78,16 +77,19 @@ namespace QuanLyCongTy
                 {
                     UCLuongCN uc = (UCLuongCN)ctr;
                     if (uc.Checked)
-                        if (!luongDAO.Them(uc.GetLuong()))
+                    {
+                        try
+                        {
+                            db.Luongs.AddOrUpdate(uc.GetLuong());
+                            db.SaveChanges();
+                            flat = true;
+                        }
+                        catch
                         {
                             MessageBox.Show("Không phát được lương");
                             return;
                         }
-                        else
-                        {
-                            flat = true;
-                        }
-
+                    }
                 }
             }
             if (flat)

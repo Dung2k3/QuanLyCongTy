@@ -18,7 +18,7 @@ namespace QuanLyCongTy
         {
             InitializeComponent();
         }
-        public void CapNhat(DuAnModel da)
+        public void CapNhat(DuAn da)
         {
             nhanXetDABUS.da = da;
         }

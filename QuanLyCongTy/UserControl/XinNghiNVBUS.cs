@@ -14,8 +14,8 @@ namespace QuanLyCongTy
     internal class XinNghiNVBUS
     {
         FlowLayoutPanel flp;
-        public NhanVienModel nv;
-        XinNghiDAO xinNghiDAO = new XinNghiDAO();
+        public NhanVien nv;
+        QLCTContext db = new QLCTContext();
         Form currentFormChild;
         public void OpenChildForm(Form childForm)
         {
@@ -51,10 +51,12 @@ namespace QuanLyCongTy
         {
             this.flp = flp;
             shape.FillColor = ColorTranslator.FromHtml("#128C7E");
-
             flp.Controls.Clear();
-            List<XinNghiModel> list = xinNghiDAO.ListTrangThaiXN(nv);
-            foreach (XinNghiModel xn in list)
+            List<XinNghi> list = db.XinNghis
+                                 .Where(xn1 => xn1.HeSoDuyet >= 0 && xn1.MaNV == nv.MaNV)
+                                 .ToList();
+
+            foreach (XinNghi xn in list)
             {
                 UCXemXinNghiDaDuyet uc = new UCXemXinNghiDaDuyet();
                 uc.CapNhat(xn);

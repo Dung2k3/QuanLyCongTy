@@ -13,13 +13,14 @@ namespace QuanLyCongTy
     public partial class FXinNghiNV : Form
     {
         XinNghiNVBUS xinNghiNVBUS = new XinNghiNVBUS();
+        QLCTContext db = new QLCTContext();
 
         public FXinNghiNV()
         {
             InitializeComponent();
         }
 
-        public void CapNhat(NhanVienModel nv)
+        public void CapNhat(NhanVien nv)
         {
             xinNghiNVBUS.nv = nv;
         }

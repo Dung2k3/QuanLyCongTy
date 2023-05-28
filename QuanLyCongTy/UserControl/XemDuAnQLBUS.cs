@@ -10,7 +10,7 @@ namespace QuanLyCongTy
 {
     internal class XemDuAnQLBUS
     {
-        DuAnDAO duAnDAO = new DuAnDAO();
+        QLCTContext db = new QLCTContext();
         FlowLayoutPanel flpListDA;
         public void AddFlp(FlowLayoutPanel flpListDA)
         {
@@ -19,8 +19,11 @@ namespace QuanLyCongTy
         public void FillDuAnChuaHT()
         {
             flpListDA.Controls.Clear();
-            List<DuAnModel> listDA = duAnDAO.ListDuAnChuaHT();
-            foreach(DuAnModel da in listDA)
+            List<DuAn> listDA = db.DuAns
+                                .Where(da1 => da1.ChamDiem == -1)
+                                .ToList();
+
+            foreach (DuAn da in listDA)
             {
                 UCTienDoDA uc = new UCTienDoDA();
                 uc.CapNhat(da, FillDuAnChuaHT);
@@ -30,8 +33,10 @@ namespace QuanLyCongTy
         public void FillDuAnDaHT()
         {
             flpListDA.Controls.Clear();
-            List<DuAnModel> listDA = duAnDAO.ListDuAnDaHT();
-            foreach (DuAnModel da in listDA)
+            List<DuAn> listDA = db.DuAns
+                                .Where(da1 => da1.ChamDiem >= 0)
+                                .ToList();
+            foreach (DuAn da in listDA)
             {
                 UCSailorStar uc = new UCSailorStar();
                 uc.CapNhat(da, FillDuAnDaHT);

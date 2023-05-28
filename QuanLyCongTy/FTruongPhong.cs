@@ -13,18 +13,16 @@ namespace QuanLyCongTy
 {
     public partial class FTruongPhong : Form
     {
-        //FThongTin fthongtin;
-
-        NhanVienDAO nvDao = new NhanVienDAO();
         TruongPhongBUS truongPhongBUS = new TruongPhongBUS();
+        QLCTContext db = new QLCTContext();
         public FTruongPhong(string ma)
         {
             InitializeComponent();
             truongPhongBUS.AddPnl(pnlNoiDung);
-            truongPhongBUS.nv = nvDao.GetNhanVienTheoMaNV(ma);
+            truongPhongBUS.nv = db.NhanViens.Where(nv1 => nv1.MaNV == ma).First();
         }
 
-        public void CapNhat(NhanVienModel nv)
+        public void CapNhat(NhanVien nv)
         {
             truongPhongBUS.nv = nv;
         }

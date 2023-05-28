@@ -18,7 +18,7 @@ namespace QuanLyCongTy
             InitializeComponent();
         }
 
-        public void CapNhat(NhanVienModel nv)
+        public void CapNhat(NhanVien nv)
         {
             taoXinNghiBUS.nv = nv;
         }

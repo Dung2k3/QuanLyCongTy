@@ -19,7 +19,7 @@ namespace QuanLyCongTy
         {
             InitializeComponent();
         }
-        public void CapNhat(NhanVienModel nv, DateTime date)
+        public void CapNhat(NhanVien nv, DateTime date)
         {
             luongCNBUS.date = date;
             luongCNBUS.nv = nv;
@@ -29,7 +29,7 @@ namespace QuanLyCongTy
         {
             luongCNBUS.FillControl(lblTen, lblChucVu, lblMucLuong, lblThuong, lblNgayDiLam, lblTreSom, lblTongLuong);
         }
-        public LuongModel GetLuong()
+        public Luong GetLuong()
         {
             return luongCNBUS.getLuong();
         }

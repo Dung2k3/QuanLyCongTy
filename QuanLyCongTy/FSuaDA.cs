@@ -14,11 +14,12 @@ namespace QuanLyCongTy
     public partial class FSuaDA : Form
     {
         SuaDABUS suaDABUS = new SuaDABUS();
+
         public FSuaDA()
         {
             InitializeComponent();
         }
-        public void CapNhat(DuAnModel da)
+        public void CapNhat(DuAn da)
         {
             suaDABUS.da = da;
         }

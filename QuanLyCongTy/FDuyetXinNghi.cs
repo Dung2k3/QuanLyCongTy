@@ -12,63 +12,33 @@ namespace QuanLyCongTy
 {
     public partial class FDuyetXinNghi : Form
     {
-
-        XinNghiDAO xinNghiDAO = new XinNghiDAO();
-        DangNhapDAO dnDao = new DangNhapDAO();
-        NhanVienModel nv;
+        QLCTContext db = new QLCTContext();
+        DuyetXinNghiBUS duyetXinNghiBUS = new DuyetXinNghiBUS();
         public FDuyetXinNghi()
         {
             InitializeComponent();
         }
-        public void CapNhat(NhanVienModel nv)
+        public void CapNhat(NhanVien nv)
         {
-            this.nv = nv;
+            duyetXinNghiBUS.nv = nv;
+            duyetXinNghiBUS.flp = flp;
+            duyetXinNghiBUS.shape = shape;
         }
         private void FXinNghi_Load(object sender, EventArgs e)
         {
-            XNChuaDuyet();
+            duyetXinNghiBUS.XNChuaDuyet();
         }
 
         public delegate void FReload();
 
-        private void XNChuaDuyet()
-        {
-            flp.Controls.Clear();
-            shape.FillColor = ColorTranslator.FromHtml("#0076D4");
-
-            //DataTable dt = xinNghiDAO.LayDanhSachChuaDuyetXinNghi();
-            List<XinNghiModel> list = xinNghiDAO.LayListXinNghiChuaDuyet();
-            bool check = dnDao.KTTruongPhong(nv.MaNV) || dnDao.KTQuanLy(nv.MaNV);
-
-            foreach (XinNghiModel xn in list)
-            {
-                UCXemXinNghiChuaDuyet uc = new UCXemXinNghiChuaDuyet();
-                uc.CapNhat(xn, XNChuaDuyet, check);
-                flp.Controls.Add(uc);
-            }
-        }
-        private void XNDaDuyet()
-        {
-            flp.Controls.Clear();
-            shape.FillColor = ColorTranslator.FromHtml("#128C7E");
-
-            List<XinNghiModel> list = xinNghiDAO.LayListXinNghiDaDuyet();
-            foreach (XinNghiModel xn in list)
-            {
-                UCXemXinNghiDaDuyet uc = new UCXemXinNghiDaDuyet();
-                uc.CapNhat(xn);
-                flp.Controls.Add(uc);
-            }
-        }
-
         private void btnDaDuyet_CheckedChanged(object sender, EventArgs e)
         {
-            XNDaDuyet();
+            duyetXinNghiBUS.XNDaDuyet();
         }
 
         private void btnChuaDuyet_CheckedChanged(object sender, EventArgs e)
         {
-            XNChuaDuyet();
+            duyetXinNghiBUS.XNChuaDuyet();
         }
     }
 }

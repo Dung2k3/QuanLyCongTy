@@ -10,15 +10,16 @@ namespace QuanLyCongTy
 {
     internal class XinNghiDaDuyetBUS
     {
-        public XinNghiModel xn;
-        NhanVienDAO nvDAO = new NhanVienDAO();
-
+        public XinNghi xn;
+        QLCTContext db = new QLCTContext();
         public void FillConstrols( Label HoTen, Label NgayNghi, Label SoNN, Label LyDo, Label TT )
         {
-            NhanVienModel nv = nvDAO.GetNhanVienTheoMaNV(xn.MaNV);
+            NhanVien gnv = db.NhanViens
+                            .Where(nv => nv.MaNV == xn.MaNV)
+                            .First();
 
-            HoTen.Text = nv.HoTenNV;
-            NgayNghi.Text = xn.NgayBD.ToShortDateString();
+            HoTen.Text = gnv.HoTenNV;
+            NgayNghi.Text = xn.NgayNghi.ToShortDateString();
             SoNN.Text = xn.SoNgayNghi.ToString();
             LyDo.Text = xn.LyDo.ToString();
 

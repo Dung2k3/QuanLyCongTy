@@ -18,15 +18,10 @@ namespace QuanLyCongTy
             InitializeComponent();
         }
 
-        public void CapNhat(XinNghiModel xn, Reload.Flp HamRL, bool ChinhSua)
+        public void CapNhat(XinNghi xn, Reload.Flp HamRL)
         {
             xemXinNghiChuaDuyetQLBUS.xn = xn;
             xemXinNghiChuaDuyetQLBUS.HamRL = HamRL;
-            if (!ChinhSua)
-            {
-                btn_Duyet.Visible = false;
-                btn_Xoa.Visible = false;
-            }
         }
 
         private void UCXinNghi_Load(object sender, EventArgs e)

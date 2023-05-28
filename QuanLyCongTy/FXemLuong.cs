@@ -18,9 +18,8 @@ namespace QuanLyCongTy
             InitializeComponent();
         }
 
-        public void CapNhat(NhanVienModel nv, DateTime date)
+        public void CapNhat(NhanVien nv, DateTime date)
         {
-            xemLuongBUS.date = date;
             xemLuongBUS.nv = nv;
         }
 

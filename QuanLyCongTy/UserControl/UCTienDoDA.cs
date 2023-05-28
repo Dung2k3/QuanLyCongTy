@@ -13,13 +13,14 @@ namespace QuanLyCongTy
     public partial class UCTienDoDA : UserControl
     {
         XemDAChuaHTQLBUS xemDAChuaHTQLBUS = new XemDAChuaHTQLBUS();
+        QLCTContext db = new QLCTContext();
         public UCTienDoDA()
         {
             InitializeComponent();
         }
-        public void CapNhat(DuAnModel da, Reload.Flp HamRL)
+        public void CapNhat(DuAn da, Reload.Flp HamRL)
         {
-            xemDAChuaHTQLBUS.da = da;
+            xemDAChuaHTQLBUS.da = db.DuAns.Where(da1 => da1.MaDA == da.MaDA).First();
             xemDAChuaHTQLBUS.HamRL = HamRL;
         }
         private void UCTienDoDA_Load(object sender, EventArgs e)

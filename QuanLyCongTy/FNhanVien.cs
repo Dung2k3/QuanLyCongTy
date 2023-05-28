@@ -13,80 +13,43 @@ namespace QuanLyCongTy
 {
     public partial class FNhanVien : Form
     {
-        Form currentFormChild;
-        NhanVienDAO nvDao = new NhanVienDAO();
-        DateTime datecal = DateTime.Today;
-        string MaNV;
+        NhanVienBUS nhanVienBUS = new NhanVienBUS();
+        QLCTContext db = new QLCTContext();
         public FNhanVien(string ma)
         {
             InitializeComponent();
-            this.MaNV = ma;
+            nhanVienBUS.nv = db.NhanViens.Where(nv1 => nv1.MaNV == ma).First();
+            nhanVienBUS.AddPnl(pnlNoiDung);
         }
 
         private void FNhanVien2_Load(object sender, EventArgs e)
         {
-            lblName.Text = nvDao.GetTenNV(MaNV);
             lblTitle.Text = "Thông tin cá nhân";
-            OpenChildForm(new FThongTin(MaNV));
-        }
-
-        private void moveImageBox(object sender)
-        {
-            Guna2Button b = (Guna2Button)sender;
-            imgSlide.Location = new Point(b.Location.X + 166, b.Location.Y - 30);
-            imgSlide.BringToFront();
-        }
-
-        public void OpenChildForm(Form childForm)
-        {
-            if (currentFormChild != null)
-            {
-                currentFormChild.Close();
-            }
-            currentFormChild = childForm;
-            childForm.TopLevel = false;
-            childForm.Dock = DockStyle.Fill;
-            pnlNoiDung.Controls.Add(childForm);
-            pnlNoiDung.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
+            nhanVienBUS.Load(lblName);
         }
 
         private void btnCaNhan_CheckedChanged(object sender, EventArgs e)
         {
             lblTitle.Text = "Thông tin cá nhân";
-            OpenChildForm(new FThongTin(MaNV));
-            moveImageBox(sender);
+            nhanVienBUS.OpenFThongTin(imgSlide, btnCaNhan);
         }
 
         private void btnCheckinout_CheckedChanged(object sender, EventArgs e)
         {
             lblTitle.Text = btnCheckinout.Text;
-            NhanVienModel nv = nvDao.GetNhanVienTheoMaNV(MaNV);
-            FCheckinout form = new FCheckinout();
-            form.CapNhat(nv);
-            OpenChildForm(form);
-            moveImageBox(sender);
+            nhanVienBUS.OpenFCheckIO(imgSlide, btnCheckinout);
         }
 
         private void btnPhanCong_CheckedChanged(object sender, EventArgs e)
         {
             lblTitle.Text = btnPhanCong.Text;
-            NhanVienModel nv = nvDao.GetNhanVienTheoMaNV(MaNV);
-            FKPI fKPI = new FKPI();
-            fKPI.CapNhat(nv);
-            OpenChildForm(fKPI);
-            moveImageBox(sender);
+            nhanVienBUS.OpenFKPI(imgSlide, btnPhanCong);
         }
 
         private void btnXinNghi_CheckedChanged(object sender, EventArgs e)
         {
             lblTitle.Text = btnXinNghi.Text;
-            FXinNghiNV f = new FXinNghiNV();
-            NhanVienModel nv = nvDao.GetNhanVienTheoMaNV(MaNV);
-            f.CapNhat(nv);
-            OpenChildForm(f);
-            moveImageBox(sender);
+            nhanVienBUS.OpenFXinNghi(imgSlide, btnXinNghi);
         }
 
         private void lblThoat_Click(object sender, EventArgs e)
@@ -97,11 +60,7 @@ namespace QuanLyCongTy
         private void btnXemLuong_CheckedChanged(object sender, EventArgs e)
         {
             lblTitle.Text = btnXemLuong.Text;
-            FXemLuong f = new FXemLuong();
-            NhanVienModel nv = nvDao.GetNhanVienTheoMaNV(MaNV);
-            f.CapNhat(nv, datecal);
-            OpenChildForm(f);
-            moveImageBox(sender);
+            nhanVienBUS.OpenFLuong(imgSlide, btnXemLuong);
         }
     }
 }

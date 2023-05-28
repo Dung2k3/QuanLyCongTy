@@ -12,28 +12,17 @@ namespace QuanLyCongTy
 {
     public partial class FThongTin : Form
     {
-        ThongTinDAO ttDAO = new ThongTinDAO();
-        string MaNV;
+        ThongTinBUS thongTinBUS = new ThongTinBUS();
+        QLCTContext db = new QLCTContext();
         public FThongTin(string MaNV)
         {   
             InitializeComponent();
-            this.MaNV = MaNV;
+            thongTinBUS.nv = db.NhanViens.Where(nv1 => nv1.MaNV == MaNV).First();
         }
 
         private void FThongTin_Load(object sender, EventArgs e)
         {
-            ThongTin tt = ttDAO.LayThongTin(MaNV);
-
-            label11.Text = tt.MaNV;
-            label12.Text = tt.HoTenNV;
-            label13.Text = tt.DiaChi;
-            label14.Text = tt.Sdt;
-            label15.Text = tt.NgaySinh.ToString("dd/MM/yyyy");
-            label16.Text = tt.GioiTinh;
-            label22.Text = tt.Cccd;
-            label17.Text = tt.Email;
-            label18.Text = tt.MaPB;
-            label19.Text = tt.TenPB;
+            thongTinBUS.FillControls(label11, label12, label13, label14, label15, label16, label22, label17, label18, label19);
         }
     }
 }

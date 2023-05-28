@@ -13,12 +13,13 @@ namespace QuanLyCongTy
     public partial class FCheckinout : Form
     {
         CheckIOBUS checkIOBUS = new CheckIOBUS();
+        QLCTContext db = new QLCTContext();
         public FCheckinout()
         {
             InitializeComponent();
         }
 
-        public void CapNhat(NhanVienModel nv)
+        public void CapNhat(NhanVien nv)
         {
             checkIOBUS.nv = nv;
         }

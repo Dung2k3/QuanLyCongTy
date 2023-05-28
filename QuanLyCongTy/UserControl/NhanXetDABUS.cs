@@ -1,6 +1,7 @@
 ﻿using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,8 +11,8 @@ namespace QuanLyCongTy
 {
     internal class NhanXetDABUS
     {
-        DuAnDAO duAnDAO = new DuAnDAO();
-        public DuAnModel da;
+        public DuAn da;
+        QLCTContext db = new QLCTContext();
         string[] ListXepLoai = { "", "Tệ", "Tệ", "Chưa tốt", "Chưa tốt", 
             "Tốt", "Tốt", "Rất tốt","Rất tốt", "Xuất sắc", "Xuất sắc" };
 
@@ -28,7 +29,8 @@ namespace QuanLyCongTy
             da.DanhGia = txt_NhanXet.Text;
             da.ChamDiem = (int)(ratingStar.Value * 20);
             da.Thuong = int.Parse(txtThuong.Text);
-            duAnDAO.Sua(da);
+            db.DuAns.AddOrUpdate(da);
+            db.SaveChanges();
         }
         public void XepLoai(Label lblXepLoai, Guna2RatingStar ratingStar)
         {

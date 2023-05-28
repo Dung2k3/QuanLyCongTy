@@ -9,14 +9,12 @@ using System.Windows.Forms;
 
 namespace QuanLyCongTy
 {
-    internal class TruongPhongBUS
+    internal class QuanLyBUS
     {
-        public NhanVien nv;
         Form currentFormChild;
         DateTime datecal = DateTime.Today;
-        PhongBanDAO pbDAO = new PhongBanDAO();
+        public NhanVien nv;
         Panel pnl;
-
         private void moveImageBox(PictureBox imgSlide, Guna2Button b)
         {
             imgSlide.Location = new Point(b.Location.X + 166, b.Location.Y - 30);
@@ -26,6 +24,7 @@ namespace QuanLyCongTy
         {
             this.pnl = pnl;
         }
+
         public void OpenChildForm(Form childForm)
         {
             if (currentFormChild != null)
@@ -40,7 +39,6 @@ namespace QuanLyCongTy
             childForm.BringToFront();
             childForm.Show();
         }
-
         public void OpenFCheckIO(PictureBox imgSlide, Guna2Button b)
         {
             FCheckinout fcheckIO = new FCheckinout();
@@ -48,19 +46,8 @@ namespace QuanLyCongTy
             OpenChildForm(fcheckIO);
             moveImageBox(imgSlide, b);
         }
-
-        public void OpenFXemDuAn(PictureBox imgSlide, Guna2Button b)
-        {
-            FXemDuAn fXemDuAn = new FXemDuAn();
-            PhongBanModel pb = pbDAO.GetPhongBanTheoMaPB(nv.MaPB);
-            fXemDuAn.CapNhat(pb);
-            OpenChildForm(fXemDuAn);
-            moveImageBox(imgSlide, b);
-        }
-
         public void OpenFThongTin(PictureBox imgSlide, Guna2Button b)
         {
-            
             OpenChildForm(new FThongTin(nv.MaNV));
             moveImageBox(imgSlide, b);
         }
@@ -69,19 +56,8 @@ namespace QuanLyCongTy
             FXinNghiNV f = new FXinNghiNV();
             f.CapNhat(nv);
             OpenChildForm(f);
-            moveImageBox(imgSlide,b);
-        }
-        public void OpenFLich(PictureBox imgSlide, Guna2Button b)
-        {
-            OpenChildForm(new FLich());
             moveImageBox(imgSlide, b);
         }
-        public void Load(Label lblTen)
-        {
-            lblTen.Text = nv.HoTenNV;
-            OpenChildForm(new FThongTin(nv.MaNV));
-        }
-
         public void OpenFLuong(PictureBox imgSlide, Guna2Button b)
         {
             FXemLuong f = new FXemLuong();
@@ -89,6 +65,16 @@ namespace QuanLyCongTy
             OpenChildForm(f);
             moveImageBox(imgSlide, b);
         }
-
+        public void Load(Label lblTen)
+        {
+            lblTen.Text = nv.HoTenNV;
+            OpenChildForm(new FThongTin(nv.MaNV));
+        }
+        public void OpenFDuAn(PictureBox imgSlide, Guna2Button b)
+        {
+            FDuAn f = new FDuAn();
+            OpenChildForm(f);
+            moveImageBox(imgSlide, b);
+        }
     }
 }

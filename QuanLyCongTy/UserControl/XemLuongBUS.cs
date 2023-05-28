@@ -10,44 +10,53 @@ namespace QuanLyCongTy
 {
     internal class XemLuongBUS
     {
-        public NhanVienModel nv;
-        public DateTime date;
+        public NhanVien nv;
+        //public DateTime date;
         DateTime datecal = DateTime.Today;
-        MucLuongDAO mucLuongDAO = new MucLuongDAO();
-        LuongDAO luongDAO = new LuongDAO();
-        PhanCongDAO phanCongDAO = new PhanCongDAO();
-        CheckIODAO checkIODAO = new CheckIODAO();
 
         public void FillControls(Label lblChucVu, Label lblMucLuong, Label lblThuong, Label lblNgayDiLam, Label lblTreSom, Label lblTongLuong, Label lblThang)
         {
-            MucLuongModel luong = mucLuongDAO.GetMucLuongTheoMaLuong(nv.MaLuong);
-            int MucLuong = luong.MucLuong;
-            int Thuong = phanCongDAO.TongThuongNVTheoThang(nv, date);
-            int NgayDiLam = checkIODAO.SoNgayDiLamNVTheoThang(nv, date);
-            int NgayViPham = checkIODAO.SoNgayViPhamNVTheoThang(nv, date);
-
             lblThang.Text = "Tháng " + datecal.Month.ToString() + " Năm " + datecal.Year.ToString();
+            int MucLuong = nv.MucLuong.MucLuong1;
 
-            LuongModel lg = luongDAO.GetLuongTheoNhanVien(nv, datecal);
+            int? Thuong = nv.PhanCongs
+                            .Where(pc => pc.DuAn.DeadLine.Value.Month == datecal.Month && pc.DuAn.DeadLine.Value.Year == datecal.Year)
+                            .Sum(pc => pc.TienThuong);
+            if (Thuong is null) Thuong = 0;
 
-            lblChucVu.Text = luong.ChucVu;
-            lblMucLuong.Text = MucLuong.ToString();
-            lblThuong.Text = Thuong.ToString();
-            lblNgayDiLam.Text = NgayDiLam.ToString();
-            lblTreSom.Text = NgayViPham.ToString();
-            if (lg is null )
+            int NgayDiLam = nv.Checkouts
+                                .Where(co => co.NgayCheckout.Month == datecal.Month && co.NgayCheckout.Year == datecal.Year)
+                                .Count();
+            int NgayViPhamCI = nv.Checkins
+                                .Where(ci => ci.GioCheckin < TimeSpan.Parse("08:00:00") && ci.NgayCheckin.Month == datecal.Month && ci.NgayCheckin.Year == datecal.Year)
+                                .Count();
+            int NgayViPhamCO = nv.Checkouts
+                                .Where(co => co.GioCheckout < TimeSpan.Parse("08:00:00") && co.NgayCheckout.Month == datecal.Month && co.NgayCheckout.Year == datecal.Year)
+                                .Count();
+            int NgayViPham = (NgayViPhamCI + NgayViPhamCO) / 2;
+
+            bool ktluong = nv.Luongs
+                            .Any(lg => lg.ThangNam.Month == datecal.Month && lg.ThangNam.Year == datecal.Year);
+            if(ktluong)
+            {
+                Luong glg = nv.Luongs
+                        .Where(lg => lg.ThangNam.Month == datecal.Month && lg.ThangNam.Year == datecal.Year)
+                        .First();
+                lblTongLuong.Text = glg.Luong1.ToString();
+                lblTongLuong.ForeColor = Color.Black;
+            }
+            else
             {
                 lblTongLuong.Text = "Chưa có lương";
                 lblTongLuong.ForeColor = ColorTranslator.FromHtml("#F44336");
             }
-            else
-            {
-                lblTongLuong.Text = lg.Luong.ToString();
 
-                lblTongLuong.ForeColor = Color.Black;
-            }
+            lblChucVu.Text = nv.MucLuong.ChucVu;
+            lblMucLuong.Text = MucLuong.ToString();
+            lblThuong.Text = Thuong.ToString();
+            lblNgayDiLam.Text = NgayDiLam.ToString();
+            lblTreSom.Text = NgayViPham.ToString();
         }
-
         public void PreMonth(Label lblChucVu, Label lblMucLuong, Label lblThuong, Label lblNgayDiLam, Label lblTreSom, Label lblTongLuong, Label lblThang)
         {
             datecal = datecal.AddMonths(-1);

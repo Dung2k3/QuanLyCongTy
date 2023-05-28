@@ -9,7 +9,7 @@ namespace QuanLyCongTy
 {
     internal class XemXinNghiQLBUS
     {
-        XinNghiDAO xinNghiDAO = new XinNghiDAO();
+        QLCTContext db = new QLCTContext();
         FlowLayoutPanel flpListXN;
 
         public void AddFlpXN(FlowLayoutPanel flpListXN)
@@ -17,23 +17,15 @@ namespace QuanLyCongTy
             this.flpListXN = flpListXN;
         }
 
-        /*public void FillXinNghiChuaDuyet()
-        {
-            flpListXN.Controls.Clear();
-            List<XinNghiModel> listXN = xinNghiDAO.ListXinNghiChuaDuyet();
-            foreach (XinNghiModel xn in listXN)
-            {
-                //UCXemXinNghiChuaDuyet uc = new UCXemXinNghiChuaDuyet(xn.MaNV);
-                //uc.CapNhat(xn, FillXinNghiChuaDuyet);
-                //flpListXN.Controls.Add(uc);
-            }*/
-        //}
-
         public void FillXinNghiDaDuyet()
         {
             flpListXN.Controls.Clear();
-            List<XinNghiModel> listXN = xinNghiDAO.ListXinNghiDaDuyet();
-            foreach (XinNghiModel xn in listXN)
+
+            List<XinNghi> list = db.XinNghis
+                                 .Where(xn1 => xn1.HeSoDuyet > -1)
+                                 .ToList();
+
+            foreach (XinNghi xn in list)
             {
                 UCXemXinNghiDaDuyet uc = new UCXemXinNghiDaDuyet();
                 uc.CapNhat(xn);

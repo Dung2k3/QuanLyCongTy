@@ -12,24 +12,22 @@ namespace QuanLyCongTy
 {
     public partial class FThongBao : Form
     {
-        DuAnModel da;
-        DuAnDAO duAnDAO = new DuAnDAO();
+        DuAn da;
+        XoaDABUS xoaDABUS = new XoaDABUS();
+
         public FThongBao()
         {
             InitializeComponent();
         }
-
-        public void CapNhat(DuAnModel da)
+        public void CapNhat(DuAn da)
         {
             this.da = da;
         }
-
         private void btnCo_Click(object sender, EventArgs e)
         {
-            duAnDAO.Xoa(da);
+            xoaDABUS.XoaDA(da);
             Close();
         }
-
         private void btnKhong_Click(object sender, EventArgs e)
         {
             Close();
